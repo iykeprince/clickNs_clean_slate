@@ -1,0 +1,57 @@
+.response_status_div {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(13, 11, 11, 0.98);
+    z-index: 3;
+}
+
+.response_status_div .content {
+    position: absolute;
+    top: 54%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 920px;
+    text-align: center;
+    color: #000;
+    background: #FFFFFF;
+    box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.3);
+}
+
+.response_status_div .content .status-img {
+    margin-top: -60px;
+    margin-bottom: 40px;
+    width: 120px;
+    height: 120px;
+}
+
+.response_status_div .content h1 {
+    margin-bottom: 74px;
+    font-size: 48px;
+    font-weight: bold;
+    color: #6D6D6D;
+}
+
+.response_status_div .content h6 {
+    margin-bottom: 73px;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 0.02em;
+    color: #6D6D6D;
+}
+
+.response_status_div .content .btn-actions {
+    margin: 0 auto;
+    margin-bottom: 50px;
+    width: fit-content;
+    display: flex;
+}
+
+.response_status_div .content .btn-actions .btn {
+    margin-right: 50px;
+}
+.response_status_div .content .btn-actions .btn:last-child {
+    margin-right: 0px;
+}

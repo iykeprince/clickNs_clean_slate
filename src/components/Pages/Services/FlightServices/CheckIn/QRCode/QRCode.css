@@ -1,0 +1,33 @@
+.check-in .scanner-div {
+    padding: 0px 30px;
+}
+
+.check-in .scanner {
+    margin: 0 auto;
+    margin-top: -20px;
+    width: 390px !important;
+    height: 388px !important;
+}
+
+.check-in .scanner section div {
+    box-shadow: rgba(131, 127, 127, 0.3) 0px 0px 0px 2px inset !important;
+    border: 1px solid rgba(0, 0, 0, 0.3) !important;
+}
+
+.check-in .qr-info {
+    margin-top: 172px;
+}
+
+.check-in .qr-info p {
+    margin-bottom: 20px;
+    font-weight: 800;
+    font-size: 18px;
+    color: #FFFFFF;
+}
+
+.check-in .qr-info img {
+    margin-left: 70px;
+    margin-bottom: 20px;
+    width: 74.26px;
+    height: 100px;
+}
