@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
+
+.services {
+    display: block;
+    padding: 40px 30px;
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Lato', sans-serif;
+    background: #FFFFFF;  /* fallback colour. Make sure this is just one solid colour. */
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://res.cloudinary.com/emekamykael45/image/upload/v1581642627/econnect/services-back_op89tv.png");
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://res.cloudinary.com/emekamykael45/image/upload/v1581642627/econnect/services-back_op89tv.png");
+    background-size: cover;
+}
+
+.services.flight {
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://res.cloudinary.com/emekamykael45/image/upload/v1581642628/econnect/flight-back_tqvzbl.png");
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://res.cloudinary.com/emekamykael45/image/upload/v1581642628/econnect/flight-back_tqvzbl.png");
+    background-size: cover;
+}
+
+.services.check-in {
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://res.cloudinary.com/emekamykael45/image/upload/v1583501107/econnect/check-in-img_vz7tjo.png");
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://res.cloudinary.com/emekamykael45/image/upload/v1583501107/econnect/check-in-img_vz7tjo.png");
+    background-size: cover;
+}
+
+.services .head-text {
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 102px;
+    color: #FFFFFF;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 900;
+    letter-spacing: 0.03em;
+    text-align: center;
+}
+
+.services .boxes {
+    margin: 0 auto;
+    width: max-content;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 200px;
+    grid-row-gap: 100px;
+}
+
+.services .boxes .box {
+    width: 350px;
+    height: 220px;
+    background: #F28244;
+    box-shadow: 0px 5px 10px rgba(242, 130, 68, 0.3);
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+.services .boxes .box:hover {
+    text-decoration: none;
+}
+
+.services .boxes .box .box-icon {
+    margin: 0;
+    margin-top: 40px;
+    margin-bottom: 33px;
+    width: 90px;
+    height: 80px;
+}
+
+.services .boxes .box p {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+}
+
+.services .btn-actions {
+    margin-top: 128px;
+    display: flex;
+    justify-content: center;
+}
+
+.services .btn-actions .btn:first-child {
+    margin-right: 10px;
+}
+
+
+
+@media screen and (max-width: 870px){
+    .services .boxes {
+        width: 100%;
+        grid-gap: 40px;
+    }
+}

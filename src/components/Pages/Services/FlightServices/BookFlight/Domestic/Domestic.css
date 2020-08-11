@@ -1,0 +1,553 @@
+.domestic {
+    padding: 0px;
+}
+
+.domestic .head-div {
+    padding: 40px 30px;
+    padding-bottom: 120px;
+    display: flex;
+    background: #092D60;
+}
+
+.domestic .head-div .arrow-prev {
+    cursor: pointer;
+}
+
+.domestic .form-div {
+    padding: 0px;
+    padding-bottom: 1px;
+    margin: 0 30px;
+    margin-top: -55px;
+    width: auto;
+    background: rgba(92, 60, 60, 0.5);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.domestic .form-div .nav-tabs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 100px;
+    border: none;
+}
+
+.domestic .form-div .nav-tabs .nav-link {
+    padding: 15px 0px;
+    font-size: 1em;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #000000;
+    background: #ffffff;
+    border: none;
+    border-right: 0.5px solid #333333;
+    border-radius: 0px;
+}
+.domestic .form-div .nav-tabs .nav-link:hover {
+    opacity: 0.98;
+}
+
+.domestic .form-div .nav-tabs .nav-link.active {
+    color: #FFFFFF;
+    background: #092D60;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Search flight css */
+
+.domestic .form-div .form {
+    padding: 0px 30px;
+}
+
+.domestic .form .radios {
+    text-align: center;
+    margin-bottom: 108px;
+}
+
+.domestic .form .radios .custom-control {
+    margin-right: 60px;
+}
+.domestic .form .radios .custom-control:last-child {
+    margin-right: 0px;
+}
+
+.domestic .form .radios .custom-control-label {
+    font-size: 18px;
+    color: #FFFFFF;
+    font-weight: bold;
+    letter-spacing: 0.03em;
+}
+
+.domestic .form-group {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    margin-bottom: 80px;
+}
+
+.domestic .form-group .input-group {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    width: 100%;
+    height: 80px;
+}
+
+.domestic .form-group .input-group-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    background-color: #EEEEEE;
+    border: none;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.domestic .form-group .input-group-text .input-img {
+    width: 40px;
+}
+.domestic .form-group .input-group-text .input-img-to {
+    transform: rotate(35deg);
+}
+.domestic .form-group .input-group-text .input-img.time-img {
+    margin: 0px 37px;
+}
+
+.domestic .form-group .filter-div {
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.domestic .form-group .filter-div .filter-dropdown {
+    padding-top: 21px;
+    height: 80px;
+    width: 100%;
+    box-shadow: none;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.domestic .form-group .filter-div .filter-dropdown div {
+    font-size: 18px;
+    /* color: rgba(0, 0, 0, 0.3); */
+    border-color: #ffffff;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.domestic .form-group .filter-div .filter-dropdown div:nth-child(3) {
+    margin: 0px;
+    padding: 0px;
+}
+
+.domestic .form-group .filter-div .filter-dropdown div:nth-child(3) div {
+    padding: 0px;
+    max-height: 320px;
+}
+
+.domestic .form-group .filter-div .filter-dropdown div:nth-child(3) div div {
+    padding: 15px;
+    height: auto;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0.02em;
+}
+
+.domestic .form-group .passengers {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    width: 100%;
+    height: 80px;
+}
+
+.domestic .form-group .passengers .inputs-div {
+    padding: 0px 12px;
+    display: flex;
+    background: #fff;
+    width: 100%;
+    height: auto;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.domestic .form-group .passengers .inputs-div .input {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+.domestic .form-group .passengers .inputs-div .input:last-child {
+    margin-right: 0px;
+}
+
+.domestic .form-group .passengers .inputs-div .input .filter-div {
+    width: 70px;
+    font-weight: bold;
+}
+
+.domestic .form-group .passengers .inputs-div label {
+    margin: 0px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #555555;
+    text-transform: uppercase;
+}
+
+.domestic .form-group .date .react-datepicker-wrapper {
+    width: 100%;
+}
+
+.domestic .form-group .date .react-datepicker__input-container {
+    height: 80px;
+}
+
+.domestic .form-group .date .react-datepicker__input-container input {
+    height: 80px;
+}
+
+.domestic .form-group .time .input-group {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-right: 0px;
+    width: 100%;
+}
+
+.domestic .form-group .time .input-group span {
+    padding: 0px 10px;
+    width: 100px;
+}
+
+.domestic .form-group .time .react-datepicker-wrapper {
+    border-right: 1px solid #ddd;
+    width: 100%;
+}
+.domestic .form-group .time .react-datepicker-wrapper:last-child {
+    border-radius: 0px 5px 5px 0px;
+}
+
+.domestic .form-group .time .react-datepicker__input-container {
+    height: 80px;
+}
+
+.domestic .form-group .time .react-datepicker__input-container input {
+    height: 80px;
+}
+.domestic .form-group .time .react-datepicker-wrapper:last-child .react-datepicker__input-container input {
+    border-radius: 0px 5px 5px 0px;
+}
+
+.domestic .form-group .time .react-datepicker__input-container .datepicker {
+    border-radius: 0px;
+}
+
+.domestic .form-group .time .react-datepicker__time-container {
+    width: 120px;
+}
+
+.domestic .form-group .time .react-datepicker__time-container .react-datepicker__time .react-datepicker__time-box {
+    width: 120px;
+}
+
+.domestic .form-group .time .react-datepicker__time-container .react-datepicker__time .react-datepicker__time-box ul.react-datepicker__time-list li.react-datepicker__time-list-item {
+    height: 40px;
+    padding: 10px 5px;
+    font-size: 1.3em;
+}
+
+::-webkit-input-placeholder { /* Edge */
+    text-transform: none;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    text-transform: none;
+}
+::placeholder {
+    text-transform: none;
+}
+
+/* Choose flight css */
+
+.form-div .flights-div {
+    display: block;
+    margin-top: -40px;
+    padding: 0px 40px;
+    padding-bottom: 30px;
+}
+
+.form-div .flight {
+    display: grid;
+    grid-template-columns: 1fr 2px 1fr 1fr 1fr;
+    grid-gap: 15px;
+    margin-bottom: 30px;
+    padding: 20px 50px;
+    color: rgba(0, 0, 0, 0.8);
+    background: #FFFFFF;
+    border-radius: 5px;
+}
+
+.form-div .flight .d-flex {
+    align-items: center;
+}
+
+.form-div .flight img {
+    width: 55px;
+    height: 55px;
+    /* border: 1px solid #000000; */
+    border-radius: 100%;
+}
+
+.form-div .flight .d-flex h5 {
+    margin-left: 12px;
+}
+
+.form-div .flight h5 {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    margin-left: 50px;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+.form-div .flight h5.last {
+    margin-left: 0px;
+}
+
+.form-div .flight h2 {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    font-weight: bold;
+    font-size: 30px;
+    color: #092D60;
+}
+
+.form-div .flight .time {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 320px !important;
+}
+
+.form-div .flight .time h6 {
+    margin: 0;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.form-div .flight .time h4 {
+    margin: 0;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+.form-div .flight .time p {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.form-div .flight .time .mid {
+    padding-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.form-div .flight .time img {
+    margin: 0px;
+    margin-bottom: 10px;
+    width: 90px !important;
+    height: 9px;
+    border: none;
+}
+
+.form-div .flight.selected {
+    color: #FFFFFF;
+    background: #3954D5;
+}
+.form-div .flight.selected .time hr {
+    background: #FFFFFF;
+}
+.form-div .flight.selected h2 {
+    color: #FFFFFF;
+}
+
+
+/* Passenger Information css */
+
+.domestic .form.passenger-div {
+    padding: 0px 100px;
+}
+
+.domestic .passenger-div h6 {
+    margin-top: -30px;
+    margin-bottom: 50px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-style: normal;
+    text-align: left;
+}
+
+.domestic .passenger-div .radios {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.domestic .passenger-div .radios .custom-control-label {
+    font-size: 1em;
+    color: #000;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.domestic .passenger-div .form-group {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 100px;
+    margin-bottom: 50px;
+}
+
+.domestic .passenger-div .form-group .input-group {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    width: 100%;
+    height: 70px;
+}
+
+.domestic .passenger-div .form-group .input-group .input-group-text {
+    height: 70px;
+}
+.domestic .passenger-div .form-group .input-group-text .input-img {
+    width: 30px;
+}
+
+.domestic .passenger-div .form-group .input-group input {
+    height: 70px;
+    font-size: 16px;
+}
+
+.domestic .passenger-div .form-group .input-group.date input {
+    padding-left: 10px;
+}
+
+.domestic .passenger-div .custom-checkbox {
+    margin-top: -10px;
+    margin-bottom: 130px;
+}
+
+.domestic .passenger-div .custom-checkbox label {
+    color: #fff;
+}
+.domestic .passenger-div .custom-checkbox label a {
+    color: red;
+}
+
+
+/* Confirmation css */
+
+.domestic .confirmation-div {
+    margin-top: -60px;
+    padding: 0px 40px;
+    padding-bottom: 30px;
+}
+
+.domestic .confirmation-div .form {
+    padding: 0px;
+}
+
+.domestic .confirmation-div .form .header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 24px 45px;
+    background: #E0ECFC;
+}
+
+.domestic .confirmation-div .form .header img {
+    width: 30px;
+    margin-right: 30px;
+}
+
+.domestic .confirmation-div .form .header p {
+    margin: 0;
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 0.02em;
+    color: #000000;
+}
+
+.domestic .confirmation-div .form .content {
+    padding: 24px 45px;
+    padding-bottom: 58px;
+    background: #F0F6FE;
+}
+
+.domestic .confirmation-div .form .content .form-group {
+    display: block !important;
+    margin-bottom: 30px;
+}
+.domestic .confirmation-div .form .content .form-group:last-child {
+    margin-bottom: 0px;
+}
+
+.domestic .confirmation-div .form .content .header {
+    padding: 0px;
+    margin-bottom: 20px;
+    background: #F0F6FE;
+}
+
+.domestic .confirmation-div .form .content .header img {
+    width: 15px;
+    margin-right: 20px;
+}
+
+.domestic .confirmation-div .form .content .header p {
+    font-size: 18px;
+    color: #757575;
+}
+
+.domestic .confirmation-div .form .content .fields {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 70px;
+    grid-row-gap: 20px;
+}
+
+.domestic .confirmation-div .form .content .fields .input-group {
+    display: block;
+    padding: 15px 15px;
+    padding-top: 12px;
+    padding-bottom: 5px;
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid #E0ECFC;
+    border-radius: 2px;
+}
+
+.domestic .confirmation-div .form .content .fields .input-group label {
+    margin-bottom: 0px;
+    font-weight: 600;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.domestic .confirmation-div .form .content .fields .input-group .form-control {
+    padding: 0 !important;
+    font-weight: bold;
+    font-size: 16px;
+    color: #000000;
+    letter-spacing: 0.02em;
+    border: none;
+}
+
+.domestic .confirmation-div .form .content .fields .input-group .form-control:disabled, .form-control[readonly] {
+    background-color: #FFFFFF !important;
+}
+
+
+.services.domestic .btn-actions {
+    margin-top: 50px;
+    padding-bottom: 50px;
+}

@@ -1,0 +1,398 @@
+.booking-details {
+    padding: 0px;
+}
+
+.booking-details .head-div {
+    padding: 40px 30px;
+    padding-bottom: 120px;
+    display: flex;
+    background: #092D60;
+}
+
+.booking-details .head-div .arrow-prev {
+    cursor: pointer;
+}
+
+.booking-details .form-div {
+    padding: 0px;
+    padding-bottom: 1px;
+    margin: 0 30px;
+    margin-top: -65px !important;
+    width: auto;
+    background: rgba(92, 60, 60, 0.5);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.booking-details .form-div .nav-tabs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 100px;
+    border: none;
+}
+
+.booking-details .form-div .nav-tabs .nav-link {
+    padding: 22px 0px;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #000000;
+    background: #ffffff;
+    border: none;
+    border-right: 0.5px solid #333333;
+    border-radius: 0px;
+}
+.booking-details .form-div .nav-tabs .nav-link:hover {
+    opacity: 0.98;
+}
+
+.booking-details .form-div .nav-tabs .nav-link.active {
+    color: #FFFFFF;
+    background: #092D60;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Search flight css */
+
+.booking-details .form-div .form {
+    padding: 0px 30px;
+}
+
+.booking-details .form-div .form.booking {
+    padding-bottom: 140px;
+}
+
+.booking-details .form-group {
+    display: grid !important;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+    width: 804px;
+}
+.booking-details .form-group:last-child {
+    margin-bottom: 0px;
+}
+
+.booking-details .form-group .input-group {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    width: 100%;
+    height: 80px;
+}
+
+.booking-details .form-group .input-group input {
+    width: 100%;
+    height: 80px;
+    font-size: 18px;
+}
+
+.booking-details .form-group .input-group-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    background-color: #EEEEEE;
+    border: none;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.booking-details .form-group .input-group-text .input-img {
+    width: 40px;
+}
+
+.booking-details .selection-div {
+    padding: 0px 50px;
+    margin-top: -30px;
+}
+
+.booking-details .selection-div h6 {
+    margin-bottom: 50px;
+    font-weight: bold;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.booking-details .selection-div .form {
+    padding: 0px;
+}
+
+.booking-details .selection-div .flex-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 150px;
+}
+
+.booking-details .selection-div .flex-div .left .custom-control {
+    margin-bottom: 40px;
+}
+.booking-details .selection-div .flex-div .left .custom-control:last-child {
+    margin-bottom: 0px;
+}
+
+.booking-details .selection-div .flex-div .left .custom-control label {
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.booking-details .selection-div .flex-div .right .btn-select {
+    height: auto;
+    width: 180px;
+    padding: 15px 0px;
+    font-weight: 800 !important;
+    font-size: 14px !important;
+    text-transform: capitalize;
+    color: #092D60;
+    background: #FFFFFF;
+    border-radius: 5px;
+}
+.booking-details .selection-div .flex-div .right .btn-select:last-child {
+    margin-top: 30px;
+}
+
+.booking-details .selection-div .form hr {
+    margin-bottom: 40px;
+    height: 2px;
+    border: none;
+    background: #FFFFFF;
+}
+
+.booking-details .selection-div .form .note {
+    margin-bottom: 40px;
+    font-weight: 800;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+}
+
+.booking-details .selection-div .form .note span {
+    color: #FF1100;
+}
+
+
+/* Choose flight css */
+
+.form-div .flights-div {
+    display: block;
+    margin-top: -40px;
+    padding: 0px 40px;
+    padding-bottom: 30px;
+}
+
+.form-div .flight {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+    grid-gap: 15px;
+    margin-bottom: 30px;
+    padding: 20px 50px;
+    color: rgba(0, 0, 0, 0.8);
+    background: #FFFFFF;
+    border-radius: 5px;
+}
+
+.form-div .flight .d-flex {
+    align-items: center;
+}
+
+.form-div .flight img {
+    width: 55px;
+    height: 55px;
+    /* border: 1px solid #000000; */
+    border-radius: 100%;
+}
+
+.form-div .flight .d-flex h5 {
+    margin-left: 12px;
+}
+
+.form-div .flight h5 {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    margin-left: 50px;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+.form-div .flight h5.last {
+    margin-left: 0px;
+}
+
+.form-div .flight h2 {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    font-weight: bold;
+    font-size: 30px;
+    color: #092D60;
+}
+
+.form-div .flight .time {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-div .flight .time h6 {
+    margin: 0;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.form-div .flight .time h4 {
+    margin: 0;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+.form-div .flight .time p {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.form-div .flight .time .mid {
+    padding-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.form-div .flight .time hr {
+    margin: 0px;
+    margin-bottom: 10px;
+    width: 125px;
+    height: 1px;
+    background: #000000;
+    border: none;
+}
+
+.form-div .flight.selected {
+    color: #FFFFFF;
+    background: #3954D5;
+}
+.form-div .flight.selected .time hr {
+    background: #FFFFFF;
+}
+.form-div .flight.selected h2 {
+    color: #FFFFFF;
+}
+
+
+
+/* Confirmation css */
+
+.booking-details .confirmation-div {
+    margin-top: -60px;
+    padding: 0px 40px;
+    padding-bottom: 30px;
+}
+
+.booking-details .confirmation-div .form {
+    padding: 0px;
+}
+
+.booking-details .confirmation-div .form .header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 24px 45px;
+    background: #E0ECFC;
+}
+
+.booking-details .confirmation-div .form .header img {
+    width: 30px;
+    margin-right: 30px;
+}
+
+.booking-details .confirmation-div .form .header p {
+    margin: 0;
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 0.02em;
+    color: #000000;
+}
+
+.booking-details .confirmation-div .form .content {
+    padding: 24px 45px;
+    padding-bottom: 58px;
+    background: #F0F6FE;
+}
+
+.booking-details .confirmation-div .form .content .form-group {
+    display: block !important;
+    margin-bottom: 30px;
+    width: auto;
+}
+.booking-details .confirmation-div .form .content .form-group:last-child {
+    margin-bottom: 0px;
+}
+
+.booking-details .confirmation-div .form .content .header {
+    padding: 0px;
+    margin-bottom: 20px;
+    background: #F0F6FE;
+}
+
+.booking-details .confirmation-div .form .content .header img {
+    width: 15px;
+    margin-right: 20px;
+}
+
+.booking-details .confirmation-div .form .content .header p {
+    font-size: 18px;
+    color: #757575;
+}
+
+.booking-details .confirmation-div .form .content .fields {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 70px;
+    grid-row-gap: 20px;
+}
+
+.booking-details .confirmation-div .form .content .fields .input-group {
+    display: block;
+    padding: 15px 15px;
+    padding-top: 12px;
+    padding-bottom: 5px;
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid #E0ECFC;
+    border-radius: 2px;
+}
+
+.booking-details .confirmation-div .form .content .fields .input-group label {
+    margin-bottom: 0px;
+    font-weight: 600;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.booking-details .confirmation-div .form .content .fields .input-group .form-control {
+    margin-top: 8px;
+    padding: 0 !important;
+    height: auto;
+    font-weight: bold;
+    font-size: 16px;
+    color: #000000;
+    letter-spacing: 0.02em;
+    border: none;
+}
+
+.booking-details .confirmation-div .form .content .fields .input-group .form-control:disabled, .form-control[readonly] {
+    background-color: #FFFFFF !important;
+}
+
+
+.services.booking-details .btn-actions {
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
