@@ -2,9 +2,6 @@ import Head from "next/head"
 import Header from "../components/Header/Header"
 import Footer from "../components/Footer/Footer"
 import styles from '../styles/index.module.css'
-import LeftSideBar from "../components/LeftSideBar/LeftSideBar"
-import RightSideBar from "../components/RightSideBar/RightSideBar"
-import MiddleBar from "../components/MiddleBar/MiddleBar"
 import HomeBodyTop from "../components/HomeBodyTop/HomeBodyTop"
 import BodyNav from "../components/BodyNav/BodyNav"
 
@@ -18,7 +15,7 @@ export default function Home() {
       </Head>
       <Header/>
       <HomeBodyTop/>
-      {/* <BodyNav/> */}
+      <BodyNav/>
       <Footer/>
       
 
