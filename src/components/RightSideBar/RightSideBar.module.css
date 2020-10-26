@@ -1,0 +1,27 @@
+.rightSidebar__top{
+    display: grid;
+    grid-auto-rows: auto;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+}
+
+.rightSidebar__top>div{
+    padding: 10px 18px;
+    
+}
+.rightSideBar__icon{
+    padding-right: 13px;
+    float: left;
+}
+.rightSideBar__text1{
+    float: left;
+    font-weight: 500;
+    font-size: 14px;
+}
+.rightSideBar__text2{
+    font-size: 12px;
+}
+.rightSidebar__bottom{
+    margin-top: 14px;
+}
