@@ -29,27 +29,27 @@ export default function Footer() {
         <div>
           {item1.map((item, index) => {
             if (index === 0) {
-              return <h2>{item}</h2>
+              return <h2 key={index}>{item}</h2>
             } else {
-              return <p>{item}</p>
+              return <p key={index}>{item}</p>
             }
           })}
         </div>
         <div>
           {item2.map((item, index) => {
             if (index === 0) {
-              return <h2>{item}</h2>
+              return <h2 key={index+item}>{item}</h2>
             } else {
-              return <p>{item}</p>
+              return <p key={index}>{item}</p>
             }
           })}
         </div>
         <div>
           {item3.map((item, index) => {
             if (index === 0) {
-              return <h2>{item}</h2>
+              return <h2 key={index}>{item}</h2>
             } else {
-              return <p>{item}</p>
+              return <p key={index}>{item}</p>
             }
           })}
         </div>

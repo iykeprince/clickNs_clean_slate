@@ -18,7 +18,7 @@ const htmlData = [];
 for (let key in LeftSideBarData) {
   let value = LeftSideBarData[key];
   htmlData.push(
-    <div>
+    <div key={key}>
       <img src={key} alt="icon" className={styles.leftSideBar__icon} />
       <span className={styles.leftSideBar__text}>{value} </span>
     </div>
