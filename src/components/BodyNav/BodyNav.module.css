@@ -1,0 +1,10 @@
+.bodyNavContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1em;
+}
+
+.bodyNav__icon{
+    padding-right: 13px;
+    /* float: left; */
+}

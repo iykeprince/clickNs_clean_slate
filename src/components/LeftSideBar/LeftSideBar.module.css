@@ -1,0 +1,16 @@
+.leftSidebar__container{
+    display: grid;
+    grid-auto-rows: auto;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+}
+
+.leftSidebar__container>div{
+    padding: 8px 18px;
+    
+}
+.leftSideBar__icon{
+    padding-right: 13px;
+    float: left;
+}
