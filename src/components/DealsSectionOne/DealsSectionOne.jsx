@@ -12,7 +12,7 @@ function DealsSectionOne() {
                         <p>Recommended for you</p>
                         </div>
                     </Col>
-
+                    
                     
                     </Row>
                     </Container>
