@@ -1,71 +1,78 @@
 .footer {
   background-color: #002a55;
-  padding: 64px 80px;
-  margin-top: 500px;
+  padding: 64px 80px !important;
+  margin-top: 92px !important;
 }
 .container {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
   color: #fff;
 }
-.container h2 {
-  font-size: 18px;
-  font-weight: 800;
-  margin-bottom: 30px;
+.rowOne__wrapper p{
+    padding-top:10px !important;
+    padding-bottom:10px !important;
+    padding-right:10px !important;
+    font-size: 12px ;
 }
-.container p {
-  font-size: 12px;
-  font-weight: 500;
-  margin-bottom: 20px;
+.rowOne__wrapper h2{
+    font-weight: 800;
+    font-size: 18px ;
+    margin-bottom: 20px !important;
 }
-.container .images img {
-  background-color: #fff;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  object-fit: none;
-  margin-right: 15px;
-}
-.container .blackimg {
-  width: 100%;
+.rowOne__wrapper h5{
+    font-weight: bold;
+    font-size: 12px ;
+    line-height: 20px;
 }
 .shop {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 15px;
-  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 12px ;
+  margin-top: 15px !important;
 }
+
 .smallCard {
   background-color: #ffba08;
-  padding: 5px 10px;
+  padding: 5px 10px !important;
+  width: 45px;
+  height: 46px;
+  float: right;
+  margin-top: -40px !important;
 }
 .smallCard p {
-  margin-bottom: 0;
   color: #000;
-}
-.flex {
-  display: flex;
-  /* justify-content: space-between; */
-  align-items: center;
-  justify-content: center;
-}
-.googleStore {
-  position: relative;
-}
-.googleStore img:nth-of-type(2) {
-  position: absolute;
-  top: -16px;
-  left: 12px;
-}
-.footer__bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.footer__bottom p {
-  color: #fff;
+  padding: 0px !important;
+  font-weight: bold;
+    font-size: 14px ;
 }
 .footer__bottom span {
-  margin-right: 10px;
+  margin-right: 10px !important;
+}
+.smallInfoGroup{
+    padding-bottom: 30px !important;
+}
+.newsLetterSection{
+    padding-bottom: 66px !important;
+}
+.newsLetterSection >p{
+    line-height: 20px;
+}
+.secondRow{
+    float: right;
+}
+.googlePlay{
+  margin-right: 21px !important;
+}
+.econnectLogo{
+  margin-right: 40px !important;
+}
+.socialMedia{
+  padding-right: 15px !important;
+}
+.readMore{
+  padding-left: 80px !important;
+}
+.lastRow, .playSection, .eConnectLimited{
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
+}
+.blog{
+  max-width: 250px;
 }

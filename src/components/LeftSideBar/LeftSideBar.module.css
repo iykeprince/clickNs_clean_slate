@@ -1,16 +1,19 @@
 .leftSidebar__container{
-    display: grid;
-    grid-auto-rows: auto;
     background: #FFFFFF;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
     border-radius: 5px;
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+    padding-right: 18px !important;
+    margin-left: 50px !important;
+    max-width: 252px;
 }
 
 .leftSidebar__container>div{
-    padding: 8px 18px;
-    
+    padding: 5.2px !important;
 }
 .leftSideBar__icon{
-    padding-right: 13px;
+    padding-right: 13px !important;
+    padding-left: 10px !important;
     float: left;
 }
