@@ -1,9 +1,10 @@
-.homeBodyTop__container{
-    display: grid;
-    /* grid-template-columns: 1fr 1fr 1fr; */
-    grid-template-columns: minmax(200px, 300px) 1fr 1fr;
-    grid-gap: 16px;
-    margin-left: 2%;
-    margin-right: 2%;
-    margin-top: 18px;
+.container{
+    margin-top: 18px !important;
+}
+@media screen and (max-width: 960px) {
+    .leftSideBar, .rightSideBar{
+        display: none !important;
+        visibility: hidden;
+        clear: both;
+    }
 }

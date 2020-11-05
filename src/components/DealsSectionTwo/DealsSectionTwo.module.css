@@ -1,0 +1,13 @@
+.dealsSectionTitle{
+    height: 43px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 23px;
+    padding-top:13px !important;
+    padding-left:18px !important;
+    background: linear-gradient(180deg, #F30F0F 0%, #DC0000 100%);
+    border-radius: 5px 5px 0px 0px
+}
+.dealsSectionTitle>p{
+    color: white;
+}

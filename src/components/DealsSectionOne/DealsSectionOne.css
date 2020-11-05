@@ -1,0 +1,15 @@
+.dealsSectionContainer{ 
+    padding-left: 50px !important;
+    padding-right: 50px !important; 
+    margin-bottom: 26px !important;
+}
+
+.dealsSectionTitle{
+    height: 43px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 23px;
+    padding-top:13px !important;
+    padding-left:18px !important;
+    background-color: white;
+}
