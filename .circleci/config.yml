@@ -13,6 +13,7 @@ workflows:
 
   staging:
     jobs:
+      # Staging
       - shops-staging:
           filters:
             branches:
