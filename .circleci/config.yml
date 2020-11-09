@@ -6,7 +6,7 @@ jobs:
     steps:
       - run:
           name: Deploy Shop Frontend
-          command: ssh -o "StrictHostKeyChecking no" ubuntu@ec2-3-17-6-220.us-east-2.compute.amazonaws.com "cd ~/app/react-frontend; git checkout clicknshop; yarn install --production; yarn build; sudo cp -r build/* /var/www/shop.woozeee.com/"
+          command: ssh -o "StrictHostKeyChecking no" ubuntu@ec2-3-17-6-220.us-east-2.compute.amazonaws.com "cd ~/app/shop; git checkout clicknshop; yarn install --production; yarn build; sudo cp -r build/* /var/www/shop.woozeee.com/"
 
 workflows:
   version: 2
