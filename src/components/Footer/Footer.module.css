@@ -76,3 +76,9 @@
 .blog{
   max-width: 250px;
 }
+.readCount>img{
+  padding-right:5px !important;
+}
+.readCount{
+  padding-right:10px !important;
+}

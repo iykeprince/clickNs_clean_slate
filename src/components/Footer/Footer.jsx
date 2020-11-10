@@ -117,11 +117,11 @@ function Footer() {
                 </p>
                 <div className={`${styles.flex} ${styles.bgd}`}>
                   <span className={styles.flex}>
-                    <span className={styles.flex}>
+                    <span className={styles.readCount}>
                       <img src="/images/eye.png" alt="eye" />
                       <span>50</span>
                     </span>
-                    <span className={styles.flex}>
+                    <span className={styles.readCount}>
                       <img src="/images/msg.png" alt="message" />
                       <span>8</span>
                     </span>

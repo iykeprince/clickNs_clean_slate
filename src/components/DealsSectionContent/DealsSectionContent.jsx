@@ -6,6 +6,7 @@ import styles from '../DealsSection/DealsSection.module.css'
 function DealsSectionContent() {
     return (
         <div>
+            
             <Col sm='6' md='4' lg='2' className={styles.dealsProduct}>
                     <div className={styles.percentDiscount}>
                         <span className={styles.percentDiscount__text}>-20%</span>

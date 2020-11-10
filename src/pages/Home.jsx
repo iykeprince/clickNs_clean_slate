@@ -9,19 +9,29 @@ import FeaturedSection from "../components/FeaturedSection/FeaturedSection";
 import DealsSectionTwo from "../components/DealsSectionTwo/DealsSectionTwo";
 import ImageDisplaySection from "../components/ImageDisplaySection/ImageDisplaySection";
 import SingleImageCard from '../components/SingleImageCard/SingleImageCard';
+import ImageDisplaySectionTwo from '../components/ImageDisplaySectionTwo/ImageDisplaySectionTwo';
+import DealsSectionFour from '../components/DealsSectionFour/DealsSectionFour';
+import DealsSectionThree from '../components/DealsSectionThree/DealsSectionThree';
+import './Home.css';
 
 function Home() {
     return (
         <div>
+            
             <Header />
+            <div className='home__wrapper'>
             <HomeBodyTop />
             <BodyNav />
             <DealsSection />
             <DealsSectionTwo/>
             <SingleImageCard/>
             <FeaturedSection />
+            <ImageDisplaySectionTwo/>
+            <DealsSectionThree/>
+            <DealsSectionFour/>
             <ImageDisplaySection/>
             <BottomAboutSection />
+            </div>
             <Footer/>
         </div>
     )

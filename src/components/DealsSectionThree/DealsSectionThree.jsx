@@ -1,15 +1,15 @@
 import React from 'react'
 import styles from '../DealsSection/DealsSection.module.css'
-import stylesThree from './DealsSectionThree.css'
+import stylesThree from './DealsSectionThree.module.css'
 import {Container, Row, Col} from 'react-bootstrap'
 
 function DealsSectionThree() {
     return (
-        <div>
+        <div  className={styles.dealsSectionTwo}>
              <Container fluid className={styles.dealsSectionContainer}>
                 <Row>
                     <Col md='12' className={styles.dealsSectionTitle__container}>
-                        <div className={stylesThree.dealsSectionTitle}>
+                        <div className={`${styles.dealsSectionTitle} ${stylesThree.bgYellow}`}>
                         <p>Deals of The Day</p>
                         </div>
                     </Col>

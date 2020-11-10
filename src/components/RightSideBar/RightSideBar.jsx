@@ -6,20 +6,20 @@ function RightSideBar() {
         <div className={styles.rightSidebar__container}>
             <div  className={styles.rightSidebar__top}>
             <div>
-                <img src='/images/RightSideBar/Quality.svg' alt="icon" className={styles.rightSideBar__icon} />
-                <span className={styles.rightSideBar__text1}>Quality Assurance</span><br/>
+                <img src='/images/RightSideBar/qualityAssurance.svg' alt="icon" className={styles.rightSideBar__icon} />
+                <span className={styles.rightSideBar__text1}>QUALITY ASSURANCE</span><br/>
                 <span className={styles.rightSideBar__text2}>Products you can trust</span>
                 </div>
 
                 <div>
-                <img src='/images/RightSideBar/refund.svg' alt="icon" className={styles.rightSideBar__icon} />
-                <span className={styles.rightSideBar__text1}>Refund Assurance</span><br/>
+                <img src='/images/RightSideBar/refundAssurance.svg' alt="icon" className={styles.rightSideBar__icon} />
+                <span className={styles.rightSideBar__text1}>REFUND ASSURANCE</span><br/>
                 <span className={styles.rightSideBar__text2}>Quick Refund</span>
                 </div>
 
                 <div>
-                <img src='/images/RightSideBar/Badge.svg' alt="icon" className={styles.rightSideBar__icon} />
-                <span className={styles.rightSideBar__text1}>Become a Seller</span><br/>
+                <img src='/images/RightSideBar/sellerBadge.svg' alt="icon" className={styles.rightSideBar__icon} />
+                <span className={styles.rightSideBar__text1}>BECOME A SELLER</span><br/>
                 <span className={styles.rightSideBar__text2}>Trade on the Platform</span>
                 </div>
             </div>

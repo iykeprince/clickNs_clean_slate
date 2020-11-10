@@ -1,6 +1,6 @@
 .bodyNav__container{
-    padding-left: 30px !important;
-    padding-right: 30px !important; 
+    /* padding-left: 7% !important;
+    padding-right: 7% !important; */
 }
 .bodyNavGroup, .bodyNavGroup1, .bodyNavGroup4{
     display: flex;
@@ -10,15 +10,20 @@
     margin: 22px 20px 27px !important;
     background-color: white;
 }
-
+.bodyNavGroup1{
+    margin-left:0px !important;
+}
+.bodyNavGroup4{
+    margin-right:0px !important;
+}
 .bodyNav__icon{
     padding-left: 20px !important;
 }
 
 .bodyNav__text{
     padding-top: 15px !important;
-    font-size: 18px;
-    padding-left: 22px !important;
+    font-size: 16px;
+    padding-left: 16px !important;
 }
 .row1 {
     display: flex;

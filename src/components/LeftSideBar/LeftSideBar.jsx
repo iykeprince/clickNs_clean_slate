@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./LeftSideBar.module.css";
+// import {Link} from "react-router-dom";
 
 const LeftSideBarData = {
   "/images/LeftSideBar/phone.svg": "Phone & Tablets",
@@ -18,10 +19,12 @@ const htmlData = [];
 for (let key in LeftSideBarData) {
   let value = LeftSideBarData[key];
   htmlData.push(
+    // <Link to=''>
     <div key={key}>
       <img src={key} alt="icon" className={styles.leftSideBar__icon} />
       <span className={styles.leftSideBar__text}>{value} </span>
     </div>
+    // </Link>
   );
 }
 

@@ -3,26 +3,26 @@ import LeftSideBar from '../LeftSideBar/LeftSideBar'
 import MiddleBar from '../MiddleBar/MiddleBar'
 import RightSideBar from '../RightSideBar/RightSideBar'
 import styles from './HomeBodyTop.module.css'
-import { Container, Row, Col} from 'react-bootstrap';
-
+import { Container} from 'react-bootstrap';
+import './HomeBodyTop.module.css'
 
 function HomeBodyTop() {
     return (
         <div>
             <Container fluid className={styles.container}>
-                <Row>
-                    <Col lg='3'>
-                    <LeftSideBar  className={styles.leftSideBar}/>
-                    </Col>
+                <div className={styles.grid__Container}>
+                    <div class={styles.griditem}>
+                    <LeftSideBar className={styles.leftSideBar} />
+                    </div>
 
-                    <Col lg='6'>
+                    <div className={styles.griditem}>
                     <MiddleBar  className={styles.middleBar}/>
-                    </Col>
+                    </div>
 
-                    <Col lg='3'>
+                    <div className={styles.griditem}>
                     <RightSideBar className={styles.rightSideBar}/>
-                    </Col>
-                </Row>
+                    </div>
+                </div>
             </Container>
             
         </div>
