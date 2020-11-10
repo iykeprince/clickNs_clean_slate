@@ -36,7 +36,7 @@
 }
 .header__option{
     display: flex;
-    padding-right: 5px !important;
+    /* padding-right: 5px !important; */
 }
 .header__icon{
     float: left;
@@ -64,6 +64,7 @@
     padding-top: 5px !important;
     padding-bottom: 5px !important;
     background-color: #F5F5F5 !important;
+    
 }
 .headerThirdRow{
     padding-top: 10px !important;
@@ -73,7 +74,7 @@
 }
 .grid__Container{
     display: grid;
-    grid-template-columns: 1fr 3fr 1.2fr;
+    grid-template-columns: 1fr 3fr 1.1fr;
 }
 .sell{
     padding-left: 135px !important;
