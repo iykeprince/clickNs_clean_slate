@@ -1,18 +1,18 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap';
-import styles from './BottomAboutSection.module.css'
+// import styles from './BottomAboutSection.module.css'
 
 function BottomAboutSection() {
     return (
-        <div className={styles.bottomAboutSection__container}>
-            <Container fluid className={styles.bottomAboutSection__wrapper}>
+        <div className="bottomAboutSection__container">
+            <Container fluid className="bottomAboutSection__wrapper">
                 <Row>
-                    <Col md='12' className={styles.bottomAboutSection__title}>
+                    <Col md='12' className="bottomAboutSection__title">
                         <p>Woozeee - The No. 1 Market Place For Smart People</p>
                     </Col>
                 </Row>
                 <Row>
-                    <Col md='12' className={styles.bottomAboutSection__text}>
+                    <Col md='12' className="bottomAboutSection__text">
                     <p>“woozeee” is a lifestyle platform that combines the power of a social media community and an
                         ecommerce marketplace to create an experience like no other. Our social media platform offers a
                         unique experience to fun loving and business

@@ -1,0 +1,18 @@
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+
+//components
+
+@import "./components/bodynav";
+
+@import "./components/bottom_about_section";
+
+
+@import "./components/deal_section";
+@import "./components/phone_segment";
+
+// scss files for pages 
+
+@import "./pages/categories";
+
+@import "./components/navbar.scss"

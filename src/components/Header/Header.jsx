@@ -1,17 +1,24 @@
 import React from 'react'
-// import { Link } from "react-router-dom"
+import { Link } from "react-router-dom"
 import styles from "./Header.module.css"
 import "./Header.module.css"
-import Search from '../Search/Search'
+import Search from '../Search/Search';
+import SideNav from '../SideNav/SideNav';
 import { Row, Col, } from 'react-bootstrap';
 
 export default function Header() {
   return (
+
+
+
     <header className={styles.header__container}>
       <Row>
         <Col md='12'>
         <div className={styles.image__wrapper}>
         {/* <Link href="/"> */}
+
+    
+
           <img
             src="/images/header/blackFridayAnimation.gif"
             alt="top advert"
@@ -50,6 +57,8 @@ export default function Header() {
         </div>
         </Col>
         <Col md='6'>
+
+     
             <span  className={styles.headerSecondIcon}>
             <img src="/images/header/woozeeeSmall.svg" alt="sell" /> 
             </span>
@@ -67,14 +76,22 @@ export default function Header() {
             </span>
         </Col>
       </Row>
+  
       <Row className={styles.headerThirdRow}>
+
+      <SideNav/>
         <div className={styles.grid__Container}>
         <div className={styles.grid__item} >
-              <img
+
+ 
+        <Link to="/">   
+        
+           <img
                 src="/images/woozeeeLogo.svg"
                 alt=""
                 className={styles.header__logo}
               />
+          </Link>    
         </div>
 
         <div  className={styles.grid__item} >
