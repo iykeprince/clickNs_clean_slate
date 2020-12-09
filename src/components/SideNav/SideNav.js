@@ -10,7 +10,7 @@ function SideNav() {
             
             style={{ fontSize:"1.5rem"}}
 
-            />
+            /> 
         </div>
     )
 }

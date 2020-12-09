@@ -18,12 +18,13 @@
 }
 .percentDiscount{
     position: relative;
-    width: 32px;
+    /* width: 32px; */
     float: right;
-    margin-right: 7px !important;
+    padding: 0px 9px 0px 9px!important;
+    margin: 5px 9px -20px 4px !important;
     /* background-color: #FFDEDE; */
-    background-color:#FF5757;
-    z-index: 2;
+    background-color: #FF5757;
+    z-index: 2
 }
 .percentDiscount__text{
     position: relative;

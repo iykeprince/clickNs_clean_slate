@@ -1,16 +1,35 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 // import {} from 'react-bootstrap'
-import Footer from '../components/Footer/Footer'
-import Header from '../components/Header/Header'
-import PhoneTablets from '../components/PhoneTablets/PhoneTablets'
-import PhoneTabletsII from '../components/PhoneTabletsII/PhoneTabletsII'
-import PhoneTabletsIII from '../components/PhoneTabletsIII/PhoneTabletsIII'
-import PhoneTabletsIV from '../PhoneTabletsIV/PhoneTabletsIV'
+import Footer from '../components/Footer/Footer';
+import Header from '../components/Header/Header';
+import OrderTable from '../components/OrderTable';
+import OrderTableI from '../components/OrderTableI';
+import OrderTableII from '../components/OrderTableII';
+import PriceSlash from '../components/PriceSlash';
+import PriceSlashI from '../components/PriceSlashI';
+import PriceSlashII from '../components/PriceSlashII';
+import PriceSlashIII from '../components/PriceSlashIII';
+import PriceSlashIV from '../components/PriceSlashIV';
+import PriceSlashV from '../components/PriceSlashV';
+import OfficialStore from '../components/OfficialStore';
+import OfficialStoreI from '../components/OfficialStoreI';
+import CatSideNav from '../components/CatSideNav/Index';
 
-function CategoryList() {
-    return (
-        <div>
+
+
+
+
+class CategoryList extends React.Component{
+
+
+    render(){
+
+        return(
+
+            <React.Fragment>
+
+<div>
             <Header />
 
   
@@ -47,10 +66,19 @@ function CategoryList() {
         />
         </div>
 
+        <OrderTable/>
 
 
+        <PriceSlash/>
 
-        <PhoneTablets/>
+    <PriceSlashI/>
+
+
+<div>
+    
+</div>
+
+        {/* <PhoneTablets/> */}
         
         <div class="grid-container">
                 <div class="grid-item">
@@ -76,13 +104,24 @@ function CategoryList() {
                 </div>  
 
         </div>
+        {/* <PhoneTablets/> */}
+        {/* <PhoneTabletsII/> */}
 
-        <PhoneTabletsII/>
+
+        <PriceSlashII/>
            
+        <OrderTableI/>
 
-        <PhoneTabletsIII/>
+     
+        
+        <PriceSlashIII/>
 
-        <PhoneTabletsIV/>
+        <PriceSlashIV/>
+
+        <OrderTableII/>
+
+
+    
 
         <br/>
         <br/><br/>
@@ -102,11 +141,23 @@ function CategoryList() {
         </Col>
 
     </Row> */}
+
+<OfficialStore/>
+
+<OfficialStoreI/>
+
+
+<PriceSlashV/>
+
+
+<CatSideNav/>
 </div>
 
             <Footer />
         </div>
-    )
+            </React.Fragment>
+        )
+    }
 }
 
 export default CategoryList

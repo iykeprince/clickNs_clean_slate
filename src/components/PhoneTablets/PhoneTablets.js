@@ -1,6 +1,9 @@
 import React from 'react'
 import {Container, Row, Col} from 'react-bootstrap';
-import * as FaIcon from "react-icons/fa"
+import * as FaIcon from "react-icons/fa";
+// import PhoneTabletsContent from './PhoneTabletContent';
+// import PhoneTabletsItems from './PhoneTabletItems';4
+// import PhoneTabletItems from './PhoneTabletsItems.js'
 
 function PhoneTablets() {
     return (
@@ -8,7 +11,7 @@ function PhoneTablets() {
        <div>
 
         <div className="budget_segment">
-
+        PhoneTabletsItems 
                 <div style={{textAlign:"left"}}>
                 <div className="bp-span">
                 <span >SEE ALL</span>    <FaIcon.FaAngleRight />
@@ -29,7 +32,13 @@ function PhoneTablets() {
 
                 <Row>
                 
+                {/* {PhoneTabletItems.map((e, i) => { */}
+              {/* return ( */}
+                {/* <PhoneTabletsContent key={i} percentage={e.percentage} img={e.img} productname={e.productname} currentprice={e.currentprice} previousprice={e.previousprice}/> */}
 
+                {/* // <TableContent key={i} url={e.url}/> */}
+              {/* ); */}
+            {/* })} */}
                 <Col md={2}> 
                     <div className="bpp_card">
 
