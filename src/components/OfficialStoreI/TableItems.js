@@ -21,8 +21,6 @@ export const TableItems =[
     info:'Basic Phone',
   },
 
-
-
   {
     img:'./images/phones/Rectangle 2241.png',
     info:'Ipads',

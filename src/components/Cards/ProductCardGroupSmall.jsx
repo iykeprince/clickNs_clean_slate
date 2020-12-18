@@ -1,30 +1,49 @@
 import React from "react";
 import ProductDetailCard from "../Cards/ProductDetailCard";
-import { Row, Col } from "react-bootstrap";
+import { Row} from "react-bootstrap";
 import imgSamsung from "../../assets/samsungFrontBack809.png";
-
+import "./ProductCardGroupSmall.css";
+import { Link } from "react-router-dom";
 const ProductCardGroupSmall = (props) => {
   return (
     <div>
-      <Row>
-        <Col sm="6" md="4" lg="1">
-          <ProductDetailCard productImg={imgSamsung} productName={`Samsung Galaxy..`}/>
-        </Col>
-        <Col sm="6" md="4" lg="1">
-          <ProductDetailCard productImg={imgSamsung} productName={`Samsung Galaxy..`}/>
-        </Col>
-        <Col sm="6" md="4" lg="1">
-          <ProductDetailCard productImg={imgSamsung} productName={`Samsung Galaxy..`}/>
-        </Col>
-        <Col sm="6" md="4" lg="1">
-          <ProductDetailCard productImg={imgSamsung} productName={`Samsung Galaxy..`}/>
-        </Col>
-        <Col sm="6" md="4" lg="1">
-          <ProductDetailCard productImg={imgSamsung} productName={`Samsung Galaxy..`}/>
-        </Col>
-        <Col sm="6" md="4" lg="1">
-          <ProductDetailCard productImg={imgSamsung} productName={`Samsung Galaxy..`}/>
-        </Col>
+      <Row className="prodSmallRow">
+        <Link to="/product" className="prodSmallCol col-lg-2 col-md-4 col-sm-6">
+          <ProductDetailCard
+            productImg={imgSamsung}
+            productName={`Samsung Galaxy..`}
+          />
+        </Link>
+        <Link to="/product" className="prodSmallCol col-lg-2 col-md-4 col-sm-6">
+          <ProductDetailCard
+            productImg={imgSamsung}
+            productName={`Samsung Galaxy..`}
+          />
+        </Link>
+        <Link to="/product" className="prodSmallCol col-lg-2 col-md-4 col-sm-6">
+          <ProductDetailCard
+            productImg={imgSamsung}
+            productName={`Samsung Galaxy..`}
+          />
+        </Link>
+        <Link to="/product" className="prodSmallCol col-lg-2 col-md-4 col-sm-6">
+          <ProductDetailCard
+            productImg={imgSamsung}
+            productName={`Samsung Galaxy..`}
+          />
+        </Link>
+        <Link to="/product" className="prodSmallCol col-lg-2 col-md-4 col-sm-6">
+          <ProductDetailCard
+            productImg={imgSamsung}
+            productName={`Samsung Galaxy..`}
+          />
+        </Link>
+        <Link to="/product" className="prodSmallCol col-lg-2 col-md-4 col-sm-6">
+          <ProductDetailCard
+            productImg={imgSamsung}
+            productName={`Samsung Galaxy..`}
+          />
+        </Link>
       </Row>
     </div>
   );

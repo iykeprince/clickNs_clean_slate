@@ -1,0 +1,95 @@
+.productDescription {
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  padding: 35px 18px 69px 18px !important;
+}
+.sponsoredRight {
+  background: #ffffff;
+  border-radius: 5px;
+}
+.RightSide2 {
+  padding-left: 15px !important;
+}
+.sponsoredTitle {
+  font-weight: bold;
+  font-size: 18px;
+  padding-top: 14px !important;
+  padding-left: 10px !important;
+  border-bottom: 2px solid #f1f1f1;
+}
+.innerDetail {
+  width: 95%;
+}
+.innerDetail > p {
+  font-weight: 400;
+  font-size: 14px;
+}
+.innerDetail > img {
+  padding-bottom: 21px !important;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.productDetailRowThree {
+  margin-top: 34px !important;
+}
+.Descriptions a {
+  font-weight: bold;
+  font-size: 19px;
+  color: rgba(0, 0, 0, 0.5);
+  border: 1px solid #dadada;
+  background-color: white;
+  border-radius: 5px;
+  padding: 13px 16px !important;
+  margin-right: 1px !important;
+}
+
+.Descriptions a:active,
+.Descriptions a:hover {
+  color: #043e7d !important;
+}
+.Descriptions a:hover {
+  outline: none;
+  box-shadow: none;
+}
+.Descriptions .active {
+  color: #043e7d;
+  border-bottom: 0px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.Descriptions .title2 {
+  padding-left: 56px !important;
+  padding-right: 56px !important;
+}
+@media screen and (max-width: 768px) {
+  .Descriptions a {
+    font-size: 14px;
+    padding: 6px 6px !important;
+  }
+  .Descriptions .title2 {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .Descriptions a {
+    border: none;
+    padding: 10px 0px !important;
+    margin-right: 1px !important;
+  }
+
+  .Descriptions .nav {
+    font-weight: bold;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.5);
+    border: 1px solid #dadada;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background-color: white;
+    padding: 3px 6px !important;
+    margin-right: 1px !important;
+  }
+}

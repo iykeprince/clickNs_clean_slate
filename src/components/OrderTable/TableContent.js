@@ -1,37 +1,46 @@
 import React from "react";
-// import{Button} from 'react-bootstrap';
 
-class TableContent extends React.Component {
-  render() {
-    return (
-      <React.Fragment>
-  
-        <div >
-          <div className="ps_card">
-           <img
-            src={this.props.img}
-            className="ps_card_img"
-           alt="iphone 11"
-           />
-           </div>
-           <br/>
-          <b><p>{this.props.info}</p></b> 
-    </div>
+const TableContent = (props) => {
+  return (
+    <React.Fragment>
+      <div>
+        <div className="ps_card">
+          <img src={props.img} className="ps_card_img" alt="iphone 11" />
+        </div>
+        <br />
+        <b>
+          <p>{props.info}</p>
+        </b>
+      </div>
+    </React.Fragment>
+  );
+};
 
-   
-    
-   
-  
- 
-
-      </React.Fragment>
-    );
-  }
-}
 export default TableContent;
+
+
+
+// class TableContent extends React.Component {
+//   render() {
+//     return (
+//       <React.Fragment>
+//         <div>
+//           <div className="ps_card">
+//             <img src={this.props.img} className="ps_card_img" alt="iphone 11" />
+//           </div>
+//           <br />
+//           <b>
+//             <p>{this.props.info}</p>
+//           </b>
+//         </div>
+//       </React.Fragment>
+//     );
+//   }
+// }
+
 //   <tr ></tr> <td>{this.props.i + 1}</td>  <td>{this.props.order} </td>
 // <td>{this.props.date} <br/> <br/> <img alt="proper" className="order_img" src="./img/Rectangle 28.png"/></td>
 // <td>{this.props.amount}</td>
 // <td>{this.props.payment}</td>
 // <td > <Button className="order_but"> {this.props.delivery}</Button></td>
-// </tr> 
+// </tr>

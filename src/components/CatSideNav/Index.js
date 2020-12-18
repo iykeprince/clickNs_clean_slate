@@ -1,5 +1,6 @@
 import React from 'react';
 import * as FaIcon from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 
 
@@ -12,7 +13,7 @@ class CatSideNav extends React.Component{
             <React.Fragment>
 
                 <div style={{display:"flex"}}>
-                    <div class="sidenav">
+                    <div className="sidenav">
 
 
                         <p><b>CATEGORY</b></p>
@@ -47,16 +48,16 @@ class CatSideNav extends React.Component{
                             <ul className="cs_section">
                                 <li>
                                     <span>  
-                                         <div class="round">
+                                         <div className="round">
                                             <input type="checkbox" id="checkbox" />
-                                            <label for="checkbox"></label>
+                                            <label htmlFor="checkbox"></label>
                                         </div>
                                                 <div className="r_star">
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star"></span>
+                                            <span className="fa fa-star "></span>
+                                            <span className="fa fa-star "></span>
+                                            <span className="fa fa-star "></span>
+                                            <span className="fa fa-star "></span>
+                                            <span className="fa fa-star"></span>
 
                                           <p className="r_text">  & above </p>
                                     </div>
@@ -66,16 +67,16 @@ class CatSideNav extends React.Component{
 
                                 <li>
                                     <span>  
-                                         <div class="round">
+                                         <div className="round">
                                             <input type="checkbox" id="checkbox" />
-                                            <label for="checkbox"></label>
+                                            <label htmlFor="checkbox"></label>
                                         </div>
                                                 <div className="r_star">
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
+                                            <span className="fa fa-star "></span>
+                                            <span className="fa fa-star "></span>
+                                            <span className="fa fa-star "></span>
+                                            <span className="fa fa-star"></span>
+                                            <span className="fa fa-star"></span>
 
                                           <p className="r_text">  & above </p>
                                     </div>
@@ -85,16 +86,16 @@ class CatSideNav extends React.Component{
 
                                 <li>
                                     <span>  
-                                         <div class="round">
+                                         <div className="round">
                                             <input type="checkbox" id="checkbox" />
-                                            <label for="checkbox"></label>
+                                            <label htmlFor="checkbox"></label>
                                         </div>
                                                 <div className="r_star">
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star "></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
+                                            <span className="fa fa-star "></span>
+                                            <span className="fa fa-star "></span>
+                                            <span className="fa fa-star "></span>
+                                            <span className="fa fa-star"></span>
+                                            <span className="fa fa-star"></span>
 
                                           <p className="r_text">  & above </p>
                                     </div>
@@ -104,16 +105,16 @@ class CatSideNav extends React.Component{
 
                                 <li>
                                     <span>  
-                                         <div class="round">
+                                         <div className="round">
                                             <input type="checkbox" id="checkbox" />
-                                            <label for="checkbox"></label>
+                                            <label htmlFor="checkbox"></label>
                                         </div>
                                                 <div className="r_star">
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star "></span>
-                                            <span class="fa fa-star "></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
+                                            <span className="fa fa-star "></span>
+                                            <span className="fa fa-star "></span>
+                                            <span className="fa fa-star "></span>
+                                            <span className="fa fa-star"></span>
+                                            <span className="fa fa-star"></span>
 
                                           <p className="r_text">  & above </p>
                                     </div>
@@ -144,26 +145,26 @@ class CatSideNav extends React.Component{
 
                             <br/>
                             <br/>
-                            <label class="container">A1
-                                <input type="checkbox" checked="checked"/>
-                                <span class="checkmark"></span>
+                            <label className="container">A1
+                                <input type="checkbox" />
+                                <span className="checkmark"></span>
                                 </label>
-                                <label class="container">AEC
+                                <label className="container">AEC
                                 <input type="checkbox"/>
-                                <span class="checkmark"></span>
+                                <span className="checkmark"></span>
                                 </label>
-                                <label class="container">Amazon
+                                <label className="container">Amazon
                                 <input type="checkbox"/>
-                                <span class="checkmark"></span>
+                                <span className="checkmark"></span>
                                 </label>
-                                <label class="container">Anker
+                                <label className="container">Anker
                                 <input type="checkbox"/>
-                                <span class="checkmark"></span>
+                                <span className="checkmark"></span>
                                 </label>
 
-                                <label class="container">Apple
+                                <label className="container">Apple
                                 <input type="checkbox"/>
-                                <span class="checkmark"></span>
+                                <span className="checkmark"></span>
                                 </label>
 
                       </div>
@@ -178,7 +179,7 @@ class CatSideNav extends React.Component{
                          <br/>
                          <br/>
 
-                      <input style={{width:"100%"}} type="range" name="range" step="50000" min="100000" max="1000000" value="" onchange="rangePrimary.value=value"></input>
+                      <input style={{width:"100%"}} type="range" name="range" step="50000" min="100000" max="1000000" value='' onChange={ e => console.log(e.target.value)}></input>
                     <div>  <span>    <input  style={{width:"7rem"}} placeholder="Minimum"/> </span> <span>   <input style={{width:"8rem"}} placeholder="Maximum" /> </span></div>
                  
                      
@@ -199,26 +200,26 @@ class CatSideNav extends React.Component{
 
                             <br/>
                             <br/>
-                            <label class="container">IOS
-                                <input type="checkbox" checked="checked"/>
-                                <span class="checkmark"></span>
+                            <label className="container">IOS
+                                <input type="checkbox" />
+                                <span className="checkmark"></span>
                                 </label>
-                                <label class="container">NOKIA OS
+                                <label className="container">NOKIA OS
                                 <input type="checkbox"/>
-                                <span class="checkmark"></span>
+                                <span className="checkmark"></span>
                                 </label>
-                                <label class="container">ANDRIOD OS
+                                <label className="container">ANDRIOD OS
                                 <input type="checkbox"/>
-                                <span class="checkmark"></span>
+                                <span className="checkmark"></span>
                                 </label>
-                                <label class="container">Blackberry 10
+                                <label className="container">Blackberry 10
                                 <input type="checkbox"/>
-                                <span class="checkmark"></span>
+                                <span className="checkmark"></span>
                                 </label>
 
-                                <label class="container">Blackberry Years 10
+                                <label className="container">Blackberry Years 10
                                 <input type="checkbox"/>
-                                <span class="checkmark"></span>
+                                <span className="checkmark"></span>
                                 </label>
 
                             </div>
@@ -240,26 +241,26 @@ class CatSideNav extends React.Component{
 
                 <br/>
                 <br/>
-                <label class="container">Black
-                    <input type="checkbox" checked="checked"/>
-                    <span class="checkmark"></span>
+                <label className="container">Black
+                    <input type="checkbox" />
+                    <span className="checkmark"></span>
                     </label>
-                    <label class="container">Blue 
+                    <label className="container">Blue 
                     <input type="checkbox"/>
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                     </label>
-                    <label class="container">Green
+                    <label className="container">Green
                     <input type="checkbox"/>
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                     </label>
-                    <label class="container">Grey
+                    <label className="container">Grey
                     <input type="checkbox"/>
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                     </label>
 
-                    <label class="container">Orange
+                    <label className="container">Orange
                     <input type="checkbox"/>
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                     </label>
 
                 </div>
@@ -280,26 +281,26 @@ class CatSideNav extends React.Component{
 
                 <br/>
                 <br/>
-                <label class="container">Black
-                    <input type="checkbox" checked="checked"/>
-                    <span class="checkmark"></span>
-                    </label>
-                    <label class="container">Blue 
+                <label className="container">Black
                     <input type="checkbox"/>
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                     </label>
-                    <label class="container">Green
+                    <label className="container">Blue 
                     <input type="checkbox"/>
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                     </label>
-                    <label class="container">Grey
+                    <label className="container">Green
                     <input type="checkbox"/>
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
+                    </label>
+                    <label className="container">Grey
+                    <input type="checkbox"/>
+                    <span className="checkmark"></span>
                     </label>
 
-                    <label class="container">Orange
+                    <label className="container">Orange
                     <input type="checkbox"/>
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                     </label>
 
                 </div>
@@ -329,14 +330,14 @@ class CatSideNav extends React.Component{
 
                                 <span className="lefter">
 
-                                <div class="dropdown">
-                                    <button class="dropbtn">Sort by: popularity    <FaIcon.FaAngleDown /></button>
-                                    <div class="dropdown-content">
-                                    <a href="#">popularity</a>
-                                    <a href="#">Newest Arrivals</a>
-                                    <a href="#">Price: Low to High</a>
-                                    <a href="#">Price: High to Low </a>
-                                    <a href="#">Product Rating </a>
+                                <div className="dropdown">
+                                    <button className="dropbtn">Sort by: popularity    <FaIcon.FaAngleDown /></button>
+                                    <div className="dropdown-content">
+                                    <Link to="#">popularity</Link>
+                                    <Link to="#">Newest Arrivals</Link>
+                                    <Link to="#">Price: Low to High</Link>
+                                    <Link to="#">Price: High to Low </Link>
+                                    <Link to="#">Product Rating </Link>
                                     
 
                                     </div>

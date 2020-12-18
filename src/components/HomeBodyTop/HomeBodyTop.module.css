@@ -2,16 +2,19 @@
     margin-top: 18px !important;
 }
 
-@media screen and (max-width: 960px) {
-    .leftSideBar, .rightSideBar{
-        display: none !important;
-        visibility: hidden;
-        clear: both;
-    }
-}
-
 .grid__Container {
     display: grid;
     grid-template-columns: 1fr 3fr 1.2fr;
     padding: 10px;
   }
+
+@media screen and (max-width: 992px) {
+    .leftSideBar, .rightSideBar{
+        display: none !important;
+        visibility: hidden;
+        clear: both;
+    }
+    .grid__Container {
+        display: flex;
+    }
+}

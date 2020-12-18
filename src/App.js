@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import {BrowserRouter as  Router , Route, Switch} from 'react-router-dom'
 import ProductDetail from './pages/ProductDetail'
 import CategoryList from './pages/CategoryList';
+import Account from './pages/Account';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path={"/"} exact component={Home}/>
         <Route path={"/product"} component={ProductDetail}/> 
         <Route path={"/category"} component={CategoryList}/> 
+        <Route path={"/account"} component={Account}/> 
       
         </Switch> 
       

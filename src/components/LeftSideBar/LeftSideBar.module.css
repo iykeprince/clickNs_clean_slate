@@ -5,11 +5,8 @@
     padding-top: 2px !important;
     padding-bottom: 2px !important;
     margin-right: 18px !important;
-    /* margin-left: 50px !important; */
     max-width: 252px;
-    /* width: 191px; */
 }
-
 .leftSidebar__container>div{
     padding: 5.5px 3px !important;
 }
@@ -20,4 +17,9 @@
 }
 .leftSideBar__text{
     font-size:12px;
+}
+@media only screen and (max-width:992px){
+    .leftSidebar__container{
+        display: none;
+    }
 }

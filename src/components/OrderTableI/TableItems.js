@@ -2,16 +2,13 @@
 export const TableItems =[
 
   {
-    
       img:'./images/phones/Rectangle 2210.png',
       info:'IPHONES',
-
-    
   },
 
 
   {
-    img:'./images/phones/Rectangle 2212.png',
+      img:'./images/phones/Rectangle 2212.png',
       info:'Andriod',
   },
 

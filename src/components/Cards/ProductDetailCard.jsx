@@ -1,11 +1,14 @@
 import React from "react";
+import DiscountPercent from "../DiscountPercent/DiscountPercent";
+import './ProductDetailCard.css'
 
 const ProductDetailCard = (props) => {
   return (
-    <div>
-      <div>
-        <span className="percentDiscount__text">-20%</span>
+    <div className='productDetailCard'>
+      <div className='discAlign'>
+      <DiscountPercent DiscountText='-20%'/>
       </div>
+      
       <div>
         <img src={props.productImg} alt="product" />
       </div>

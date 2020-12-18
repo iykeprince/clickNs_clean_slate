@@ -57,6 +57,9 @@
 .secondRow{
     float: right;
 }
+.bonusimg{
+  width: 100%;
+}
 .googlePlay{
   margin-right: 21px !important;
 }

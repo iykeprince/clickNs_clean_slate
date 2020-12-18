@@ -1,0 +1,15 @@
+.productLocation{
+    margin-top:23px !important;
+    margin-bottom: 15px !important;
+
+}
+.spanOne, .spanTwo{
+    font-size: 12px;
+}
+.spanOne{
+    font-weight: 700;
+}
+.spanTwo{
+    font-weight: 500;
+    color: #919191;
+}

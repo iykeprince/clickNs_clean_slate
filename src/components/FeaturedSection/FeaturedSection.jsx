@@ -1,16 +1,24 @@
-import React from 'react'
+import React from "react";
 import styles from "./FeaturedSection.module.css";
-import {
-  Container,
-  Row,
-  Col,
-} from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
+import FeaturedCard from "./FeaturedCard";
+import laptop from "../../assets/Products/laptop.png";
+import solarpanel from "../../assets/Products/solarpanel.png";
+import wig from "../../assets/Products/wigs.png";
+import gen from "../../assets/Products/gen.png";
+import cabinet from "../../assets/Products/cabinet.png";
+import trouser from "../../assets/Products/trouser.png";
+import microwave from "../../assets/Products/microwave.png";
+import shoe from "../../assets/Products/shoe.png";
+import bag from "../../assets/Products/bag.png";
+import headset from "../../assets/Products/headset.png";
+import chair from "../../assets/Products/chair.png";
+
 
 function FeaturedSection() {
   return (
     <div>
       <Container fluid className={styles.featureSectionContainer}>
-         
         <Row>
           <Col md="12">
             <div className={styles.featureSectionTitle}>
@@ -19,118 +27,29 @@ function FeaturedSection() {
           </Col>
         </Row>
         <div className={styles.secondfeatureSectionWrapper}>
-        <Row className={styles.featureRow}>
-        
-          <Col sm="6" md="4" lg="2">
-            <div className={styles.featuredImage}>
-              <img src="/images/Products/laptop.png" alt="product" />
-            </div>
-            <div className={styles.featuredName}>
-              <p className="">Desktops</p>
-            </div>
-          </Col>
+          <Row className={styles.featureRow}>
+            <FeaturedCard featuredImage={laptop} featuredName={`Laptops`} />
+            <FeaturedCard featuredImage={wig} featuredName={`Wigs`} />
+            <FeaturedCard
+              featuredImage={solarpanel}
+              featuredName={`Solar panels`}
+            />
+            <FeaturedCard featuredImage={gen} featuredName={`Gen`} />
+            <FeaturedCard featuredImage={cabinet} featuredName={`Cabinet`} />
+            <FeaturedCard featuredImage={trouser} featuredName={`Trousers`} />
+          </Row>
 
-          <Col sm="6" md="4" lg="2">
-            <div className={styles.featuredImage}>
-              <img src="/images/Products/wigs.png" alt="product" />
-            </div>
-            <div className={styles.featuredName}>
-              <p className="">Wigs</p>
-            </div>
-          </Col>
-
-          <Col sm="6" md="4" lg="2">
-            <div className={styles.featuredImage}>
-              <img src="/images/Products/solarpanel.png" alt="product" />
-            </div>
-            <div className={styles.featuredName}>
-              <p className="">Solar Panels</p>
-            </div>
-          </Col>
-
-          <Col sm="6" md="4" lg="2">
-            <div className={styles.featuredImage}>
-              <img src="/images/Products/gen.png" alt="product" />
-            </div>
-            <div className={styles.featuredName}>
-              <p className="">Generators</p>
-            </div>
-          </Col>
-
-          <Col sm="6" md="4" lg="2">
-            <div className={styles.featuredImage}>
-              <img src="/images/Products/cabinet.png" alt="product" />
-            </div>
-            <div className={styles.featuredName}>
-              <p className="">Wardrobes</p>
-            </div>
-          </Col>
-
-          <Col sm="6" md="4" lg="2">
-            <div className={styles.featuredImage}>
-              <img src="/images/Products/trouser.png" alt="product" />
-            </div>
-            <div className={styles.featuredName}>
-              <p className="">Trousers</p>
-            </div>
-          </Col>
-        </Row>
-
-        <Row className={styles.featureRow}>
-          <Col sm="6" md="4" lg="2">
-            <div className={styles.featuredImage}>
-              <img src="/images/Products/microwave.png" alt="product" />
-            </div>
-            <div className={styles.featuredName}>
-              <p className="">Microwaves </p>
-            </div>
-          </Col>
-
-          <Col sm="6" md="4" lg="2">
-            <div className={styles.featuredImage}>
-              <img src="/images/Products/flower.png" alt="product" />
-            </div>
-            <div className={styles.featuredName}>
-              <p className="">Plants</p>
-            </div>
-          </Col>
-
-          <Col sm="6" md="4" lg="2">
-            <div className={styles.featuredImage}>
-              <img src="/images/Products/bag.png" alt="product" />
-            </div>
-            <div className={styles.featuredName}>
-              <p className="">Bags</p>
-            </div>
-          </Col>
-
-          <Col sm="6" md="4" lg="2">
-            <div className={styles.featuredImage}>
-              <img src="/images/Products/shoe.png" alt="product" />
-            </div>
-            <div className={styles.featuredName}>
-              <p className="">Shoes </p>
-            </div>
-          </Col>
-
-          <Col sm="6" md="4" lg="2">
-            <div className={styles.featuredImage}>
-              <img src="/images/Products/headset.png" alt="product" />
-            </div>
-            <div className={styles.featuredName}>
-              <p className="">Headsets </p>
-            </div>
-          </Col>
-
-          <Col sm="6" md="4" lg="2">
-            <div className={styles.featuredImage}>
-              <img src="/images/Products/chair.png" alt="product" />
-            </div>
-            <div className={styles.featuredName}>
-              <p className="">Chair</p>
-            </div>
-          </Col>
-        </Row>
+          <Row className={styles.featureRow}>
+            <FeaturedCard
+              featuredImage={microwave}
+              featuredName={`Microwave`}
+            />
+            <FeaturedCard featuredImage={shoe} featuredName={`Shoes`} />
+            <FeaturedCard featuredImage={bag} featuredName={`Bags`} />
+            <FeaturedCard featuredImage={gen} featuredName={`Gen`} />
+            <FeaturedCard featuredImage={headset} featuredName={`Headsets`} />
+            <FeaturedCard featuredImage={chair} featuredName={`Chairs`} />
+          </Row>
         </div>
       </Container>
     </div>

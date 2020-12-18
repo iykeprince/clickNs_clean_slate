@@ -1,36 +1,38 @@
-.rightSidebar__container{
-    padding-left: 18px !important;
-    /* width: 206px; */
-    /* padding-right: 50px !important; */
-
+.rightSidebar__container {
+  padding-left: 18px !important;
 }
-.rightSidebar__top{
-    background: #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
-    border-radius: 5px;
+.rightSidebar__top {
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
 }
 
-.rightSidebar__top>div{
-    padding: 9px 14px !important;
-    
+.rightSidebar__top > div {
+  padding: 9px 14px !important;
 }
-.rightSideBar__icon{
-    padding-right: 13px !important;
-    float: left;
+.rightSideBar__icon {
+  padding-right: 13px !important;
+  float: left;
 }
-.rightSideBar__text1{
-    float: left;
-    font-weight: 500;
-    font-size: 14px;
+.rightSideBar__text1 {
+  float: left;
+  font-weight: 500;
+  font-size: 14px;
 }
-.rightSideBar__text2{
-    font-size: 11px;
+.rightSideBar__text2 {
+  font-size: 11px;
 }
-.rightSidebar__bottom{
-    margin-top: 14px !important;
+.rightSidebar__bottom {
+  margin-top: 14px !important;
 }
-.rightSidebar__bottomImage{
-    width:100%;
-    height: 162px;
-    object-fit: cover;
+.rightSidebar__bottomImage {
+  width: 100%;
+  height: 162px;
+  object-fit: cover;
+}
+
+@media only screen and (max-width: 992px) {
+  .rightSidebar__container {
+    display: none;
+  }
 }

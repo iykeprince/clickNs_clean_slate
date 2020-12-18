@@ -1,0 +1,10 @@
+.body__wrapper{
+    padding-left:11.8% !important;
+    padding-right:11.8% !important;
+}
+@media only screen and (max-width: 1200px) {
+    .body__wrapper{
+        padding-left:5% !important;
+        padding-right:5% !important;
+    }
+}

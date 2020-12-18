@@ -1,0 +1,13 @@
+.prodWrapper {
+  margin-top: 23px !important;
+}
+.prodBigWrapper {
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  padding: 16px 0px 0px 16px !important;
+}
+.prodBigWrapper h5{
+  font-weight: bold;
+  font-size: 20px;
+}

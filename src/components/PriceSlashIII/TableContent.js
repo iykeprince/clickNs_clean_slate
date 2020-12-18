@@ -48,9 +48,3 @@ class TableContent extends React.Component {
   }
 }
 export default TableContent;
-//   <tr ></tr> <td>{this.props.i + 1}</td>  <td>{this.props.order} </td>
-// <td>{this.props.date} <br/> <br/> <img alt="proper" className="order_img" src="./img/Rectangle 28.png"/></td>
-// <td>{this.props.amount}</td>
-// <td>{this.props.payment}</td>
-// <td > <Button className="order_but"> {this.props.delivery}</Button></td>
-// </tr> 

@@ -1,0 +1,68 @@
+.mediumButton {
+    display: inline-block;
+  background: #043e7d;
+  border-radius: 5px;
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  height: 30px;
+  border: none;
+  width: 100%;
+}
+.slimRow{
+    display: flex;
+    padding: 20px 0px !important;
+}
+
+.slimLogo{
+    align-self: center;
+    margin-right: 4% !important;
+    width: 90px;
+    flex: 0 0 90px;
+    min-width: 90px;
+}
+.slimImage{
+    padding-left: 0px !important;
+    max-width: 100px !important;
+    flex: 0 1 100px;
+}
+.slimText{
+    padding-top:16px !important ;
+    color: rgba(0, 0, 0, 0.7);
+}
+.slimButton{
+    align-self: center;
+    width: 100px;
+    flex: 0 0 100px;
+}
+
+.slimTextContainer {
+    max-width: auto;
+    flex-basis:auto;
+}
+.slimTextBig{
+    font-weight: bold;
+font-size: 18px;
+}
+.slimTextSmall{
+    font-size: 14px;
+    font-weight: 500;
+}
+@media screen and (min-width:480px){
+    .slimButton{
+        width: 165px;
+        flex: 0 0 165px;
+    }
+}
+@media screen and (min-width:768px){
+    .slimTextContainer {
+        max-width: calc(100% - 165px);
+        flex-basis:calc(100% - 165px) ;
+        padding-right: 30px !important;
+    }
+}
+@media screen and (max-width:992px){
+    .slimButton{
+        width: 100%;
+    }
+}

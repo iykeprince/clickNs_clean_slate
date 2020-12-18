@@ -6,20 +6,24 @@ import sparLogo from '../../assets/sparLogo.png';
 import gameLogo from '../../assets/gameLogo.png';
 import SlimCard from '../SlimHorizontalCard/SlimCard';
 import './ProductDetailsRowTwo.css'
+import { Col, Row } from "react-bootstrap";
 
 
 function ProductDetailRowTwo() {
   return (
-    <div>
-    <div className='slimCard__wrapper'>
+    <Row>
+    <Col lg='9' className='slimCard__wrapper'>
       <SlimCard companyLogo={slotLogo} productImg={phoneImagex}/>
+      <hr className='separator2'/>
       <SlimCard companyLogo={samsungLogo} productImg={phoneImagex}/>
+      <hr className='separator2'/>
       <SlimCard companyLogo={sparLogo} productImg={phoneImagex}/>
+      <hr className='separator2'/>
       <SlimCard companyLogo={gameLogo} productImg={phoneImagex}/>
-      </div>
+      </Col>
 
       
-    </div>
+    </Row>
   );
 }
 
