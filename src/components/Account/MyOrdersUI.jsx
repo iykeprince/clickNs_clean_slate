@@ -1,18 +1,34 @@
-import React from 'react'
+// import { IconButton } from '@material-ui/core'
+import React from "react";
+import IconStore from "../../store/IconStore";
+import LargeButton from "../Button/LargeButton";
 
 function MyOrdersUI() {
-    return (
-        <div>
-            <h3 className="titleHeader">Orders</h3>
-              Cillum ad ut irure tempor velit nostrud occaecat ullamco aliqua
-              anim Lorem sint. Veniam sint duis incididunt do esse magna mollit
-              excepteur laborum qui. Id id reprehenderit sit est eu aliqua
-              occaecat quis et velit excepteur laborum mollit dolore eiusmod.
-              Ipsum dolor in occaecat commodo et voluptate minim reprehenderit
-              mollit pariatur. Deserunt non laborum enim et cillum eu deserunt
-              excepteur ea incididunt minim occaecat.
+  return (
+    <div>
+      <h3 className="titleHeader">Orders</h3>
+
+      <div  className='orderToggle__wrapper'>
+        <span className='orderToggle'>OPEN ORDERS (0)</span>
+        <span className='orderToggle'>CLOSED ORDERS (0)</span>
+      </div>
+      <hr className="newSeperator"/>
+      <div className="titleHeader">
+
+        <div className='orderContent__group'>
+          {IconStore.orderShopBag}
+          <p className='orderTxt'>You have placed no orders yet!</p>
+          <p className='orderExplanation'>All your orders will be saved here for you to access their state
+            anytime
+          </p>
         </div>
-    )
+
+        <div className="button__wrap">
+          <LargeButton buttonName="CONTINUE SHOPPING" />
+        </div>
+      </div>
+    </div>
+  );
 }
 
-export default MyOrdersUI
+export default MyOrdersUI;

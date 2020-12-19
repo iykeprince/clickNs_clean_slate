@@ -11,18 +11,23 @@ import MyVoucherUI from "./MyVoucherUI";
 import NewsletterUI from "./NewsletterUI";
 import RecentlyViewedUI from "./RecentlyViewedUI";
 import IconStore from '../../store/IconStore';
+import AccountOtherRows from "./AccountOtherRows";
+// import { IconButton } from "@material-ui/core";
 
 function AccountRowOne() {
   return (
     <div>
       <div className="row accRowOne__wrapper">
-        <div className="col-md-3 accLeftRow__wrapper">
+        <div className="col-md-3 accLeftRow__wrapper ">
           <div
-            className="nav flex-column nav-pills"
+            className="nav flex-column nav-pills h-100"
             id="v-pills-tab"
             role="tablist"
             aria-orientation="vertical"
           >
+
+
+            {/* <IconButton> */}
             <a
               className="nav-link active"
               id="v-pills-acc-tab"
@@ -37,6 +42,10 @@ function AccountRowOne() {
               </span>
               <span className="adjacentIcon__text">My Account</span>
             </a>
+            {/* </IconButton> */}
+
+
+
             <a
               className="nav-link"
               id="v-pills-ordr-tab"
@@ -144,6 +153,7 @@ function AccountRowOne() {
             >
               Newsletter Preferences
             </a>
+            <hr className="hrSeparator"/>
             <a
               className="nav-link"
               id="v-pills-sign-tab"
@@ -157,8 +167,8 @@ function AccountRowOne() {
             </a>
           </div>
         </div>
-        <div className="col-md-9 rightr">
-          <div className="tab-content right__wrapper" id="v-pills-tabContent">
+        <div className="col-md-9 rightr ">
+          <div className="tab-content right__wrapper  h-100" id="v-pills-tabContent">
             <div
               className="tab-pane fade show active"
               id="v-pills-acc"
@@ -259,11 +269,14 @@ function AccountRowOne() {
               role="tabpanel"
               aria-labelledby="v-pills-sign-tab"
             >
+              
               <LogInOutUI/>
             </div>
           </div>
         </div>
       </div>
+    
+      <AccountOtherRows/>
     </div>
   );
 }

@@ -1,11 +1,11 @@
 .accRowOne__wrapper {
   margin-top: 32px !important;
+  margin-bottom: 10px !important;
 }
 .accLeftRow__wrapper {
   background: #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
   border-radius: 5px;
-  padding: 16px 0px !important;
 }
 label + .MuiInput-formControl {
   margin-top: 16px !important;
@@ -64,6 +64,7 @@ label + .MuiInput-formControl {
 .nav-pills .show > .nav-link {
   color: #fff;
   background-color: #ededed;
+  transition: 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 .nav-pills .nav-link {
   border-radius: 0px !important;
@@ -84,7 +85,7 @@ label + .MuiInput-formControl {
     padding-left: 24px !important;
 }
 .hrSeparator{
-    border: 2px solid #F1F1F1;
+    border: 1px solid #F1F1F1;
 }
 
 .MuiMenuItem-root {
@@ -98,4 +99,87 @@ label + .MuiInput-formControl {
 .MuiListItem-root {
     padding-top: 8px !important;
     padding-bottom: 8px !important;
+}
+.accBox__wrapper{
+  position: relative;
+  background: #FFFFFF;
+border: 1px solid #E8E8E8;
+}
+.accBox__title{
+  font-weight: 500;
+}
+.accBox__content{
+  padding: 16px 13px 13px 13px !important;
+}
+.accBox__head{
+  padding: 13px !important;
+  border-bottom:  1px solid #E8E8E8;
+}
+.editIcon{
+  float: right;
+}
+svg{
+  cursor: pointer;
+}
+.detailText{
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 13px !important;
+  font-weight: 500;
+  color: #043E7D;
+}
+.subscribText{
+  padding-bottom: 48px !important;
+}
+.text2{
+  padding-bottom: 50px !important;
+}
+.woozBalance{
+  font-weight: 500;
+  font-size: 16px;
+  color: #043E7D;
+  padding-left: 16px !important;
+}
+.subscribText{
+  font-weight: 500;
+}
+.text1{
+  padding-bottom: 15px !important;
+  font-weight: 500;
+}
+.changePassword__wrapper{
+  width: 50%;
+}
+.button__wrap{
+  max-width: 267px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.orderContent__group{
+  text-align: center;
+}
+.orderToggle{
+  font-weight: 500;
+  padding-right: 68px !important;
+}
+.orderContent__group{
+  margin-top: 45px !important;
+}
+.orderTxt{
+  margin-top: 18px !important;
+  font-weight: 500;
+font-size: 16px;
+}
+.orderExplanation{
+  font-weight: 500;
+  margin-top: 3px !important;
+  margin-bottom: 34px !important;
+}
+.orderToggle__wrapper{
+  padding-bottom: 12px !important;
+}
+.newSeperator {
+  border: 1px solid #F1F1F1;
+  margin-left: -22px !important;
+  width: 106%;
 }

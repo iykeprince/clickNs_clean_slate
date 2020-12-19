@@ -1,48 +1,71 @@
-import React from 'react'
-import { Col, Row } from 'react-bootstrap'
+import React from "react";
+import { Col, Row } from "react-bootstrap";
+import IconStore from "../../store/IconStore";
 
 function MyAccountUI() {
-    return (
-        <div>
-            <h3 className="titleHeader">My Account</h3>
-             <Row>
-                 <Col md='6' className="aColContainer">
-                 <div>
-                     <h6 >ACCOUNT DETAILS</h6>
-                     <h6>Bukky Owolabi</h6>
-                     <p>bukkytohgbesky@example.com</p>
-                     <p>ACCOUNT DETAILS</p>
-                 </div>
-                 </Col>
-                 <Col md='6' className="aColContainer">
-                 <div>
-                        <h6>ADDRESS BOOK</h6>
-                        <h6>Your default shipping address:</h6>
-                        <p>Bukky Owolabi
-                            60 Landbridge
-                            Oniru-Estate, Victoria, Lagos
-                            +2349108000984
-                            </p>
-                    </div>
-                 </Col>
-                    
-                 
-             </Row>
+  return (
+    <div>
+      <h3 className="titleHeader">My Account</h3>
+      <Row>
+        <Col md="6" className="aColContainer">
+          <div className="accBox__wrapper h-100">
+            <div className="accBox__head">
+              <span className="accBox__title">ACCOUNT DETAILS </span>
+              <span className="editIcon">{IconStore.editSolid}</span>
+            </div>
+            <div className="accBox__content">
+              <p  className="text1">Bukky Owolabi</p>
+              <p  className="text2 text-black-50">bukkytohgbesky@example.com</p>
+              <p  className="detailText">ACCOUNT DETAILS</p>
+            </div>
+          </div>
+        </Col>
+        <Col md="6" className="aColContainer">
+          <div className="accBox__wrapper h-100">
+            <div className="accBox__head">
+              <span className="accBox__title">ADDRESS </span>
+              <span className="editIcon">{IconStore.editSolid}</span>
+            </div>
+            <div className="accBox__content">
+            <p className="text1">Your default shipping address:</p>
+            <p className='text-black-50'>Bukky Owolabi </p>
+            <p className='text-black-50'>60 Landbridge</p>
+            <p className='text-black-50'>Oniru-Estate, Victoria, Lagos</p>
+            <p className='text-black-50'> +2349108000984</p>
+            </div>
+          </div>
+        </Col>
+      </Row>
 
-             <Row>
-             <Col md='6' className="aColContainer">
-                 <h6>NEWSLETTER PREFERENCES</h6>
-                 <h6>You are currently not subscribed to any of our newsletters.</h6>
-                 <h6>EDIT NEWSLETTER PREFERENCES</h6>
-                 </Col>
+      <Row>
+        <Col md="6" className="aColContainer">
+          <div className="accBox__wrapper h-100">
+          <div className="accBox__head">
+          <h6 className="accBox__title">NEWSLETTER PREFERENCES</h6>
+            </div>
+            
+            <div className="accBox__content">
+              <p className="subscribText">You are currently not subscribed to any of our newsletters.</p>
+              <p className="detailText">EDIT NEWSLETTER PREFERENCES</p>
+            </div>
+          </div>
+        </Col>
 
-                 <Col md='6' className="aColContainer">
-                 <h6>WOOZEEE BALANCE</h6>
-                 <p>₦ 19,650</p>
-                 </Col>
-             </Row>
-        </div>
-    )
+        <Col md="6" className="aColContainer">
+          <div className="accBox__wrapper h-100">
+          <div className="accBox__head">
+          <h6 className="accBox__title">WOOZEEE BALANCE</h6>
+            </div>
+            
+            <div className="accBox__content">
+              <span>{IconStore.accWallet}</span>
+              <span className='woozBalance'>₦ 19,650</span>
+            </div>
+          </div>
+        </Col>
+      </Row>
+    </div>
+  );
 }
 
-export default MyAccountUI
+export default MyAccountUI;

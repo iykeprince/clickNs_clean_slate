@@ -98,7 +98,7 @@ export default function Header() {
                   className="dropdown__icon"
                 />
 
-                <Ai.AiOutlineUser className="personIcon" />
+               <Link to='/account'><Ai.AiOutlineUser className="personIcon" /></Link> 
               </div>
               <div className="header__option .help__sec">
                 <img
