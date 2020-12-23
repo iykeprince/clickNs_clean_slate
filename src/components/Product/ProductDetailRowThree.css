@@ -47,14 +47,14 @@
 
 .Descriptions a:active,
 .Descriptions a:hover {
-  color: #043e7d !important;
+  color: var(--woozBlue)  !important;
 }
 .Descriptions a:hover {
   outline: none;
   box-shadow: none;
 }
 .Descriptions .active {
-  color: #043e7d;
+  color: var(--woozBlue) ;
   border-bottom: 0px;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;

@@ -85,7 +85,7 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 15px;
-  color: #043e7d;
+  color: var(--woozBlue) ;
 }
 .headerSecondIcon {
   padding-left: 8px !important;

@@ -1,6 +1,9 @@
 import React from "react";
 import "./LargeButton.scss";
 
+
+//VERSION 1 - Fixed style, but dynamic button text
+
 const LargeButton = (props) => {
   return (
     <React.Fragment>

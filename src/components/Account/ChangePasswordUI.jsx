@@ -13,22 +13,17 @@ function ChangePasswordUI() {
         <br />
         <br />
         <br />
-        <br />
 
         <PasswordUI labelName="New Password" />
 
         <br />
         <br />
         <br />
-        <br />
 
         <PasswordUI labelName="Retype New Password" />
-
-        <br />
-        <br />
       </form>
 
-      <div className="accButton__wrapper">
+      <div className="passButton__wrapper">
         <LargeButton buttonName="SUBMIT" />
       </div>
     </div>

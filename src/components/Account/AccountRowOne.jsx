@@ -155,7 +155,7 @@ function AccountRowOne() {
             </a>
             <hr className="hrSeparator"/>
             <a
-              className="nav-link"
+              className="nav-link text-center logoutTxt"
               id="v-pills-sign-tab"
               data-toggle="pill"
               href="#v-pills-sign"
@@ -163,7 +163,7 @@ function AccountRowOne() {
               aria-controls="v-pills-sign"
               aria-selected="false"
             >
-              LOGOUT
+              LOG OUT
             </a>
           </div>
         </div>

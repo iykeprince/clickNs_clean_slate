@@ -60,6 +60,10 @@ label + .MuiInput-formControl {
   padding-top: 55px !important;
   padding-bottom: 80px !important;
 }
+.passButton__wrapper {
+  padding-top: 61px !important;
+  padding-bottom: 63px !important;
+}
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
   color: #fff;
@@ -126,7 +130,7 @@ svg{
   bottom: 0;
   padding-bottom: 13px !important;
   font-weight: 500;
-  color: #043E7D;
+  color: var(--woozBlue) ;
 }
 .subscribText{
   padding-bottom: 48px !important;
@@ -137,7 +141,7 @@ svg{
 .woozBalance{
   font-weight: 500;
   font-size: 16px;
-  color: #043E7D;
+  color: var(--woozBlue) ;
   padding-left: 16px !important;
 }
 .subscribText{
@@ -155,15 +159,24 @@ svg{
   margin-left: auto !important;
   margin-right: auto !important;
 }
+.orderToggle{
+  position: relative;
+  z-index: 2;
+  font-weight: 500;
+  padding-right: 8px !important;
+  padding-left: 8px !important;
+  margin-right: 42px !important;
+}
+.orderToggle__wrapper{
+  padding-bottom: 12px !important;
+  position: relative;
+}
 .orderContent__group{
   text-align: center;
-}
-.orderToggle{
-  font-weight: 500;
-  padding-right: 68px !important;
-}
-.orderContent__group{
   margin-top: 45px !important;
+  max-width: 469px;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 .orderTxt{
   margin-top: 18px !important;
@@ -172,14 +185,102 @@ font-size: 16px;
 }
 .orderExplanation{
   font-weight: 500;
-  margin-top: 3px !important;
+  margin-top: 6px !important;
   margin-bottom: 34px !important;
 }
-.orderToggle__wrapper{
-  padding-bottom: 12px !important;
-}
+
 .newSeperator {
   border: 1px solid #F1F1F1;
   margin-left: -22px !important;
   width: 106%;
+  position: absolute;
+    z-index: 1;
+    bottom: 12px;
+}
+
+.OpenClosedNav .nav-tabs .nav-link.active{
+  color: var(--woozBlue)  !important;
+  border-color: var(--woozBlue) ;
+  border-top: 1px solid transparent;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-bottom-width: 2px !important;
+}
+
+.OpenClosedNav .nav-link{
+padding-bottom: 12px !important;
+}
+
+.OpenClosedNav .nav-tabs {
+  border-bottom: 0px !important;
+}
+.OpenClosedNav .nav-tabs .nav-link:hover, .OpenClosedNav .nav-tabs .nav-link:focus{
+  border-top-color: transparent !important;
+    border-left-color: transparent !important;
+    border-right-color: transparent !important;
+}
+
+.addressBookDetail__wrapper{
+  max-width: 373px;
+  border: 1px solid #E8E8E8;
+}
+.addressbookUI_wrapper{
+  position: relative;
+}
+.button__wrap2{
+  display: flex;
+  width: 193px;
+  position: absolute;
+  right: 0;
+  top: 2px;
+}
+.button__wrap2>button{
+  height: 43px;
+  font-size: 14px;
+}
+.reEdit, .Subsc{
+  font-weight: 500;
+}
+.Subsc{
+  padding: 11px !important;
+  border-bottom: 1px solid #E8E8E8;
+  font-weight: 500;
+}
+.reEdit{
+  padding: 13px 13px 19px 16px !important;
+  border-top: 1px solid #E8E8E8;
+  color: #B3B3B3;
+}
+.addresstext_detail{
+padding: 14px 12px 12px 16px !important;
+}
+.defaultAdress{
+  color: #00A912;
+  font-weight: 500;
+  padding-top: 16px !important;
+  padding-bottom: 12px!important;
+}
+.nameOf{
+  font-weight: 500;
+font-size: 16px;
+  padding-bottom: 10px !important;
+}
+.mbottom{
+  padding-bottom: 17px !important;
+}
+.MuiRadio-colorSecondary.Mui-checked {
+  color: var(--woozBlue) !important;
+}
+.addresstext_detail .MuiIconButton-root {
+  padding: 12px !important;
+}
+.MuiIconButton-colorSecondary:hover {
+  background-color: rgba(0, 41, 245, 0.04) !important;
+}
+.logoutTxt{
+  color: var(--woozBlue) !important;
+}
+.newsButton__wrapper{
+  padding-top: 55px !important;
+  padding-bottom: 5px !important;
 }

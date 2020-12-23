@@ -1,6 +1,6 @@
 .mediumButton {
     display: inline-block;
-  background: #043e7d;
+  background: var(--woozBlue) ;
   border-radius: 5px;
   color: white;
   font-weight: 500;

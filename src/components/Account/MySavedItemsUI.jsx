@@ -1,18 +1,25 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
+import IconStore from "../../store/IconStore";
+import LargeButton from "../Button/LargeButton";
+import NoDataUI from "./NoDataUI";
 
 function MySavedItemsUI() {
-    return (
-        <div>
-            <h3 className="titleHeader">Saved Items</h3>
-              Cillum ad ut irure tempor velit nostrud occaecat ullamco aliqua
-              anim Lorem sint. Veniam sint duis incididunt do esse magna mollit
-              excepteur laborum qui. Id id reprehenderit sit est eu aliqua
-              occaecat quis et velit excepteur laborum mollit dolore eiusmod.
-              Ipsum dolor in occaecat commodo et voluptate minim reprehenderit
-              mollit pariatur. Deserunt non laborum enim et cillum eu deserunt
-              excepteur ea incididunt minim occaecat.
-        </div>
-    )
+  return (
+    <div>
+      <h3 className="titleHeader mbottom">Saved Items</h3>
+      <NoDataUI
+        Image={IconStore.orderShopBag}
+        Topic="You haven’t saved an item yet!"
+        Explanation="Found something you like? 
+        Tap on the heart shaped icon next to the item to add it to your wishlist!
+        All your saved items will appear here."
+      />
+      <div className="button__wrap">
+      <Link to='/'><LargeButton buttonName="CONTINUE SHOPPING" /></Link>
+      </div>
+    </div>
+  );
 }
 
-export default MySavedItemsUI
+export default MySavedItemsUI;

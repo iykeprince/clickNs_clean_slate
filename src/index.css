@@ -34,3 +34,9 @@ code {
 img:hover, a:hover{
   cursor: pointer;
 }
+
+:root {
+  --woozBlue: #043E7D;
+  --woozRed: #FF5757;
+}
+
