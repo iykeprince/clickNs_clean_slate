@@ -52,6 +52,7 @@ function NewsletterUI() {
         <DynamicButton
           type="button"
           color="var(--woozBlue)"
+          width="100%"
           fontWeight="500"
           fontSize="16px"
           height="52px"

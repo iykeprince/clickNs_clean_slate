@@ -11,7 +11,7 @@ function PhoneTabletsIV() {
 
 <div className="ps_text">
 
-    <h3> Tablets Accersories</h3>
+    <h3> Tablets Accessories</h3>
 </div>
 
 <br/>

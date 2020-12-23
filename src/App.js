@@ -6,6 +6,8 @@ import {BrowserRouter as  Router , Route, Switch} from 'react-router-dom'
 import ProductDetail from './pages/ProductDetail'
 import CategoryList from './pages/CategoryList';
 import Account from './pages/Account';
+import RecentlyViewed from './pages/RecentlyViewed';
+
 
 function App() {
   return (
@@ -23,6 +25,7 @@ function App() {
         <Route path={"/product"} component={ProductDetail}/> 
         <Route path={"/category"} component={CategoryList}/> 
         <Route path={"/account"} component={Account}/> 
+        <Route path={"/recentlyViewed"} component={RecentlyViewed}/> 
       
         </Switch> 
       

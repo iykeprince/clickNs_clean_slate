@@ -12,18 +12,15 @@ import NewsletterUI from "./NewsletterUI";
 import RecentlyViewedUI from "./RecentlyViewedUI";
 import IconStore from '../../store/IconStore';
 import AccountOtherRows from "./AccountOtherRows";
+import { Link } from "react-router-dom";
 // import { IconButton } from "@material-ui/core";
 
 function AccountRowOne() {
   return (
     <div>
       <div className="row accRowOne__wrapper">
-        <div className="col-md-3 accLeftRow__wrapper ">
-          <div
-            className="nav flex-column nav-pills h-100"
-            id="v-pills-tab"
-            role="tablist"
-            aria-orientation="vertical"
+        <div className="col-md-3 accLeftRow__wrapper fixedHeight">
+          <div className="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical"
           >
 
 
@@ -96,7 +93,7 @@ function AccountRowOne() {
               {IconStore.heart}
              <span className="adjacentIcon__text">Saved Items</span> 
             </a>
-            <a
+            <Link to='/recentlyViewed'
               className="nav-link"
               id="v-pills-viewed-tab"
               data-toggle="pill"
@@ -107,7 +104,7 @@ function AccountRowOne() {
             >
               {IconStore.baselineHistory}
              <span className="adjacentIcon__text">Recently Viewed</span> 
-            </a>
+            </Link>
             <hr className="hrSeparator"/>
             <a
               className="nav-link"
@@ -184,7 +181,7 @@ function AccountRowOne() {
               role="tabpanel"
               aria-labelledby="v-pills-ordr-tab"
             >
-              <MyOrdersUI/>
+              <MyOrdersUI openOrderNumber='3'closedOrderNumber='0'/>
               
             </div>
             <div

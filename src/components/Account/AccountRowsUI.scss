@@ -80,86 +80,86 @@ label + .MuiInput-formControl {
 .nav-pills .show > .nav-link {
   color: #282828;
 }
-.aColContainer{
-    padding-right: 13px !important;
-    padding-bottom: 28px !important;
-
+.aColContainer {
+  padding-right: 13px !important;
+  padding-bottom: 28px !important;
 }
-.adjacentIcon__text{
-    padding-left: 24px !important;
+.adjacentIcon__text {
+  padding-left: 24px !important;
 }
-.hrSeparator{
-    border: 1px solid #F1F1F1;
+.hrSeparator {
+  border: 1px solid #f1f1f1;
 }
 
 .MuiMenuItem-root {
-    padding-top: 6px !important;
-    padding-bottom: 6px !important;
+  padding-top: 6px !important;
+  padding-bottom: 6px !important;
 }
 .MuiListItem-gutters {
-    padding-left: 16px !important;
-    padding-right: 16px !important;
+  padding-left: 16px !important;
+  padding-right: 16px !important;
 }
 .MuiListItem-root {
-    padding-top: 8px !important;
-    padding-bottom: 8px !important;
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
 }
-.accBox__wrapper{
+.accBox__wrapper {
   position: relative;
-  background: #FFFFFF;
-border: 1px solid #E8E8E8;
+  background: #ffffff;
+  border: 1px solid #e8e8e8;
 }
-.accBox__title{
+.accBox__title {
   font-weight: 500;
 }
-.accBox__content{
+.accBox__content {
   padding: 16px 13px 13px 13px !important;
 }
-.accBox__head{
+.accBox__head {
   padding: 13px !important;
-  border-bottom:  1px solid #E8E8E8;
+  border-bottom: 1px solid #e8e8e8;
 }
-.editIcon{
+.editIcon {
   float: right;
 }
-svg{
+svg {
   cursor: pointer;
 }
-.detailText{
+.detailText {
   position: absolute;
   bottom: 0;
   padding-bottom: 13px !important;
   font-weight: 500;
-  color: var(--woozBlue) ;
+  color: var(--woozBlue);
 }
-.subscribText{
+.subscribText {
   padding-bottom: 48px !important;
 }
-.text2{
+.text2 {
+  overflow-wrap: break-word;
   padding-bottom: 50px !important;
 }
-.woozBalance{
+.woozBalance {
   font-weight: 500;
   font-size: 16px;
-  color: var(--woozBlue) ;
+  color: var(--woozBlue);
   padding-left: 16px !important;
 }
-.subscribText{
+.subscribText {
   font-weight: 500;
 }
-.text1{
+.text1 {
   padding-bottom: 15px !important;
   font-weight: 500;
 }
-.changePassword__wrapper{
+.changePassword__wrapper {
   width: 50%;
 }
-.button__wrap{
+.button__wrap {
   max-width: 267px;
   margin-left: auto !important;
   margin-right: auto !important;
 }
-.orderToggle{
+.orderToggle {
   position: relative;
   z-index: 2;
   font-weight: 500;
@@ -167,105 +167,108 @@ svg{
   padding-left: 8px !important;
   margin-right: 42px !important;
 }
-.orderToggle__wrapper{
+.orderToggle__wrapper {
   padding-bottom: 12px !important;
   position: relative;
 }
-.orderContent__group{
+.orderContent__group {
   text-align: center;
   margin-top: 45px !important;
   max-width: 469px;
   margin-left: auto !important;
   margin-right: auto !important;
 }
-.orderTxt{
+.orderTxt {
   margin-top: 18px !important;
   font-weight: 500;
-font-size: 16px;
+  font-size: 16px;
 }
-.orderExplanation{
+.orderExplanation {
   font-weight: 500;
   margin-top: 6px !important;
   margin-bottom: 34px !important;
 }
 
 .newSeperator {
-  border: 1px solid #F1F1F1;
+  border: 1px solid #f1f1f1;
   margin-left: -22px !important;
   width: 106%;
   position: absolute;
-    z-index: 1;
-    bottom: 12px;
+  z-index: 1;
+  bottom: 12px;
 }
 
-.OpenClosedNav .nav-tabs .nav-link.active{
-  color: var(--woozBlue)  !important;
-  border-color: var(--woozBlue) ;
+.OpenClosedNav .nav-tabs .nav-link.active {
+  color: var(--woozBlue) !important;
+  border-color: var(--woozBlue);
   border-top: 1px solid transparent;
   border-left: 1px solid transparent;
   border-right: 1px solid transparent;
   border-bottom-width: 2px !important;
 }
 
-.OpenClosedNav .nav-link{
-padding-bottom: 12px !important;
+.OpenClosedNav .nav-link {
+  padding-bottom: 12px !important;
 }
 
 .OpenClosedNav .nav-tabs {
   border-bottom: 0px !important;
 }
-.OpenClosedNav .nav-tabs .nav-link:hover, .OpenClosedNav .nav-tabs .nav-link:focus{
+.OpenClosedNav .nav-tabs .nav-link:hover,
+.OpenClosedNav .nav-tabs .nav-link:focus {
   border-top-color: transparent !important;
-    border-left-color: transparent !important;
-    border-right-color: transparent !important;
+  border-left-color: transparent !important;
+  border-right-color: transparent !important;
 }
 
-.addressBookDetail__wrapper{
+.addressBookDetail__wrapper {
   max-width: 373px;
-  border: 1px solid #E8E8E8;
+  border: 1px solid #e8e8e8;
 }
-.addressbookUI_wrapper{
+.addressbookUI_wrapper {
+  // display: block;
   position: relative;
 }
-.button__wrap2{
+.button__wrap2 {
   display: flex;
   width: 193px;
   position: absolute;
   right: 0;
   top: 2px;
 }
-.button__wrap2>button{
+.button__wrap2 > button {
   height: 43px;
   font-size: 14px;
 }
-.reEdit, .Subsc{
+.reEdit,
+.Subsc {
   font-weight: 500;
 }
-.Subsc{
+.Subsc {
   padding: 11px !important;
-  border-bottom: 1px solid #E8E8E8;
+  border-bottom: 1px solid #e8e8e8;
   font-weight: 500;
 }
-.reEdit{
+.reEdit {
   padding: 13px 13px 19px 16px !important;
-  border-top: 1px solid #E8E8E8;
-  color: #B3B3B3;
+  border-top: 1px solid #e8e8e8;
+  color: #b3b3b3;
 }
-.addresstext_detail{
-padding: 14px 12px 12px 16px !important;
+.addresstext_detail {
+  padding: 14px 12px 12px 16px !important;
 }
-.defaultAdress{
-  color: #00A912;
+.defaultAdress {
+  color: #00a912;
   font-weight: 500;
   padding-top: 16px !important;
-  padding-bottom: 12px!important;
+  padding-bottom: 12px !important;
 }
-.nameOf{
+.nameOf {
   font-weight: 500;
-font-size: 16px;
+  font-size: 16px;
   padding-bottom: 10px !important;
 }
-.mbottom{
+.mbottom {
   padding-bottom: 17px !important;
 }
 .MuiRadio-colorSecondary.Mui-checked {
@@ -277,10 +280,54 @@ font-size: 16px;
 .MuiIconButton-colorSecondary:hover {
   background-color: rgba(0, 41, 245, 0.04) !important;
 }
-.logoutTxt{
+.logoutTxt {
   color: var(--woozBlue) !important;
 }
-.newsButton__wrapper{
+.newsButton__wrapper {
   padding-top: 55px !important;
   padding-bottom: 5px !important;
+}
+
+.orderImage {
+  width: 111px;
+  height: 134px;
+  object-fit: contain;
+}
+.orderAvailableDataRow {
+  border: 1px solid #f1f1f1;
+  width: 103%;
+  border-right: transparent;
+  padding: 15px 11px 7px 12px !important;
+  margin-bottom: 18px !important;
+}
+.seeDetailsLink,.seeDetailsLink:hover {
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--woozBlue) !important;
+  padding-right: 8px !important;
+}
+.fixedHeight{
+  max-height: 540px;
+}
+.orderAvailDetail p{
+  font-weight: 500;
+}
+.orderedProdNumber,.orderedProdName,.seeDetailsLink{
+  padding-top: 8px !important;
+}
+.orderedProdNumber{
+  padding-bottom: 16px !important;
+}
+.orderAvailDetail button{
+  margin-bottom: 9px!important;
+}
+
+@media screen and (max-width: 768px) {
+  // .adjacentIcon__text{
+  //   display: none;
+  // }
+  .rightr {
+    margin-top: 20px !important;
+    padding-left: 0px !important;
+  }
 }

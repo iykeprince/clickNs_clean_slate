@@ -1,7 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import IconStore from "../../store/IconStore";
-import LargeButton from "../Button/LargeButton";
 import NoDataUI from "./NoDataUI";
 
 function MyPendReviewUI() {
@@ -18,9 +16,6 @@ function MyPendReviewUI() {
         page to help all woozeee's users get the best shopping experience!"
       />
 
-      <div className="button__wrap">
-      <Link to='/'><LargeButton buttonName="CONTINUE SHOPPING" /></Link>
-      </div>
     </div>
   );
 }

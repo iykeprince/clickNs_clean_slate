@@ -13,7 +13,7 @@ class AdminOrder extends React.Component {
     return (
       <React.Fragment>
         <div className="conatine">
-          <h3 style={{ textAlign: "center" }}>Phone Accercories</h3>
+          <h3 style={{ textAlign: "center" }}>Phone Accessories</h3>
           <br />
 
           <div className="ogridd-container">

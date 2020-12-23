@@ -218,5 +218,16 @@ padding-right:11px !important;
 @media screen and (max-width:768px){
     .rows__wrapper{
         text-align: center;
+        padding-left: 16px !important;
+    }
+    .separator {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:992px){
+    .rightSide {
+        padding-left: 0px !important;
+        padding-bottom: 10px !important;
     }
 }

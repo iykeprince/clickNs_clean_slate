@@ -18,7 +18,7 @@ class AdminOrder extends React.Component {
    
         
 <div className="conatine">
-<h3 style={{textAlign:"center"}}>Tablets Accercories</h3>
+<h3 style={{textAlign:"center"}}>Tablets Accessories</h3>
 <br/>
 
         <div className="gridd-container">

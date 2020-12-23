@@ -1,11 +1,10 @@
 // import { IconButton } from '@material-ui/core'
 import React from "react";
-import { Link } from "react-router-dom";
 import IconStore from "../../store/IconStore";
-import LargeButton from "../Button/LargeButton";
 import NoDataUI from "./NoDataUI";
+import OrderAvailableData from "./OrderAvailableData";
 
-function MyOrdersUI() {
+function MyOrdersUI(prop) {
   return (
     <div>
       <h3 className="titleHeader">Orders</h3>
@@ -24,7 +23,7 @@ function MyOrdersUI() {
                 aria-controls="home"
                 aria-selected="true"
               >
-                OPEN ORDERS (0)
+                OPEN ORDERS ({prop.openOrderNumber})
               </a>
             </li>
             <li className="nav-item" role="presentation">
@@ -37,7 +36,7 @@ function MyOrdersUI() {
                 aria-controls="profile"
                 aria-selected="false"
               >
-                CLOSED ORDERS (0)
+                CLOSED ORDERS ({prop.closedOrderNumber})
               </a>
             </li>
           </ul>
@@ -52,8 +51,16 @@ function MyOrdersUI() {
             role="tabpanel"
             aria-labelledby="home-tab"
           >
-           <NoDataUI Image={IconStore.orderShopBag} Topic='You have placed no orders yet!' Explanation=' All your orders will be saved here for you to access their state
-            anytime'/>
+  
+            {/* IF NO DATA */}
+           {/* <NoDataUI Image={IconStore.orderShopBag} Topic='You have placed no orders yet!' Explanation=' All your orders will be saved here for you to access their state
+            anytime'/> */}
+
+
+              {/* IF DATA */}
+          <OrderAvailableData/>
+
+
           </div>
           <div
             className="tab-pane fade"
@@ -67,9 +74,7 @@ function MyOrdersUI() {
         </div>
 
         
-        <div className="button__wrap">
-            <Link to='/'><LargeButton buttonName="CONTINUE SHOPPING" /></Link>
-        </div>
+        
       </div>
     </div>
   );

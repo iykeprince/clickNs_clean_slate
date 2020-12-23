@@ -217,7 +217,7 @@ function PhoneTabletsII() {
 
 <div className="ps_text">
 
-    <h3> Phone Accersories</h3>
+    <h3> Phone Accessories</h3>
 </div>
 
 <br/>

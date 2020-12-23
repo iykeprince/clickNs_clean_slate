@@ -12,7 +12,7 @@ const ProductCardGroupBig = (props) => {
   return (
     <div>
       <Row className="ProductCardGroupBig">
-        <Col sm="6" md="4" lg="2">
+        <Col sm="6" md="4" lg="2" >
           <ProductDetailCard
             productImg={imgPhone}
             productName={`Samsung Galaxy A50..`}

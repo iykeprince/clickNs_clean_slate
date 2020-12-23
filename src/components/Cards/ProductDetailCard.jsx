@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import DiscountPercent from "../DiscountPercent/DiscountPercent";
 import './ProductDetailCard.css'
 
 const ProductDetailCard = (props) => {
   return (
-    <div className='productDetailCard'>
+    <Link to="/product" className='productDetailCard'>
       <div className='discAlign'>
       <DiscountPercent DiscountText='-20%'/>
       </div>
@@ -21,7 +22,7 @@ const ProductDetailCard = (props) => {
       <div className="previousProductPrice">
         <p>&#8358; 80,000</p>
       </div>
-    </div>
+    </Link>
   );
 };
 

@@ -3,7 +3,6 @@ import * as FaIcon from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
 
-
 class CatSideNav extends React.Component{
 
     render(){

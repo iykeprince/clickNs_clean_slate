@@ -2,12 +2,12 @@ import styled from '@emotion/styled'
 import { css } from '@emotion/react'
 
 
-//VERSION 2 - Fixed button text, but Dynamic styles
+//2nd Type - Fixed button text, but Dynamic styles
 
 const dynamicStyle = props =>
   css`
     color: ${props.color};
-    width: 100%;
+    width: ${props.width};
     height: ${props.height};
     background: ${props.backgroundColor};
     box-shadow: ${props.boxShadow};

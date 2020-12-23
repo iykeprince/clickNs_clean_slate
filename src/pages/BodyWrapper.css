@@ -2,6 +2,12 @@
     padding-left:11.8% !important;
     padding-right:11.8% !important;
 }
+.Separator2{
+    margin-left: -16px !important;
+    margin-top: 12px !important;
+    margin-bottom: 12px !important;
+    border: 1px solid #F1F1F1;
+}
 @media only screen and (max-width: 1200px) {
     .body__wrapper{
         padding-left:5% !important;
