@@ -3,7 +3,7 @@ import { Row, Col } from "react-bootstrap";
 import "./SlimCard.css";
 const SlimCard = (props) => {
   return (
-    <Row className="slimRow flex-wrap flex-lg-nowrap">
+    <Row className="slimRow">
       <div className="slimLogo ml-auto">
         <img className="img-fluid" src={props.companyLogo} alt="slim logo" />
       </div>
@@ -22,7 +22,7 @@ const SlimCard = (props) => {
               </p>
             </Col>
 
-            <div className="slimButton mt-2 mt-lg-0">
+            <div className="slimButton">
               <button type="button" className="mediumButton">
                 Buy Now
               </button>

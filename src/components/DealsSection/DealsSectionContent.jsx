@@ -5,7 +5,7 @@ const DealsSectionContent = (props) => {
   return (
     <Link
       to="/product"
-      className="dealsProduct col-lg-2 col-md-4 col-sm-6"
+      className="dealsProduct col-lg-2 col-md-4 col-sm-6 col-6"
     >
       <div className="percentDiscount">
         <span className="percentDiscount__text">-20%</span>
