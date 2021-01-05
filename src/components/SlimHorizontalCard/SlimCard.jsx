@@ -4,7 +4,7 @@ import "./SlimCard.css";
 const SlimCard = (props) => {
   return (
     <Row className="slimRow">
-      <div className="slimLogo ml-auto">
+      <div className="slimLogo">
         <img className="img-fluid" src={props.companyLogo} alt="slim logo" />
       </div>
 

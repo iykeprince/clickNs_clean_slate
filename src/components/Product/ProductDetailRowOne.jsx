@@ -117,14 +117,9 @@ function ProductDetailRowOne() {
         <div className="rightSectionOne">
           <p className="rightSectionTitle">DELIVERY AND RETURNS</p>
           <Row className='newRowWrap'>
-            <Col xs="2" className='iconWrapper'>
-              <img src="/images/deliveryBus.svg" alt="delivery Bus" />
-              <br />
-              <img src="/images/returnPolicyIcon.svg" alt="returnPolicy Icon" className='topRightIcon'/>
-              <br />
-              <img src="/images/warantyIcon.svg" alt="warantyIcon" className='topRightIcon' />
-            </Col>
-            <Col xs="10"  className='rightSectionWrapper'>
+            <div className='rightSectionWrapper col'>
+              <div  className='rightSelGrp'>
+              <img src="/images/deliveryBus.svg" alt="delivery Bus" className='topRightImgIcon' />
               <div>
                 <span>Delivery Information</span>
                 <p className="smallText">
@@ -133,19 +128,42 @@ function ProductDetailRowOne() {
                 </p>
                 <Link className="smallText textLink">See more </Link>
               </div>
-              <div > 
+              </div>
+           
+              <div className='rightSelGrp'> 
+                <img src="/images/returnPolicyIcon.svg" alt="returnPolicy Icon" className='topRightImgIcon'/>
+                <div>
                 <span>Return Policy</span>
                 <p className="smallText">
                   Free return within 15 days for Jumia Mall items and 7 days for
                   other eligible items.
                 </p>
                 <Link className="smallText textLink">See more </Link>
+                </div>
+
               </div>
-              <div >
-                <span>Warranty</span>
+              
+              <div  className='rightSelGrp'>
+                <img src="/images/warantyIcon.svg" alt="warantyIcon" className='topRightImgIcon' />
+                <div>
+                  <span>Warranty</span>
                 <p className="smallText">24 Months</p>
+                </div>
+                
               </div>
-            </Col>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
           </Row>
         </div>
 
