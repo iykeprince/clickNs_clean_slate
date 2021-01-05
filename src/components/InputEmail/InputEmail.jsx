@@ -1,11 +1,11 @@
 import React from 'react'
-import styles from './InputEmail.module.css'
+
 function InputEmail() {
     return (
-        <div className={styles.email}>
+        <div className='email'>
     <input
       type="text"
-      className={styles.emailInput}
+      className='emailInput'
       placeholder="Your Email"
     />
 

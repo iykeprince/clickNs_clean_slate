@@ -1,5 +1,5 @@
 import React from 'react'
-import "./ProductLocation.css";
+
 const ProductLocation = props=>{
     return (
         <div className="productLocation">

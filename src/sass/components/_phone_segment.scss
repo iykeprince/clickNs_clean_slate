@@ -1,67 +1,48 @@
-// .ps{
-// text-align: center !important;
-
-// }
-
-
-
-
 
 .phone_segment{
-
     background-color: white !important;
     margin-top: 5rem !important;
-    border-radius: 5px;
+    border-radius: 0.313rem;
     padding: 1rem !important;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.05);
 }
 
 .budget_segment{
-
     background-color: white !important;
     margin-top: 5rem !important;
-    border-radius: 5px;
+    border-radius: 0.313rem;
     padding: 1rem !important;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.05);
 }
 .ps_display_image{
-
     background-color: white !important;
     margin-top: 5rem !important;
-    // padding: 1rem !important;
- 
-
 }
 .fun_images1{
-
     padding: 3rem !important;
 }
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto;
-    padding: 10px;
+    padding: 0.625rem;
     background-color: #ffff;
     margin-top: 5rem !important;
-    border-radius: 5px !important;
+    border-radius: 0.313rem !important;
   }
   .grid-item {
-    padding:3px !important;
-    font-size: 30px;
+    padding:0.188rem !important;
+    font-size: 1.875rem;
     text-align: center !important;
     width: 100% !important;
   }
   .funImages{
-
     width: 100%;
-    border-radius: 5px !important;
+    border-radius: 0.313rem !important;
   }
 
   .gridd-container {
     display: flex;
-    grid-template-columns: auto auto auto auto auto auto;
-  
-
-    padding: 10px !important;
+    padding: 0.625rem !important;
     width: 100%;
     justify-content: space-evenly !important;
 
@@ -69,100 +50,70 @@
 
       text-align: center !important;
       font-weight: 500;
-      font-size: 14px;
+      font-size: 0.875rem;
     }
 
   }
   .griddd-container {
     display: flex;
-    grid-template-columns: auto auto auto auto auto auto;
-    padding: 10px !important;
+    padding: 0.625rem !important;
     width: 100%;
     justify-content: space-evenly !important;
 
     p {
-
       text-align: left !important;
-      padding-left: 9px !important;
+      padding-left: 0.563rem !important;
     }
-
-
-
-
   }
 
    .ogridd-container {
-    display: grid;
-    grid-template-columns: auto auto auto auto auto auto;
-    padding: 10px !important;
+    padding: 0.625rem !important;
     width: 100%;
     justify-content: space-evenly !important;
 
     p {
-
       text-align: center !important;
       font-weight: 500;
-      font-size: 14px;
-      
+      font-size: 0.875rem;
     }
-
-
-
 
   }
   .conatine{
     margin-top: 2rem !important;
-    border-radius: 5px !important;
+    border-radius: 0.313rem !important;
     background-color: #ffff;
     padding: 1rem !important;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.05);
   }
-
-
   
   .gridd-item {
-  
-    padding: 20px;
- 
+    padding: 1.25rem;
   }
   .ps_card_bg{
     background-color: white !important;
 
   }
-
-
   .ps_card_img{
-
-  
     width: 7rem;
-    height: 118px !important;
+    height: 7.375rem !important;
     object-fit: contain;
   }
 
 .ps_card{
-
     background: #F5F5F5 !important;
     padding: 2rem !important;
-    margin: 5px !important;
-    border-radius: 5px !important;
-    // display: flex !important;
+    margin: 0.313rem !important;
+    border-radius: 0.313rem !important;
   
 }
 .bp-span{
-
     float: right !important;
     color: #043D7D;
     font-weight: bolder;
     font-size: 1rem;
-    ;
 }
 
-
 .bp_card{
-
-    // background: #F5F5F5 !important;
-    // padding: 3rem !important;
-    // margin: 5px !important;
-    border-radius: 5px;
+    border-radius: 0.313rem;
     
 }

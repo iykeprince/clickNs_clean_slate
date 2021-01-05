@@ -1,5 +1,4 @@
 import React from 'react'
-import './DiscountPercent.css'
 
 const DiscountPercent=props=> {
     return (

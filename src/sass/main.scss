@@ -2,19 +2,22 @@
 
 
 //scss files for components
-
-@import "./components/bodynav";
-
-@import "./components/bottom_about_section";
+@import "./components/header";
+@import "./components/footer";
+@import "./components/home_bodynav";
+@import "./components/home_bottom_about";
+@import "./components/account_rowsui";
+@import "./components/large_button";
 @import "./components/product";
-
+@import "./components/product_cards";
+@import "./components/body_wrapper";
+@import "./components/input_email";
 @import "./components/deal_section";
 @import "./components/phone_segment";
-
 @import "./components/catsidenav";
+@import "./components/navbar";
+@import "./components/homebody_top";
+
 
 // scss files for pages 
-
 @import "./pages/categories";
-
-@import "./components/navbar.scss"

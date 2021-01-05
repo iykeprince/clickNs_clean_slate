@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import DiscountPercent from "../DiscountPercent/DiscountPercent";
-import './ProductDetailCard.css'
 
 const ProductDetailCard = (props) => {
   return (

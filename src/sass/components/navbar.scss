@@ -4,23 +4,18 @@
   box-shadow: #ededed 1rem 1rem 8rem 1rem;
 }
 
-
 .flexbox > div {
   width: 70%;
   padding-top: 2rem;
   // padding: 1rem 1rem 1rem;
-
-
 }
 
 .flexbox{
   display: flex;
   flex-wrap: nowrap;
-
 }
 
 .dropdown .dropbtn {
-
   border: none;
   outline: none;
   color: black;
@@ -43,15 +38,15 @@
   display: none;
   position: absolute;
   background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  min-width: 10rem;
+  box-shadow: 0rem 0.5rem 1rem 0rem rgba(0,0,0,0.2);
   z-index: 1;
 }
 
 .dropdown-content a {
   float: none;
   color: black;
-  padding: 12px 16px;
+  padding: 0.75rem 1rem;
   text-decoration: none;
   display: block;
   text-align: center;
@@ -91,7 +86,7 @@
   color: #495057;
   background-color: #FAFAFA !important;
   background-clip: padding-box;
-  border: 1px solid #ced4da;
+  border: 0.063rem solid #ced4da;
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
@@ -108,7 +103,6 @@ and (-webkit-min-device-pixel-ratio: 1) {
     align-items: stretch;
     width: 24rem !important;
 }
-
 
 }
 

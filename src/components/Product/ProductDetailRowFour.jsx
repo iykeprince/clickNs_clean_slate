@@ -2,7 +2,7 @@ import React from "react";
 import { Row, Col } from "react-bootstrap";
 import CardGroupTitle from "../Cards/CardGroupTitle";
 import ProductCardGroupSmall from "../Cards/ProductCardGroupSmall";
-import "./ProductDetailRowFour.css";
+
 
 function ProductDetailRowFour() {
   return (

@@ -12,14 +12,14 @@ import SingleImageCard from '../components/SingleImageCard/SingleImageCard';
 import ImageDisplaySectionTwo from '../components/ImageDisplaySectionTwo/ImageDisplaySectionTwo';
 import DealsSectionFour from '../components/DealsSection/DealsSectionFour';
 import DealsSectionThree from '../components/DealsSection/DealsSectionThree';
-import './BodyWrapper.css';
+
 
 function Home() {
     return (
         <div>
             
             <Header />
-            <div className='body__wrapper'>
+            <div className='body__wrapper putAtMiddle'>
             <HomeBodyTop />
             <BodyNav />
             <DealsSection />

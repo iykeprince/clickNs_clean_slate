@@ -5,7 +5,6 @@ import samsungLogo from '../../assets/samsungLogo.png';
 import sparLogo from '../../assets/sparLogo.png';
 import gameLogo from '../../assets/gameLogo.png';
 import SlimCard from '../SlimHorizontalCard/SlimCard';
-import './ProductDetailsRowTwo.css'
 import { Col, Row } from "react-bootstrap";
 
 

@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "./LeftSideBar.module.css";
 import { Link } from "react-router-dom";
 
 const LeftSideBarData = {
@@ -16,25 +15,17 @@ const LeftSideBarData = {
   "/images/LeftSideBar/others.svg": "Other Categories",
 };
 
-// const list = [
-//   {name: "",
-//   imgURL: "",
-//   children: [
-
-//   ]
-// }
-// ]
 
 const htmlData = [];
 for (let key in LeftSideBarData) {
   let value = LeftSideBarData[key];
   htmlData.push(
     // <Link to=''>
-    <div key={key}>
-      <img src={key} alt="icon" className={styles.leftSideBar__icon} />
+    <div className='leftSideBar__grp' key={key}>
+      <img src={key} alt="icon" className='leftSideBar__icon' />
       <Link to="category">
         {" "}
-        <span className={styles.leftSideBar__text}>{value} </span>
+        <span className='leftSideBar__text'>{value} </span>
       </Link>
     </div>
     // </Link>
@@ -42,7 +33,7 @@ for (let key in LeftSideBarData) {
 }
 
 function LeftSideBar() {
-  return <div className={styles.leftSidebar__container}>{htmlData}</div>;
+  return <div className='leftSidebar__container'>{htmlData}</div>;
 }
 
 export default LeftSideBar;

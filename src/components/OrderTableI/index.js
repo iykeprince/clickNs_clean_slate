@@ -16,7 +16,7 @@ class AdminOrder extends React.Component {
           <h3 style={{ textAlign: "center" }}>Phone Accessories</h3>
           <br />
 
-          <div className="ogridd-container">
+          <div className="ogridd-container row">
             {TableItems.map((e, i) => {
               return (
                 <TableContent key={i} img={e.img} info={e.info} />

@@ -6,7 +6,7 @@ class TableContent extends React.Component {
     return (
       <React.Fragment>
   
-        <div >
+        <div className='col-lg-2 col-md-4 col-sm-6 col-6' >
           <div className="pse_card">
            <img
             src={this.props.img}

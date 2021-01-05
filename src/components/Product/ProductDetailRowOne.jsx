@@ -1,6 +1,6 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
-import "./ProductDetailRowOne.css";
+// import "./ProductDetailRowOne.css";
 import imgPrev from "../../assets/prevLeft.svg";
 import phonesmall1 from "../../assets/phoneSmall47.svg";
 import phonesmall2 from "../../assets/phoneSmall45.svg";

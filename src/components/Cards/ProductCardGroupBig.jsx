@@ -6,7 +6,6 @@ import powerBank795 from '../../assets/powerBank795.png'
 import phone790 from '../../assets/phone790.png'
 import phone792 from '../../assets/phone792.png'
 
-import './ProductCardGroupBig.css';
 
 const ProductCardGroupBig = (props) => {
   return (

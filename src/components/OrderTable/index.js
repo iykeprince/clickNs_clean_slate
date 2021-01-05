@@ -23,7 +23,7 @@ class AdminOrder extends React.Component {
             Phone & Tablets
           </h3>
 
-          <div className="gridd-container">
+          <div className="gridd-container row">
             {TableItems.map((e, i) => {
               return (
                 <TableContent key={i} img={e.img} info={e.info} />

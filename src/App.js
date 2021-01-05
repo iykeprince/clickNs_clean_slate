@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import "./sass/main.scss";
 import Home from './pages/Home';
 import {BrowserRouter as  Router , Route, Switch} from 'react-router-dom'
@@ -25,7 +24,7 @@ function App() {
         <Route path={"/product"} component={ProductDetail}/> 
         <Route path={"/category"} component={CategoryList}/> 
         <Route path={"/account"} component={Account}/> 
-        <Route path={"/recentlyViewed"} component={RecentlyViewed}/> 
+        <Route path={"/recentlyViewed"} component={RecentlyViewed}/>
       
         </Switch> 
       

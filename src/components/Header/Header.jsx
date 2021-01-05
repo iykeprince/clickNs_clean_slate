@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Header.css";
 import Search from "../Search/Search";
 import SideNav from "../SideNav/SideNav";
 import { Row, Col } from "react-bootstrap";
@@ -8,7 +7,7 @@ import * as Ai from "react-icons/ai";
 
 export default function Header() {
   return (
-    <header className="header__container">
+    <header className="header__container Container">
       <Row>
         <Col md="12">
           <div className="image__wrapper">
@@ -43,33 +42,34 @@ export default function Header() {
         </Col>
       </Row>
 
-      <Row className="headerSecondRow">
-        <Col md="4">
+      <div className="bgSR">
+        <div className="headerSecondRow row">
           <div className="sell">
             <img src="/images/blueStar.svg" alt="sell" />
             <span>Sell on woozeee</span>
           </div>
-        </Col>
-        <Col md="6">
-          <div className='woozSpan'>
-          <span className="headerSecondIcon">
-            <img src="/images/header/woozeeeSmall.svg" alt="sell" />
-          </span>
-          <span className="headerSecondIcon">
-            <img src="/images/header/payCapital.svg" alt="sell" />
-          </span>
-          <span className="headerSecondIcon">
-            <img src="/images/header/DispatchCapital.svg" alt="sell" />
-          </span>
-          <span className="headerSecondIcon">
-            <img src="/images/header/socialsCapital.svg" alt="sell" />
-          </span>
-          <span className="headerSecondIcon">
-            <img src="/images/header/hangoutsCapital.svg" alt="sell" />
-          </span>
+
+          <div className="m-auto">
+            <div className="woozSpan">
+              <span className="headerSecondIcon">
+                <img src="/images/header/woozeeeSmall.svg" alt="sell" />
+              </span>
+              <span className="headerSecondIcon">
+                <img src="/images/header/payCapital.svg" alt="sell" />
+              </span>
+              <span className="headerSecondIcon">
+                <img src="/images/header/DispatchCapital.svg" alt="sell" />
+              </span>
+              <span className="headerSecondIcon">
+                <img src="/images/header/socialsCapital.svg" alt="sell" />
+              </span>
+              <span className="headerSecondIcon">
+                <img src="/images/header/hangoutsCapital.svg" alt="sell" />
+              </span>
+            </div>
           </div>
-        </Col>
-      </Row>
+        </div>
+      </div>
 
       <Row className="headerThirdRow">
         <div className="some__Container">
@@ -91,14 +91,18 @@ export default function Header() {
           <div className="some__item2">
             <div className="header__nav">
               <div className="header__option">
-              <Link to="/account"><span className="option__lineOne">Hi, Bukky</span></Link> 
+                <Link to="/account">
+                  <span className="option__lineOne">Hi, Bukky</span>
+                </Link>
                 <img
                   src="/images/arrowdown.svg"
                   alt=""
                   className="dropdown__icon"
                 />
 
-               <Link to='/account'><Ai.AiOutlineUser className="personIcon" /></Link> 
+                <Link to="/account">
+                  <Ai.AiOutlineUser className="personIcon" />
+                </Link>
               </div>
               <div className="header__option .help__sec">
                 <img

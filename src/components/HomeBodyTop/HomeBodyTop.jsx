@@ -2,30 +2,24 @@ import React from 'react'
 import LeftSideBar from '../LeftSideBar/LeftSideBar'
 import MiddleBar from '../MiddleBar/MiddleBar'
 import RightSideBar from '../RightSideBar/RightSideBar'
-import styles from './HomeBodyTop.module.css'
-import { Container} from 'react-bootstrap';
-import './HomeBodyTop.module.css'
 
 function HomeBodyTop() {
     return (
-        <div>
-            <Container fluid className={styles.container}>
-                <div className={styles.grid__Container}>
-                    <div class={styles.griditem}>
-                    <LeftSideBar className={styles.leftSideBar} />
+            <div className='hmbcontainer'>
+                <div className='grid__Container'>
+                    <div class='griditem'>
+                    <LeftSideBar className='leftSideBar'/>
                     </div>
 
-                    <div className={styles.griditem}>
-                    <MiddleBar  className={styles.middleBar}/>
+                    <div className='griditem'>
+                    <MiddleBar  className='middleBar'/>
                     </div>
 
-                    <div className={styles.griditem}>
-                    <RightSideBar className={styles.rightSideBar}/>
+                    <div className='griditem'>
+                    <RightSideBar className='rightSideBar'/>
                     </div>
                 </div>
-            </Container>
-            
-        </div>
+            </div>
 
     )
 }

@@ -2,8 +2,9 @@ import React from "react";
 import ProductDetailCard from "../Cards/ProductDetailCard";
 import { Row} from "react-bootstrap";
 import imgSamsung from "../../assets/samsungFrontBack809.png";
-import "./ProductCardGroupSmall.css";
 import { Link } from "react-router-dom";
+
+
 const ProductCardGroupSmall = (props) => {
   return (
     <div>

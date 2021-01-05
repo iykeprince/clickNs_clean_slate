@@ -1,5 +1,4 @@
 import React from "react";
-import "./LargeButton.scss";
 
 
 //TO UPDATE VERSION - From Fixed style, dynamic button text to dynamic style and button using props.className

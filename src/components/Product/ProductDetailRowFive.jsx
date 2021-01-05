@@ -1,7 +1,7 @@
 import React from "react";
 import ProductCardGroupBig from "../Cards/ProductCardGroupBig";
 import CardGroupTitle from "../Cards/CardGroupTitle";
-import './ProductDetailRowFive.css'
+
 
 function ProductDetailRowFive() {
   return (

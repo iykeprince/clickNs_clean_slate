@@ -21,7 +21,7 @@ class AdminOrder extends React.Component {
 <h3 style={{textAlign:"center"}}>Tablets Accessories</h3>
 <br/>
 
-        <div className="gridd-container">
+        <div className="gridd-container row">
 
          
  

@@ -1,5 +1,4 @@
 import React from 'react'
-import './RightSideCard.css'
 
 const RightSideCard = props=> {
     return (

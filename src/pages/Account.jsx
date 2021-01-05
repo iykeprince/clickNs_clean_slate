@@ -7,7 +7,7 @@ function Account() {
     return (
         <div>
             <Header/>
-            <div className='body__wrapper'>
+            <div className='body__wrapper putAtMiddle'>
             <AccountRowOne/>
             </div>
             <Footer/>

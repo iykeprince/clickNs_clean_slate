@@ -1,6 +1,5 @@
 import React from "react";
 import Header from "../components/Header/Header";
-import "./BodyWrapper.css";
 import ProductDetailRowOne from "../components/Product/ProductDetailRowOne";
 import ProductDetailRowTwo from "../components/Product/ProductDetailRowTwo";
 import ProductDetailRowThree from "../components/Product/ProductDetailRowThree";
@@ -14,7 +13,7 @@ function ProductDetail() {
   return (
     <div>
       <Header />
-      <div className="body__wrapper">
+      <div className="body__wrapper putAtMiddle">
       <ProductLocation/>
       <ProductDetailRowOne/>
       <ProductDetailRowTwo/>

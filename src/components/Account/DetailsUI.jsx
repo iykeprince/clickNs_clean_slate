@@ -1,7 +1,6 @@
 import React from "react";
 import TextField from "@material-ui/core/TextField";
 import { makeStyles } from "@material-ui/core/styles";
-import "./AccountRowsUI.scss";
 import { Col, Row } from "react-bootstrap";
 import { Input } from "@material-ui/core";
 import LargeButton from "../Button/LargeButton";

@@ -3,7 +3,7 @@ import { Row, Col } from "react-bootstrap";
 import RightSideCard from "./RightSideCard";
 import samsungGalaxyA70 from "../../assets/samsungGalaxyA70.png";
 import samsungFrontBack from "../../assets/samsungFrontBack.png";
-import "./ProductDetailRowThree.css";
+// import "./ProductDetailRowThree.css";
 import { Link } from "react-router-dom";
 
 function ProductDetailRowThree() {

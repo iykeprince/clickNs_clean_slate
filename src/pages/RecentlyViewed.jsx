@@ -6,10 +6,10 @@ import Header from "../components/Header/Header";
 
 function RecentlyViewed() {
   return (
-    <div>
+    <div >
       <Header />
 
-      <div className="body__wrapper">
+      <div className="body__wrapper putAtMiddle">
         <div className="prodWrapper">
           <div className="prodBigWrapper">
             <CardGroupTitle titleText="Recently Viewed" />

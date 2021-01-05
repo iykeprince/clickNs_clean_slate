@@ -19,13 +19,14 @@ class CategoryList extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <div>
+        
           <Header />
+          <div >
 
-          <div className="containe">
-            <div className="top_banner"></div>
+          <div className="containe putAtMiddle">
+            <div className="top_banner "></div>
           </div>
-          <div className="body__wrapper">
+          <div className="body__wrapper putAtMiddle">
             <ol className="breadcrumb ">
               <li className="breadcrumb-item">
                 <Link to="/" className="active">
@@ -35,8 +36,6 @@ class CategoryList extends React.Component {
               <li className="breadcrumb-item active">Phones & Tablets</li>
             </ol>
 
-            {/* <Row>
-        <Col md={12}> */}
 
             <div className="top_badge">
               <img
@@ -99,16 +98,10 @@ class CategoryList extends React.Component {
             <div className="top_badge">
               <img
                 src="./images/phones/21914 1.png"
-                // className="top_banner_img"
                 alt="top_banner_image"
                 style={{ width: "100%", marginTop: " 3rem !important" }}
               />
             </div>
-            {/*         
-</div>
-        </Col>
-
-    </Row> */}
 
             <OfficialStore />
 
@@ -119,8 +112,9 @@ class CategoryList extends React.Component {
             <CatSideNav />
           </div>
 
+          </div>
           <Footer />
-        </div>
+        
       </React.Fragment>
     );
   }
