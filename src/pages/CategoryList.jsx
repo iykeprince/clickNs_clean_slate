@@ -20,8 +20,8 @@ class CategoryList extends React.Component {
     return (
       <React.Fragment>
         
-          <Header />
-          <div >
+          <Header/>
+          <div className=''>
 
           <div className="containe putAtMiddle">
             <div className="top_banner "></div>

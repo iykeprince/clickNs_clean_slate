@@ -314,6 +314,7 @@ padding-right:0.688rem !important;
   background: #ffffff;
   box-shadow: 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.05);
   border-radius: 0.313rem;
+  border-top: 1px solid #dee2e6;
   padding: 2.188rem 1.125rem 4.313rem 1.125rem !important;
 }
 .sponsoredRight {
@@ -375,7 +376,9 @@ padding-right:0.688rem !important;
   padding-left: 3.5rem !important;
   padding-right: 3.5rem !important;
 }
-
+.Descriptions .nav-tabs {
+   border-bottom: 0rem;
+}
 
 
 

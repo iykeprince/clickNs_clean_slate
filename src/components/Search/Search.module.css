@@ -6,21 +6,23 @@
 }
 
 .header__searchInput{
-    height: 2.75rem;
+    height: 2.5rem;
     width: 100%;
-    background: #FAFAFA;
+    background: #fff;
     border: 0.063rem solid #E4E4E4;
     border-radius: 0.313rem;
     outline-width: 0;
     padding: 0.625rem !important ;
     text-indent: 2.188rem;
+    font-size: 0.938rem !important;
 }
 .button{
-    padding: 0.625rem 0.938rem !important;
+    padding: 0.6rem 0.938rem !important;
     background-color: var(--woozBlue)  !important;
     border: none !important;
     margin-left: 0.563rem !important;
     font-weight: bold;
+    font-size: 13px !important;
 }
 .btn-primary:hover {
     background-color: var(--woozBlue)  !important;
@@ -42,4 +44,5 @@
 .searchIcon{
     position: absolute;
     padding-left: 0.813rem !important;
+    height: 1.125rem;
 }

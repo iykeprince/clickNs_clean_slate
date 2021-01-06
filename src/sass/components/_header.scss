@@ -19,6 +19,9 @@
   .logo__wrapper{
     padding-right: 1.625rem !important;
   }
+  .logwrp{
+    margin-right: 4rem !important;
+  }
   .woozSpan{
     display: flex;
   }
@@ -140,7 +143,11 @@
       padding-right: 5% !important;
     }
   }
-  
+  @media only screen and (max-width: 992px) {
+    .logwrp{
+      margin-right: 0rem !important;
+    }
+  }
   @media only screen and (max-width: 768px) {
     .headerSecondRow,
     .searchWrapper {
@@ -153,6 +160,7 @@
     .some__item1{
       flex:1;
     }
+    
   }
   @media only screen and (max-width: 576px) {
     .image__wrapper {
