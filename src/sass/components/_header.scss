@@ -133,6 +133,54 @@
   .personIcon{
     display: none;
   }
+
+
+
+//HEADER THREE
+
+
+.question_wrap{
+  display: flex;
+  align-items: center;
+
+  .questionText_wrap{
+    font-weight: 500;
+    font-size: 0.75rem;
+    color: #6B6866;
+    padding-left: 0.188rem !important;
+
+  }
+}
+.some__item1{
+  padding-right:4% !important ;
+}
+
+.smallSection_wrapr{
+  display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    gap: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   @media only screen and (max-width: 1200px) {
     .header__wrapper {
       padding-left: 5% !important;

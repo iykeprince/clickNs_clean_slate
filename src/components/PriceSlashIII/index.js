@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/alt-text */
 import React from "react";
 // import {  Container, Row, Col } from "react-bootstrap";
 import { TableItems } from "./TableItems";

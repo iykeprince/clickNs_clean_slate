@@ -6,7 +6,7 @@ import Header from '../components/Header/Header'
 function Account() {
     return (
         <div>
-            <Header/>
+            <Header showHamburger={true}/>
             <div className='body__wrapper putAtMiddle'>
             <AccountRowOne/>
             </div>

@@ -8,7 +8,7 @@ function Search() {
     <div className={styles.header__search}>
       <img src="/images/search.svg" alt="" className={styles.searchIcon}/>
     <input
-      type="text"
+      type="text" 
       className={styles.header__searchInput}
       placeholder="Search products, brands and categories"
     />

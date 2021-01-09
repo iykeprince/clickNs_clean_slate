@@ -12,7 +12,7 @@ import ProductLocation from "../components/Product/ProductLocation";
 function ProductDetail() {
   return (
     <div>
-      <Header />
+      <Header showHamburger={true} />
       <div className="body__wrapper putAtMiddle">
       <ProductLocation/>
       <ProductDetailRowOne/>

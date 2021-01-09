@@ -1,6 +1,5 @@
 import React from 'react'
 import Header from "../components/Header/Header";
-import HeaderTwo from "../components/Header/HeaderTwo";
 import Footer from "../components/Footer/Footer";
 import HomeBodyTop from "../components/HomeBodyTop/HomeBodyTop";
 import BodyNav from "../components/BodyNav/BodyNav";
@@ -19,8 +18,7 @@ function Home() {
     return (
         <div>
             
-            {/* <Header /> */}
-            <HeaderTwo />
+            <Header />
             <div className='body__wrapper putAtMiddle'>
             <HomeBodyTop />
             <BodyNav />

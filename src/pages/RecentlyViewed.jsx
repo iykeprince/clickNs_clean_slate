@@ -7,7 +7,7 @@ import Header from "../components/Header/Header";
 function RecentlyViewed() {
   return (
     <div >
-      <Header />
+      <Header  showHamburger={true} />
 
       <div className="body__wrapper putAtMiddle">
         <div className="prodWrapper">

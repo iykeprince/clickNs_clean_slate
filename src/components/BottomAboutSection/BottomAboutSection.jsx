@@ -8,7 +8,7 @@ function BottomAboutSection() {
             <Container fluid className="bottomAboutSection__wrapper">
                 <Row>
                     <Col md='12' className="bottomAboutSection__title">
-                        <p>Woozeee - The No. 1 Market Place For Smart People</p>
+                        <p>woozeee - The No. 1 Market Place For Smart People</p>
                     </Col>
                 </Row>
                 <Row>

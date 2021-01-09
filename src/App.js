@@ -6,6 +6,8 @@ import ProductDetail from './pages/ProductDetail'
 import CategoryList from './pages/CategoryList';
 import Account from './pages/Account';
 import RecentlyViewed from './pages/RecentlyViewed';
+import Cart from './pages/Cart';
+import CheckOut from './pages/CheckOut';
 
 
 function App() {
@@ -25,6 +27,8 @@ function App() {
         <Route path={"/category"} component={CategoryList}/> 
         <Route path={"/account"} component={Account}/> 
         <Route path={"/recentlyViewed"} component={RecentlyViewed}/>
+        <Route path={"/cart"} component={Cart}/>
+        <Route path={"/checkout"} component={CheckOut}/>
       
         </Switch> 
       

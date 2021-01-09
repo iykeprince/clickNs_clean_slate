@@ -1,22 +1,22 @@
-import React from 'react'
-import CardGroupTitle from '../Cards/CardGroupTitle'
-import ProductCardGroupBig from '../Cards/ProductCardGroupBig'
+import React from "react";
+import CardGroupTitle from "../Cards/CardGroupTitle";
+import ProductCardGroupBig from "../Cards/ProductCardGroupBig";
 
 function AccountOtherRows() {
-    return (
-        <div className="prodWrapper">
+  return (
+    <div className="prodWrapper">
       <div className="prodBigWrapper">
-        <CardGroupTitle titleText='Recommended For You'/>
+        <CardGroupTitle titleText="Recommended For You" />
         <ProductCardGroupBig />
       </div>
       <br />
-      <div className="prodBigWrapper"> 
-        <CardGroupTitle titleText='Recently Viewed' />
+      <div className="prodBigWrapper">
+        <CardGroupTitle titleText="Recently Viewed" />
         <ProductCardGroupBig />
       </div>
       <br />
     </div>
-    )
+  );
 }
 
-export default AccountOtherRows
+export default AccountOtherRows;

@@ -16,7 +16,7 @@
 
 .slimLogo{
     align-self: center;
-    margin-right: 4% !important;
+    margin-right: 1rem !important;
     margin-left: 1rem !important;
     width: 90px;
     flex: 0 0 90px;
@@ -51,6 +51,7 @@ font-size: 18px;
 .slimTextSmall{
     font-size: 14px;
     font-weight: 500;
+    max-width: 19.8rem;
 }
 @media screen and (min-width:480px){
     .slimButton{
@@ -72,5 +73,18 @@ font-size: 18px;
     }
     .slimLogo{
         margin-left: auto !important;
+    }
+}
+
+@media screen and (min-width:1360px){
+    .slimTextContainer{
+        padding-right: 4rem !important;
+    }
+    
+}
+@media screen and (min-width: 1395px){
+    .slimTextContainer {
+    padding-right: 4.6rem !important;
+
     }
 }

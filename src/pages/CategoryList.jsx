@@ -20,7 +20,7 @@ class CategoryList extends React.Component {
     return (
       <React.Fragment>
         
-          <Header/>
+          <Header showHamburger={true} />
           <div className=''>
 
           <div className="containe putAtMiddle">
@@ -51,9 +51,7 @@ class CategoryList extends React.Component {
 
             <PriceSlashI />
 
-            <div></div>
-
-            {/* <PhoneTablets/> */}
+            
 
             <div className="grid-container">
               <div className="grid-item">
@@ -78,8 +76,6 @@ class CategoryList extends React.Component {
                 />
               </div>
             </div>
-            {/* <PhoneTablets/> */}
-            {/* <PhoneTabletsII/> */}
 
             <PriceSlashII />
 

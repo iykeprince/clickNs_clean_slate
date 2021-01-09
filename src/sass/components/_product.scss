@@ -43,6 +43,9 @@
 .rightSide{
     padding-left: 0.938rem !important;
 }
+.smallTextHeadr{
+  font-size: 0.875rem ;
+}
 .textBig, .textSmallOne, .textSmallTwo{
     font-size: 1.25rem;
     font-weight: 500;
@@ -109,7 +112,7 @@
 }
 .toSell{
     display: flex;
-    font-size: 0.875rem;
+    font-size: 0.813rem;;
     padding: 0.813rem 0.875rem 1.188rem 1.25rem !important;
     border-radius: 0.313rem;
 }

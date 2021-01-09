@@ -4,8 +4,10 @@ import Search from "../Search/Search";
 import SideNav from "../SideNav/SideNav";
 import { Row, Col } from "react-bootstrap";
 import * as Ai from "react-icons/ai";
+import IconStore from "../../store/IconStore"
+import WoozHeaderLogo from "./WoozHeaderLogo"
 
-export default function Header() {
+export default function Header({showHamburger}) {
   return (
     <header className="header__container Container">
       <Row>
@@ -55,16 +57,16 @@ export default function Header() {
                 <img src="/images/header/woozeeeSmall.svg" alt="sell" />
               </span>
               <span className="headerSecondIcon">
-                <img src="/images/header/payCapital.svg" alt="sell" />
+                {IconStore.payCapitalIcon}
               </span>
               <span className="headerSecondIcon">
-                <img src="/images/header/DispatchCapital.svg" alt="sell" />
+              {IconStore.dispatchCapitalIcon}
               </span>
               <span className="headerSecondIcon">
-                <img src="/images/header/socialsCapital.svg" alt="sell" />
+              {IconStore.socialCapitalIcon}
               </span>
               <span className="headerSecondIcon">
-                <img src="/images/header/hangoutsCapital.svg" alt="sell" />
+              {IconStore.hangoutCapitalIcon}
               </span>
             </div>
           </div>
@@ -73,16 +75,9 @@ export default function Header() {
 
       <Row className="headerThirdRow">
         <div className="some__Container">
-          <SideNav />
-          <div className="some__item1">
-            <Link to="/" className="logo__wrapper">
-              <img
-                src="/images/woozeeeLogo.svg"
-                alt=""
-                className="header__logo"
-              />
-            </Link>
-          </div>
+        {showHamburger && <SideNav />}
+          <WoozHeaderLogo/>
+          
 
           <div className="searchWrapper">
             <Search />
@@ -117,13 +112,18 @@ export default function Header() {
                   className="dropdown__icon"
                 />
               </div>
-              <div className="header__option">
+              
+                <Link to='/cart'>
+                <div className="header__option">
                 <img src="/images/cart.svg" alt="" className="cart" />
                 <span className="purchaseCount">
                   <span>4</span>
                 </span>
                 <span className="option__lineOneCart">Cart</span>
-              </div>
+                </div>
+                </Link>
+                
+              
             </div>
           </div>
         </div>

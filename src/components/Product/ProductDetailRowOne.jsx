@@ -68,7 +68,10 @@ function ProductDetailRowOne() {
             <span className="discountedPrice">&#8358; 150,000</span>
             <DiscountPercent DiscountText="-10%" />
             <div className="largeButton__wrapper">
-                 <LargeButton buttonName='ADD TO CART'/>
+              <Link to='/cart'>
+              <LargeButton buttonName='ADD TO CART'/>
+              </Link>
+                 
             </div>
             <div className="offers">
               <span>3 offers starting from &#8358; 124,990</span>
@@ -121,7 +124,7 @@ function ProductDetailRowOne() {
               <div  className='rightSelGrp'>
               <img src="/images/deliveryBus.svg" alt="delivery Bus" className='topRightImgIcon' />
               <div>
-                <span>Delivery Information</span>
+                <span className='smallTextHeadr'>Delivery Information</span>
                 <p className="smallText">
                   Shipped from abroad. Delivered between Thursday 19 Dec and
                   Thursday 26 Dec.
@@ -133,7 +136,7 @@ function ProductDetailRowOne() {
               <div className='rightSelGrp'> 
                 <img src="/images/returnPolicyIcon.svg" alt="returnPolicy Icon" className='topRightImgIcon'/>
                 <div>
-                <span>Return Policy</span>
+                <span className='smallTextHeadr'>Return Policy</span>
                 <p className="smallText">
                   Free return within 15 days for Jumia Mall items and 7 days for
                   other eligible items.
@@ -146,7 +149,7 @@ function ProductDetailRowOne() {
               <div  className='rightSelGrp'>
                 <img src="/images/warantyIcon.svg" alt="warantyIcon" className='topRightImgIcon' />
                 <div>
-                  <span>Warranty</span>
+                  <span className='smallTextHeadr'>Warranty</span>
                 <p className="smallText">24 Months</p>
                 </div>
                 
