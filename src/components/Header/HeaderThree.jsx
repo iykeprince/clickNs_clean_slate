@@ -1,6 +1,5 @@
 import React from "react";
 import { Row } from "react-bootstrap";
-import { Link } from "react-router-dom";
 // import * as Ai from "react-icons/ai";
 import SmallSection from "./SmallSection";
 import WoozHeaderLogo from "./WoozHeaderLogo";
