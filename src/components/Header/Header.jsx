@@ -86,7 +86,7 @@ export default function Header({showHamburger}) {
           <div className="some__item2">
             <div className="header__nav">
               <div className="header__option">
-                <Link to="/account">
+                <Link to="/customer">
                   <span className="option__lineOne">Hi, Bukky</span>
                 </Link>
                 <img
@@ -95,7 +95,7 @@ export default function Header({showHamburger}) {
                   className="dropdown__icon"
                 />
 
-                <Link to="/account">
+                <Link to="/customer">
                   <Ai.AiOutlineUser className="personIcon" />
                 </Link>
               </div>

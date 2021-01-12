@@ -243,10 +243,9 @@
   .button__wrap2 {
     display: flex;
     width: 12.063rem;
-    position: absolute;
-    right: 0;
-    top: 0.125rem;
-  }
+    align-content: flex-end;
+    margin-left: auto !important;
+}
   .button__wrap2 > button {
     height: 2.688rem;
     font-size: 0.875rem;
