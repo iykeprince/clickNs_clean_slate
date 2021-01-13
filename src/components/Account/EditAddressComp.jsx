@@ -2,13 +2,12 @@ import React from "react";
 import TextField from "@material-ui/core/TextField";
 import { makeStyles } from "@material-ui/core/styles";
 import { Col, Row } from "react-bootstrap";
-import { Input } from "@material-ui/core";
 import LargeButton from "../Button/LargeButton";
-
 import InputLabel from "@material-ui/core/InputLabel";
 import MenuItem from "@material-ui/core/MenuItem";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
+import Checkbox from "@material-ui/core/Checkbox";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -16,18 +15,19 @@ const useStyles = makeStyles((theme) => ({
       width: "80%",
     },
   },
-  formControl: {
+  formControlr: {
     minWidth: 120,
     width: "80%",
+    marginTop: "0.6rem !important",
+    marginLeft: "0.6rem !important",
   },
-  phoneSelect:{
+  phoneSelect: {
     width: "8ch",
   },
-  phoneNumberField:{
+  phoneNumberField: {
     width: "110% !important",
     minWidth: 120,
   },
-  
 }));
 
 export default function EditAddressComp() {
@@ -44,96 +44,184 @@ export default function EditAddressComp() {
     setSelect(event.target.value);
   };
 
+  const [checked, setChecked] = React.useState(true);
+
+  const handleCheckChange = (event) => {
+    setChecked(event.target.checked);
+  };
+
   return (
-    <div className="">
+    <div className="editAddressComp_wrap">
       <form className={classes.root} noValidate autoComplete="off">
         <div>
-          <h3 className="titleHeader">Add a new Address</h3>
           <Row>
-            <Col lg='6'>
+            <Col lg="6">
               <TextField label="First Name" defaultValue="Bukky" />
-              <br/><br/>
-              <TextField
-                label="E-mail"
-                defaultValue="bukkytohgbesky@example.com"
-              />
-              <br/><br/>
-              <FormControl className={classes.formControl}>
-                  <InputLabel
-                    shrink
-                    id="demo-simple-select-placeholder-label-label"
-                  >
-                    Gender (optional)
-                  </InputLabel>
-                  <Select
-                    labelId="demo-simple-select-placeholder-label-label"
-                    id="demo-simple-select-placeholder-label"
-                    value={select}
-                    onChange={handleChangeTwo}
-                    displayEmpty
-                    className=''
-                  >
-                    <MenuItem value=""><p>Please Select</p></MenuItem>
-                    <MenuItem value={234}>Male</MenuItem>
-                    <MenuItem value={235}>Female</MenuItem>
-                    </Select>
-                </FormControl>
-            </Col>
-
-            
-            <Col lg='6'>
-              <TextField label="Last Name" defaultValue="Owolabi" />
-              <br/><br/>
+              <br />
+              <br />
               <Row>
                 <Col>
-                <span>
-                <FormControl className={classes.formControl}>
-                  <InputLabel
-                    shrink
-                    id="demo-simple-select-placeholder-label-label"
-                  >
-                    Prefix
-                  </InputLabel>
-                  <Select
-                    labelId="demo-simple-select-placeholder-label-label"
-                    id="demo-simple-select-placeholder-label"
-                    value={prefix}
-                    onChange={handleChange}
-                    displayEmpty
-                    className={classes.phoneSelect}
-                  >
-                    <MenuItem value=""><p>+234</p></MenuItem>
-                    <MenuItem value={235}>+235</MenuItem>
-                    <MenuItem value={236}>+236</MenuItem>
-                  </Select>
-                </FormControl>
-              </span>
+                  <span>
+                    <FormControl className={classes.formControlr}>
+                      <InputLabel
+                        shrink
+                        id="demo-simple-select-placeholder-label-label"
+                      >
+                        Prefix
+                      </InputLabel>
+                      <Select
+                        labelId="demo-simple-select-placeholder-label-label"
+                        id="demo-simple-select-placeholder-label"
+                        value={prefix}
+                        onChange={handleChange}
+                        displayEmpty
+                        className={classes.phoneSelect}
+                      >
+                        <MenuItem value="">
+                          <p>+234</p>
+                        </MenuItem>
+                        <MenuItem value={235}>+235</MenuItem>
+                        <MenuItem value={236}>+236</MenuItem>
+                      </Select>
+                    </FormControl>
+                  </span>
                 </Col>
-                
+
                 <Col>
-                <span className='phoneField__wrapper'><TextField label="Phone Number" className={classes.phoneNumberField} /></span>
+                  <span className="phoneField__wrapper">
+                    <TextField
+                      label="Phone Number"
+                      className={classes.phoneNumberField}
+                    />
+                  </span>
                 </Col>
-            </Row>
+              </Row>
+            </Col>
+
+            <Col lg="6">
+              <TextField label="Last Name" defaultValue="Owolabi" />
               <br />
-              <span>
-                <FormControl className={classes.formControl}>
-                  <InputLabel id="demo-simple-select-label" shrink>Birthday (optional)</InputLabel>
-                  <Input
-                    type="date"
-                    format="MM/dd/yyyy"
-                    label="Phone Number"
-                    defaultValue="Birthday (optional)"
-                  />
-                </FormControl>
-              </span>
+              <br />
+              <Row>
+                <Col>
+                  <span>
+                    <FormControl className={classes.formControlr}>
+                      <InputLabel
+                        shrink
+                        id="demo-simple-select-placeholder-label-label"
+                      >
+                        Prefix
+                      </InputLabel>
+                      <Select
+                        labelId="demo-simple-select-placeholder-label-label"
+                        id="demo-simple-select-placeholder-label"
+                        value={prefix}
+                        onChange={handleChange}
+                        displayEmpty
+                        className={classes.phoneSelect}
+                      >
+                        <MenuItem value="">
+                          <p>+234</p>
+                        </MenuItem>
+                        <MenuItem value={235}>+235</MenuItem>
+                        <MenuItem value={236}>+236</MenuItem>
+                      </Select>
+                    </FormControl>
+                  </span>
+                </Col>
+
+                <Col>
+                  <span className="phoneField__wrapper">
+                    <TextField
+                      label="Phone Number"
+                      className={classes.phoneNumberField}
+                    />
+                  </span>
+                </Col>
+              </Row>
+              <br />
+            </Col>
+          </Row>
+
+          <Row>
+            <TextField label="Address" defaultValue="Please Select" />
+          </Row>
+
+          <Row>
+            <TextField label="Additional Information" defaultValue="" />
+          </Row>
+
+          <Row>
+            <Col lg="6">
+              <br />
+              <FormControl className={classes.formControlr}>
+                <InputLabel
+                  shrink
+                  id="demo-simple-select-placeholder-label-label"
+                >
+                  Region
+                </InputLabel>
+                <Select
+                  labelId="demo-simple-select-placeholder-label-label"
+                  id="demo-simple-select-placeholder-label"
+                  value={select}
+                  onChange={handleChangeTwo}
+                  displayEmpty
+                  className=""
+                >
+                  <MenuItem value="">
+                    <p>Lagos</p>
+                  </MenuItem>
+                  <MenuItem value={234}>Ekiti</MenuItem>
+                  <MenuItem value={235}>Ibadan</MenuItem>
+                </Select>
+              </FormControl>
+            </Col>
+
+            <Col lg="6">
+              <br />
+              <FormControl className={classes.formControlr}>
+                <InputLabel
+                  shrink
+                  id="demo-simple-select-placeholder-label-label"
+                >
+                  City
+                </InputLabel>
+                <Select
+                  labelId="demo-simple-select-placeholder-label-label"
+                  id="demo-simple-select-placeholder-label"
+                  value={select}
+                  onChange={handleChangeTwo}
+                  displayEmpty
+                  className=""
+                >
+                  <MenuItem value="">
+                    <p>Victoria Island</p>
+                  </MenuItem>
+                  <MenuItem value={234}>Yaba</MenuItem>
+                  <MenuItem value={235}>Ketu</MenuItem>
+                </Select>
+              </FormControl>
             </Col>
           </Row>
         </div>
 
-        <div className="accButton__wrapper">
+        <div className='editAddressCheckBox_wrap'>
+          <Checkbox
+            checked={checked}
+            color="primary"
+            onChange={handleCheckChange}
+            inputProps={{ "aria-label": "secondary checkbox" }}
+          />
+          <span className='checkboxAddress__txt'>Set as Default Address</span>
+        </div>
+
+        <div className="accButton__wrapper2">
           <LargeButton buttonName="SAVE" />
         </div>
       </form>
+    
+    
     </div>
   );
 }

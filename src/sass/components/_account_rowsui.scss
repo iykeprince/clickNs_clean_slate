@@ -47,8 +47,13 @@
   .MuiInputBase-input {
     padding: 0.375rem 0 0.438rem !important;
   }
-  .titleHeader {
+  .titleHeader{
     margin-bottom: 2.125rem !important;
+  }
+  .titleHeader2{
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding-left: 0.625rem !important;
   }
   .right__wrapper {
     background-color: #ffffff;
@@ -66,6 +71,10 @@
   .accButton__wrapper {
     padding-top: 3.438rem !important;
     padding-bottom: 5rem !important;
+  }
+  .accButton__wrapper2{
+    padding-top: 3.438rem !important;
+    padding-bottom: 2rem !important;
   }
   .passButton__wrapper {
     padding-top: 3.813rem !important;
@@ -232,18 +241,19 @@
   .addressBookDetail__wrapper {
     max-width: 23.313rem;
     border: 0.063rem solid #e8e8e8;
+    margin-left: 0.375rem !important;
   }
   .addressBookDetail__wrapper .MuiTypography-body1 {
     font-size: 0.875rem;
   }
   .addressbookUI_wrapper {
-    // display: block;
     position: relative;
+    padding-left: 0.125rem !important;
+    padding-top: 0.125rem !important;
   }
   .button__wrap2 {
     display: flex;
     width: 12.063rem;
-    align-content: flex-end;
     margin-left: auto !important;
 }
   .button__wrap2 > button {
@@ -332,6 +342,37 @@
     margin-bottom: 0.563rem !important;
   }
   
+  .editAddressCheckBox_wrap{
+    display: flex;
+    align-items: center;
+    margin-top: 1.438rem !important;
+  }
+.checkboxAddress__txt{
+  padding-left: 0.75rem !important;
+  font-weight: 500;
+}
+.addressBook__backButton, .addressBook__backButton:focus, .addressBook__backButton:hover{
+  outline: none;
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+  width: 2rem ;
+  height: 2rem;
+}
+.addressBook_btnGrp{
+  display: flex;
+  padding-bottom: 1.813rem !important;
+}
+
+.address_newHeadr{
+  margin-top: -3.2rem !important;
+  max-width: 12rem;
+}
+
+
+
+
+
   @media screen and (max-width: 768px) {
     // .adjacentIcon__text{
     //   display: none;

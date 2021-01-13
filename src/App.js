@@ -17,8 +17,6 @@ function App() {
       <header className="App-header">
       <title>Woozeee</title>
         <link rel="icon" href="/images/favicon.ico" />
-       
-    
       </header>
       
       <Switch>

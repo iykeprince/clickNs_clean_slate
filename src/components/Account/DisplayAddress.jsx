@@ -4,7 +4,7 @@ import IconStore from "../../store/IconStore";
 function DisplayAddress() {
     return (
         <div className="addressbookUI_wrapper">
-      <h3 className="titleHeader">Address Book</h3>
+      <h3 className="titleHeader address_newHeadr">Address Book</h3>
 
       <div className="addressBookDetail__wrapper">
         <div className="addresstext_detail">
