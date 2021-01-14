@@ -22,8 +22,6 @@ function AccountRowOne() {
         <div className="col-md-3 accLeftRow__wrapper fixedHeight">
           <div className="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical"
           >
-
-
             {/* <IconButton> */}
             <a
               className="nav-link active"
@@ -40,8 +38,6 @@ function AccountRowOne() {
               <span className="adjacentIcon__text">My Account</span>
             </a>
             {/* </IconButton> */}
-
-
 
             <a
               className="nav-link"

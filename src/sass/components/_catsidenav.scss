@@ -79,16 +79,20 @@
   }
   .lefter{
     margin-left: auto !important;
+    font-size: 0.875rem;
   }
   .dropbtn {
     // background-color: #4CAF50;
     // color: white;
     // padding: 1rem;
-    font-size: 1.2rem;
     border: none;
     cursor: pointer;
   }
 
+.listGridTopic{
+  font-size:1.25rem;
+  padding-bottom: 1.25rem !important;
+}
   .dropdown {
     position: relative;
     display: inline-block;
@@ -99,7 +103,6 @@
     position: absolute;
     background-color: #f9f9f9;
     min-width: 10rem;
-    font-size: 1.2rem !important;
     box-shadow: 0rem 0.5rem 1rem 0rem rgba(0,0,0,0.2);
     z-index: 1;
   }

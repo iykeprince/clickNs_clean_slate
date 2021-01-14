@@ -17,14 +17,20 @@ const useStyles = makeStyles((theme) => ({
   },
   formControlr: {
     minWidth: 120,
+    width: "100%",
+    marginTop: "0.6rem !important",
+    marginLeft: "0.6rem !important",
+  },
+  formContrl2: {
+    minWidth: 120,
     width: "80%",
     marginTop: "0.6rem !important",
     marginLeft: "0.6rem !important",
   },
-  phoneSelect: {
-    width: "8ch",
+  phoneSelectr: {
+    width: "7ch",
   },
-  phoneNumberField: {
+  phoneNumberFieldr: {
     width: "110% !important",
     minWidth: 120,
   },
@@ -44,7 +50,7 @@ export default function EditAddressComp() {
     setSelect(event.target.value);
   };
 
-  const [checked, setChecked] = React.useState(true);
+  const [checked, setChecked] = React.useState(false);
 
   const handleCheckChange = (event) => {
     setChecked(event.target.checked);
@@ -57,12 +63,13 @@ export default function EditAddressComp() {
           <Row>
             <Col lg="6">
               <TextField label="First Name" defaultValue="Bukky" />
-              <br />
-              <br />
-              <Row>
+
+              <Row className="editAddressComp_rowOneInner">
                 <Col>
                   <span>
-                    <FormControl className={classes.formControlr}>
+                    <FormControl
+                      className={`prefixAdditionalStyle ${classes.formControlr}`}
+                    >
                       <InputLabel
                         shrink
                         id="demo-simple-select-placeholder-label-label"
@@ -75,7 +82,7 @@ export default function EditAddressComp() {
                         value={prefix}
                         onChange={handleChange}
                         displayEmpty
-                        className={classes.phoneSelect}
+                        className={classes.phoneSelectr}
                       >
                         <MenuItem value="">
                           <p>+234</p>
@@ -91,7 +98,7 @@ export default function EditAddressComp() {
                   <span className="phoneField__wrapper">
                     <TextField
                       label="Phone Number"
-                      className={classes.phoneNumberField}
+                      className={classes.phoneNumberFieldr}
                     />
                   </span>
                 </Col>
@@ -100,12 +107,12 @@ export default function EditAddressComp() {
 
             <Col lg="6">
               <TextField label="Last Name" defaultValue="Owolabi" />
-              <br />
-              <br />
               <Row>
                 <Col>
                   <span>
-                    <FormControl className={classes.formControlr}>
+                    <FormControl
+                      className={`prefixAdditionalStyle ${classes.formControlr}`}
+                    >
                       <InputLabel
                         shrink
                         id="demo-simple-select-placeholder-label-label"
@@ -118,7 +125,7 @@ export default function EditAddressComp() {
                         value={prefix}
                         onChange={handleChange}
                         displayEmpty
-                        className={classes.phoneSelect}
+                        className={classes.phoneSelectr}
                       >
                         <MenuItem value="">
                           <p>+234</p>
@@ -133,28 +140,34 @@ export default function EditAddressComp() {
                 <Col>
                   <span className="phoneField__wrapper">
                     <TextField
-                      label="Phone Number"
-                      className={classes.phoneNumberField}
+                      label="Additional Phone Number"
+                      className={classes.phoneNumberFieldr}
                     />
                   </span>
                 </Col>
               </Row>
-              <br />
             </Col>
           </Row>
 
           <Row>
-            <TextField label="Address" defaultValue="Please Select" />
+            <TextField
+              label="Address"
+              defaultValue=""
+              className="txtField_edit"
+            />
           </Row>
 
           <Row>
-            <TextField label="Additional Information" defaultValue="" />
+            <TextField
+              label="Additional Information"
+              defaultValue=""
+              className="txtField_edit"
+            />
           </Row>
 
           <Row>
             <Col lg="6">
-              <br />
-              <FormControl className={classes.formControlr}>
+              <FormControl className={classes.formContrl2}>
                 <InputLabel
                   shrink
                   id="demo-simple-select-placeholder-label-label"
@@ -179,8 +192,7 @@ export default function EditAddressComp() {
             </Col>
 
             <Col lg="6">
-              <br />
-              <FormControl className={classes.formControlr}>
+              <FormControl className={classes.formContrl2}>
                 <InputLabel
                   shrink
                   id="demo-simple-select-placeholder-label-label"
@@ -206,22 +218,20 @@ export default function EditAddressComp() {
           </Row>
         </div>
 
-        <div className='editAddressCheckBox_wrap'>
+        <div className="editAddressCheckBox_wrap">
           <Checkbox
             checked={checked}
             color="primary"
             onChange={handleCheckChange}
             inputProps={{ "aria-label": "secondary checkbox" }}
           />
-          <span className='checkboxAddress__txt'>Set as Default Address</span>
+          <span className="checkboxAddress__txt">Set as Default Address</span>
         </div>
 
         <div className="accButton__wrapper2">
           <LargeButton buttonName="SAVE" />
         </div>
       </form>
-    
-    
     </div>
   );
 }
