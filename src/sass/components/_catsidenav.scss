@@ -25,11 +25,17 @@
     display: block;
   }
   .cs_section{
-
+    padding: 1rem !important;
+  }
+  .cs_section, .cs_section_inner{
     text-decoration: none !important;
-
+    font-size: 0.875rem;
     list-style-type: none !important;
     padding: 1rem !important;
+  }
+  .cs_section_inner{
+    padding: 1rem 1rem 1rem 0rem  !important;
+    margin-left: -0.8rem !important;
   }
   .s_hr{
 
@@ -140,15 +146,10 @@
   .r_star{
 
     font-size: 1.5rem;
-    /* text-align: center; */
+    align-items: center;
     display: flex;
     margin-left: 1rem !important;
     justify-content: right;
-  }
-  .r_text{
-
-    padding-left: 1rem !important;
-    font-size: 1.3rem;
   }
   
   .brand_input{
@@ -242,4 +243,23 @@
     display: flex;
   }
 
-
+.r_star .MuiFormControlLabel-root{
+  display: flex;
+}
+ .formgroup__wrap .MuiRating-root.MuiRating-sizeSmall.MuiRating-readOnly{
+  padding-top: 0.2rem !important;
+ }
+ .ratingText{
+   align-self: center;
+   padding-left: 0.5rem !important;
+   font-size: 0.875rem ;
+ }
+ .formgroup__wrap{
+   display: flex;
+ }
+ .MuiIconButton-root {
+  padding: 0.75rem !important;
+}
+.check_section{
+  font-size: 0.875rem;
+}

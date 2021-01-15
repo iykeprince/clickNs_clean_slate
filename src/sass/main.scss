@@ -1,6 +1,5 @@
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
-
 //scss files for components
 @import "./components/header";
 @import "./components/footer";
@@ -19,7 +18,8 @@
 @import "./components/homebody_top";
 @import "./components/checkout";
 @import "./components/cart";
+@import "./components/search";
+@import "./components/range_slider";
 
-
-// scss files for pages 
+// scss files for pages
 @import "./pages/categories";

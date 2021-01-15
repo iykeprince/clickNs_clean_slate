@@ -1,0 +1,21 @@
+.rangeSliderClass{
+    font-size: 0.875rem;
+
+    .MuiTypography-gutterBottom {
+        margin-bottom: 0.35em !important;
+        font-size: 0.875rem;
+      }
+      .MuiSlider-root {
+        color: var(--woozBlue);
+        padding: 13px 0 !important;
+      }
+      .MuiSlider-thumb{
+        margin-top: -5px !important;
+        margin-left: -6px !important;
+      }
+
+
+}
+.rangeSlideInput{
+    width: 7rem;
+}

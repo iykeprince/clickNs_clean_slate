@@ -1,331 +1,202 @@
-import React from 'react'
+import React from "react";
+import { ReadOnlyRating } from "../Rating/Rating";
+import Radio from "@material-ui/core/Radio";
+import RadioGroup from "@material-ui/core/RadioGroup";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+import FormControl from "@material-ui/core/FormControl";
+import SideCatCheckBox from "./SideCatCheckBox";
+// import IconStore from "../../store/IconStore";
+import { CategorySideSearch } from "../Search/Search";
+import RangeSlider from "./RangeSlider";
+// import LargeButton from "../Button/LargeButton";
 
 function LeftCatSideNav() {
-    return (
-        <div className="sidenav">
-            <p>
-              <b>CATEGORY</b>
-            </p>
+  const [value, setValue] = React.useState("firstChoice");
 
-            <br />
+  const handleChange = (event) => {
+    setValue(event.target.value);
+  };
 
-            <p>Phones & Tablets</p>
-            <div>
-              <ul className="cs_section">
-                <li> Mobile Phone Accessories</li>
-                <br />
-                <li>Mobile Phones</li>
-                <br />
-                <li>Tablet Accessories</li>
-                <br/>
-                <li>Tablets</li>
-                <br />
-                <li>Telephones & Accessories</li>
-              </ul>
-              <hr className="s_hr" />
-            </div>
-            <br />
-            <br />
 
-            <div>
-              <p>
-                <b> PRODUCT RATING</b>
-              </p>
-              <br />
-              <ul className="cs_section">
-                <li>
-                  <span>
-                    <div className="round">
-                      <input type="checkbox" id="checkbox" />
-                      <label htmlFor="checkbox"></label>
+  return (
+    <div className="sidenav">
+      <p>
+        <b>CATEGORY</b>
+      </p>
+
+      <br />
+
+      <p>{`Phones & Tablets`}</p>
+      <div>
+        <ul className="cs_section">
+          <li>Mobile Phone Accessories</li>
+          <br />
+          <li>Mobile Phones</li>
+          <br />
+          <li>Tablet Accessories</li>
+          <br />
+          <li>Tablets</li>
+          <br />
+          <li>{`Telephones & Accessories`}</li>
+        </ul>
+        <hr className="s_hr" />
+      </div>
+      <br />
+      <br />
+
+      <div>
+        <p>
+          <b> PRODUCT RATING</b>
+        </p>
+
+        <div className="cs_section_inner">
+            <FormControl component="fieldset">
+              <RadioGroup
+                aria-label="choice"
+                name="choice1"
+                value={value}
+                onChange={handleChange}
+              >
+                <FormControlLabel
+                  value="firstChoice"
+                  control={<Radio />}
+                  label={
+                    <div className="formgroup__wrap">
+                      <ReadOnlyRating size="small" ratingCount={4} />
+                      <span className="ratingText">{`& above`} </span>
                     </div>
-                    <div className="r_star">
-                      <span className="fa fa-star "></span>
-                      <span className="fa fa-star "></span>
-                      <span className="fa fa-star "></span>
-                      <span className="fa fa-star "></span>
-                      <span className="fa fa-star"></span>
-
-                      <p className="r_text"> & above </p>
-                    </div>
-                  </span>
-                </li>
-
-                <li>
-                  <span>
-                    <div className="round">
-                      <input type="checkbox" id="checkbox" />
-                      <label htmlFor="checkbox"></label>
-                    </div>
-                    <div className="r_star">
-                      <span className="fa fa-star "></span>
-                      <span className="fa fa-star "></span>
-                      <span className="fa fa-star "></span>
-                      <span className="fa fa-star"></span>
-                      <span className="fa fa-star"></span>
-
-                      <p className="r_text"> & above </p>
-                    </div>
-                  </span>
-                </li>
-
-                <li>
-                  <span>
-                    <div className="round">
-                      <input type="checkbox" id="checkbox" />
-                      <label htmlFor="checkbox"></label>
-                    </div>
-                    <div className="r_star">
-                      <span className="fa fa-star "></span>
-                      <span className="fa fa-star "></span>
-                      <span className="fa fa-star "></span>
-                      <span className="fa fa-star"></span>
-                      <span className="fa fa-star"></span>
-
-                      <p className="r_text"> & above </p>
-                    </div>
-                  </span>
-                </li>
-
-                <li>
-                  <span>
-                    <div className="round">
-                      <input type="checkbox" id="checkbox" />
-                      <label htmlFor="checkbox"></label>
-                    </div>
-                    <div className="r_star">
-                      <span className="fa fa-star "></span>
-                      <span className="fa fa-star "></span>
-                      <span className="fa fa-star "></span>
-                      <span className="fa fa-star"></span>
-                      <span className="fa fa-star"></span>
-
-                      <p className="r_text"> & above </p>
-                    </div>
-                  </span>
-                </li>
-              </ul>
-            </div>
-
-            <hr className="s_hr" />
-            <br />
-            <br />
-
-            <div className="brend">
-              <p>
-                <b>BRAND</b>
-              </p>
-              <br />
-
-              <input
-                type="text"
-                className="brand_input"
-                placeholder=" Search"
-                style={{ fontFamily: "Arial, FontAwesome" }}
-              />
-
-              <br />
-              <br />
-              <label className="container">
-                A1
-                <input type="checkbox" />
-                <span className="checkmark"></span>
-              </label>
-              <label className="container">
-                AEC
-                <input type="checkbox" />
-                <span className="checkmark"></span>
-              </label>
-              <label className="container">
-                Amazon
-                <input type="checkbox" />
-                <span className="checkmark"></span>
-              </label>
-              <label className="container">
-                Anker
-                <input type="checkbox" />
-                <span className="checkmark"></span>
-              </label>
-
-              <label className="container">
-                Apple
-                <input type="checkbox" />
-                <span className="checkmark"></span>
-              </label>
-            </div>
-            <br />
-            <hr className="s_hr" />
-            <br />
-
-            <div>
-              <span>
-                <b>Price ( ₦ )</b>
-              </span>{" "}
-              <span className="apply">
-                <b>APPLY</b>
-              </span>
-              <br />
-              <br />
-              <input
-                style={{ width: "100%" }}
-                type="range"
-                name="range"
-                step="50000"
-                min="100000"
-                max="1000000"
-                value=""
-                onChange={(e) => console.log(e.target.value)}
-              ></input>
-              <div>
-                <span>
-                  <input style={{ width: "7rem" }} placeholder="Minimum" />{" "}
-                </span>{" "}
-                <span>
-                  {" "}
-                  <input style={{ width: "8rem" }} placeholder="Maximum" />{" "}
-                </span>
-              </div>
-              <br />
-              <hr className="s_hr" />
-              <br />
-              <div className="brend">
-                <p>
-                  <b>OPERATING SYSTEM</b>
-                </p>
-                <br />
-
-                <input
-                  type="text"
-                  className="brand_input"
-                  placeholder=" Search"
-                  style={{ fontFamily: "Arial, FontAwesome" }}
+                  }
                 />
-
-                <br />
-                <br />
-                <label className="container">
-                  IOS
-                  <input type="checkbox" />
-                  <span className="checkmark"></span>
-                </label>
-                <label className="container">
-                  NOKIA OS
-                  <input type="checkbox" />
-                  <span className="checkmark"></span>
-                </label>
-                <label className="container">
-                  ANDRIOD OS
-                  <input type="checkbox" />
-                  <span className="checkmark"></span>
-                </label>
-                <label className="container">
-                  Blackberry 10
-                  <input type="checkbox" />
-                  <span className="checkmark"></span>
-                </label>
-
-                <label className="container">
-                  Blackberry Years 10
-                  <input type="checkbox" />
-                  <span className="checkmark"></span>
-                </label>
-              </div>
-              <br />
-              <hr className="s_hr" />
-              <br />
-              <div className="brend">
-                <p>
-                  <b>COLOR</b>
-                </p>
-                <br />
-
-                <input
-                  type="text"
-                  className="brand_input"
-                  placeholder=" Search"
-                  style={{ fontFamily: "Arial, FontAwesome" }}
+                <FormControlLabel
+                  value="secondChoice"
+                  control={<Radio />}
+                  label={
+                    <div className="formgroup__wrap">
+                      <ReadOnlyRating size="small" ratingCount={3} />
+                      <span className="ratingText">{`& above`} </span>
+                    </div>
+                  }
                 />
-
-                <br />
-                <br />
-                <label className="container">
-                  Black
-                  <input type="checkbox" />
-                  <span className="checkmark"></span>
-                </label>
-                <label className="container">
-                  Blue
-                  <input type="checkbox" />
-                  <span className="checkmark"></span>
-                </label>
-                <label className="container">
-                  Green
-                  <input type="checkbox" />
-                  <span className="checkmark"></span>
-                </label>
-                <label className="container">
-                  Grey
-                  <input type="checkbox" />
-                  <span className="checkmark"></span>
-                </label>
-
-                <label className="container">
-                  Orange
-                  <input type="checkbox" />
-                  <span className="checkmark"></span>
-                </label>
-              </div>
-              <br />
-              <hr className="s_hr" />
-              <br />
-              <div className="brend">
-                <p>
-                  <b>HARD DISK (GB)</b>
-                </p>
-                <br />
-
-                <input
-                  type="text"
-                  className="brand_input"
-                  placeholder=" Search"
-                  style={{ fontFamily: "Arial, FontAwesome" }}
+                <FormControlLabel
+                  value="thirdChoice"
+                  control={<Radio />}
+                  label={
+                    <div className="formgroup__wrap">
+                      <ReadOnlyRating size="small" ratingCount={2} />
+                      <span className="ratingText">{`& above`} </span>
+                    </div>
+                  }
                 />
+                <FormControlLabel
+                  value="fourthChoice"
+                  control={<Radio />}
+                  label={
+                    <div className="formgroup__wrap">
+                      <ReadOnlyRating size="small" ratingCount={1} />
+                      <span className="ratingText">{`& above`} </span>
+                    </div>
+                  }
+                />
+              </RadioGroup>
+            </FormControl>
+        </div>
+      </div>
 
-                <br />
-                <br />
-                <label className="container">
-                  Black
-                  <input type="checkbox" />
-                  <span className="checkmark"></span>
-                </label>
-                <label className="container">
-                  Blue
-                  <input type="checkbox" />
-                  <span className="checkmark"></span>
-                </label>
-                <label className="container">
-                  Green
-                  <input type="checkbox" />
-                  <span className="checkmark"></span>
-                </label>
-                <label className="container">
-                  Grey
-                  <input type="checkbox" />
-                  <span className="checkmark"></span>
-                </label>
+      <hr className="s_hr" />
+      <br />
+      <br />
 
-                <label className="container">
-                  Orange
-                  <input type="checkbox" />
-                  <span className="checkmark"></span>
-                </label>
-              </div>
-              <br />
-              <hr className="s_hr" />
-              <br />
-            </div>
-          </div>
-    )
+      <div className="brend">
+        <p>
+          <b>BRAND</b>
+        </p>
+        <br />
+
+        <CategorySideSearch/>
+
+        <SideCatCheckBox productCatName='A1'/>
+        <SideCatCheckBox productCatName='AEC'/>
+        <SideCatCheckBox productCatName='Amazon'/>
+        <SideCatCheckBox productCatName='Anker'/>
+        <SideCatCheckBox productCatName='Apple'/>
+   
+      </div>
+      <br />
+      <hr className="s_hr" />
+      <br />
+
+      <div>
+
+        <RangeSlider rangeSliderName='Price ( ₦ )'/>
+        <br/>
+        <div>
+          <span>
+            <input className='rangeSlideInput' placeholder="Minimum" />
+          </span>
+          <span>
+            <input className='rangeSlideInput' placeholder="Maximum" />
+          </span>
+        </div>
+
+
+
+        <br />
+        <hr className="s_hr" />
+        <br />
+        <div className="brend">
+          <p>
+            <b>OPERATING SYSTEM</b>
+          </p>
+          <br />
+
+          
+        <CategorySideSearch/>
+
+        <SideCatCheckBox productCatName='iOS'/>
+        <SideCatCheckBox productCatName='NOKIA OS'/>
+        <SideCatCheckBox productCatName='Android'/>
+        <SideCatCheckBox productCatName='Blackberry 10 '/>
+        <SideCatCheckBox productCatName='BlackberrYears 10'/>
+        </div>
+        <br />
+        <hr className="s_hr" />
+        <br />
+        <div className="brend">
+          <p>
+            <b>COLOR</b>
+          </p>
+          <br />
+
+          <CategorySideSearch/>
+
+        <SideCatCheckBox productCatName='Black'/>
+        <SideCatCheckBox productCatName='Blue'/>
+        <SideCatCheckBox productCatName='Green'/>
+        <SideCatCheckBox productCatName='Grey'/>
+        <SideCatCheckBox productCatName='Orange'/>
+        </div>
+        <br />
+        <hr className="s_hr" />
+        <br />
+        <div className="brend">
+          <p>
+            <b>HARD DISK (GB)</b>
+          </p>
+          <br />
+          <CategorySideSearch/>
+
+        <SideCatCheckBox productCatName='0'/>
+        <SideCatCheckBox productCatName='1'/>
+        <SideCatCheckBox productCatName='1GB'/>
+        <SideCatCheckBox productCatName='1TB'/>
+        <SideCatCheckBox productCatName='2'/>
+        </div>
+        <br />
+        <hr className="s_hr" />
+        <br />
+      </div>
+    </div>
+  );
 }
 
-export default LeftCatSideNav
+export default LeftCatSideNav;

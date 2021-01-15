@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Search from "../Search/Search";
+import { HeaderSearch } from "../Search/Search";
 import SideNav from "../SideNav/SideNav";
 import { Row, Col } from "react-bootstrap";
 import * as Ai from "react-icons/ai";
@@ -80,7 +80,7 @@ export default function Header({showHamburger}) {
           
 
           <div className="searchWrapper">
-            <Search />
+            <HeaderSearch/>
           </div>
 
           <div className="some__item2">

@@ -1,23 +1,34 @@
 import React from "react";
-import styles from './Search.module.css'
-import  './Search.module.css'
-import {Button} from "react-bootstrap"
+import { Button } from "react-bootstrap";
 
-function Search() {
+export const HeaderSearch = () => {
+
   return (
-    <div className={styles.header__search}>
-      <img src="/images/search.svg" alt="" className={styles.searchIcon}/>
-    <input
-      type="text" 
-      className={styles.header__searchInput}
-      placeholder="Search products, brands and categories"
-    />
+       <div className='header__search'>
+      <img src="/images/search.svg" alt="" className='searchIcon '/>
+      <input
+        type="text"
+        className='header__searchInput'
+        placeholder="Search products, brands and categories"
+      />
 
-    <Button className={styles.button}>SEARCH</Button> 
-    {/* <button class="buttonn">Button</button> */}
+      <Button className='button'>SEARCH</Button>
+    </div>
+
+  );
+};
+
+export const CategorySideSearch = () => {
+
+  return (
+    <div className='header__search header__searchTwo'>
+    <img src="/images/search.svg" alt="" className='searchIcon '/>
+    <input
+      type="text"
+      className='header__searchInput header__searchInputTwo'
+      placeholder="Search"
+    />
   </div>
 
   );
-}
-
-export default Search;
+};
