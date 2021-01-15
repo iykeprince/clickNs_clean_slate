@@ -28,3 +28,30 @@ const DynamicButton = styled.button`
 
 export default DynamicButton
 
+
+
+
+
+ const improvedDynamicStyle = props =>
+  css`
+    color: ${props.color};
+    width: ${props.width};
+    height: ${props.height};
+    background: ${props.backgroundColor};
+    box-shadow: ${props.boxShadow};
+    border-radius: ${props.borderRadius};
+    border: ${props.border};
+    margin-bottom: ${props.marginBottom};
+    font-weight: ${props.fontWeight};
+    font-size: ${props.fontSize};
+
+    &:hover, &:focus{
+      box-shadow: ${props.hoverBoxShadow};
+    }
+  `
+
+  export const DynamicButtonTwo = styled.button`
+  ${improvedDynamicStyle};`
+
+
+

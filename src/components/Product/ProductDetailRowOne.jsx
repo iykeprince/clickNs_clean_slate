@@ -6,12 +6,12 @@ import phonesmall1 from "../../assets/phoneSmall47.svg";
 import phonesmall2 from "../../assets/phoneSmall45.svg";
 import phonesmall3 from "../../assets/phoneSmall46.svg";
 import nextImg from "../../assets/nextRight.svg";
-import loveIcon from "../../assets/loveIcon.svg";
 import VariableImage from "../Image/VariableImage";
 import DiscountPercent from "../DiscountPercent/DiscountPercent";
 import { Link } from "react-router-dom";
 import * as FaIcon from "react-icons/fa"
 import LargeButton from "../Button/LargeButton";
+import {HeartRating, ReadOnlyRating} from "../Rating/Rating"
 
 function ProductDetailRowOne() {
   return (
@@ -50,7 +50,7 @@ function ProductDetailRowOne() {
               <div className='topSec'>
               <span className="textBig">{`Samsung Galaxy A50 6.4-Inch (4GB,128GB ROM) Android 9 Pie,
               (25MP+5MP+ 8MP)+ 25MP 4000mAh 4G Dual SIM Smartphone - White`}</span>
-              <VariableImage Img={loveIcon}  altText="loveIcon"/>
+              <HeartRating/>
               </div>
               
               <span className="textSmallOne">Brand: </span>
@@ -58,9 +58,7 @@ function ProductDetailRowOne() {
             </div>
 
             <div className="ratings__wrapper">
-              <span>
-                <img src="/images/ratingsIcon.svg" alt="ratings" />
-              </span>
+            <span><ReadOnlyRating size="small" ratingCount='4' /></span>
               <Link className="textSmallThree"> (4 ratings) </Link>
             </div>
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState, useEffect}  from "react";
 import { Route, NavLink, HashRouter } from "react-router-dom";
 import LargeButton from "../Button/LargeButton";
 import EditAddressComp from "./EditAddressComp";
@@ -7,15 +7,29 @@ import IconStore from "../../store/IconStore";
 
 
 function AddressBookUI() {
-  const [showForm, setShowForm] = React.useState(false);
+  const [showForm, setShowForm] = useState(false);
   const onButtonClick = () => setShowForm(true);
-  const onBackArrowClick = () => setShowForm(false);
 
+  // const useEffect(() => {
+  //   effect
+  //   return () => {
+  //     cleanup
+  //   }
+  // }, [input])
+  const onBackArrowClick = () => setShowForm(false);
+  
+  //IMPORTANT NOTE!: first fix how to keep the current page on page reload since you've used bootstrap,
+  // before solving the bug associated with backarrow dissapearing 
   return (
     <div className="addressbookUI_wrapper">
       <HashRouter>
+
         {showForm ? (
-          <NavLink to="/" className="addressBook_btnGrp" onClick={onBackArrowClick}>
+          <NavLink
+            to="/"
+            className="addressBook_btnGrp"
+            onClick={onBackArrowClick}
+          >
             <button className="addressBook__backButton">
               {IconStore.bxArrowBack}
             </button>

@@ -10,38 +10,38 @@ function MyOrdersUI(prop) {
       <h3 className="titleHeader">Orders</h3>
 
       <div className="titleHeader">
-      <div className="orderToggle__wrapper">
-        <div className="OpenClosedNav">
-          <ul className="nav nav-tabs" id="myTab" role="tablist">
-            <li className="nav-item" role="presentation">
-              <a
-                className="nav-link active orderToggle"
-                id="home-tab"
-                data-toggle="tab"
-                href="#home"
-                role="tab"
-                aria-controls="home"
-                aria-selected="true"
-              >
-                OPEN ORDERS ({prop.openOrderNumber})
-              </a>
-            </li>
-            <li className="nav-item" role="presentation">
-              <a
-                className="nav-link orderToggle"
-                id="profile-tab"
-                data-toggle="tab"
-                href="#profile"
-                role="tab"
-                aria-controls="profile"
-                aria-selected="false"
-              >
-                CLOSED ORDERS ({prop.closedOrderNumber})
-              </a>
-            </li>
-          </ul>
-        </div>
-        <hr className="newSeperator" />
+        <div className="orderToggle__wrapper">
+          <div className="OpenClosedNav">
+            <ul className="nav nav-tabs" id="myTab" role="tablist">
+              <li className="nav-item" role="presentation">
+                <a
+                  className="nav-link active orderToggle"
+                  id="home-tab"
+                  data-toggle="tab"
+                  href="#home"
+                  role="tab"
+                  aria-controls="home"
+                  aria-selected="true"
+                >
+                  OPEN ORDERS ({prop.openOrderNumber})
+                </a>
+              </li>
+              <li className="nav-item" role="presentation">
+                <a
+                  className="nav-link orderToggle"
+                  id="profile-tab"
+                  data-toggle="tab"
+                  href="#profile"
+                  role="tab"
+                  aria-controls="profile"
+                  aria-selected="false"
+                >
+                  CLOSED ORDERS ({prop.closedOrderNumber})
+                </a>
+              </li>
+            </ul>
+          </div>
+          <hr className="newSeperator" />
         </div>
 
         <div className="tab-content" id="myTabContent">
@@ -51,16 +51,16 @@ function MyOrdersUI(prop) {
             role="tabpanel"
             aria-labelledby="home-tab"
           >
-  
-            {/* IF NO DATA */}
-           {/* <NoDataUI Image={IconStore.orderShopBag} Topic='You have placed no orders yet!' Explanation=' All your orders will be saved here for you to access their state
-            anytime'/> */}
-
-
-              {/* IF DATA */}
-          <OrderAvailableData/>
-
-
+            {prop.openOrderNumber !== 0 ? (
+              <OrderAvailableData />
+            ) : (
+              <NoDataUI
+                Image={IconStore.orderShopBag}
+                Topic="You have placed no orders yet!"
+                Explanation=" All your orders will be saved here for you to access their state
+              anytime"
+              />
+            )}
           </div>
           <div
             className="tab-pane fade"
@@ -68,13 +68,14 @@ function MyOrdersUI(prop) {
             role="tabpanel"
             aria-labelledby="profile-tab"
           >
-            <NoDataUI Image={IconStore.orderShopBag} Topic='You have placed no orders yet!' Explanation=' All your orders will be saved here for you to access their state
-            anytime'/>
+            <NoDataUI
+              Image={IconStore.orderShopBag}
+              Topic="You have placed no orders yet!"
+              Explanation=" All your orders will be saved here for you to access their state
+            anytime"
+            />
           </div>
         </div>
-
-        
-        
       </div>
     </div>
   );
