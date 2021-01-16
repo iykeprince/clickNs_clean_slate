@@ -1,4 +1,4 @@
-import React,{useState, useEffect}  from "react";
+import React,{useState}  from "react";
 import { Route, NavLink, HashRouter } from "react-router-dom";
 import LargeButton from "../Button/LargeButton";
 import EditAddressComp from "./EditAddressComp";
