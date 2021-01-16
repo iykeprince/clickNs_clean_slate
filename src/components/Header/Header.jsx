@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { HeaderSearch } from "../Search/Search";
 import SideNav from "../SideNav/SideNav";
 import { Row, Col } from "react-bootstrap";
-// import * as Ai from "react-icons/ai";
+import * as Ai from "react-icons/ai";
 import IconStore from "../../store/IconStore"
 import WoozHeaderLogo from "./WoozHeaderLogo"
 import MenuListComp from "./MenuListComp";
@@ -97,9 +97,9 @@ export default function Header({showHamburger}) {
                 /> */}
                   <MenuListComp/>
 
-                {/* <Link to="/customer">
+                <Link to="/customer">
                   <Ai.AiOutlineUser className="personIcon" />
-                </Link> */}
+                </Link>
               </div>
               <div className="header__option .help__sec">
                 <img
