@@ -2,7 +2,8 @@ import React from 'react'
 import Checkbox from "@material-ui/core/Checkbox";
 
 function SideCatCheckBox(prop) {
-    const [checked, setChecked] = React.useState(false);
+    // const [checked, setChecked] = React.useState(false);
+    const [setChecked] = React.useState(false);
 
     const handleCheckChange = (event) => {
       setChecked(event.target.checked);
