@@ -152,6 +152,13 @@ const IconStore = {
         <path d="M20.9999 11H6.41394L11.7069 5.70697L10.2929 4.29297L2.58594 12L10.2929 19.707L11.7069 18.293L6.41394 13H20.9999V11Z" fill="#282828"/>
         </svg>,
 
+        listIcon:<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7.05882 0V6.85714H24V0H7.05882ZM7.05882 24H24V17.1429H7.05882V24ZM7.05882 15.4286H24V8.57143H7.05882V15.4286ZM0 6.85714H5.64706V0H0V6.85714ZM0 24H5.64706V17.1429H0V24ZM0 15.4286H5.64706V8.57143H0V15.4286Z" fill="#BBBBBB"/>
+        </svg>,
+
+        gridIcon:<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 10.6667H10.6667V0H0V10.6667ZM0 24H10.6667V13.3333H0V24ZM13.3333 24H24V13.3333H13.3333V24ZM13.3333 0V10.6667H24V0" fill="#BBBBBB"/>
+        </svg>,
         
         
       }

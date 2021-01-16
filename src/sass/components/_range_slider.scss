@@ -17,5 +17,16 @@
 
 }
 .rangeSlideInput{
-    width: 7rem;
+    height: 2.5rem;
+    width: 50%;
+    background: #fff;
+    border: 0.063rem solid #e4e4e4;
+    border-radius: 0.313rem;
+    outline-width: 0;
+    padding: 0.625rem !important ;
+    font-size: 0.875rem !important;
+    margin-right: 0.25rem !important;
+}
+.rangeSlideInput__wrap{
+    display: flex;
 }

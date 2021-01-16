@@ -31,10 +31,9 @@
     text-decoration: none !important;
     font-size: 0.875rem;
     list-style-type: none !important;
-    padding: 1rem !important;
   }
   .cs_section_inner{
-    padding: 1rem 1rem 1rem 0rem  !important;
+    padding: 1rem !important;
     margin-left: -0.8rem !important;
   }
   .s_hr{
@@ -98,6 +97,7 @@
 .listGridTopic{
   font-size:1.25rem;
   padding-bottom: 1.25rem !important;
+  font-weight: 500;
 }
   .dropdown {
     position: relative;
@@ -260,6 +260,12 @@
  .MuiIconButton-root {
   padding: 0.75rem !important;
 }
+
 .check_section{
   font-size: 0.875rem;
+}
+.sidenav{
+  .MuiIconButton-root {
+    padding: 0.3rem !important;
+  }
 }
