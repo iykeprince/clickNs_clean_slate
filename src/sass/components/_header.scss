@@ -100,11 +100,10 @@
   padding-right: 0.5rem !important;
 }
 .headerSecondIcon:hover {
-  // fill: var(--woozBlue);
   svg {
-    fill: var(--woozBlue);
+    fill: var(--woozRed);
     path {
-      fill: var(--woozBlue);
+      fill: var(--woozRed);
     }
   }
 }

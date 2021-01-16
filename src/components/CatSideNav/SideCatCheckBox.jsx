@@ -11,7 +11,7 @@ function SideCatCheckBox(prop) {
     return (
         <div className="check_section">
         <Checkbox
-        checked={checked}
+          checked={checked}
           color="primary"
           onChange={handleCheckChange}
           inputProps={{ "aria-label": "secondary checkbox" }}
