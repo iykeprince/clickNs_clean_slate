@@ -61,8 +61,11 @@
   font-size: 0.875rem;
 }
 .textSmallTwo,
+.textSmallTwo:hover,
 .textSmallThree,
-.textLink {
+.textSmallThree:hover,
+.textLink,
+.textLink:hover {
   color: #2f80ed !important;
 }
 .textLink {
