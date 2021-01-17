@@ -7,6 +7,9 @@
   box-shadow: 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.05);
   border-radius: 0.313rem;
 }
+.accLeftRow__wrapper .nav-link {
+  font-size: 0.875rem !important;
+}
 label + .MuiInput-formControl {
   margin-top: 1rem !important;
 }
@@ -77,7 +80,22 @@ label + .MuiInput-formControl {
   padding-top: 3.813rem !important;
   padding-bottom: 3.938rem !important;
 }
-
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #ededed;
+  transition: 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+.nav-pills .nav-link {
+  border-radius: 0rem !important;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.813rem 1rem !important;
+}
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #282828;
+}
 .aColContainer {
   padding-right: 0.813rem !important;
   padding-bottom: 1.75rem !important;
@@ -197,33 +215,6 @@ svg {
   bottom: 0.75rem;
 }
 
-
-
-
-
-
-
-
-
-.accLeftRow__wrapper .nav-link {
-  font-size: 0.875rem !important;
-}
-.nav-p .nav-link:active,
-.nav-p .nav-link:focus,
-.nav-p .show > .nav-link {
-  background-color: #ededed;
-  transition: 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-}
-.nav-p .nav-link {
-  border-radius: 0rem !important;
-  font-weight: 500;
-  font-size: 1rem;
-  padding: 0.813rem 1rem !important;
-}
-.nav-p .nav-link.active,
-.nav-p .show > .nav-link {
-  color: #282828;
-}
 .OpenClosedNav .nav-tabs .nav-link.active {
   color: var(--woozBlue) !important;
   border-color: var(--woozBlue);
@@ -246,23 +237,6 @@ svg {
   border-left-color: transparent !important;
   border-right-color: transparent !important;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .addressBookDetail__wrapper {
   max-width: 23.313rem;

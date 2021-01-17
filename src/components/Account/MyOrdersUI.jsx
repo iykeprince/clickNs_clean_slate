@@ -1,10 +1,14 @@
 // import { IconButton } from '@material-ui/core'
 import React from "react";
 import IconStore from "../../store/IconStore";
+import ClosedOrderData from "./ClosedOrderData";
 import NoDataUI from "./NoDataUI";
-import OrderAvailableData from "./OrderAvailableData";
+import OpenOrderData from "./OpenOrderData";
 
-function MyOrdersUI(prop) {
+function MyOrdersUI() {
+  const openOrderNumber = 3;
+  const closedOrderNumber = 0;
+
   return (
     <div>
       <h3 className="titleHeader">Orders</h3>
@@ -23,7 +27,7 @@ function MyOrdersUI(prop) {
                   aria-controls="home"
                   aria-selected="true"
                 >
-                  OPEN ORDERS ({prop.openOrderNumber})
+                  OPEN ORDERS ({openOrderNumber})
                 </a>
               </li>
               <li className="nav-item" role="presentation">
@@ -36,7 +40,7 @@ function MyOrdersUI(prop) {
                   aria-controls="profile"
                   aria-selected="false"
                 >
-                  CLOSED ORDERS ({prop.closedOrderNumber})
+                  CLOSED ORDERS ({closedOrderNumber})
                 </a>
               </li>
             </ul>
@@ -51,8 +55,8 @@ function MyOrdersUI(prop) {
             role="tabpanel"
             aria-labelledby="home-tab"
           >
-            {prop.openOrderNumber !== 0 ? (
-              <OrderAvailableData />
+            {openOrderNumber !== 0 ? (
+              <OpenOrderData />
             ) : (
               <NoDataUI
                 Image={IconStore.orderShopBag}
@@ -68,12 +72,16 @@ function MyOrdersUI(prop) {
             role="tabpanel"
             aria-labelledby="profile-tab"
           >
-            <NoDataUI
-              Image={IconStore.orderShopBag}
-              Topic="You have placed no orders yet!"
-              Explanation=" All your orders will be saved here for you to access their state
-            anytime"
-            />
+            {closedOrderNumber !== 0 ? (
+              <ClosedOrderData />
+            ) : (
+              <NoDataUI
+                Image={IconStore.orderShopBag}
+                Topic="You have placed no orders yet!"
+                Explanation=" All your orders will be saved here for you to access their state
+              anytime"
+              />
+            )}
           </div>
         </div>
       </div>

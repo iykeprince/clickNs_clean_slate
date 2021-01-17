@@ -25,7 +25,7 @@ function OrderAvailableDataRow(props) {
           color="white"
           height="25px"
           width="215px"
-          backgroundColor="var(--woozRed)"
+          backgroundColor={props.bgColor}
           boxShadow="none"
           fontWeight="700"
           fontSize="12px"
