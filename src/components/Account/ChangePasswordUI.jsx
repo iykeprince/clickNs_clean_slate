@@ -10,7 +10,7 @@ function ChangePasswordUI() {
       <form action="">
         <PasswordUI labelName="Current Password" />
 
-        {[...Array(3)].map((e, i) => <br />)}
+        {[...Array(3)].map((e, i) => <br key={i}/>)}
 
         <PasswordUI labelName="New Password" />
 

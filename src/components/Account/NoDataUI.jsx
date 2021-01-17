@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import LargeButton from '../Button/LargeButton'
 
 function NoDataUI(props) {
@@ -8,7 +8,7 @@ function NoDataUI(props) {
           <p className="orderTxt">{props.Topic}</p>
           <p className="orderExplanation">{props.Explanation}</p>
           <div className="button__wrap">
-            <Link to='/'><LargeButton buttonName="CONTINUE SHOPPING" /></Link>
+            <a href='/'><LargeButton buttonName="CONTINUE SHOPPING" /></a>
         </div>
         </div>
     )

@@ -72,7 +72,7 @@ function AccountRowOne() {
               <hr className="hrSeparator" />
 
               <a href="/" className="nav-link text-center logoutTxt">
-                <span className="adjacentIcon__text">LOG OUT</span>
+                <span>LOG OUT</span>
               </a>
             </div>
           </div>
