@@ -5,10 +5,8 @@ import RadioGroup from "@material-ui/core/RadioGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import FormControl from "@material-ui/core/FormControl";
 import SideCatCheckBox from "./SideCatCheckBox";
-// import IconStore from "../../store/IconStore";
 import { CategorySideSearch } from "../Search/Search";
 import RangeSlider from "./RangeSlider";
-// import LargeButton from "../Button/LargeButton";
 
 function LeftCatSideNav() {
   const [value, setValue] = React.useState("firstChoice");

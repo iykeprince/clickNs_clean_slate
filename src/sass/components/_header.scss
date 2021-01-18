@@ -31,7 +31,7 @@
   font-weight: 500;
   color: #282828;
   text-transform: capitalize;
-  font-family:'Google Sans' !important;
+  font-family: "Google Sans" !important;
 }
 .option__lineOneCart {
   padding-left: 0.188rem !important;
@@ -151,12 +151,6 @@ button:focus {
   outline: none !important;
 }
 
-
-
-
-
-
-
 //HEADER THREE
 
 .question_wrap {
@@ -174,7 +168,7 @@ button:focus {
 .some__item1 {
   padding-right: 4% !important ;
 }
-.some__item2{
+.some__item2 {
   display: flex;
   align-items: center;
 }
@@ -186,8 +180,49 @@ button:focus {
 }
 .MuiMenuItem-root {
   font-size: 0.875rem !important;
-  font-family:'Google Sans' !important;
+  font-family: "Google Sans" !important;
 }
+.header__nav {
+  .MuiListItem-root {
+    padding-top: 0.75rem !important;
+    padding-bottom: 0.75rem !important;
+  }
+  .MuiPaper-root {
+    min-width: 12.875rem;
+  }
+  .MuiButtonBase-root.MuiButton-root.MuiButton-text +div{
+    z-index: 20;
+  }
+  .MuiPaper-elevation1 {
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.15);
+  }
+}
+.adjacentIcon__text2 {
+  padding-left: 1rem !important;
+}
+.logOutTxt{
+  text-align: center !important;
+  justify-content: center !important;
+  font-weight: 500 !important;
+  color: var(--woozRed) !important;
+  &::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    content: '';
+    background-color: #ededed;
+  }
+}
+.cartHeader__Section{
+  padding-left: 0.125rem !important;
+}
+
+
+
+
+
 
 
 
@@ -234,6 +269,7 @@ button:focus {
   .option__lineOneCart,
   .image__wrapper,
   .header__icon,
+  .helpSection,
   .dropdown__icon {
     display: none;
   }

@@ -1,4 +1,4 @@
-const WorkOrders = [
+const ProductOrders = [
     {
     id: '1',
     status: 'Draft',
@@ -357,4 +357,4 @@ const WorkOrders = [
 },
 ];
 
-export default WorkOrders;
+export default ProductOrders;

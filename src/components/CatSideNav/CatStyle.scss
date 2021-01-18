@@ -255,8 +255,19 @@ p.list-status.list-text-block {
 .rowCatApp_wrap {
   border-top: 1px solid #e3e3e3;
   border-bottom: 1px solid #e3e3e3;
+  
 }
+.btn-group{
+  .listButton, .gridButton{
+    svg {
+      fill: var(--woozBlue);
+      path {
+        fill: var(--woozBlue);
+      }
+    }
+  }
 
+}
 // .rowCatApp_wrap #list svg{
 //     &:hover{
 //         fill: var(--woozBlue);

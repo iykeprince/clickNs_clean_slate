@@ -8,7 +8,6 @@ import MenuItem from "@material-ui/core/MenuItem";
 import MenuList from "@material-ui/core/MenuList";
 import { makeStyles } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
-import IconStore from "../../store/IconStore";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -19,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function MenuListComp() {
+export default function HelpListComp() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef(null);
@@ -62,8 +61,17 @@ export default function MenuListComp() {
           aria-haspopup="true"
           onClick={handleToggle}
         >
-          <span className="option__lineOne">Hi, Bukky</span>
-          <img src="/images/arrowdown.svg" alt="" className="dropdown__icon" />
+          <img
+                  src="/images/alertCircle.svg"
+                  alt=""
+                  className="header__icon"
+                />
+                <span className="option__lineOne">Help</span>
+                <img
+                  src="/images/arrowdown.svg"
+                  alt=""
+                  className="dropdown__icon"
+                />
         </Button>
         <Popper
           open={open}
@@ -87,43 +95,16 @@ export default function MenuListComp() {
                     id="menu-list-grow"
                     onKeyDown={handleListKeyDown}
                   >
-                    <Link to="/customer">
-                      <MenuItem onClick={handleClose}>
-                        <span>{IconStore.bxUser}</span>
-                        <span className="adjacentIcon__text2">Account</span>
-                      </MenuItem>
-                    </Link>
-                    <Link to="/customer#/orders">
-                      <MenuItem onClick={handleClose}>
-                        <span>{IconStore.bxBox}</span>
-                        <span className="adjacentIcon__text2">Orders</span>
-                      </MenuItem>
-                    </Link>
-                    <Link to="/customer#/saved">
-                      <MenuItem onClick={handleClose}>
-                        {IconStore.heart}
-                        <span className="adjacentIcon__text2">Saved Items</span>
-                      </MenuItem>
-                    </Link>
-                    <Link to="/">
-                      <MenuItem onClick={handleClose} className="logOutTxt">
-                        LOGOUT
-                        {/* <DynamicButtonTwo
-                color="white"
-                height="2.5rem"
-                width={listGridbtn}
-                backgroundColor="var(--woozBlue)"
-                boxShadow="none"
-                borderRadius="5px"
-                border="none !important"
-                fontWeight="700"
-                fontSize="0.875rem"
-                hoverBoxShadow="none"
-              >
-                ADD TO CART
-              </DynamicButtonTwo> */}
-                      </MenuItem>
-                    </Link>
+                    <MenuItem onClick={handleClose}>Help Center</MenuItem>
+                    <MenuItem onClick={handleClose}>
+                      <Link to="">Place and Track Order</Link>
+                    </MenuItem>
+                    <MenuItem onClick={handleClose}>Order Cancellation
+                    </MenuItem>
+                    <MenuItem onClick={handleClose}>Returns and Refunds
+                    </MenuItem>
+                    <MenuItem onClick={handleClose}>Payment and Jumia account
+                    </MenuItem>
                   </MenuList>
                 </ClickAwayListener>
               </Paper>

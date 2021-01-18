@@ -7,6 +7,7 @@ import * as Ai from "react-icons/ai";
 import IconStore from "../../store/IconStore"
 import WoozHeaderLogo from "./WoozHeaderLogo"
 import MenuListComp from "./MenuListComp";
+import HelpListComp from "./HelpListComp";
 
 export default function Header({showHamburger}) {
   return (
@@ -14,7 +15,6 @@ export default function Header({showHamburger}) {
       <Row>
         <Col md="12">
           <div className="image__wrapper">
-            {/* <Link href="/"> */}
             <img
               src="/images/header/blackFridayAnimation.gif"
               alt="top advert"
@@ -40,7 +40,6 @@ export default function Header({showHamburger}) {
               alt="top advert"
               className="advertImage__three"
             />
-            {/* </Link> */}
           </div>
         </Col>
       </Row>
@@ -87,36 +86,18 @@ export default function Header({showHamburger}) {
           <div className="some__item2">
             <div className="header__nav">
               <div className="header__option">
-                {/* <Link to="/customer">
-                  <span className="option__lineOne">Hi, Bukky</span>
-                </Link>
-                <img
-                  src="/images/arrowdown.svg"
-                  alt=""
-                  className="dropdown__icon"
-                /> */}
                   <MenuListComp/>
 
                 <Link to="/customer">
                   <Ai.AiOutlineUser className="personIcon" />
                 </Link>
               </div>
-              <div className="header__option .help__sec">
-                <img
-                  src="/images/alertCircle.svg"
-                  alt=""
-                  className="header__icon"
-                />
-                <span className="option__lineOne">Help</span>
-                <img
-                  src="/images/arrowdown.svg"
-                  alt=""
-                  className="dropdown__icon"
-                />
+              <div className="header__option helpSection">
+                <HelpListComp/>
               </div>
               
                 <Link to='/cart'>
-                <div className="header__option">
+                <div className="header__option cartHeader__Section">
                 <img src="/images/cart.svg" alt="" className="cart" />
                 <span className="purchaseCount">
                   <span>4</span>
