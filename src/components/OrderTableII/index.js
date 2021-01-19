@@ -1,44 +1,20 @@
-/* eslint-disable jsx-a11y/alt-text */
 import React from "react";
-// import {  Container, Row, Col } from "react-bootstrap";
 import { TableItems } from "./TableItems";
-import TableContent from './TableContent'
+import TableContent from "./TableContent";
 
-// import {  Form, Button,Container } from "react-bootstrap";
-
-// import { NavLink } from "react-router-dom";
-
-class AdminOrder extends React.Component {
-  render() {
+export default function OrderTableII(props) {
     return (
       <React.Fragment>
+        <div className="conatine">
+        <h3 className="heading__Title text-center">{props.headingTitle}</h3>
+          <br />
 
-
-   
-   
-        
-<div className="conatine">
-<h3 style={{textAlign:"center"}}>Tablets Accessories</h3>
-<br/>
-
-        <div className="gridd-container row">
-
-         
- 
-  
-        {TableItems.map((e, i) => {
-              return (
-                <TableContent key={i} img={e.img} info={e.info} />
-
-                // <TableContent key={i} url={e.url}/>
-              );
+          <div className="gridd-container row">
+            {TableItems.map((e, i) => {
+              return <TableContent key={i} img={e.img} info={e.info} />;
             })}
-</div>
-
-</div>
+          </div>
+        </div>
       </React.Fragment>
     );
   }
-}
-
-export default AdminOrder;

@@ -3,7 +3,7 @@ import "./sass/main.scss";
 import Home from './pages/Home';
 import {BrowserRouter as  Router , Route, Switch} from 'react-router-dom'
 import ProductDetail from './pages/ProductDetail'
-import CategoryList from './pages/CategoryList';
+import PhoneCategory from './pages/PhoneCategory';
 import Account from './pages/Account';
 import RecentlyViewed from './pages/RecentlyViewed';
 import Cart from './pages/Cart';
@@ -22,7 +22,7 @@ function App() {
       <Switch>
         <Route path={"/"} exact component={Home}/>
         <Route path={"/product"} component={ProductDetail}/> 
-        <Route path={"/category"} component={CategoryList}/> 
+        <Route path={"/phones-tablets"} component={PhoneCategory}/> 
         <Route path={"/customer/"} component={Account}/> 
         <Route path={"/recentlyViewed"} component={RecentlyViewed}/>
         <Route path={"/cart"} component={Cart}/>

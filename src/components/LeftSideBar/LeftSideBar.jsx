@@ -1,39 +1,64 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import LeftSideItem from "./LeftSideItem";
 
-const LeftSideBarData = {
-  "/images/LeftSideBar/phone.svg": "Phone & Tablets",
-  "/images/LeftSideBar/supermarket.svg": "Supermarket",
-  "/images/LeftSideBar/Fashion.svg": "Fashion",
-  "/images/LeftSideBar/electronics.svg": "Electronics",
-  "/images/LeftSideBar/Computing.svg": "Computing",
-  "/images/LeftSideBar/Home.svg": "Home & Office",
-  "/images/LeftSideBar/health.svg": "Health & Beauty",
-  "/images/LeftSideBar/Gaming.svg": "Gaming",
-  "/images/LeftSideBar/Sports.svg": "Sporting Goods",
-  "/images/LeftSideBar/BabyProduct.svg": "Baby Products",
-  "/images/LeftSideBar/others.svg": "Other Categories",
-};
-
-
-const htmlData = [];
-for (let key in LeftSideBarData) {
-  let value = LeftSideBarData[key];
-  htmlData.push(
-    // <Link to=''>
-    <div className='leftSideBar__grp' key={key}>
-      <img src={key} alt="icon" className='leftSideBar__icon' />
-      <Link to="category">
-        {" "}
-        <span className='leftSideBar__text'>{value} </span>
-      </Link>
+export default function LeftSideBar() {
+  return (
+    <div className="leftSidebar__container">
+      <LeftSideItem
+        iconSource="/images/LeftSideBar/phone.svg"
+        urlDirection="/phones-tablets"
+        iconText={`Phone & Tablets`}
+      />
+      <LeftSideItem
+        iconSource="/images/LeftSideBar/supermarket.svg"
+        urlDirection="/groceries"
+        iconText="Supermarket"
+      />
+      <LeftSideItem
+        iconSource="/images/LeftSideBar/electronics.svg"
+        urlDirection="/fashion"
+        iconText="Fashion"
+      />
+      <LeftSideItem
+        iconSource="/images/LeftSideBar/phone.svg"
+        urlDirection="/electronics"
+        iconText="Electronics"
+      />
+      <LeftSideItem
+        iconSource="/images/LeftSideBar/Computing.svg"
+        urlDirection="/computing"
+        iconText="Computing"
+      />
+      <LeftSideItem
+        iconSource="/images/LeftSideBar/Home.svg"
+        urlDirection="/home-office"
+        iconText={`Home & Office`}
+      />
+      <LeftSideItem
+        iconSource="/images/LeftSideBar/health.svg"
+        urlDirection="/health-beauty"
+        iconText={`Health & Beauty`}
+      />
+      <LeftSideItem
+        iconSource="/images/LeftSideBar/Gaming.svg"
+        urlDirection="/gaming"
+        iconText="Gaming"
+      />
+      <LeftSideItem
+        iconSource="/images/LeftSideBar/Sports.svg"
+        urlDirection="/sports"
+        iconText="Sporting Goods"
+      />
+      <LeftSideItem
+        iconSource="/images/LeftSideBar/BabyProduct.svg"
+        urlDirection="/baby-products"
+        iconText="Baby Products"
+      />
+      <LeftSideItem
+        iconSource="/images/LeftSideBar/others.svg"
+        urlDirection=""
+        iconText="Other Categories"
+      />
     </div>
-    // </Link>
   );
 }
-
-function LeftSideBar() {
-  return <div className='leftSidebar__container'>{htmlData}</div>;
-}
-
-export default LeftSideBar;

@@ -7,7 +7,6 @@ import Popper from "@material-ui/core/Popper";
 import MenuItem from "@material-ui/core/MenuItem";
 import MenuList from "@material-ui/core/MenuList";
 import { makeStyles } from "@material-ui/core/styles";
-import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -96,8 +95,7 @@ export default function HelpListComp() {
                     onKeyDown={handleListKeyDown}
                   >
                     <MenuItem onClick={handleClose}>Help Center</MenuItem>
-                    <MenuItem onClick={handleClose}>
-                      <Link to="">Place and Track Order</Link>
+                    <MenuItem onClick={handleClose}>Place and Track Order
                     </MenuItem>
                     <MenuItem onClick={handleClose}>Order Cancellation
                     </MenuItem>
