@@ -160,6 +160,10 @@ const IconStore = {
         <path d="M0 10.6667H10.6667V0H0V10.6667ZM0 24H10.6667V13.3333H0V24ZM13.3333 24H24V13.3333H13.3333V24ZM13.3333 0V10.6667H24V0" fill="#BBBBBB"/>
         </svg>,
         
+        arrowDown:<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3.75 5.625L7.5 9.375L11.25 5.625" stroke="#282828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>,
+        
         
       }
   

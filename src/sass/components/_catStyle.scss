@@ -268,12 +268,29 @@ p.list-status.list-text-block {
   }
 
 }
-// .rowCatApp_wrap #list svg{
-//     &:hover{
-//         fill: var(--woozBlue);
-//         stroke: var(--woozBlue) ;
-//         }
-// }
+.mainer{
+  .lefter{
+      position: relative;
+      z-index: 2;
+  }
+  .MuiListItem-root {
+    padding-top: 0.75rem !important;
+    padding-bottom: 0.75rem !important;
+  }
+  .MuiPaper-root {
+    min-width: 12.875rem;
+  }
+  .MuiButtonBase-root.MuiButton-root.MuiButton-text +div{
+    z-index: 20;
+  }
+  .MuiPaper-elevation1 {
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.15);
+  }
+}
+
+
+
+
 
 .rowCatApp_wrap #list,
 .rowCatApp_wrap #grid {

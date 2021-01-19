@@ -1,9 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-import "./CatStyle.scss";
-import DynamicButton, {DynamicButtonTwo} from "../Button/DynamicButton";
-import { ReadOnlyRating } from "../Rating/Rating";
+import DynamicButton, {DynamicButtonTwo} from "../../Button/DynamicButton";
+import { ReadOnlyRating } from "../../Rating/Rating";
 
 const ProductRow = (props) => {
   let btnClass = classNames("", {

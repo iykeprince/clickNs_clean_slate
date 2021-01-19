@@ -1,14 +1,17 @@
-import React from "react";
-import { ReadOnlyRating } from "../Rating/Rating";
+import React, { useContext } from "react";
+import { ReadOnlyRating } from "../../Rating/Rating";
 import Radio from "@material-ui/core/Radio";
 import RadioGroup from "@material-ui/core/RadioGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import FormControl from "@material-ui/core/FormControl";
 import SideCatCheckBox from "./SideCatCheckBox";
-import { CategorySideSearch } from "../Search/Search";
+import { CategorySideSearch } from "../../Search/Search";
 import RangeSlider from "./RangeSlider";
+import CategoryContext from "../../../Contexts/useContext";
 
 function LeftCatSideNav() {
+  const category = useContext(CategoryContext);
+
   const [value, setValue] = React.useState("firstChoice");
 
   const handleChange = (event) => {
@@ -21,7 +24,7 @@ function LeftCatSideNav() {
 
       <br />
 
-      <p>{`Phones & Tablets`}</p>
+      <p>{category.name}</p>
       <div>
         <ul className="cs_section">
           <li>Mobile Phone Accessories</li>

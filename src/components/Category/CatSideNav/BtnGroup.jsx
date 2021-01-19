@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import IconStore from "../../store/IconStore";
-import "./CatStyle.scss";
+import IconStore from "../../../store/IconStore";
 
 const BtnGroup = (props) => {
     

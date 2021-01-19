@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import classNames from "classnames";
-import "./CatStyle.scss";
 import ProductOrders from "./ProductOrders";
 import ProductRow from "./ProductRow";
 import BtnGroup from "./BtnGroup";

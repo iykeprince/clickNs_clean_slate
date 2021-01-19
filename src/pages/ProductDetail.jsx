@@ -7,7 +7,6 @@ import ProductDetailRowFour from "../components/Product/ProductDetailRowFour";
 import ProductDetailRowFive from "../components/Product/ProductDetailRowFive";
 import Footer from "../components/Footer/Footer";
 import ProductLocation from "../components/Product/ProductLocation";
-// import PhoneLarge from "../assets/phoneProduct.png";
 
 function ProductDetail() {
   return (

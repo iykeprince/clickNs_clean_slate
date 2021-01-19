@@ -3,7 +3,7 @@ import "./sass/main.scss";
 import Home from './pages/Home';
 import {BrowserRouter as  Router , Route, Switch} from 'react-router-dom'
 import ProductDetail from './pages/ProductDetail'
-import PhoneCategory from './pages/PhoneCategory';
+import PhoneCategory from './pages/Categories/PhonenTablet';
 import Account from './pages/Account';
 import RecentlyViewed from './pages/RecentlyViewed';
 import Cart from './pages/Cart';
