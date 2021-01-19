@@ -19,3 +19,99 @@ export default function OrderTable(props){
       </React.Fragment>
     );
   }
+
+
+
+//ALL YOU NEED TO DO IS TO JUST DUPLICATE THIS EXPORT FUNCTION FOR OTHER CATEGORIES, AND REPLACE
+// THE DATA, I.E OFFICIALSTOREDATA WITH THE ONE IN ITS CORRESPONDING DB FILE!
+
+export const OrderTable_BabyProduct = () => {
+  return (
+    <div>
+      
+    </div>
+  )
+}
+
+
+export const OrderTable_Computing = () => {
+  return (
+    <div>
+      
+    </div>
+  )
+}
+
+
+
+export const OrderTable_Electronics = () => {
+  return (
+    <div>
+      
+    </div>
+  )
+}
+
+
+
+
+export const OrderTable_Fashion = () => {
+  return (
+    <div>
+      
+    </div>
+  )
+}
+
+
+
+export const OrderTable_Gaming = () => {
+  return (
+    <div>
+      
+    </div>
+  )
+}
+
+
+export const OrderTable_HealthBeauty = () => {
+  return (
+    <div>
+      
+    </div>
+  )
+}
+
+export const OrderTable_HomeOffice = () => {
+  return (
+    <div>
+      
+    </div>
+  )
+}
+
+
+export const OrderTable_Others = () => {
+  return (
+    <div>
+      
+    </div>
+  )
+}
+
+export const OrderTable_Sports = () => {
+  return (
+    <div>
+      
+    </div>
+  )
+}
+
+
+export const OrderTable_Supermarket = () => {
+  return (
+    <div>
+      
+    </div>
+  )
+}
