@@ -1,27 +1,28 @@
 import React, { useContext } from "react";
-import CategoryContext from "../../../Contexts/useContext";
+import CategoryContext from "../../../../../Contexts/CategoryContext";
 import CatApp from "./CatApp";
-import Sort from "./Sort";
+import Sort from "../../Sort";
+// import { PhoneTabletrows } from "../../SpecificProductrows";
 
-function RightCatSideNav() {
+function RIGHTCATSIDENAV_PHONENTABLET() {
   const category = useContext(CategoryContext);
 
   return (
     <div className="mainer">
       <div className="d-flex">
         <span className="listGridTopic">
-          {category.name}
+          {category.catName}
           </span>
 
         <span className="lefter">
-          <Sort />
+          <Sort/>
         </span>
       </div>
       <div className="listGrid__header">
-        <CatApp />
+        <CatApp/>
       </div>
     </div>
   );
 }
 
-export default RightCatSideNav;
+export default RIGHTCATSIDENAV_PHONENTABLET;

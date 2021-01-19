@@ -1,7 +1,10 @@
-import React from "react";
+import React, {useContext} from "react";
 import { Link } from "react-router-dom";
+import CategoryContext from "../../Contexts/CategoryContext";
 
 function CategoryDirection(props) {
+  const category = useContext(CategoryContext);
+
   return (
     <div className="link_dirGroup">
       <Link to="/">
@@ -12,7 +15,7 @@ function CategoryDirection(props) {
         <b>{`>`}</b>
       </span>
       <Link>
-        <span className="link_dir2 active">{props.categoryName}</span>
+        <span className="link_dir2 active">{category.catName}</span>
       </Link>
     </div>
   );

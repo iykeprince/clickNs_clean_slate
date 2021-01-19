@@ -182,7 +182,7 @@ button:focus {
   font-size: 0.875rem !important;
   font-family: "Google Sans" !important;
 }
-.header__nav {
+.headerThirdRow {
   .MuiListItem-root {
     padding-top: 0.75rem !important;
     padding-bottom: 0.75rem !important;
@@ -219,6 +219,25 @@ button:focus {
 }
 .cartHeader__Section{
   padding-left: 0.125rem !important;
+}
+
+.faIconBar{
+  font-size : 1.5rem;
+  cursor: pointer;
+  padding-right: 1.125rem !important;
+  display: flex;
+  align-self: center;
+}
+.faIconBar>svg{
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.lefter.grpr{
+  .dropdown-content{
+    min-width: 200px;
+
+}
 }
 
 

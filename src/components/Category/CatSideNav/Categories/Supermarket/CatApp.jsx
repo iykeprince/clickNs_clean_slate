@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import classNames from "classnames";
-import ProductOrders from "./ProductOrders";
-import ProductRow from "./ProductRow";
-import BtnGroup from "./BtnGroup";
+import BtnGroup from "../../BtnGroup";
+import ProductRow from "../../GenericProductRow";
+import { PRODUCTORDERS_SUPERMARKET } from "../../../../../DB/Categories/SupermarketData";
 
-class CatApp extends Component {
+export default class CatApp extends Component {
+  
   state = {
     listView: true,
     gridView: false,
@@ -35,7 +36,8 @@ class CatApp extends Component {
         gridButton: this.state.gridView,
       }),
     ];
-    let rows = ProductOrders.map((product) => {
+    
+    let rows = PRODUCTORDERS_SUPERMARKET.map((product) => {
       return (
         <ProductRow
           key={product.id}
@@ -45,6 +47,7 @@ class CatApp extends Component {
         />
       );
     });
+
     return (
       <div className="">
         <div className="row row-eq-height gray-bg">
@@ -71,4 +74,3 @@ class CatApp extends Component {
   }
 }
 
-export default CatApp;

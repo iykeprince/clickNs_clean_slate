@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { HeaderSearch } from "../Search/Search";
-import SideNav from "../SideNav/SideNav";
+import SideNav from "./SideNav";
 import { Row, Col } from "react-bootstrap";
 import * as Ai from "react-icons/ai";
 import IconStore from "../../store/IconStore"

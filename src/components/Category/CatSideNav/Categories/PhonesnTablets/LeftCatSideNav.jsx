@@ -1,15 +1,15 @@
 import React, { useContext } from "react";
-import { ReadOnlyRating } from "../../Rating/Rating";
+import { ReadOnlyRating } from "../../../../Rating/Rating";
 import Radio from "@material-ui/core/Radio";
 import RadioGroup from "@material-ui/core/RadioGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import FormControl from "@material-ui/core/FormControl";
-import SideCatCheckBox from "./SideCatCheckBox";
-import { CategorySideSearch } from "../../Search/Search";
-import RangeSlider from "./RangeSlider";
-import CategoryContext from "../../../Contexts/useContext";
+import SideCatCheckBox from "../../SideCatCheckBox";
+import { CategorySideSearch } from "../../../../Search/Search";
+import RangeSlider from "../../RangeSlider";
+import CategoryContext from "../../../../../Contexts/CategoryContext";
 
-function LeftCatSideNav() {
+export default function LEFTCATSIDENAV_PHONENTABLET() {
   const category = useContext(CategoryContext);
 
   const [value, setValue] = React.useState("firstChoice");
@@ -24,7 +24,7 @@ function LeftCatSideNav() {
 
       <br />
 
-      <p>{category.name}</p>
+      <p>{category.catName}</p>
       <div>
         <ul className="cs_section">
           <li>Mobile Phone Accessories</li>
@@ -297,4 +297,3 @@ function LeftCatSideNav() {
   );
 }
 
-export default LeftCatSideNav;

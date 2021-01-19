@@ -11,7 +11,7 @@ export default function LeftSideBar() {
       />
       <LeftSideItem
         iconSource="/images/LeftSideBar/supermarket.svg"
-        urlDirection="/groceries"
+        urlDirection="/supermarket"
         iconText="Supermarket"
       />
       <LeftSideItem

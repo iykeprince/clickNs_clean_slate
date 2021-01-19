@@ -1,25 +1,25 @@
 import React from "react";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
-import OrderTable from "../../components/Category/OrderTable";
-import OrderTableI from "../../components/Category/OrderTableI";
-import OrderTableII from "../../components/Category/OrderTableII";
-import PriceSlash from "../../components/Category/PriceSlash";
-import PriceSlashI from "../../components/Category/PriceSlashI";
-import PriceSlashII from "../../components/Category/PriceSlashII";
-import PriceSlashIII from "../../components/Category/PriceSlashIII";
-import PriceSlashIV from "../../components/Category/PriceSlashIV";
-import PriceSlashV from "../../components/Category/PriceSlashV";
-import OfficialStore from "../../components/Category/OfficialStore";
-import OfficialStoreI from "../../components/Category/OfficialStoreI";
-import CatSideNav from "../../components/Category/CatSideNav/Index";
-import CatBannerImage from "../../components/Category/CatBannerImage";
+import { ORDERTABLE_SUPERMARKET } from "../../components/Category/OrderTable";
+import { ORDERTABLE_SUPERMARKETI } from "../../components/Category/OrderTableI";
+import {ORDERTABLE_SUPERMARKETII} from "../../components/Category/OrderTableII";
+import {PRICESLASH_SUPERMARKET} from "../../components/Category/PriceSlash";
+import {PRICESLASH_SUPERMARKETI} from "../../components/Category/PriceSlashI";
+import {PRICESLASH_SUPERMARKETII} from "../../components/Category/PriceSlashII";
+import {PRICESLASH_SUPERMARKETIII} from "../../components/Category/PriceSlashIII";
+import {PRICESLASH_SUPERMARKETIV} from "../../components/Category/PriceSlashIV";
+import {PRICESLASH_SUPERMARKETV} from "../../components/Category/PriceSlashV";
+import {OFFICIALSTORE_SUPERMARKET} from "../../components/Category/OfficialStore";
+import {OFFICIALSTORE_SUPERMARKETI} from "../../components/Category/OfficialStoreI";
+import { CATSIDENAV_SUPERMARKET } from "../../components/Category/CatSideNav/Index";
+import {CATBANNERIMAGE_SUPERMARKETI,  CATBANNERIMAGE_SUPERMARKETII } from "../../components/Category/CatBannerImage";
 import CategoryDirection from "../../components/Category/CategoryDirection";
 import CategoryAdvert from "../../components/Category/CategoryAdvert";
-import { CategoryProvider } from "../../Contexts/useContext";
+import { CategoryProvider } from "../../Contexts/CategoryContext";
 
 export default function Supermarket() {
-  const category = { name: 'Supermarket'}
+  const category = {catName: 'Supermarket'}
 
   return (
     <React.Fragment>
@@ -27,40 +27,40 @@ export default function Supermarket() {
       <div className="body__wrapper putAtMiddle">
 
       <CategoryProvider value={category}>  
-        <CategoryDirection categoryName="Supermarket"/>
+        <CategoryDirection/>
 
-        <CatBannerImage bannerImageSource="./images/phones/2924 1.png" />
+        <CATBANNERIMAGE_SUPERMARKETI />
 
-        <OrderTable headingTitle="Supermarket"/>
+        <ORDERTABLE_SUPERMARKET headingTitle="Supermarket" />
 
-        <PriceSlash headingTitle="Budget Smartphones" />
+        <PRICESLASH_SUPERMARKET headingTitle="Budget" />
 
-        <PriceSlashI headingTitle="Large Screen Phones" />
+        <PRICESLASH_SUPERMARKETI headingTitle="Supermarket" />
 
         <CategoryAdvert />
 
-        <PriceSlashII headingTitle="Top Picks for you" />
+        <PRICESLASH_SUPERMARKETII headingTitle="Top Picks for you" />
 
-        <OrderTableI headingTitle="Phone Accessories" />
+        <ORDERTABLE_SUPERMARKETI headingTitle="Budget" />
 
-        <PriceSlashIII headingTitle="Landline Phones" />
+        <PRICESLASH_SUPERMARKETIII headingTitle="Supermarket" />
 
-        <PriceSlashIV headingTitle="Mobile Game Controllers" />
+        <PRICESLASH_SUPERMARKETIV headingTitle="Budget" />
 
-        <OrderTableII headingTitle="Tablet Accessories" />
+        <ORDERTABLE_SUPERMARKETII headingTitle="Supermarket" />
 
         <br />
         <br />
         <br />
-        <CatBannerImage bannerImageSource="./images/phones/21914 1.png" />
+        <CATBANNERIMAGE_SUPERMARKETII/>
 
-        <OfficialStore headingTitle="Official Stores" />
+        <OFFICIALSTORE_SUPERMARKET headingTitle="Official Stores" />
 
-        <OfficialStoreI headingTitle="Tablet Accessories" />
+        <OFFICIALSTORE_SUPERMARKETI headingTitle="Supermarket" />
 
-        <PriceSlashV headingTitle="Mobile Game Controllers" />
+        <PRICESLASH_SUPERMARKETV headingTitle="Budget" />
 
-        <CatSideNav />
+        <CATSIDENAV_SUPERMARKET />
         </CategoryProvider>
 
       </div>
