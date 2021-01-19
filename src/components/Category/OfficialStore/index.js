@@ -1,5 +1,5 @@
 import React from "react";
-import { TableItems } from "./TableItems";
+import { OfficialStoreData } from "../DB/PhonenTabletData";
 import TableContent from "./TableContent";
 
 
@@ -11,7 +11,7 @@ export default function OfficialStore(props) {
           <br />
 
           <div class="gridd-container row">
-            {TableItems.map((e, i) => {
+            {OfficialStoreData.map((e, i) => {
               return (
                 <TableContent key={i} img={e.img} info={e.info} />
               );
@@ -21,3 +21,5 @@ export default function OfficialStore(props) {
       </React.Fragment>
     );
   }
+
+  

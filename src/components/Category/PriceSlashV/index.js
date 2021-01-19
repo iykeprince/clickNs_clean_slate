@@ -1,6 +1,6 @@
 import React from "react";
-import { TableItems } from "./TableItems";
-import TableContent from "./TableContent";
+import { PriceSlashDataV } from "../DB/PhonenTabletData";
+import TableContent from "../PriceSlash/TableContent";
 import * as FaIcon from "react-icons/fa";
 
 export default function PriceSlashV(props) {
@@ -14,7 +14,7 @@ export default function PriceSlashV(props) {
           <h3 className="heading__Title">{props.headingTitle}</h3>
 
           <div class="griddd-container">
-            {TableItems.map((e, i) => {
+            {PriceSlashDataV.map((e, i) => {
               return (
                 <TableContent
                   key={i}

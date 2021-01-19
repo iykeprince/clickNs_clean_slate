@@ -1,5 +1,5 @@
 import React from "react";
-import { TableItems } from "./TableItems";
+import { OrderTableData } from "../DB/PhonenTabletData";
 import TableContent from "./TableContent";
 
 export default function OrderTable(props){
@@ -9,7 +9,7 @@ export default function OrderTable(props){
         <h3 className="heading__Title text-center">{props.headingTitle}</h3>
 
           <div className="gridd-container row">
-            {TableItems.map((e, i) => {
+            {OrderTableData.map((e, i) => {
               return (
                 <TableContent key={i} img={e.img} info={e.info} />
               );

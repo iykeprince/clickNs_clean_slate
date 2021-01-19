@@ -1,6 +1,6 @@
 import React from "react";
-import { TableItems } from "./TableItems";
-import TableContent from "./TableContent";
+import { OrderTableDataI } from "../DB/PhonenTabletData";
+import TableContent from "../OrderTable/TableContent";
 
 export default function OrderTableI(props) {
     return (
@@ -10,7 +10,7 @@ export default function OrderTableI(props) {
           <br />
 
           <div className="ogridd-container row">
-            {TableItems.map((e, i) => {
+            {OrderTableDataI.map((e, i) => {
               return <TableContent key={i} img={e.img} info={e.info} />;
             })}
           </div>
