@@ -6,10 +6,21 @@
   top: 0;
   left: 0;
   overflow-x: hidden;
-  padding: 2rem 1rem 1rem 1.5rem !important;
+  padding: 1rem !important;
   background: #FFFFFF;
   box-shadow: 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.05);
   border-radius: 0.313rem;
+  font-size: 0.875rem;
+  .cs_section{
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    
+  }
+  .catName{
+    padding-top: 1rem !important;
+    font-weight: 500;
+  }
   }
 
   @media screen and (max-height: 450px) {
@@ -268,4 +279,8 @@
   .MuiIconButton-root {
     padding: 0.3rem !important;
   }
+}
+
+ul.MuiPagination-ul>li {
+padding: 0.5rem !important;
 }

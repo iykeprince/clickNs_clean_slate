@@ -90,13 +90,11 @@ export default function Sort() {
                     <Link to="#">
                       <MenuItem onClick={handleClose}>
                         <span>Popularity</span>
-                        {/* <span className="adjacentIcon__text2">Account</span> */}
                       </MenuItem>
                     </Link>
                     <Link to="#">
                       <MenuItem onClick={handleClose}>
                         <span>Newest Arrivals</span>
-                        {/* <span className="adjacentIcon__text2">Orders</span> */}
                       </MenuItem>
                     </Link>
                     <Link to="#">

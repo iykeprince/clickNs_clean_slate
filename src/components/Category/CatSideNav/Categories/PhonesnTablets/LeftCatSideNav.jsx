@@ -22,19 +22,13 @@ export default function LEFTCATSIDENAV_PHONENTABLET() {
     <div className="sidenav">
       <p className='some_Category_Text'>CATEGORY</p>
 
-      <br />
-
-      <p>{category.catName}</p>
+      <p className='catName'>{category.catName}</p>
       <div>
         <ul className="cs_section">
           <li>Mobile Phone Accessories</li>
-          <br />
           <li>Mobile Phones</li>
-          <br />
           <li>Tablet Accessories</li>
-          <br />
           <li>Tablets</li>
-          <br />
           <li>{`Telephones & Accessories`}</li>
         </ul>
         <hr className="s_hr" />

@@ -13,17 +13,17 @@ function DealsSection() {
       <Container fluid className="dealsSectionContainer">
         <Row>
           <Col md="12" className="dealsSectionTitle__container">
-            <div className="dealsSectionTitle bgWhite" >
+            <div className="dealsSectionTitle bgWhite">
               <p>Recommended for you</p>
             </div>
           </Col>
 
-          <DealsSectionContent productImage={samsung1}/>
-                    <DealsSectionContent productImage={shoe1}/>
-                    <DealsSectionContent productImage={laptop1}/>
-                    <DealsSectionContent productImage={dress1}/>
-                    <DealsSectionContent productImage={fridge1}/>
-                    <DealsSectionContent productImage={shoe1}/>
+          <DealsSectionContent productImage={samsung1} />
+          <DealsSectionContent productImage={shoe1} />
+          <DealsSectionContent productImage={laptop1} />
+          <DealsSectionContent productImage={dress1} />
+          <DealsSectionContent productImage={fridge1} />
+          <DealsSectionContent productImage={shoe1} />
         </Row>
       </Container>
     </div>

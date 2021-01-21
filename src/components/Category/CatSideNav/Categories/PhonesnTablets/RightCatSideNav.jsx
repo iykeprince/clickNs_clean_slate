@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import CategoryContext from "../../../../../Contexts/CategoryContext";
 import CatApp from "./CatApp";
 import Sort from "../../Sort";
-// import { PhoneTabletrows } from "../../SpecificProductrows";
 
 function RIGHTCATSIDENAV_PHONENTABLET() {
   const category = useContext(CategoryContext);
