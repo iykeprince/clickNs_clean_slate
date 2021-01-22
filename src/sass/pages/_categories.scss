@@ -17,6 +17,7 @@
   background-color: white;
   border-radius: 5px !important;
   padding: 0.5rem !important;
+  margin-top: 2rem !important;
 }
 .containe {
   margin-right: auto !important;
@@ -33,3 +34,8 @@
   margin-top: " 3rem !important";
 }
 
+@media screen and (max-width:992px){
+  .top_badge {
+    margin-top: 1rem !important;
+  }
+}

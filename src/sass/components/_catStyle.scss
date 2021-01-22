@@ -191,10 +191,6 @@ p.list-status.list-text-block {
   font-size: 0.875rem;
   font-weight: 500;
   padding: 0.25rem !important;
-  // transition-duration: 1s;
-  // transition-property: height;
-  // transition-timing-function:cubic-bezier(.21,-0.16,.74,1.2);
-
   &:hover {
     .addToCart_buttonGrid {
       display: block;
@@ -395,5 +391,10 @@ p.list-status.list-text-block {
   }
   .table-row.header.caption {
     display: none;
+  }
+  .caption:hover {
+    box-shadow: none;
+    border-radius: none;
+    transition: none;
   }
 }

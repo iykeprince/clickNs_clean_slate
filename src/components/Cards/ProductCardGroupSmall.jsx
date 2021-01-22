@@ -9,37 +9,37 @@ const ProductCardGroupSmall = (props) => {
   return (
     <div>
       <Row className="prodSmallRow">
-        <Link to="/product" className="prodSmallCol col-lg-2 col-md-4 col-sm-6">
+        <Link to="/product" className="prodSmallCol col-6 col-sm-4 col-lg-2">
           <ProductDetailCard
             productImg={imgSamsung}
             productName={`Samsung Galaxy..`}
           />
         </Link>
-        <Link to="/product" className="prodSmallCol col-lg-2 col-md-4 col-sm-6">
+        <Link to="/product" className="prodSmallCol col-6 col-sm-4 col-lg-2">
           <ProductDetailCard
             productImg={imgSamsung}
             productName={`Samsung Galaxy..`}
           />
         </Link>
-        <Link to="/product" className="prodSmallCol col-lg-2 col-md-4 col-sm-6">
+        <Link to="/product" className="prodSmallCol col-6 col-sm-4 col-lg-2">
           <ProductDetailCard
             productImg={imgSamsung}
             productName={`Samsung Galaxy..`}
           />
         </Link>
-        <Link to="/product" className="prodSmallCol col-lg-2 col-md-4 col-sm-6">
+        <Link to="/product" className="prodSmallCol col-6 col-sm-4 col-lg-2">
           <ProductDetailCard
             productImg={imgSamsung}
             productName={`Samsung Galaxy..`}
           />
         </Link>
-        <Link to="/product" className="prodSmallCol col-lg-2 col-md-4 col-sm-6">
+        <Link to="/product" className="prodSmallCol col-6 col-sm-4 col-lg-2">
           <ProductDetailCard
             productImg={imgSamsung}
             productName={`Samsung Galaxy..`}
           />
         </Link>
-        <Link to="/product" className="prodSmallCol col-lg-2 col-md-4 col-sm-6">
+        <Link to="/product" className="prodSmallCol col-6 col-sm-4 col-lg-2">
           <ProductDetailCard
             productImg={imgSamsung}
             productName={`Samsung Galaxy..`}

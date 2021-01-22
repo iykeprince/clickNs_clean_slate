@@ -62,7 +62,7 @@ export default function MenuListComp() {
           aria-haspopup="true"
           onClick={handleToggle}
         >
-          <span className="option__lineOne">Hi, Bukky</span>
+          <span className="option__lineOne">Hi,Bukky</span>
           <img src="/images/arrowdown.svg" alt="" className="dropdown__icon" />
         </Button>
         <Popper

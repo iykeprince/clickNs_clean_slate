@@ -14,7 +14,7 @@ export function PriceSlashII(props) {
 
           <h3 className="heading__Title">{props.headingTitle}</h3>
 
-          <div class="griddd-container">
+          <div class="griddd-container row">
             {PriceSlashDataII.map((e, i) => {
               return (
                 <TableContent
@@ -44,7 +44,7 @@ export function PriceSlashII(props) {
 
           <h3 className="heading__Title">{props.headingTitle}</h3>
 
-          <div class="griddd-container">
+          <div class="griddd-container row">
             {PriceSlashData_SupermarketII.map((e, i) => {
               return (
                 <TableContent

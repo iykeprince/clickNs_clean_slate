@@ -15,3 +15,9 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
     // padding: 0rem 15.5% !important;
 }
+@media screen and (max-width:768px){
+    .proceedbtn, .continuebtn{
+        display: flex;
+        justify-content: center;
+    }
+}

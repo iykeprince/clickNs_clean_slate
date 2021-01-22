@@ -24,14 +24,14 @@
 
 @media screen and (max-width: 576px) {
     .grid__Container {
-    grid-template-rows: 15rem;
+    grid-template-rows: 12rem;
   }
   
 }
 
 @media screen and (max-width: 480px) {
     .grid__Container {
-    grid-template-rows: 12rem;
+    grid-template-rows: 8rem;
   }
   
 }
@@ -91,16 +91,18 @@
   }
   @media screen and (max-width: 576px) {
     .CarouselItem {
-      height: 15rem;
+      height: 12rem;
     }
-    
   }
   
   @media screen and (max-width: 480px) {
     .CarouselItem {
-      height: 12rem;
+      height: 8rem;
     }
     
+    .hmbcontainer, .row1 {
+      margin-top:  0.75rem !important;
+  }
   }
 
   //THE RIGHT SIDE BAR

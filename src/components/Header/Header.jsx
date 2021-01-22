@@ -4,14 +4,19 @@ import { HeaderSearch } from "../Search/Search";
 import SideNav from "./SideNav";
 import { Row, Col } from "react-bootstrap";
 import * as Ai from "react-icons/ai";
-import IconStore from "../../store/IconStore"
-import WoozHeaderLogo from "./WoozHeaderLogo"
+import IconStore from "../../store/IconStore";
+import WoozHeaderLogo from "./WoozHeaderLogo";
 import MenuListComp from "./MenuListComp";
 import HelpListComp from "./HelpListComp";
+import useWindowDimensions from "../../Hooks/UseWindowDimension";
 
-export default function Header({showHamburger}) {
+export default function Header({ showHamburger }) {
+  // EXTENDED USAGE
+  // const { height, width } = useWindowDimensions();
+
+  const { width } = useWindowDimensions();
   return (
-    <header className="header__container Container">
+    <header className="header__container">
       <Row>
         <Col md="12">
           <div className="image__wrapper">
@@ -60,13 +65,13 @@ export default function Header({showHamburger}) {
                 {IconStore.payCapitalIcon}
               </span>
               <span className="headerSecondIcon">
-              {IconStore.dispatchCapitalIcon}
+                {IconStore.dispatchCapitalIcon}
               </span>
               <span className="headerSecondIcon">
-              {IconStore.socialCapitalIcon}
+                {IconStore.socialCapitalIcon}
               </span>
               <span className="headerSecondIcon">
-              {IconStore.hangoutCapitalIcon}
+                {IconStore.hangoutCapitalIcon}
               </span>
             </div>
           </div>
@@ -75,38 +80,38 @@ export default function Header({showHamburger}) {
 
       <Row className="headerThirdRow">
         <div className="some__Container">
-        {showHamburger && <SideNav />}
-          <WoozHeaderLogo/>
-          
+
+          {(showHamburger && <SideNav />) ||
+            (width <= 992 ? <SideNav /> : null)}
+
+          <WoozHeaderLogo />
 
           <div className="searchWrapper">
-            <HeaderSearch/>
+            <HeaderSearch />
           </div>
 
           <div className="some__item2">
             <div className="header__nav">
               <div className="header__option">
-                  <MenuListComp/>
+                <MenuListComp />
 
                 <Link to="/customer">
                   <Ai.AiOutlineUser className="personIcon" />
                 </Link>
               </div>
               <div className="header__option helpSection">
-                <HelpListComp/>
+                <HelpListComp />
               </div>
-              
-                <Link to='/cart'>
+
+              <Link to="/cart">
                 <div className="header__option cartHeader__Section">
-                <img src="/images/cart.svg" alt="" className="cart" />
-                <span className="purchaseCount">
-                  <span>4</span>
-                </span>
-                <span className="option__lineOneCart">Cart</span>
+                  <img src="/images/cart.svg" alt="" className="cart" />
+                  <span className="purchaseCount">
+                    <span>4</span>
+                  </span>
+                  <span className="option__lineOneCart">Cart</span>
                 </div>
-                </Link>
-                
-              
+              </Link>
             </div>
           </div>
         </div>

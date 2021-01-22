@@ -49,9 +49,6 @@ export default function Supermarket() {
 
         <ORDERTABLE_SUPERMARKETII headingTitle="Supermarket" />
 
-        <br />
-        <br />
-        <br />
         <CATBANNERIMAGE_SUPERMARKETII/>
 
         <OFFICIALSTORE_SUPERMARKET headingTitle="Official Stores" />

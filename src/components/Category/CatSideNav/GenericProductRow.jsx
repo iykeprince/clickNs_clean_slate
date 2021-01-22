@@ -7,7 +7,7 @@ import { ReadOnlyRating } from "../../Rating/Rating";
 const ProductRow = (props) => {
   let btnClass = classNames("", {
     thumbnail: props.listView,
-    " col-xs-12 col-sm-6 col-md-4 col-lg-3 thumbnail-grid": props.gridView,
+    " col-6 col-md-4 col-lg-3 thumbnail-grid": props.gridView,
   });
   let [
     listClass,
@@ -42,10 +42,10 @@ const ProductRow = (props) => {
       "col-12": props.listView,
     }),
     classNames("", {
-      "col-9": props.listView,
+      "col-md-9 col-12": props.listView,
     }),
     classNames("", {
-      "col-3 text-right": props.listView,
+      "col-md-3 col-12 priceDisc": props.listView,
     }),
     classNames("", {
       "13rem": props.listView,

@@ -14,7 +14,7 @@ export function PriceSlashV(props) {
 
           <h3 className="heading__Title">{props.headingTitle}</h3>
 
-          <div class="griddd-container">
+          <div class="griddd-container row">
             {PriceSlashDataV.map((e, i) => {
               return (
                 <TableContent
@@ -44,7 +44,7 @@ export function PriceSlashV(props) {
 
           <h3 className="heading__Title">{props.headingTitle}</h3>
 
-          <div class="griddd-container">
+          <div class="griddd-container row">
             {PriceSlashData_SupermarketV.map((e, i) => {
               return (
                 <TableContent

@@ -9,7 +9,7 @@ const ProductDetailCard = (props) => {
       <DiscountPercent DiscountText='-20%'/>
       </div>
       
-      <div>
+      <div className="productCardImg">
         <img src={props.productImg} alt="product" />
       </div>
       <div className="productName">

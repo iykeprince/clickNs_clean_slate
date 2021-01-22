@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col } from "react-bootstrap";
+import { Row} from "react-bootstrap";
 import ProductDetailCard from "../Cards/ProductDetailCard";
 import imgPhone from "../../assets/phone791.png";
 import powerBank795 from '../../assets/powerBank795.png'
@@ -11,42 +11,42 @@ const ProductCardGroupBig = (props) => {
   return (
     <div>
       <Row className="ProductCardGroupBig">
-        <Col sm="6" md="4" lg="2" >
+        <div className="col-6 col-sm-4 col-lg-2" >
           <ProductDetailCard
             productImg={imgPhone}
             productName={`Samsung Galaxy A50..`}
           />
-        </Col>
-        <Col sm="6" md="4" lg="2">
+        </div>
+        <div className="col-6 col-sm-4 col-lg-2">
           <ProductDetailCard
             productImg={phone792}
             productName={`Samsung Galaxy A50..`}
           />
-        </Col>
-        <Col sm="6" md="4" lg="2">
+        </div>
+        <div className="col-6 col-sm-4 col-lg-2">
           <ProductDetailCard
             productImg={imgPhone}
             productName={`Samsung Galaxy A50..`}
           />
-        </Col>
-        <Col sm="6" md="4" lg="2">
+        </div>
+        <div className="col-6 col-sm-4 col-lg-2">
           <ProductDetailCard
             productImg={phone790}
             productName={`Samsung Galaxy A50..`}
           />
-        </Col>
-        <Col sm="6" md="4" lg="2">
+        </div>
+        <div className="col-6 col-sm-4 col-lg-2">
           <ProductDetailCard
             productImg={phone790}
             productName={`Samsung Galaxy A50..`}
           />
-        </Col>
-        <Col sm="6" md="4" lg="2">
+        </div>
+        <div className="col-6 col-sm-4 col-lg-2">
           <ProductDetailCard
             productImg={powerBank795}
             productName={`Samsung Galaxy A50..`}
           />
-        </Col>
+        </div>
       </Row>
     </div>
   );

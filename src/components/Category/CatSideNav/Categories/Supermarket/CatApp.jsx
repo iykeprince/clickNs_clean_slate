@@ -85,7 +85,7 @@ export default function CatApp() {
     <div className="">
       <MuiThemeProvider theme={theme}>
       <div className="row row-eq-height gray-bg">
-        <div className="col-sm-9 col-xs-12 col-md-12 main-container">
+        <div className="col col-xs-12 col-md-12 main-container">
           <div className="row rowCatApp_wrap">
             <div className="col align-self-center">18637 products found</div>
             <div className="col-sm-offset-8 col-sm-4 col text-right grid-space">

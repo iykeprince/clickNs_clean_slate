@@ -42,28 +42,40 @@
   }
 }
 @media screen and (max-width: 992px) {
-    .bodyNav__text {
-        font-size: 0.75rem;
-        padding-left: 0px !important;
-      }
-      .bodyNavGroup, .bodyNavGroup1{
-        margin-right: 0px !important;
-      }
-      .bodyNavGroup,
-      .bodyNavGroup1,
-      .bodyNavGroup4 {
-        box-shadow: none;
-        background-color: transparent;
-        padding: 0px !important;
-        text-align: center;
-        margin: 0px !important;
-      }
-      .bodyNav__icon {
-        padding-left: 0px !important;
-    }
-    .row1{
-        background-color: white;
-        margin: 0.938rem 0rem !important ;
-        padding: 0.5rem 0rem  !important ;
-    }
+  .bodyNav__text {
+    font-size: 0.75rem;
+    padding-left: 0px !important;
+  }
+  .bodyNavGroup,
+  .bodyNavGroup1 {
+    margin-right: 0px !important;
+  }
+  .bodyNavGroup,
+  .bodyNavGroup1,
+  .bodyNavGroup4 {
+    box-shadow: none;
+    background-color: transparent;
+    padding: 0px !important;
+    text-align: center;
+    margin: 0px !important;
+  }
+  .bodyNav__icon {
+    padding-left: 0px !important;
+  }
+  .row1 {
+    background-color: white;
+    margin: 0.938rem 0rem !important ;
+    padding: 0.5rem 0rem !important ;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .bodyNav__text {
+    word-spacing: 9999rem;
+  }
+  .bodyNavGroup,
+  .bodyNavGroup1,
+  .bodyNavGroup4 {
+    text-align: center;
+  }
 }

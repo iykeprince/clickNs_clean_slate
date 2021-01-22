@@ -5,7 +5,7 @@ class TableContent extends React.Component {
   render() {
     return (
       <React.Fragment>
-  <div className="gridd-container">
+  <div className="gridd-container col-lg-2 col-md-4 col-sm-6 col-6">
   <div className="bp_card">
 
 
