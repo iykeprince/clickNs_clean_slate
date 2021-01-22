@@ -3,21 +3,21 @@ import "./sass/main.scss";
 import Home from "./pages/Home";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ProductDetail from "./pages/ProductDetail";
-import PhonenTablet from "./pages/Categories/PhonenTablet";
-import Supermarket from "./pages/Categories/Supermarket";
+import PhonenTablet from "./pages/Categry/PhonenTablet";
+import Supermarket from "./pages/Categry/Supermarket";
 import Account from "./pages/Account";
 import RecentlyViewed from "./pages/RecentlyViewed";
 import Cart from "./pages/Cart";
 import CheckOut from "./pages/CheckOut";
-import Fashion from "./pages/Categories/Fashion";
-import HealthnBeauty from "./pages/Categories/HealthnBeauty";
-import HomenOffice from "./pages/Categories/HomenOffice";
-import OtherCategories from "./pages/Categories/OtherCategories";
-import Sports from "./pages/Categories/Sports";
-import BabyProducts from "./pages/Categories/BabyProducts";
-import Computing from "./pages/Categories/Computing";
-import Electronics from "./pages/Categories/Electronics";
-import Gaming from "./pages/Categories/Gaming";
+import Fashion from "./pages/Categry/Fashion";
+import HealthnBeauty from "./pages/Categry/HealthnBeauty";
+import HomenOffice from "./pages/Categry/HomenOffice";
+import OtherCategories from "./pages/Categry/OtherCategories";
+import Sports from "./pages/Categry/Sports";
+import BabyProducts from "./pages/Categry/BabyProducts";
+import Computing from "./pages/Categry/Computing";
+import Electronics from "./pages/Categry/Electronics";
+import Gaming from "./pages/Categry/Gaming";
 
 function App() {
   return (
