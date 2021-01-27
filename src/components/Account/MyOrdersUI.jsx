@@ -32,7 +32,7 @@ function MyOrdersUI() {
               </li>
               <li className="nav-item" role="presentation">
                 <a
-                  className="nav-link orderToggle"
+                  className="nav-link orderToggle closedOrdr"
                   id="profile-tab"
                   data-toggle="tab"
                   href="#profile"
