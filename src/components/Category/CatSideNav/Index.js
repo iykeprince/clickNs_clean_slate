@@ -1,12 +1,12 @@
 import React from "react";
-import LEFTCATSIDENAV_SUPERMARKET from "./Categories/PhonesnTablets/LeftCatSideNav";
-import RIGHTCATSIDENAV_SUPERMARKET from "./Categories/PhonesnTablets/RightCatSideNav";
+import LEFTCATSIDENAV from "./LeftCatSideNav";
+import RIGHTCATSIDENAV from "./RightCatSideNav";
 
-export default function CATSIDENAV_SUPERMARKET({ products }) {
+export default function CATSIDENAV({ products }) {
   return (
     <div className="catSideNav__group">
-      <LEFTCATSIDENAV_SUPERMARKET />
-      <RIGHTCATSIDENAV_SUPERMARKET products={products} />
+      <LEFTCATSIDENAV />
+      <RIGHTCATSIDENAV products={products} />
     </div>
   );
 }

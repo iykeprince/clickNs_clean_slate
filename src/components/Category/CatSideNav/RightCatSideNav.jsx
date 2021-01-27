@@ -1,26 +1,24 @@
 import React, { useContext } from "react";
-import CategoryContext from "../../../../../Contexts/CategoryContext";
+import CategoryContext from "../../../Contexts/CategoryContext";
 import CatApp from "./CatApp";
-import Sort from "../../Sort";
+import Sort from "./Sort";
 
-export default function RIGHTCATSIDENAV_SUPERMARKET () {
+export default function RIGHTCATSIDENAV({ products }) {
   const category = useContext(CategoryContext);
 
   return (
     <div className="mainer">
       <div className="d-flex">
-        <span className="listGridTopic">
-          {category.catName}
-          </span>
+        <span className="listGridTopic">{category.catName}</span>
 
         <span className="lefter">
-          <Sort />
+          <Sort/>
         </span>
+        
       </div>
       <div className="listGrid__header">
-        <CatApp/>
+        <CatApp products={products} />
       </div>
     </div>
   );
 }
-

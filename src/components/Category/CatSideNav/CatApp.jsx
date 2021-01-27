@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
-import BtnGroup from "../../BtnGroup";
-import ProductRow from "../../GenericProductRow";
+import BtnGroup from "./BtnGroup";
+import ProductRow from "./GenericProductRow";
 import { makeStyles, Box } from "@material-ui/core";
 import { Pagination } from "@material-ui/lab";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core";

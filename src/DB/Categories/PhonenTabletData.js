@@ -494,7 +494,12 @@ export const bannerImage_PhoneTablet = [
   },
 ];
 
-
+export const bannerImage = [
+  {
+    bannerImage1: "./images/phones/2924 1.png",
+    bannerImage2: "./images/phones/21914 1.png",
+  },
+];
 
 export const ProductOrders = [
   {

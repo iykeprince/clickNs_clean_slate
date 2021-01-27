@@ -1,26 +1,24 @@
 import React from "react";
+import CategoryDisplay from ".";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
-import { ORDERTABLE_SUPERMARKET } from "../../components/Category/OrderTable";
-import { ORDERTABLE_SUPERMARKETI } from "../../components/Category/OrderTableI";
-import { ORDERTABLE_SUPERMARKETII } from "../../components/Category/OrderTableII";
-import { PRICESLASH_SUPERMARKET } from "../../components/Category/PriceSlash";
-import { PRICESLASH_SUPERMARKETI } from "../../components/Category/PriceSlashI";
-import { PRICESLASH_SUPERMARKETII } from "../../components/Category/PriceSlashII";
-import { PRICESLASH_SUPERMARKETIII } from "../../components/Category/PriceSlashIII";
-import { PRICESLASH_SUPERMARKETIV } from "../../components/Category/PriceSlashIV";
-import { PRICESLASH_SUPERMARKETV } from "../../components/Category/PriceSlashV";
-import { OFFICIALSTORE_SUPERMARKET } from "../../components/Category/OfficialStore";
-import { OFFICIALSTORE_SUPERMARKETI } from "../../components/Category/OfficialStoreI";
-import CATSIDENAV_PHONESNTABLET from "../../components/Category/CatSideNav/Index";
-import {
-  CATBANNERIMAGE_SPORTSI,
-  CATBANNERIMAGE_SPORTSII,
-} from "../../components/Category/CatBannerImage";
-import CategoryDirection from "../../components/Category/CategoryDirection";
-import CategoryAdvert from "../../components/Category/CategoryAdvert";
+import CATSIDENAV from "../../components/Category/CatSideNav/Index";
 import { CategoryProvider } from "../../Contexts/CategoryContext";
-import { ProductOrders } from "../../DB/Categories/PhonenTabletData";
+import {
+  OfficialStoreData,
+  OfficialStoreDataI,
+  OrderTableData ,
+  OrderTableDataI,
+  OrderTableDataII,
+  PriceSlashData,
+  PriceSlashDataI,
+  PriceSlashDataII,
+  PriceSlashDataIII,
+  PriceSlashDataIV,
+  PriceSlashDataV,
+  ProductOrders ,
+  bannerImage,
+} from "../../DB/Categories/SportsData";
 
 export default function Sports() {
   const category = { catName: "Sports" };
@@ -30,40 +28,58 @@ export default function Sports() {
       <Header showHamburger={true} />
       <div className="body__wrapper putAtMiddle">
         <CategoryProvider value={category}>
-          <CategoryDirection />
+          <CategoryDisplay
+            categoryDirectionProps={{}}
+            catBannerImageIProps={{ bannerImage}}
+            catBannerImageIIProps={{bannerImage}}
+            categoryAdvertProps={{}}
+            orderTableProps={{
+              headingTitle: `Sports`,
+              OrderTableData:OrderTableData,
+            }}
+            orderTableIProps={{
+              headingTitle: "Phone Accessories",
+              OrderTableDataI:OrderTableDataI,
+            }}
+            orderTableIIProps={{
+              headingTitle: "Tablet Accessories",
+              OrderTableDataII:OrderTableDataII,
+            }}
+            priceSlashProps={{
+              headingTitle: "Budget Smartphones",
+              PriceSlashData:PriceSlashData,
+            }}
+            priceSlashIProps={{
+              headingTitle: "Large Screen Phones",
+              PriceSlashDataI:PriceSlashDataI,
+            }}
+            priceSlashIIProps={{
+              headingTitle: "Top Picks for you",
+              PriceSlashDataII:PriceSlashDataII,
+            }}
+            priceSlashIIIProps={{
+              headingTitle: "Landline Phones",
+              PriceSlashDataIII:PriceSlashDataIII,
+            }}
+            priceSlashIVProps={{
+              headingTitle: "Mobile Game Controllers",
+              PriceSlashDataIV:PriceSlashDataIV,
+            }}
+            priceSlashVProps={{
+              headingTitle: "Mobile Game Controllers",
+              PriceSlashDataV:PriceSlashDataV,
+            }}
+            officialStoreProps={{
+              headingTitle: "Official Stores",
+              OfficialStoreData:OfficialStoreData,
+            }}
+            officialStoreIProps={{
+              headingTitle: "Tablet Accessories",
+              OfficialStoreDataI:OfficialStoreDataI,
+            }}
+          />
 
-          <CATBANNERIMAGE_SPORTSI />
-
-          <ORDERTABLE_SUPERMARKET headingTitle="Sports" />
-
-          <PRICESLASH_SUPERMARKET headingTitle="Budget" />
-
-          <PRICESLASH_SUPERMARKETI headingTitle="Sports" />
-
-          <CategoryAdvert />
-
-          <PRICESLASH_SUPERMARKETII headingTitle="Top Picks for you" />
-
-          <ORDERTABLE_SUPERMARKETI headingTitle="Budget" />
-
-          <PRICESLASH_SUPERMARKETIII headingTitle="Sports" />
-
-          <PRICESLASH_SUPERMARKETIV headingTitle="Budget" />
-
-          <ORDERTABLE_SUPERMARKETII headingTitle="Sports" />
-
-          <br />
-          <br />
-          <br />
-          <CATBANNERIMAGE_SPORTSII />
-
-          <OFFICIALSTORE_SUPERMARKET headingTitle="Official Stores" />
-
-          <OFFICIALSTORE_SUPERMARKETI headingTitle="Sports" />
-
-          <PRICESLASH_SUPERMARKETV headingTitle="Budget" />
-
-          <CATSIDENAV_PHONESNTABLET products={ProductOrders} />
+          <CATSIDENAV products={ProductOrders} />
         </CategoryProvider>
       </div>
       <Footer />

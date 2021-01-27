@@ -11,6 +11,8 @@
   margin-left: auto !important;
   margin-right: auto !important;
   width: 100% !important;
+  height: 10rem !important;
+  object-fit: cover;
   border-radius: 5px !important;
 }
 .top_badge {
@@ -37,5 +39,10 @@
 @media screen and (max-width:992px){
   .top_badge {
     margin-top: 1rem !important;
+  }
+}
+@media screen and (max-width:576px){
+  .top_banner_img {
+    height: 6rem !important;
   }
 }

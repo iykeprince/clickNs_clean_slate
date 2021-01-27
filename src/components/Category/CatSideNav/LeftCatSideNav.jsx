@@ -1,15 +1,15 @@
 import React, { useContext } from "react";
-import { ReadOnlyRating } from "../../../../Rating/Rating";
+import { ReadOnlyRating } from "../../Rating/Rating";
 import Radio from "@material-ui/core/Radio";
 import RadioGroup from "@material-ui/core/RadioGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import FormControl from "@material-ui/core/FormControl";
-import SideCatCheckBox from "../../SideCatCheckBox";
-import { CategorySideSearch } from "../../../../Search/Search";
-import RangeSlider from "../../RangeSlider";
-import CategoryContext from "../../../../../Contexts/CategoryContext";
+import SideCatCheckBox from "./SideCatCheckBox";
+import { CategorySideSearch } from "../../Search/Search";
+import RangeSlider from "./RangeSlider";
+import CategoryContext from "../../../Contexts/CategoryContext";
 
-export default function LEFTCATSIDENAV_PHONENTABLET() {
+export default function LEFTCATSIDENAV() {
   const category = useContext(CategoryContext);
 
   const [value, setValue] = React.useState("firstChoice");
