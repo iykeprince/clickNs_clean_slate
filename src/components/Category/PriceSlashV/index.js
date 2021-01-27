@@ -1,7 +1,6 @@
 import React from "react";
 import TableContent from "../PriceSlash/TableContent";
 import * as FaIcon from "react-icons/fa";
-import { PriceSlashData_SupermarketV } from "../../../DB/Categories/SupermarketData";
 
 export function PriceSlashV({...props}) {
     return (
