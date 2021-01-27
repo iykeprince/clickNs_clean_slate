@@ -1,9 +1,8 @@
 import React from 'react'
 
-const VariableImage = props=> {
+export default function VariableImage(props){
     return (
     <img src={props.Img} alt={props.altText}/>
     )
 }
 
-export default VariableImage

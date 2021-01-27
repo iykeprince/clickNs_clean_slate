@@ -18,6 +18,15 @@ import BabyProducts from "./pages/Categry/BabyProducts";
 import Computing from "./pages/Categry/Computing";
 import Electronics from "./pages/Categry/Electronics";
 import Gaming from "./pages/Categry/Gaming";
+import MyAccount from "./pages/Customer/MyAccount";
+import MyOrders from "./pages/Customer/MyOrders";
+import MyPendingReviews from "./pages/Customer/MyPendingReviews";
+import MyVoucher from "./pages/Customer/MyVoucher";
+import MySavedItems from "./pages/Customer/MySavedItems";
+import MyDetails from "./pages/Customer/MyDetails";
+import MyAddressBook from "./pages/Customer/MyAddressBook";
+import MyPassword from "./pages/Customer/MyPassword";
+import MyNewsletter from "./pages/Customer/MyNewsletter";
 
 function App() {
   return (
@@ -35,6 +44,18 @@ function App() {
           <Route path={"/recentlyViewed"} component={RecentlyViewed} />
           <Route path={"/cart"} component={Cart} />
           <Route path={"/checkout"} component={CheckOut} />
+
+          {/* Mobile View */}
+          <Route path={"/account"} component={MyAccount} />
+          <Route path="/orders" component={MyOrders} />
+          <Route path="/reviews" component={MyPendingReviews} />
+          <Route path="/vouchers" component={MyVoucher} />
+          <Route path="/saved" component={MySavedItems} />
+          <Route path="/details" component={MyDetails} />
+          <Route path="/addressBook" component={MyAddressBook} />
+          <Route path="/changePassword" component={MyPassword} />
+          <Route path="/newsletter" component={MyNewsletter} />
+          {/* <Route path="/editAddress" component={EditAddressComp} /> */}
 
           {/* Categories */}
           <Route path={"/phones-tablets"} component={PhonenTablet} />

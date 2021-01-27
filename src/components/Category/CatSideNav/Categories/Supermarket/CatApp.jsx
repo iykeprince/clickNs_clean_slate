@@ -7,7 +7,7 @@ import { makeStyles, Box} from "@material-ui/core";
 import { Pagination } from "@material-ui/lab";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core";
 
-export default function CatApp() {
+export default function CatApp({}) {
   const useStyles = makeStyles((theme) => ({
     root: {
       width: "100%",

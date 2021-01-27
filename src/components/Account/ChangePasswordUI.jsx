@@ -5,7 +5,7 @@ import PasswordUI from "./PasswordUI";
 function ChangePasswordUI() {
   return (
     <div className="changePassword__wrapper">
-      <h3 className="titleHeader">Change Password</h3>
+      <h3 className="titleHeader  d-none d-md-block">Change Password</h3>
 
       <form action="">
         <PasswordUI labelName="Current Password" />

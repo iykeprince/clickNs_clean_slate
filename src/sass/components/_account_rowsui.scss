@@ -417,23 +417,35 @@ svg {
   color: var(--woozBlue) !important;
 }
 
-
-
-
-
-
-@media screen and (max-width: 768px) {
-  // .adjacentIcon__text{
-  //   display: none;
-  // }
-  .rightr {
-    margin-top: 1.25rem !important;
-    padding-left: 0rem !important;
+.rightIconMobile{
+  svg{
+    font-size: 0.75rem;
   }
 }
+
 
 @media screen and (max-width: 992px) {
   .txtField_edit {
     width: 80% !important;
   }
+  .changePassword__wrapper {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  
+  .rightr {
+    margin-top: 1.25rem !important;
+    padding-left: 0rem !important;
+  }
+  .changePassword__wrapper {
+    width: 100%;
+  }
+  .titleHeader {
+    font-size: 1rem !important;
+    font-weight: 500;
+    margin-bottom: 0rem !important;
+    padding-left: 1rem !important ;
+}
 }

@@ -5,7 +5,7 @@ import NoDataUI from "./NoDataUI";
 function MyPendReviewUI() {
   return (
     <div>
-      <h3 className="titleHeader mbottom">Pending Reviews</h3>
+      <h3 className="titleHeader mbottom  d-none d-md-block">Pending Reviews</h3>
 
       <NoDataUI
         Image={IconStore.calendarIcon}

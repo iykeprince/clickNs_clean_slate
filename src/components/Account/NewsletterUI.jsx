@@ -14,7 +14,7 @@ function NewsletterUI() {
   };
   return (
     <div>
-      <h3 className="titleHeader">Newsletter Preferences</h3>
+      <h3 className="titleHeader d-none d-md-block">Newsletter Preferences</h3>
 
       <div className="addressBookDetail__wrapper">
         <div className="Subsc">SUBSCRIBE TO</div>

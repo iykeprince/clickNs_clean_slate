@@ -1,10 +1,12 @@
 import React from "react";
 import IconStore from "../../store/IconStore";
-
 import RadioGroup from "@material-ui/core/RadioGroup";
 import FormControl from "@material-ui/core/FormControl";
 import CheckListItem from "./CheckListItem";
 import { Link } from "react-router-dom";
+// import CartMainItem from "../Cart/CartMainItem";
+import phone11Img from "../../assets/phone11.jpg";
+import CheckRightSection from "./CheckRightSection";
 
 function CheckoutRowOne() {
   const [value, setValue] = React.useState("firstChoice");
@@ -16,24 +18,26 @@ function CheckoutRowOne() {
   return (
     <div className="checkout_row">
       <div className="row checkout__body">
-        <div className="col-md-9">
+        <div className="col-md-8 col-lg-9">
           <div className="check_top_wrapper">
             <p className="checkoutTxt">CHECKOUT</p>
             <div className="addressCheckout_leftTop">
               <div className="check__addressTitle">
-                <div className='listInfoSection__infoIconGrp'>
-                  <span  className='listInfoSection__infoIcon'>{IconStore.coloredCheckMark}</span>
+                <div className="listInfoSection__infoIconGrp">
+                  <span className="listInfoSection__infoIcon">
+                    {IconStore.coloredCheckMark}
+                  </span>
                   <span className="checktitle__numbr">1. </span>
                   <span className="checktitle__name">ADDRESS DETAILS</span>
                 </div>
                 <div>
-                  <Link>
+                  <Link to="/customer#/editAddress">
                     <p className="checktitle__fn">CHANGE</p>
                   </Link>
                 </div>
               </div>
               <div className="check__addressDetail">
-                <p className='prsnName'>Bukky Owolabi </p>
+                <p className="prsnName">Bukky Owolabi </p>
                 <p> 60 Landbridge</p>
                 <p>Oniru-Estate Victoria, Lagos </p>
                 <p> +2348100892368</p>
@@ -42,12 +46,16 @@ function CheckoutRowOne() {
 
             <div className="addressCheckout_leftBottom">
               <div className="check__deliveryTitle">
-                <span className='listInfoSection__infoIcon'>{IconStore.greyedCheckMark}</span>
+                <span className="listInfoSection__infoIcon">
+                  {IconStore.greyedCheckMark}
+                </span>
                 <span className="checktitle__numbr">2. </span>
                 <span className="checktitle__name">DELIVERY METHOD</span>
               </div>
               <div className="deliveryMethod__details">
-                <p className="deliveryMethod__descrip">How do you want your order delivered? </p>
+                <p className="deliveryMethod__descrip">
+                  How do you want your order delivered?{" "}
+                </p>
 
                 <div className="check_formcontrol">
                   <FormControl component="fieldset">
@@ -126,14 +134,17 @@ function CheckoutRowOne() {
           </div>
         </div>
 
-        <div className="col-md-3">
+        <div className="col-md-4 col-lg-3 mt-5 mt-md-0">
           <p className="checkoutTxt">ORDER SUMMARY</p>
-          <div className="addressCheckout_rightTop h-25">
+          <div className="addressCheckout_rightTop">
             <div className="check__orderTitle">
               <span className="ordertitle__numbr">YOUR ORDER (1 Item)</span>
             </div>
-            <div className="check__orderDetail">
-             
+            <CheckRightSection pImage={phone11Img} sellerText="THE 4DX" />
+            <CheckRightSection pImage={phone11Img} sellerText="THE 4DX" />
+
+            <div className="p-3 mt-3 border-top d-flex justify-content-between align-content-center">
+              <span className="totalStyle align-self-center">Total:</span> <span className="totalPriceStyle"> N179,4888</span>
             </div>
           </div>
         </div>

@@ -5,7 +5,7 @@ import IconStore from "../../store/IconStore";
 function MyAccountUI() {
   return (
     <div>
-      <h3 className="titleHeader">My Account</h3>
+      <h3 className="titleHeader d-none d-md-block">My Account</h3>
       <Row>
         <Col md="6" className="aColContainer">
           <div className="accBox__wrapper h-100">

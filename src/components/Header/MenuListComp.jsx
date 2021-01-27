@@ -54,7 +54,7 @@ export default function MenuListComp() {
   }, [open]);
 
   return (
-    <div className={classes.root}>
+    <div className={`${classes.root} d-none d-sm-block`}>
       <div>
         <Button
           ref={anchorRef}

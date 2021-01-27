@@ -271,7 +271,7 @@ ul.MuiPagination-ul > li {
   padding: 0.5rem !important;
 }
 
-.priceDisc{
+.priceDisc {
   text-align: right;
 }
 
@@ -281,24 +281,40 @@ ul.MuiPagination-ul > li {
   }
 }
 
+@media screen and (max-width: 480px) {
+  .withTwo .addToCart_buttonList {
+    button {
+      display: none;
+    }
+  }
+  // .list_productImg.withOne {
+  //   width: 30% !important;
+  // }
+  // .sthToDo.withTwo {
+  //   width: 70% !important;
+  // }
+  .list_productImg img {
+    height: 6.7rem !important;
+    width: 5.2rem !important;
+    object-fit: contain;
+}
+}
 
 @media screen and (max-width: 992px) {
   .sidenav {
     display: none;
   }
- 
-
 }
 
 @media screen and (max-width: 768px) {
-  .withTwo .addToCart_buttonList{
+  .withTwo .addToCart_buttonList {
     display: block;
     left: 0;
-}
-.priceDisc{
-  text-align: left;
-}
-.withTwo{
-  padding-left: 20% !important;
-}
+  }
+  .priceDisc {
+    text-align: left;
+  }
+  .withTwo {
+    padding-left: 20% !important;
+  }
 }

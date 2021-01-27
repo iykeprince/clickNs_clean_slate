@@ -7,13 +7,19 @@ import BottomAboutSection from "../components/BottomAboutSection/BottomAboutSect
 import DealsSection from "../components/DealsSection/DealsSection";
 import FeaturedSection from "../components/FeaturedSection/FeaturedSection";
 import DealsSectionTwo from "../components/DealsSection/DealsSectionTwo";
-import ImageDisplaySection from "../components/ImageDisplaySection/ImageDisplaySection";
-import SingleImageCard from '../components/SingleImageCard/SingleImageCard';
-import ImageDisplaySectionTwo from '../components/ImageDisplaySectionTwo/ImageDisplaySectionTwo';
+import DoubleImage from "../components/ImageCard/DoubleImage";
+import SingleImage from '../components/ImageCard/SingleImage';
 import DealsSectionFour from '../components/DealsSection/DealsSectionFour';
 import DealsSectionThree from '../components/DealsSection/DealsSectionThree';
 
 
+let homeImgs ={
+    shoe: "/images/imageSection/ShoesAd.png",
+    youghurt:"/images/imageSection/youghurtAd.png",
+    megaSale:"/images/imageSection/megaSale.png",
+    nailPolish:"/images/imageSection/nailPolish.png",
+    blackFriday:"/images/imageSection/blackFridayImage.png",
+}
 function Home() {
     return (
         <div>
@@ -24,12 +30,12 @@ function Home() {
             <BodyNav />
             <DealsSection />
             <DealsSectionTwo/>
-            <SingleImageCard/>
+            <SingleImage img={homeImgs.blackFriday}/>
             <FeaturedSection />
-            <ImageDisplaySectionTwo/>
+            <DoubleImage img1={homeImgs.shoe} img2={homeImgs.youghurt}/>
             <DealsSectionThree/>
             <DealsSectionFour/>
-            <ImageDisplaySection/>
+            <DoubleImage img1={homeImgs.megaSale} img2={homeImgs.nailPolish}/>
             <BottomAboutSection />
             </div>
             <Footer/>

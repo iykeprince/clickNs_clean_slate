@@ -4,11 +4,11 @@ class TableContent extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <div className="col-lg-2 col-4">
+        <div className="col-lg-2 col-xs-4 col-6">
           <div className="pse_card">
             <img src={this.props.img} className="ps_card_img" alt="iphone 11" />
           </div>
-          <br />
+          <br/>
         </div>
       </React.Fragment>
     );

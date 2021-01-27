@@ -11,7 +11,7 @@ function MyOrdersUI() {
 
   return (
     <div>
-      <h3 className="titleHeader">Orders</h3>
+      <h3 className="titleHeader  d-none d-md-block">Orders</h3>
 
       <div className="titleHeader">
         <div className="orderToggle__wrapper">

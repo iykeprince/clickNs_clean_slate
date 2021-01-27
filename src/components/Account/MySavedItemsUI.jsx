@@ -5,7 +5,7 @@ import NoDataUI from "./NoDataUI";
 function MySavedItemsUI() {
   return (
     <div>
-      <h3 className="titleHeader mbottom">Saved Items</h3>
+      <h3 className="titleHeader mbottom  d-none d-md-block">Saved Items</h3>
       <NoDataUI
         Image={IconStore.orderShopBag}
         Topic="You haven’t saved an item yet!"

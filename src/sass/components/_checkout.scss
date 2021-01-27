@@ -128,3 +128,39 @@ hr.listItem_seperator {
 .listInfoSection__infoIcon{
     display: flex;
 }
+.prodDescrpt2 {
+  padding-top: 0.3rem !important;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+.totalPriceStyle{
+  font-size: 1.25rem;
+  color: #043E7D;
+}
+.totalStyle{
+  font-size: 1.125rem;
+}
+
+
+
+@media screen and (max-width:576px){
+  .listInfoSection {
+    margin-top: 1rem !important;
+    padding: 0.625rem 2.125rem 0.625rem 0.625rem !important;
+    border: 1px solid #cbcbcb;
+    border-radius: 5px;
+    margin-left: 0 !important;
+}
+.check_top_wrapper{
+  padding-right: 0 !important;
+}
+.deliveryMethod__details{
+  padding: 1rem !important;
+}
+.check_formcontrol{
+  padding-right: 1rem !important;
+}
+hr.listItem_seperator {
+   margin-left: 0 !important;
+}
+}

@@ -284,6 +284,7 @@ button:focus {
   .image__wrapper {
     display: none;
   }
+  
 }
 @media only screen and (max-width: 480px) {
   .option__lineOne,
@@ -294,7 +295,9 @@ button:focus {
   .dropdown__icon {
     display: none;
   }
-
+  .smallSection_wrapr{
+    gap: 1rem;
+  }
   .personIcon {
     display: block;
     font-weight: 500;

@@ -8,13 +8,14 @@ function StandaloneBtnGrp() {
       <div className="body__wrapper putAtMiddle">
       <div className="btnwrap row justify-content-md-end justify-content-sm-center crt_grp">
 
+      <Link to="/" className="continuebtn col-sm-auto mr-3 d-none d-sm-inline-block">
+          <LargeButton buttonName="CONTINUE SHOPPING" />
+        </Link>
+
         <Link to="/checkout" className='proceedbtn col-sm-auto'>
           <LargeButton buttonName="PROCEED TO CHECKOUT" />
         </Link>
-
-        <Link to="/" className="continuebtn col-sm-auto">
-          <LargeButton buttonName="CONTINUE SHOPPING" />
-        </Link>
+        
       </div>
       </div>
     </div>

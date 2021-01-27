@@ -364,7 +364,7 @@ export const OfficialStoreDataI = [
 
 export const OrderTableData = [
   {
-    img: "./images/phones/R1 1.png",
+    img: "./images/phones/R2 1.png",
     info: "IPHONES",
   },
 

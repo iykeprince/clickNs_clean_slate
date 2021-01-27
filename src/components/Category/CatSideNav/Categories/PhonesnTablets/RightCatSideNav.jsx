@@ -3,22 +3,21 @@ import CategoryContext from "../../../../../Contexts/CategoryContext";
 import CatApp from "./CatApp";
 import Sort from "../../Sort";
 
-function RIGHTCATSIDENAV_PHONENTABLET() {
+function RIGHTCATSIDENAV_PHONENTABLET({ products }) {
   const category = useContext(CategoryContext);
 
   return (
     <div className="mainer">
       <div className="d-flex">
-        <span className="listGridTopic">
-          {category.catName}
-          </span>
+        <span className="listGridTopic">{category.catName}</span>
 
         <span className="lefter">
           <Sort/>
         </span>
+        
       </div>
       <div className="listGrid__header">
-        <CatApp/>
+        <CatApp products={products} />
       </div>
     </div>
   );

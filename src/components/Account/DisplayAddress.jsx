@@ -10,7 +10,7 @@ function DisplayAddress() {
         <LargeButton buttonName="ADD NEW ADDRESS" />
       </NavLink>
       <div className="addressbookUI_wrapper">
-        <h3 className="titleHeader address_newHeadr">Address Book</h3>
+        <h3 className="titleHeader address_newHeadr  d-none d-md-block">Address Book</h3>
         <div className="addressBookDetail__wrapper">
           <div className="addresstext_detail">
             <h6 className="nameOf">Bukky Owolabi</h6>

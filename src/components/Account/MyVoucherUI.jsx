@@ -5,7 +5,7 @@ import NoDataUI from "./NoDataUI";
 function MyVoucherUI() {
   return (
     <div>
-      <h3 className="titleHeader mbottom">Voucher Credit</h3>
+      <h3 className="titleHeader mbottom  d-none d-md-block">Voucher Credit</h3>
       <NoDataUI
         Image={IconStore.voucherTicket}
         Topic="You currently have no available Voucher Credit"

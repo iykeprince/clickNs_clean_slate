@@ -48,7 +48,7 @@ export default function DetailsUI() {
     <div className="">
       <form className={classes.root} noValidate autoComplete="off">
         <div>
-          <h3 className="titleHeader">Details</h3>
+          <h3 className="titleHeader d-none d-md-block">Details</h3>
           <Row className="detailsUI__row">
             <Col lg='6'>
               <TextField label="First Name" defaultValue="Bukky" />

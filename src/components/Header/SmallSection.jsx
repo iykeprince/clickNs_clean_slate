@@ -6,8 +6,8 @@ function SmallSection(props) {
             <span className='qstnIcon'>{props.icon}</span>
             
             <div className='questionText_wrap'>
-            <p>{props.txt_headrOne}</p>
-            <p>{props.txt_headrTwo}</p>
+            <p className="d-none d-md-block">{props.txt_headrOne}</p>
+            <p className="d-none d-md-block">{props.txt_headrTwo}</p>
             </div>
           </div>
     )

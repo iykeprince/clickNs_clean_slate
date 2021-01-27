@@ -6,7 +6,7 @@ import phonesmall1 from "../../assets/phoneSmall47.svg";
 import phonesmall2 from "../../assets/phoneSmall45.svg";
 import phonesmall3 from "../../assets/phoneSmall46.svg";
 import nextImg from "../../assets/nextRight.svg";
-import VariableImage from "../Image/VariableImage";
+import VariableImage from "../ImageCard/VariableImage";
 import DiscountPercent from "../DiscountPercent/DiscountPercent";
 import { Link } from "react-router-dom";
 import * as FaIcon from "react-icons/fa";
