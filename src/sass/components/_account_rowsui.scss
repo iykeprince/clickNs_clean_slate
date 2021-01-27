@@ -422,10 +422,6 @@ svg {
     font-size: 0.75rem;
   }
 }
-// .dynamicBtn__wrapper{
-//   width:200px;
-//   height: 25px;
-// }
 
 @media screen and (max-width: 992px) {
   .txtField_edit {
@@ -453,10 +449,13 @@ svg {
     width: 100%;
   }
   .titleHeader {
-    font-size: 1rem !important;
+    font-size: 1rem;
     font-weight: 500;
     margin-bottom: 0rem !important;
     padding-left: 1rem !important ;
+}
+.orderAvailableDataRow,.OpenClosedNav{
+  font-size: 0.875rem;
 }
 
 }

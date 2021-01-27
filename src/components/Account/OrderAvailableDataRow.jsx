@@ -5,7 +5,7 @@ import DynamicButton from "../Button/DynamicButton";
 
 function OrderAvailableDataRow(props) {
   return (
-    <Row className='orderAvailableDataRow'>
+    <Row className='orderAvailableDataRow justify-content-between'>
       <Link to="/product" className="col-lg-2 col-3">
         <img
           src={props.itemImage}
@@ -21,22 +21,25 @@ function OrderAvailableDataRow(props) {
         </p>
 
         <p className='orderedProdNumber'> Order 348765433</p>
+        <span className="orderDataRowBtn d-none d-sm-inline-block">
         <DynamicButton
           color="white"
-          height="25px"
-          width="215px"
+          height="1.5rem"
+          width="13.3rem"
           backgroundColor={props.bgColor}
           boxShadow="none"
           fontWeight="700"
           fontSize="12px"
           hoverBoxShadow="none"
         >
-          STARTED - PAYMENT SUCCESSFUL
+          <span className="d-none d-md-inline-block">STARTED -</span> <span className="">PAYMENT SUCCESSFUL</span> 
         </DynamicButton>
+        </span>
+        
         <p className='orderedProdDate'>On 12-11-2020</p>
       </div>
 
-      <Link to='#' className='seeDetailsLink col-lg-2 col-2 text-right'>SEE DETAILS</Link>
+      <Link to='#' className='seeDetailsLink col-lg-2 col-2 text-right d-none d-md-block'>SEE DETAILS</Link>
 
     </Row>
   );
