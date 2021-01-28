@@ -54,7 +54,7 @@ function MyAccountUI() {
         <Col md="6" className="aColContainer">
           <div className="accBox__wrapper h-100">
           <div className="accBox__head">
-          <h6 className="accBox__title">WOOZEEE BALANCE</h6>
+          <h6 className="accBox__title">woozeee Balance</h6>
             </div>
             
             <div className="accBox__content">
