@@ -278,9 +278,11 @@ svg {
   padding-top: 0.125rem !important;
 }
 .button__wrap2 {
+  margin-left: auto !important;
+}
+.button__wrap3, .button__wrap2{
   display: flex;
   width: 12.063rem;
-  margin-left: auto !important;
 }
 .button__wrap2 > button {
   height: 2.688rem;

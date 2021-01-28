@@ -1,14 +1,18 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+// import useWindowDimensions from "../../Hooks/UseWindowDimension";
 import IconStore from "../../store/IconStore";
 import LargeButton from "../Button/LargeButton";
 
 function DisplayAddress() {
+  // const { width } = useWindowDimensions();
+
   return (
     <div>
-      <NavLink to="/editAddress" className="button__wrap2">
-        <LargeButton buttonName="ADD NEW ADDRESS" />
-      </NavLink>
+     <NavLink to="/editAddress" className="button__wrap2 d-none d-md-flex">
+       <LargeButton buttonName="ADD NEW ADDRESS" />
+     </NavLink>
+       
       <div className="addressbookUI_wrapper">
         <h3 className="titleHeader address_newHeadr  d-none d-md-block">Address Book</h3>
         <div className="addressBookDetail__wrapper">
@@ -25,6 +29,10 @@ function DisplayAddress() {
           </div>
         </div>
       </div>
+
+      <NavLink to="/editAddress_m" className="button__wrap2 mx-auto mt-4 mb-1 d-flex d-md-none">
+       <LargeButton buttonName="ADD NEW ADDRESS" />
+     </NavLink>
     </div>
   );
 }

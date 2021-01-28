@@ -18,15 +18,17 @@ import BabyProducts from "./pages/Categry/BabyProducts";
 import Computing from "./pages/Categry/Computing";
 import Electronics from "./pages/Categry/Electronics";
 import Gaming from "./pages/Categry/Gaming";
-import MyAccount from "./pages/Customer/MyAccount";
-import MyOrders from "./pages/Customer/MyOrders";
-import MyPendingReviews from "./pages/Customer/MyPendingReviews";
-import MyVoucher from "./pages/Customer/MyVoucher";
-import MySavedItems from "./pages/Customer/MySavedItems";
-import MyDetails from "./pages/Customer/MyDetails";
-import MyAddressBook from "./pages/Customer/MyAddressBook";
-import MyPassword from "./pages/Customer/MyPassword";
-import MyNewsletter from "./pages/Customer/MyNewsletter";
+import MyAccount from "./pages/Customer_MobileView/MyAccount";
+import MyOrders from "./pages/Customer_MobileView/MyOrders";
+import MyPendingReviews from "./pages/Customer_MobileView/MyPendingReviews";
+import MyVoucher from "./pages/Customer_MobileView/MyVoucher";
+import MySavedItems from "./pages/Customer_MobileView/MySavedItems";
+import MyDetails from "./pages/Customer_MobileView/MyDetails";
+import MyAddressBook from "./pages/Customer_MobileView/MyAddressBook";
+import MyPassword from "./pages/Customer_MobileView/MyPassword";
+import MyNewsletter from "./pages/Customer_MobileView/MyNewsletter";
+import EditAddressComp from "./components/Account/EditAddressComp";
+import MobileEditAddress from "./pages/Customer_MobileView/MobileEditAddress";
 
 function App() {
   return (
@@ -55,7 +57,9 @@ function App() {
           <Route path="/addressBook" component={MyAddressBook} />
           <Route path="/changePassword" component={MyPassword} />
           <Route path="/newsletter" component={MyNewsletter} />
-          {/* <Route path="/editAddress" component={EditAddressComp} /> */}
+          <Route path="/editAddress" component={EditAddressComp} />
+          <Route path="/editAddress_m" component={MobileEditAddress} />
+
 
           {/* Categories */}
           <Route path={"/phones-tablets"} component={PhonenTablet} />
