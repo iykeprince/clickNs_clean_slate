@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import IconStore from "../../../store/IconStore";
+import IconStore from "../../../assets/icons/IconStore";
 
 const BtnGroup = (props) => {
     

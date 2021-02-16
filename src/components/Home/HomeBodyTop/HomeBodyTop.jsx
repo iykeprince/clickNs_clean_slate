@@ -7,7 +7,7 @@ function HomeBodyTop() {
     return (
             <div className='hmbcontainer'>
                 <div className='grid__Container'>
-                    <div class='griditem'>
+                    <div className='griditem'>
                     <LeftSideBar className='leftSideBar'/>
                     </div>
 

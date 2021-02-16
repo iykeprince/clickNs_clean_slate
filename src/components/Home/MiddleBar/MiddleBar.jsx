@@ -1,6 +1,6 @@
 import React from 'react'
 import {Carousel } from 'react-bootstrap';
-import carouselImg from '../../../assets/carouselImg.svg'
+import carouselImg from '../../../assets/images/carouselImg.svg'
 
 function MiddleBar() {
     return (

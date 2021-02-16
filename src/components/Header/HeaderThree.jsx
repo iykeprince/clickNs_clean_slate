@@ -3,7 +3,7 @@ import { Row } from "react-bootstrap";
 // import * as Ai from "react-icons/ai";
 import SmallSection from "./SmallSection";
 import WoozHeaderLogo from "./WoozHeaderLogo";
-import IconStore from "../../store/IconStore";
+import IconStore from "../../assets/icons/IconStore";
 
 function HeaderThree() {
   return (

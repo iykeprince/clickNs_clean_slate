@@ -1,11 +1,11 @@
 import React from "react";
-import IconStore from "../../store/IconStore";
+import IconStore from "../../assets/icons/IconStore";
 import RadioGroup from "@material-ui/core/RadioGroup";
 import FormControl from "@material-ui/core/FormControl";
 import CheckListItem from "./CheckListItem";
 import { Link } from "react-router-dom";
 // import CartMainItem from "../Cart/CartMainItem";
-import phone11Img from "../../assets/phone11.jpg";
+import phone11Img from "../../assets/images/phone11.jpg";
 import CheckRightSection from "./CheckRightSection";
 
 function CheckoutRowOne() {

@@ -2,17 +2,17 @@ import React from "react";
 import styles from "./FeaturedSection.module.css";
 import { Container, Row, Col } from "react-bootstrap";
 import FeaturedCard from "./FeaturedCard";
-import laptop from "../../assets/Products/laptop.png";
-import solarpanel from "../../assets/Products/solarpanel.png";
-import wig from "../../assets/Products/wigs.png";
-import gen from "../../assets/Products/gen.png";
-import cabinet from "../../assets/Products/cabinet.png";
-import trouser from "../../assets/Products/trouser.png";
-import microwave from "../../assets/Products/microwave.png";
-import shoe from "../../assets/Products/shoe.png";
-import bag from "../../assets/Products/bag.png";
-import headset from "../../assets/Products/headset.png";
-import chair from "../../assets/Products/chair.png";
+import laptop from "../../assets/images/Products/laptop.png";
+import solarpanel from "../../assets/images/Products/solarpanel.png";
+import wig from "../../assets/images/Products/wigs.png";
+import gen from "../../assets/images/Products/gen.png";
+import cabinet from "../../assets/images/Products/cabinet.png";
+import trouser from "../../assets/images/Products/trouser.png";
+import microwave from "../../assets/images/Products/microwave.png";
+import shoe from "../../assets/images/Products/shoe.png";
+import bag from "../../assets/images/Products/bag.png";
+import headset from "../../assets/images/Products/headset.png";
+import chair from "../../assets/images/Products/chair.png";
 
 
 function FeaturedSection() {

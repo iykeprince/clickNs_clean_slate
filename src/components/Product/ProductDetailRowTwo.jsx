@@ -1,9 +1,9 @@
 import React from "react";
-import slotLogo from '../../assets/slotLogo.png';
-import phoneImagex from '../../assets/phone2108.png';
-import samsungLogo from '../../assets/samsungLogo.png';
-import sparLogo from '../../assets/sparLogo.png';
-import gameLogo from '../../assets/gameLogo.png';
+import slotLogo from '../../assets/images/slotLogo.png';
+import phoneImagex from '../../assets/images/phone2108.png';
+import samsungLogo from '../../assets/images/samsungLogo.png';
+import sparLogo from '../../assets/images/sparLogo.png';
+import gameLogo from '../../assets/images/gameLogo.png';
 import SlimCard from '../SlimHorizontalCard/SlimCard';
 import { Col, Row } from "react-bootstrap";
 

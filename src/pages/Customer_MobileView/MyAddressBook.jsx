@@ -2,7 +2,7 @@ import React from 'react'
 import AccountOtherRows from "../../components/Account/AccountOtherRows";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
-import IconStore from "../../store/IconStore";
+import IconStore from "../../assets/icons/IconStore";
 import useWindowDimensions from "../../Hooks/UseWindowDimension";
 import { Link, Redirect } from "react-router-dom";
 import DisplayAddress from '../../components/Account/DisplayAddress';

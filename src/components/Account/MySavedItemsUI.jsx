@@ -1,5 +1,5 @@
 import React from "react";
-import IconStore from "../../store/IconStore";
+import IconStore from "../../assets/icons/IconStore";
 import NoDataUI from "./NoDataUI";
 
 function MySavedItemsUI() {

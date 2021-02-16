@@ -388,8 +388,13 @@ text-align: center;
   margin-right: 0.063 !important;
 }
 
+// .Descriptions a:active,
+// .Descriptions a:hover {
+//   color: var(--woozBlue) !important;
+// }
 .Descriptions a:active,
-.Descriptions a:hover {
+.Descriptions a:hover,
+.Descriptions a:focus {
   color: var(--woozBlue) !important;
 }
 .Descriptions a:hover {
@@ -397,7 +402,6 @@ text-align: center;
   box-shadow: none;
 }
 .Descriptions .active {
-  color: var(--woozBlue);
   border-bottom: 0px;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;

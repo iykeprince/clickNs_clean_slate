@@ -1,11 +1,11 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import DealsSectionContent from "./DealsSectionContent";
-import samsung1 from "../../assets/Products/samsungGalaxy.png";
-import shoe1 from "../../assets/Products/shoe.png";
-import laptop1 from "../../assets/Products/laptop.png";
-import dress1 from "../../assets/Products/dress.png";
-import fridge1 from "../../assets/Products/fridge.png";
+import samsung1 from "../../assets/images/Products/samsungGalaxy.png";
+import shoe1 from "../../assets/images/Products/shoe.png";
+import laptop1 from "../../assets/images/Products/laptop.png";
+import dress1 from "../../assets/images/Products/dress.png";
+import fridge1 from "../../assets/images/Products/fridge.png";
 
 function DealsSection() {
   return (

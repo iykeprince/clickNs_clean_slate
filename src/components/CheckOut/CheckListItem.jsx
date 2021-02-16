@@ -1,7 +1,7 @@
 import React from "react";
 import Radio from "@material-ui/core/Radio";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
-import IconStore from "../../store/IconStore";
+import IconStore from "../../assets/icons/IconStore";
 import { Link } from "react-router-dom";
 
 function CheckListItem(props) {

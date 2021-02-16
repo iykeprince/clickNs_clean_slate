@@ -1,5 +1,5 @@
 import React from 'react'
-import IconStore from "../../store/IconStore";
+import IconStore from "../../assets/icons/IconStore";
 import { Link} from "react-router-dom";
 import * as FaIcon from "react-icons/fa";
 

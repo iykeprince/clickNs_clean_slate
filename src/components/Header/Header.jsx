@@ -4,7 +4,7 @@ import { HeaderSearch } from "../Search/Search";
 import SideNav from "./SideNav";
 import { Row, Col } from "react-bootstrap";
 import * as Ai from "react-icons/ai";
-import IconStore from "../../store/IconStore";
+import IconStore from "../../assets/icons/IconStore";
 import WoozHeaderLogo from "./WoozHeaderLogo";
 import MenuListComp from "./MenuListComp";
 import HelpListComp from "./HelpListComp";

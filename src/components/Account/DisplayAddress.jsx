@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import IconStore from "../../store/IconStore";
+import IconStore from "../../assets/icons/IconStore";
 import LargeButton from "../Button/LargeButton";
 
 function DisplayAddress() {

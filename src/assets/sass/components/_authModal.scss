@@ -1,0 +1,21 @@
+.authModal {
+  a {
+    padding-bottom: 0.875rem !important;
+    span{
+        font-weight: 500;
+    }
+  }
+//   a:active, a:hover, a:focus {
+//     color: var(--woozBlue) !important;
+//     border-color: var(--woozBlue);
+//     border-bottom-width: 0.125rem !important;
+//   }
+}
+
+.googlePlay2,
+.appStore2 {
+  img {
+    width: 10rem;
+    height: 4rem;
+  }
+}

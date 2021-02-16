@@ -8,7 +8,7 @@ import MenuItem from "@material-ui/core/MenuItem";
 import MenuList from "@material-ui/core/MenuList";
 import { makeStyles } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
-import IconStore from "../../../store/IconStore";
+import IconStore from "../../../assets/icons/IconStore";
 
 const useStyles = makeStyles((theme) => ({
   root: {

@@ -1,11 +1,11 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
 // import "./ProductDetailRowOne.css";
-import imgPrev from "../../assets/prevLeft.svg";
-import phonesmall1 from "../../assets/phoneSmall47.svg";
-import phonesmall2 from "../../assets/phoneSmall45.svg";
-import phonesmall3 from "../../assets/phoneSmall46.svg";
-import nextImg from "../../assets/nextRight.svg";
+import imgPrev from "../../assets/images/prevLeft.svg";
+import phonesmall1 from "../../assets/images/phoneSmall47.svg";
+import phonesmall2 from "../../assets/images/phoneSmall45.svg";
+import phonesmall3 from "../../assets/images/phoneSmall46.svg";
+import nextImg from "../../assets/images/nextRight.svg";
 import VariableImage from "../ImageCard/VariableImage";
 import DiscountPercent from "../DiscountPercent/DiscountPercent";
 import { Link } from "react-router-dom";

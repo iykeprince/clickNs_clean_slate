@@ -8,7 +8,7 @@ import MyPendReviewUI from "./MyPendReviewUI";
 import MySavedItemsUI from "./MySavedItemsUI";
 import MyVoucherUI from "./MyVoucherUI";
 import NewsletterUI from "./NewsletterUI";
-import IconStore from "../../store/IconStore";
+import IconStore from "../../assets/icons/IconStore";
 import { Route, NavLink, HashRouter } from "react-router-dom";
 import EditAddressComp from "./EditAddressComp";
 import * as FaIcon from "react-icons/fa";

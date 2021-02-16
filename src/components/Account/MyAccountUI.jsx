@@ -1,6 +1,6 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
-import IconStore from "../../store/IconStore";
+import IconStore from "../../assets/icons/IconStore";
 
 function MyAccountUI() {
   return (

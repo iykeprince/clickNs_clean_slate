@@ -1,4 +1,4 @@
-@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../../../node_modules/bootstrap/scss/bootstrap";
 
 //scss files for components
 @import "./components/header";
@@ -23,7 +23,7 @@
 @import "./components/category";
 @import "./components/catStyle";
 @import "./components/image_card";
-
+@import "./components/authModal";
 
 
 // scss files for pages

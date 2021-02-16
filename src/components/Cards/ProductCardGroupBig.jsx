@@ -1,10 +1,10 @@
 import React from "react";
 import { Row} from "react-bootstrap";
 import ProductDetailCard from "../Cards/ProductDetailCard";
-import imgPhone from "../../assets/phone791.png";
-import powerBank795 from '../../assets/powerBank795.png'
-import phone790 from '../../assets/phone790.png'
-import phone792 from '../../assets/phone792.png'
+import imgPhone from "../../assets/images/phone791.png";
+import powerBank795 from '../../assets/images/powerBank795.png'
+import phone790 from '../../assets/images/phone790.png'
+import phone792 from '../../assets/images/phone792.png'
 
 
 const ProductCardGroupBig = (props) => {

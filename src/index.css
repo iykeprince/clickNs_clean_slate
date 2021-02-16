@@ -2,11 +2,13 @@
   margin: 0 !important;
   padding: 0 !important;
   box-sizing: border-box;
+  font-family: 'Google Sans' !important;
 }
 
 :root {
   --woozBlue: #043E7D;
   --woozRed: #FF5757;
+  font-family: 'Google Sans' !important;
     
 }
 @media only screen and(min-width:768px){
@@ -31,7 +33,7 @@ a:hover,.link-unstyled, .link-unstyled:link, .link-unstyled:hover   {
 html,
 body {
   margin: 0;
-  font-family: Google Sans, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Google Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif !important;
     font-weight: 500;

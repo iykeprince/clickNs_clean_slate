@@ -1,6 +1,6 @@
 import React from "react";
 import { Row } from "react-bootstrap";
-import IconStore from "../../store/IconStore";
+import IconStore from "../../assets/icons/IconStore";
 
 import MenuItem from "@material-ui/core/MenuItem";
 import FormControl from "@material-ui/core/FormControl";

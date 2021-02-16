@@ -9,7 +9,7 @@ import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
 import Checkbox from "@material-ui/core/Checkbox";
 import { NavLink } from "react-router-dom";
-import IconStore from "../../store/IconStore";
+import IconStore from "../../assets/icons/IconStore";
 
 const useStyles = makeStyles((theme) => ({
   root: {

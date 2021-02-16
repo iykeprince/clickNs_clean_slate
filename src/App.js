@@ -1,5 +1,5 @@
 import React from "react";
-import "./sass/main.scss";
+import "./assets/sass/main.scss";
 import Home from "./pages/Home";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ProductDetail from "./pages/ProductDetail";
@@ -29,6 +29,7 @@ import MyPassword from "./pages/Customer_MobileView/MyPassword";
 import MyNewsletter from "./pages/Customer_MobileView/MyNewsletter";
 import EditAddressComp from "./components/Account/EditAddressComp";
 import MobileEditAddress from "./pages/Customer_MobileView/MobileEditAddress";
+import AuthModal from "./components/Modal/AuthModal";
 
 function App() {
   return (
@@ -46,6 +47,8 @@ function App() {
           <Route path={"/recentlyViewed"} component={RecentlyViewed} />
           <Route path={"/cart"} component={Cart} />
           <Route path={"/checkout"} component={CheckOut} />
+          <Route path={"/auth"} component={AuthModal} />
+
 
           {/* Mobile View */}
           <Route path={"/account"} component={MyAccount} />

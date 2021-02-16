@@ -1,7 +1,7 @@
 import React from "react";
 import { Row } from "react-bootstrap";
 import CartMainItem from "./CartMainItem";
-import phone11Img from "../../assets/phone11.jpg";
+import phone11Img from "../../assets/images/phone11.jpg";
 
 function CartRowOne() {
   return (

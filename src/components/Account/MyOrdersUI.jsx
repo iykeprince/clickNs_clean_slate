@@ -1,6 +1,6 @@
 // import { IconButton } from '@material-ui/core'
 import React from "react";
-import IconStore from "../../store/IconStore";
+import IconStore from "../../assets/icons/IconStore";
 import ClosedOrderData from "./ClosedOrderData";
 import NoDataUI from "./NoDataUI";
 import OpenOrderData from "./OpenOrderData";
