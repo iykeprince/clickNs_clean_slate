@@ -1,5 +1,10 @@
 @import "../../../node_modules/bootstrap/scss/bootstrap";
 
+
+// import base
+@import "./base/typography";
+
+
 //scss files for components
 @import "./components/header";
 @import "./components/footer";

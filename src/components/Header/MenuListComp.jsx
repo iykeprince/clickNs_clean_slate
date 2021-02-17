@@ -14,6 +14,7 @@ import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
 import AuthModal from "../Modal/AuthModal";
+// import * as authDetails from "../Modal/AuthModalLogin"
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -29,7 +30,8 @@ const useStyles = makeStyles((theme) => ({
   },
   paperTwo: {
     backgroundColor: theme.palette.background.paper,
-    border: "2px solid #000",
+    border: "2px solid #0000001c",
+    borderRadius:4,
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
     minWidth: "400px",
@@ -37,13 +39,14 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function MenuListComp() {
+
+export default function MenuListComp(props) {
   const classes = useStyles();
 
   const [open, setOpen] = useState(false);
   const anchorRef = React.useRef(null);
   const [login, setLogin] = useState(false);
-  const username = "Hi,Bukky";
+  const username = `Hi, ${props.email}` ;
 
   const [openModal, setModalOpen] = React.useState(false);
 

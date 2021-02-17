@@ -22,16 +22,16 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(3),
   },
   textField: {
-    width: "35ch",
+    width: "33ch",
   },
   inputField: {
     paddingTop: "0.5rem !important",
     paddingBottom: "0.5rem !important",
-    fontSize:"0.875rem",
+    fontSize: "0.875rem",
   },
 }));
 
-export default function AuthModalLogin() {
+export default function AuthModalLogin(props) {
   const classes = useStyles();
   const [values, setValues] = useState({
     showPassword: false,
@@ -49,77 +49,103 @@ export default function AuthModalLogin() {
     setValues({ ...values, showPassword: !values.showPassword });
   };
 
+  const [spin, setSpin] = useState(false);
+
   const handleMouseDownPassword = (event) => {
     event.preventDefault();
   };
 
+  const handleLogin = () => {
+    // props.email = email;
+    // props.password = values.password;
+  };
+
+  const handleLoginClick = () => {
+    setSpin(true);
+  };
+
   return (
     <div className={classes.root}>
-      <div className="m-3 mt-4 d-flex flex-column justify-content-around">
-        <FormControl
-          className={clsx(classes.margin, classes.textField)}
-          variant="outlined"
-        >
-          <OutlinedInput
-            type="email"
-            value={email}
-            onChange={handleEmailChange}
-            placeholder="Email or Username"
-            className={classes.inputField}
-            startAdornment={
-              <InputAdornment position="start">
-                <IconButton
-                  aria-label="toggle password visibility"
-                  edge="start"
-                >
-                  <IoMdMail />
-                </IconButton>
-              </InputAdornment>
-            }
-          />
-        </FormControl>
+      <form onSubmit={handleLogin}>
+        <div className="m-3 mt-4 d-flex flex-column justify-content-around">
+          <FormControl
+            className={clsx(classes.margin, classes.textField)}
+            variant="outlined"
+          >
+            <OutlinedInput
+              type="email"
+              value={email}
+              onChange={handleEmailChange}
+              placeholder="Email or Username"
+              className={classes.inputField}
+              startAdornment={
+                <InputAdornment position="start">
+                  <IconButton
+                    aria-label="toggle password visibility"
+                    edge="start"
+                  >
+                    <IoMdMail />
+                  </IconButton>
+                </InputAdornment>
+              }
+            />
+          </FormControl>
 
-        <br />
-        <FormControl
-          className={clsx(classes.margin, classes.textField)}
-          variant="outlined"
-        >
-          <OutlinedInput
-            type={values.showPassword ? "text" : "password"}
-            value={values.password}
-            onChange={handlePasswordChange("password")}
-            placeholder="Password"
-            className={classes.inputField}
-            startAdornment={
-              <InputAdornment position="start">
-                <IconButton
-                  aria-label="toggle password visibility"
-                  onClick={handleClickShowPassword}
-                  onMouseDown={handleMouseDownPassword}
-                  edge="start"
+          <br />
+          <FormControl
+            className={clsx(classes.margin, classes.textField)}
+            variant="outlined"
+          >
+            <OutlinedInput
+              type={values.showPassword ? "text" : "password"}
+              value={values.password}
+              onChange={handlePasswordChange("password")}
+              placeholder="Password"
+              className={classes.inputField}
+              startAdornment={
+                <InputAdornment position="start">
+                  <IconButton
+                    aria-label="toggle password visibility"
+                    onClick={handleClickShowPassword}
+                    onMouseDown={handleMouseDownPassword}
+                    edge="start"
+                  >
+                    {values.showPassword ? <Visibility /> : <VisibilityOff />}
+                  </IconButton>
+                </InputAdornment>
+              }
+            />
+          </FormControl>
+          <br />
+          <DynamicButtonTwo
+            color="white"
+            height="2.5rem"
+            width="100%"
+            backgroundColor="var(--woozBlue)"
+            boxShadow="0 4px 8px 0 rgb(0 0 0 / 20%)"
+            borderRadius="5px"
+            border="none !important"
+            fontWeight="700"
+            fontSize="0.875rem"
+            hoverBoxShadow="0 4px 8px 0 rgb(0 0 0 / 20%)"
+            type="submit"
+            onClick={handleLoginClick}
+          >
+            <div className="d-flex justify-content-center align-items-center">
+              <div className="mr-4">LOGIN </div>
+              {spin && (
+                <div
+                  className="spinner-border font-xs  text-light"
+                  role="status"
                 >
-                  {values.showPassword ? <Visibility /> : <VisibilityOff />}
-                </IconButton>
-              </InputAdornment>
-            }
-          />
-        </FormControl>
-        <br />
-        <DynamicButtonTwo
-          color="white"
-          height="2.5rem"
-          width="100%"
-          backgroundColor="var(--woozBlue)"
-          boxShadow="0 4px 8px 0 rgb(0 0 0 / 20%)"
-          borderRadius="5px"
-          border="none !important"
-          fontWeight="700"
-          fontSize="0.875rem"
-          hoverBoxShadow="0 4px 8px 0 rgb(0 0 0 / 20%)"
-        >
-          LOGIN
-        </DynamicButtonTwo>
-      </div>
+                  <span className="sr-only font-xs">Loading...</span>
+                </div>
+              )}
+            </div>
+          </DynamicButtonTwo>
+        </div>
+      </form>
     </div>
   );
 }
+

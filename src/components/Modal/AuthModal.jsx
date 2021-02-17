@@ -3,7 +3,7 @@ import { HashRouter} from "react-router-dom";
 import AuthModalSignUp from "./AuthModalSignUp";
 import AuthModalLogin from "./AuthModalLogin";
 
-export default function AuthModal() {
+export default function AuthModal(props) {
   return (
     <HashRouter>
       {/* Careful with the Classes here, coz they're used in  MyOrdersUI  */}
