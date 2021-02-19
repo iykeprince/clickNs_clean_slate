@@ -31,7 +31,6 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
   },
   paperTwo: {
-    // backgroundColor: theme.palette.background.paper,
     backgroundColor: "#f7fafc !important",
     border: "2px solid #0000001c",
     borderRadius: 4,
@@ -49,7 +48,6 @@ function MenuListComp(props) {
 
   const [open, setOpen] = useState(false);
   const anchorRef = React.useRef(null);
-  const [login, setLogin] = useState(false);
   const username = `Hi, ${firstName}`;
 
   const [openModal, setModalOpen] = React.useState(false);
@@ -58,20 +56,15 @@ function MenuListComp(props) {
     setModalOpen(false);
   };
 
-  const handleSignOut = () => {
-    // props.history.push('/auth/login')
-    props.logoutUser();
-  };
   const handleToggle = () => {
     setOpen((prevOpen) => !prevOpen);
   };
 
   const handleModalOpen = () => {
     setModalOpen(true);
-    // setLogin((prevLog) => !prevLog);
   };
-  const handleLoginToggle = () => {
-    setLogin((prevLog) => !prevLog);
+  const handleLogOut = () => {
+    props.logoutUser()
   };
 
   const handleClose = (event) => {
@@ -88,16 +81,6 @@ function MenuListComp(props) {
       setOpen(false);
     }
   }
-
-  // React.useEffect(() => {
-  //   if(props.token){
-  //     setModalOpen(false)
-  //   }
-  // })
-
-  // props.token ? setModalOpen(false) : setModalOpen(true);
-
-  // console.log(`token is: ${props.token}`)
 
   // return focus to the button when we transitioned from !open -> open
   const prevOpen = React.useRef(open);
@@ -163,9 +146,9 @@ function MenuListComp(props) {
                         <span className="adjacentIcon__text2">Saved Items</span>
                       </MenuItem>
                     </Link>
-                    {login ? (
+                    {props.token ? (
                       <MenuItem
-                        onClick={handleLoginToggle}
+                        onClick={handleLogOut}
                         className="logOutTxt"
                       >
                         LOGOUT

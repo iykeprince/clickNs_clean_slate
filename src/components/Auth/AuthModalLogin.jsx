@@ -77,7 +77,7 @@ function AuthModalLogin(props) {
     setIsMakingRequest((prevState) => ({
       isMakingRequest: !prevState.isMakingRequest,
     }));
-    // const { email, password } = this.state;
+
     if (!email || !password) return;
     const { history, loginUser } = props;
 
@@ -86,14 +86,20 @@ function AuthModalLogin(props) {
         isMakingRequest: !prevState.isMakingRequest,
       }));
 
-      console.log("====================================");
-      console.log(!res.error);
-      console.log("====================================");
+      // console.log("====================================");
+      // console.log(!res.error);
+      // console.log("====================================");
 
-      if (!res.error && props.onLoginSuccess) {
+      // if (!res.error && props.onLoginSuccess) {
+      //   props.onLoginSuccess();
+      // }
+      if (props.onLoginSuccess) {
         props.onLoginSuccess();
       }
+
     });
+
+
   };
 
   const handleLoginClick = () => {

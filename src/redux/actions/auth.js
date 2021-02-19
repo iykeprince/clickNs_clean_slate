@@ -40,7 +40,7 @@ export const login = (payload, history) => async (dispatch) => {
       type: LOGIN_SUCCESS,
       payload: data,
     });
-    history.push("http://localhost:3000/");
+    // history.push("/");
     return data;
   } catch (error) {
     toastr.error(error.message, toastrOptions);
