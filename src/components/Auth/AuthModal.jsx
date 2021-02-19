@@ -1,24 +1,24 @@
 import React from "react";
-import { HashRouter} from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import AuthModalSignUp from "./AuthModalSignUp";
 import AuthModalLogin from "./AuthModalLogin";
 
 export default function AuthModal(props) {
   return (
     <HashRouter>
-      {/* Careful with the Classes here, coz they're used in  MyOrdersUI  */}
+      {/* Careful editing css classes here, coz they're used in  MyOrdersUI  */}
       <div className="authModal">
         <div className="OpenClosedNav my-3  d-flex justify-content-center">
           <ul className="nav nav-tabs" id="myTab" role="tablist">
             <li className="nav-item" role="presentation">
               <a
                 to="/"
-                className="nav-link active orderToggle"
-                id="home-tab"
+                className="nav-link active orderToggle bg_toggle"
+                id="login-tab"
                 data-toggle="tab"
-                href="#home"
+                href="#login"
                 role="tab"
-                aria-controls="home"
+                aria-controls="login"
                 aria-selected="true"
               >
                 Login
@@ -27,12 +27,12 @@ export default function AuthModal(props) {
             <li className="nav-item" role="presentation">
               <a
                 to="/signup"
-                className="nav-link orderToggle closedOrdr"
-                id="profile-tab"
+                className="nav-link orderToggle closedOrdr bg_toggle"
+                id="signup-tab"
                 data-toggle="tab"
-                href="#profile"
+                href="#signup"
                 role="tab"
-                aria-controls="profile"
+                aria-controls="signup"
                 aria-selected="false"
               >
                 Signup
@@ -45,17 +45,17 @@ export default function AuthModal(props) {
           <div className="tab-content" id="myTabContent">
             <div
               className="tab-pane fade show active"
-              id="home"
+              id="login"
               role="tabpanel"
-              aria-labelledby="home-tab"
+              aria-labelledby="login-tab"
             >
-              <AuthModalLogin />
+              <AuthModalLogin onLoginSuccess={props.onLoginSuccess} />
             </div>
             <div
               className="tab-pane fade"
-              id="profile"
+              id="signup"
               role="tabpanel"
-              aria-labelledby="profile-tab"
+              aria-labelledby="signup-tab"
             >
               <AuthModalSignUp />
             </div>

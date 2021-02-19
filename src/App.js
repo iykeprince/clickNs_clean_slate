@@ -29,7 +29,7 @@ import MyPassword from "./pages/Customer_MobileView/MyPassword";
 import MyNewsletter from "./pages/Customer_MobileView/MyNewsletter";
 import EditAddressComp from "./components/Account/EditAddressComp";
 import MobileEditAddress from "./pages/Customer_MobileView/MobileEditAddress";
-import AuthModal from "./components/Modal/AuthModal";
+import AuthModal from "./components/Auth/AuthModal";
 
 function App() {
   return (

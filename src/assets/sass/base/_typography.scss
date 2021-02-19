@@ -4,3 +4,32 @@
 .font-xs{
     font-size: 0.75rem !important;
 }
+
+.text-primary{
+    color: var(--woozBlue) !important;
+}
+
+
+//FOR REDUX TOASTER
+
+.redux-toastr .toastr .rrt-middle-container {
+    margin-left: 80px !important;
+    padding: 10px 5px !important;
+}
+
+
+.redux-toastr .toastr .rrt-progress-container {
+    margin: 0 -20px -20px -60px !important;
+}
+
+.redux-toastr .toastr .rrt-left-container .toastr-icon {
+    margin-top: 5px !important;
+}
+
+.rrt-text{
+    padding-top: 0.6rem !important;
+}
+
+.redux-toastr .toastr .rrt-left-container .rrt-holder {
+    margin-top: -30px !important;
+}

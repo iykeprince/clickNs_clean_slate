@@ -101,7 +101,7 @@ export default function HelpListComp() {
                     </MenuItem>
                     <MenuItem onClick={handleClose}>Returns and Refunds
                     </MenuItem>
-                    <MenuItem onClick={handleClose}>Payment and Jumia account
+                    <MenuItem onClick={handleClose}>Payment and woozeee account
                     </MenuItem>
                   </MenuList>
                 </ClickAwayListener>

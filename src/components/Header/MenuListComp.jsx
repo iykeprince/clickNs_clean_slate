@@ -13,8 +13,10 @@ import { DynamicButtonTwo } from "../Button/DynamicButton";
 import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
-import AuthModal from "../Modal/AuthModal";
-// import * as authDetails from "../Modal/AuthModalLogin"
+import AuthModal from "../Auth/AuthModal";
+import { withRouter } from "react-router-dom";
+import { connect } from "react-redux";
+import { logOut } from "../../redux/actions/auth";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -29,24 +31,26 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
   },
   paperTwo: {
-    backgroundColor: theme.palette.background.paper,
+    // backgroundColor: theme.palette.background.paper,
+    backgroundColor: "#f7fafc !important",
     border: "2px solid #0000001c",
-    borderRadius:4,
+    borderRadius: 4,
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
     minWidth: "400px",
-    minHeight: "320px",
+    minHeight: "335px",
   },
 }));
 
+function MenuListComp(props) {
+  const { firstName, lastName } = props;
 
-export default function MenuListComp(props) {
   const classes = useStyles();
 
   const [open, setOpen] = useState(false);
   const anchorRef = React.useRef(null);
   const [login, setLogin] = useState(false);
-  const username = `Hi, ${props.email}` ;
+  const username = `Hi, ${firstName}`;
 
   const [openModal, setModalOpen] = React.useState(false);
 
@@ -54,6 +58,10 @@ export default function MenuListComp(props) {
     setModalOpen(false);
   };
 
+  const handleSignOut = () => {
+    // props.history.push('/auth/login')
+    props.logoutUser();
+  };
   const handleToggle = () => {
     setOpen((prevOpen) => !prevOpen);
   };
@@ -62,9 +70,9 @@ export default function MenuListComp(props) {
     setModalOpen(true);
     // setLogin((prevLog) => !prevLog);
   };
-  const handleLoginToggle=()=>{
+  const handleLoginToggle = () => {
     setLogin((prevLog) => !prevLog);
-  }
+  };
 
   const handleClose = (event) => {
     if (anchorRef.current && anchorRef.current.contains(event.target)) {
@@ -80,6 +88,16 @@ export default function MenuListComp(props) {
       setOpen(false);
     }
   }
+
+  // React.useEffect(() => {
+  //   if(props.token){
+  //     setModalOpen(false)
+  //   }
+  // })
+
+  // props.token ? setModalOpen(false) : setModalOpen(true);
+
+  // console.log(`token is: ${props.token}`)
 
   // return focus to the button when we transitioned from !open -> open
   const prevOpen = React.useRef(open);
@@ -100,7 +118,9 @@ export default function MenuListComp(props) {
           aria-haspopup="true"
           onClick={handleToggle}
         >
-          <span className="option__lineOne">{login ? username : "Login"}</span>
+          <span className="option__lineOne">
+            {props.token ? username : "Login"}
+          </span>
           <img src="/images/arrowdown.svg" alt="" className="dropdown__icon" />
         </Button>
         <Popper
@@ -144,7 +164,12 @@ export default function MenuListComp(props) {
                       </MenuItem>
                     </Link>
                     {login ? (
-                      <MenuItem onClick={handleLoginToggle} className="logOutTxt">LOGOUT</MenuItem>
+                      <MenuItem
+                        onClick={handleLoginToggle}
+                        className="logOutTxt"
+                      >
+                        LOGOUT
+                      </MenuItem>
                     ) : (
                       <MenuItem onClick={handleModalOpen} className="logOutTxt">
                         <DynamicButtonTwo
@@ -184,10 +209,35 @@ export default function MenuListComp(props) {
       >
         <Fade in={openModal}>
           <div className={classes.paperTwo}>
-            <AuthModal/>
+            <AuthModal onLoginSuccess={handleModalClose}/>
           </div>
         </Fade>
       </Modal>
     </div>
   );
 }
+
+const mapStateToProps = ({ auth }) => {
+  if (auth.user) {
+    const {
+      user: { fName, sName, token },
+    } = auth;
+    return {
+      firstName: fName,
+      lastName: sName,
+      token: auth.token,
+    };
+  }
+};
+
+// const mapStateToProps = ({ auth: { token } }) => ({
+//   token,
+// });
+
+const mapDispatchToProps = (dispatch) => ({
+  logoutUser: () => dispatch(logOut()),
+});
+
+export default withRouter(
+  connect(mapStateToProps, mapDispatchToProps)(MenuListComp)
+);

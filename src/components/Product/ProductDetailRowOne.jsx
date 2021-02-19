@@ -12,6 +12,7 @@ import { Link } from "react-router-dom";
 import * as FaIcon from "react-icons/fa";
 import LargeButton from "../Button/LargeButton";
 import { HeartRating, ReadOnlyRating } from "../Rating/Rating";
+import IconStore from "../../assets/icons/IconStore";
 
 function ProductDetailRowOne() {
   return (
@@ -35,19 +36,13 @@ function ProductDetailRowOne() {
               <VariableImage Img={nextImg} altText="next" />
             </div>
             <hr className="separator" />
-            <div className="product__share">
+
+            <div className="product__share pb-3 d-none d-md-block">
               <p className="shareProduct">SHARE THIS PRODUCT</p>
-              <img
-                src="/images/facebook12.svg"
-                alt="facebookIcon"
-                className="socialFacebook"
-              />
-              <img
-                src="/images/twitter12.svg"
-                alt="twitterIcon"
-                className="socialTwitter"
-              />
+              <span className="socialFacebook">{IconStore.facebookIcon}</span>
+              <span className="socialTwitter">{IconStore.twitterIcon}</span>
             </div>
+
           </Col>
           <Col md="8">
             <div>

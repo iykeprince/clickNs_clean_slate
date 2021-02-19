@@ -471,3 +471,12 @@ svg {
     margin-top: 1rem !important;
   }
 }
+
+@media screen and (max-width:375px){
+  .makeStyles-phoneNumberFieldr-13{
+    .MuiFormLabel-root.MuiInputLabel-root.MuiInputLabel-formControl.MuiInputLabel-animated{
+      display: none;
+  }
+  }
+
+}

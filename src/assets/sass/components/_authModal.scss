@@ -1,6 +1,5 @@
 .authModal {
   a {
-    padding-bottom: 0.875rem !important;
     span{
         font-weight: 500;
     }
@@ -24,3 +23,29 @@
   width: 1.25rem !important;
   height: 1.25rem !important;
 }
+
+.bg_toggle.active{
+  background-color: #f7fafc!important;
+}
+
+.loginInputCls{
+  .MuiOutlinedInput-notchedOutline {
+    border-color: transparent !important;
+  }
+}
+
+
+// .hideMe {
+//   -webkit-animation: cssAnimation 2s forwards; 
+//   animation: cssAnimation 2s forwards;
+// }
+// @keyframes cssAnimation{
+//   0%   {opacity: 1;}
+//   90%  {opacity: 1;}
+//   100% {opacity: 0;}
+// }
+// @-webkit-keyframes cssAnimation{
+//   0%   {opacity: 1;}
+//   90%  {opacity: 1;}
+//   100% {opacity: 0;}
+// }

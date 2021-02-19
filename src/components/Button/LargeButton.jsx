@@ -6,7 +6,7 @@ import React from "react";
 const LargeButton = (props) => {
   return (
     <React.Fragment>
-      <button type="button" className="largeButton">
+      <button type={props.type} className="largeButton">
         {props.buttonName}
       </button>
     </React.Fragment>

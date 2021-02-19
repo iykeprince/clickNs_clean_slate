@@ -35,6 +35,7 @@ const useStyles = makeStyles((theme) => ({
   phoneNumberFieldr: {
     width: "110% !important",
     minWidth: 120,
+    whiteSpace: "nowrap",
   },
 }));
 
@@ -68,7 +69,7 @@ export default function EditAddressComp() {
       </NavLink>
 
       <div className="editAddressComp_wrap">
-        <form className={classes.root} noValidate autoComplete="off">
+        <form className={classes.root} noValidate autoComplete="off" onSubmit="/">
           <div>
             <Row>
               <Col lg="6">
@@ -239,7 +240,7 @@ export default function EditAddressComp() {
           </div>
 
           <div className="accButton__wrapper2">
-            <LargeButton buttonName="SAVE" />
+            <LargeButton buttonName="SAVE" type="submit"/>
           </div>
         </form>
       </div>
