@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
 import IconButton from "@material-ui/core/IconButton";
@@ -10,10 +10,11 @@ import VisibilityOff from "@material-ui/icons/VisibilityOff";
 import { IoMdMail } from "react-icons/io";
 import { DynamicButtonTwo } from "../Button/DynamicButton";
 // import { isWhiteSpaceLike } from "typescript";
-import { Checkbox } from "@material-ui/core";
+import { Checkbox, FormHelperText } from "@material-ui/core";
 import { Link, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { login } from "../../redux/actions/auth";
+import Loader from "react-loader-spinner";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -45,6 +46,7 @@ function AuthModalLogin(props) {
   });
   const [email, setEmail] = useState("");
 
+   const [validationError, setvalidationError] = useState(false)
   const password = values.password;
 
   const handleEmailChange = (e) => {
@@ -59,7 +61,7 @@ function AuthModalLogin(props) {
   };
 
   const [spin, setSpin] = useState(false);
-
+  const [timeout, settimeout] = useState();
   const handleMouseDownPassword = (event) => {
     event.preventDefault();
   };
@@ -86,24 +88,18 @@ function AuthModalLogin(props) {
         isMakingRequest: !prevState.isMakingRequest,
       }));
 
-      // console.log("====================================");
-      // console.log(!res.error);
-      // console.log("====================================");
-
-      // if (!res.error && props.onLoginSuccess) {
-      //   props.onLoginSuccess();
-      // }
-      if (props.onLoginSuccess) {
+      if (props.token) {
         props.onLoginSuccess();
+        
+      }else{
+        setvalidationError(true)
       }
-
     });
-
-
   };
 
   const handleLoginClick = () => {
     setSpin(true);
+    settimeout(500);
   };
 
   return (
@@ -159,6 +155,14 @@ function AuthModalLogin(props) {
             />
           </FormControl>
 
+          {validationError ? (
+           <div className="font-sm text-danger pt-3">
+           * Email or password incorrect
+         </div>
+          ) : (
+            ``
+          )}
+
           <div className="mb-2 mt-3 text-black-50 d-flex align-items-center">
             <Checkbox
               checked={checked}
@@ -198,13 +202,16 @@ function AuthModalLogin(props) {
           >
             <div className="d-flex justify-content-center align-items-center">
               <div>LOGIN</div>
-              {isMakingRequest && (
-                <div
-                  className="spinner-border font-xs text-light ml-4"
-                  role="status"
-                >
-                  <span className="sr-only font-xs"></span>
-                </div>
+              {spin && (
+                <span className="ml-4">
+                  <Loader
+                    type="TailSpin"
+                    color="#fff"
+                    height={14}
+                    width={14}
+                    timeout={timeout}
+                  />
+                </span>
               )}
             </div>
           </DynamicButtonTwo>

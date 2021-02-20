@@ -1,11 +1,11 @@
-import Home from "./pages/Home";
+//TO BE USED
 
-var routes = [
-    {
-      path: "/",
-      // name: "Login",
-      // icon: "ni ni-key-25 text-info",
-      component: Home,
-      layout: "/"
-    },
-]
+// import Home from "./pages/Home";
+
+// var routes = [
+//     {
+//       path: "/",
+//       component: Home,
+//       layout: "/"
+//     },
+// ]

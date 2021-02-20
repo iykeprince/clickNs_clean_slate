@@ -101,7 +101,7 @@ function MenuListComp(props) {
           aria-haspopup="true"
           onClick={handleToggle}
         >
-          <span className="option__lineOne">
+          <span className="option__lineOne text-capitalize">
             {props.token ? username : "Login"}
           </span>
           <img src="/images/arrowdown.svg" alt="" className="dropdown__icon" />
