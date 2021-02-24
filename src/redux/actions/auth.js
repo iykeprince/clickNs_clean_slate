@@ -1,17 +1,17 @@
-import axios from "axios";
-import { returnErrors } from "./messages";
+// import axios from "axios";
+// import { returnErrors } from "./messages";
 import { toastr } from "react-redux-toastr";
 
 import {
-  USER_LOADED,
-  USER_LOADING,
-  AUTH_ERROR,
+  // USER_LOADED,
+  // USER_LOADING,
+  // AUTH_ERROR,
   LOGIN_SUCCESS,
-  LOGIN_FAIL,
+  // LOGIN_FAIL,
   LOGOUT_SUCCESS,
 } from "./types";
 
-const base = "https://scalable-commerce-backend.herokuapp.com/api/v1";
+// const base = "https://scalable-commerce-backend.herokuapp.com/api/v1";
 
 const toastrOptions = {
   timeOut: 9000,

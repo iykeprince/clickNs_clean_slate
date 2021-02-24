@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
 import IconButton from "@material-ui/core/IconButton";
@@ -10,7 +10,7 @@ import VisibilityOff from "@material-ui/icons/VisibilityOff";
 import { IoMdMail } from "react-icons/io";
 import { DynamicButtonTwo } from "../Button/DynamicButton";
 // import { isWhiteSpaceLike } from "typescript";
-import { Checkbox, FormHelperText } from "@material-ui/core";
+import { Checkbox } from "@material-ui/core";
 import { Link, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { login } from "../../redux/actions/auth";

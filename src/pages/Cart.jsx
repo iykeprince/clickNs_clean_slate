@@ -4,14 +4,18 @@ import CartOtherRows from "../components/Cart/CartOtherRows";
 import CartRowOne from "../components/Cart/CartRowOne";
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
+import { connect } from "react-redux";
 
-function Cart() {
+
+function Cart({products}) {
   return (
     <div>
       <Header showHamburger={true}/>
 
       <div className="body__wrapper putAtMiddle">
+        {products.map(prod=>(
         <CartRowOne />
+        ))}
       </div>
 
       <StandaloneBtnGrp />
@@ -25,4 +29,10 @@ function Cart() {
   );
 }
 
-export default Cart;
+const mapStateToProps = (state) => {
+  return {
+    products: state.shop.products,
+  };
+};
+
+export default connect(mapStateToProps)(Cart);

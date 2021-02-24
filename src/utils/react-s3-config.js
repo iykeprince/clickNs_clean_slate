@@ -1,6 +1,3 @@
-
-
-
 export const config = {
   bucketName: 'woozeee-socials-artifacts',
   region: 'eu-central-1',

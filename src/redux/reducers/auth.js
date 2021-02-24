@@ -2,8 +2,8 @@
 import {
   USER_LOADED,
   USER_LOADING,
-  AUTH_ERROR,
-  LOGIN_FAIL,
+  // AUTH_ERROR,
+  // LOGIN_FAIL,
   LOGIN_SUCCESS,
   LOGOUT_SUCCESS,
 } from '../actions/types'
