@@ -7,7 +7,7 @@ import InputAdornment from "@material-ui/core/InputAdornment";
 import FormControl from "@material-ui/core/FormControl";
 import Visibility from "@material-ui/icons/Visibility";
 import VisibilityOff from "@material-ui/icons/VisibilityOff";
-import { IoMdMail } from "react-icons/io";
+// import { IoMdMail } from "react-icons/io";
 import { DynamicButtonTwo } from "../Button/DynamicButton";
 // import { isWhiteSpaceLike } from "typescript";
 import { Checkbox } from "@material-ui/core";
@@ -15,6 +15,8 @@ import { Link, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { login } from "../../redux/actions/auth";
 import Loader from "react-loader-spinner";
+import {FaFacebookF, FaTwitter} from "react-icons/fa"
+import {FcGoogle} from "react-icons/fc"
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -35,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: "0.5rem !important",
     fontSize: "0.875rem",
     boxShadow: "2.5px 2.5px 5px 1px #00000012",
-    backgroundColor: "white",
+    backgroundColor: "#F9F9F9",
   },
 }));
 
@@ -106,6 +108,7 @@ function AuthModalLogin(props) {
     <div className={classes.root}>
       <form onSubmit={handleSubmit}>
         <div className="m-3 d-flex flex-column justify-content-around">
+          <p className="font-sm text-dark pb-2 font-weight-500">Email</p> 
           <FormControl
             className={clsx(classes.margin, classes.textField)}
             variant="outlined"
@@ -115,21 +118,22 @@ function AuthModalLogin(props) {
               value={email}
               onChange={handleEmailChange}
               placeholder="Email or Username"
-              className={`${classes.inputField} loginInputCls`}
-              startAdornment={
-                <InputAdornment position="start">
-                  <IconButton
-                    aria-label="toggle password visibility"
-                    edge="start"
-                  >
-                    <IoMdMail />
-                  </IconButton>
-                </InputAdornment>
-              }
+              className={`${classes.inputField} loginInputCls pl-3`}
+              // startAdornment={
+              //   <InputAdornment position="start">
+              //     <IconButton
+              //       aria-label="toggle password visibility"
+              //       edge="start"
+              //     >
+              //       <IoMdMail />
+              //     </IconButton>
+              //   </InputAdornment>
+              // }
             />
           </FormControl>
 
           <br />
+          <p className="font-sm text-dark pb-2 font-weight-500">Password</p> 
           <FormControl
             className={clsx(classes.margin, classes.textField)}
             variant="outlined"
@@ -139,14 +143,14 @@ function AuthModalLogin(props) {
               value={password}
               onChange={handlePasswordChange("password")}
               placeholder="Password"
-              className={`${classes.inputField} loginInputCls`}
-              startAdornment={
-                <InputAdornment position="start">
+              className={`${classes.inputField} loginInputCls pl-3`}
+              endAdornment={
+                <InputAdornment position="end">
                   <IconButton
                     aria-label="toggle password visibility"
                     onClick={handleClickShowPassword}
                     onMouseDown={handleMouseDownPassword}
-                    edge="start"
+                    edge="end"
                   >
                     {values.showPassword ? <Visibility /> : <VisibilityOff />}
                   </IconButton>
@@ -187,10 +191,10 @@ function AuthModalLogin(props) {
             width="100%"
             backgroundColor={
               (!isMakingRequest, !email, !password)
-                ? "#5b81a9"
-                : "var(--woozBlue)"
+                ? "rgba(255,87,87,0.7)"
+                : "var(--woozRed)"
             }
-            boxShadow="0 4px 8px 0 rgb(0 0 0 / 20%)"
+            boxShadow="none"
             borderRadius="5px"
             border="none !important"
             fontWeight="700"
@@ -215,6 +219,63 @@ function AuthModalLogin(props) {
               )}
             </div>
           </DynamicButtonTwo>
+
+          <p className="text-center my-4 font-sm horizontal_Line">Or continue with</p>
+
+          <DynamicButtonTwo
+            color="white"
+            height="2.5rem"
+            width="100%"
+            backgroundColor="#fff"
+            boxShadow="none"
+            borderRadius="5px"
+            border="1px solid #1976D2"
+            fontWeight="500"
+            fontSize="0.875rem"
+            hoverBoxShadow="0 4px 8px 0 rgb(0 0 0 / 20%)"
+            type="submit"
+          >
+            <div className="d-flex justify-content-center align-items-center text-dark">
+              <FcGoogle/><div className="pl-3">Google Account</div>
+            </div>
+          </DynamicButtonTwo>
+            <div className="my-1"></div>
+          <DynamicButtonTwo
+            color="white"
+            height="2.5rem"
+            width="100%"
+            backgroundColor="var(--woozBlue)"
+            boxShadow="none"
+            borderRadius="5px"
+            border="none !important"
+            fontWeight="500"
+            fontSize="0.875rem"
+            hoverBoxShadow="0 4px 8px 0 rgb(0 0 0 / 20%)"
+            type="submit"
+          >
+            <div className="d-flex justify-content-center align-items-center">
+           <FaFacebookF/><div className="pl-3">Facebook Account</div> 
+            </div>
+          </DynamicButtonTwo>
+          <div className="my-1"></div>
+          <DynamicButtonTwo
+            color="white"
+            height="2.5rem"
+            width="100%"
+            backgroundColor="#55ACEE"
+            boxShadow="none"
+            borderRadius="5px"
+            border="none !important"
+            fontWeight="500"
+            fontSize="0.875rem"
+            hoverBoxShadow="0 4px 8px 0 rgb(0 0 0 / 20%)"
+            type="submit"
+          >
+            <div className="d-flex justify-content-center align-items-center">
+            <FaTwitter/><div className="pl-3">Twitter Account</div>
+            </div>
+          </DynamicButtonTwo>
+          <div className="pb-2"></div>
         </div>
       </form>
     </div>

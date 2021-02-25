@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col } from "react-bootstrap";
+import { Row} from "react-bootstrap";
 import CardGroupTitle from "../Cards/CardGroupTitle";
 import ProductCardGroupSmall from "../Cards/ProductCardGroupSmall";
 
@@ -7,7 +7,7 @@ import ProductCardGroupSmall from "../Cards/ProductCardGroupSmall";
 function ProductDetailRowFour() {
   return (
     <Row>
-      <Col sm="9" className="prodDetailWrapper">
+      <div className="prodDetailWrapper col-lg-9 col-12">
         <div className="prodSmallWrapper">
           <CardGroupTitle titleText={`Customers who viewed this also viewed`} />
           <ProductCardGroupSmall />
@@ -18,7 +18,7 @@ function ProductDetailRowFour() {
           <ProductCardGroupSmall />
         </div>
         <br />
-      </Col>
+      </div>
     </Row>
   );
 }

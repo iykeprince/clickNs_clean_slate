@@ -1,7 +1,7 @@
 import React from 'react'
-import LeftSideBar from '../LeftSideBar/LeftSideBar'
-import MiddleBar from '../MiddleBar/MiddleBar'
-import RightSideBar from '../RightSideBar/RightSideBar'
+import LeftSideBar from './LeftSideBar'
+import MiddleBar from './MiddleBar'
+import RightSideBar from './RightSideBar'
 
 function HomeBodyTop() {
     return (

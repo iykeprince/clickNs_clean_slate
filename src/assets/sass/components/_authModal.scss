@@ -4,11 +4,6 @@
         font-weight: 500;
     }
   }
-//   a:active, a:hover, a:focus {
-//     color: var(--woozBlue) !important;
-//     border-color: var(--woozBlue);
-//     border-bottom-width: 0.125rem !important;
-//   }
 }
 
 .googlePlay2,
@@ -24,28 +19,35 @@
   height: 1.25rem !important;
 }
 
-.bg_toggle.active{
-  background-color: #f7fafc!important;
-}
+// .bg_toggle.active{
+//   background-color: #f7fafc!important;
+// }
 
 .loginInputCls{
   .MuiOutlinedInput-notchedOutline {
-    border-color: transparent !important;
+    border-color: transparent;
+
+    &:focus {
+      border: 1px solid #053F7C !important;
+    }
   }
+  
 }
 
+.horizontal_Line{
+  display: flex;
+  flex-direction: row;
+}
 
-// .hideMe {
-//   -webkit-animation: cssAnimation 2s forwards; 
-//   animation: cssAnimation 2s forwards;
-// }
-// @keyframes cssAnimation{
-//   0%   {opacity: 1;}
-//   90%  {opacity: 1;}
-//   100% {opacity: 0;}
-// }
-// @-webkit-keyframes cssAnimation{
-//   0%   {opacity: 1;}
-//   90%  {opacity: 1;}
-//   100% {opacity: 0;}
-// }
+.horizontal_Line:before, .horizontal_Line:after{
+  content: "";
+  flex: 1 1;
+  border-bottom: 1px solid #E1E1E1;
+  margin: auto;
+}
+.horizontal_Line::before {
+  margin-right: 10px
+}
+.horizontal_Line::after {
+  margin-left: 10px
+}

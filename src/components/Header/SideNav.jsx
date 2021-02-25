@@ -1,7 +1,7 @@
 import React from "react";
 import * as FaIcon from "react-icons/fa";
 import { Link } from "react-router-dom";
-import LeftSideItem from "../Home/LeftSideBar/LeftSideItem";
+import LeftSideItem from "../Home/LeftSideItem";
 import Button from "@material-ui/core/Button";
 import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 import Grow from "@material-ui/core/Grow";

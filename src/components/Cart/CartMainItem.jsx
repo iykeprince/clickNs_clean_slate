@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
   },
   numberSelect: {
     width: "8ch",
-    paddingRight: "0.8rem !important"
+    paddingRight: "0.8rem !important",
   },
 }));
 
@@ -39,30 +39,32 @@ function CartMainItem(props) {
 
             <div className="col-10 pText__wrapper">
               <p className="selrText">Seller: {props.sellerText}</p>
-              <p className="prodDescrpt">
-                Galaxy A50 6.4-Inch (4GB,128GB ROM) Android 9 Pie, (25MP+5MP+
-                8MP)+ 25MP 4000mAh 4G Dual SIM Smartphone - White
-              </p>
-              <div className='productPrice__Wrap'>
-                <span className="iconDescrpt__wrapper mainPrice">&#8358;24,000</span>
-                <span className="slashedPrice">&#8358;135,898</span>
-                <span></span>
+              <p className="prodDescrpt"> {props.productName}</p>
+              <div className="productPrice__Wrap">
+                <span className="iconDescrpt__wrapper mainPrice">
+                   {props.mainPrice}
+                </span>
+                <span className="slashedPrice">{props.slashedPrice}</span>
               </div>
               <div className="iconWithText__wrap">
                 <span>
-                <span className="iconDescrpt__wrapper">
-                  <span>{IconStore.loveIconSmall}</span>
-                  <span className="iconDescrpt">MOVE TO SAVED ITEMS</span>
-                </span>
-                <span className="iconDescrpt__wrapper">
-                  <span>{IconStore.deleteIconSmall}</span>
-                  <span className="iconDescrpt">REMOVE</span>
-                </span>
+                  <span className="iconDescrpt__wrapper">
+                    <span>{IconStore.loveIconSmall}</span>
+                    <span className="iconDescrpt">MOVE TO SAVED ITEMS</span>
+                  </span>
+                  <span className="iconDescrpt__wrapper">
+                    <span>{IconStore.deleteIconSmall}</span>
+                    <span className="iconDescrpt">REMOVE</span>
+                  </span>
                 </span>
                 <span className="mobilePlusMinusGrp">
-                  <span className="plusCircleIcon">{IconStore.plusCircleIcon}</span>
+                  <span className="plusCircleIcon">
+                    {IconStore.plusCircleIcon}
+                  </span>
                   <span>1</span>
-                  <span className="minusCircleIcon">{IconStore.minusCircleIcon}</span>
+                  <span className="minusCircleIcon">
+                    {IconStore.minusCircleIcon}
+                  </span>
                 </span>
               </div>
             </div>
@@ -71,8 +73,7 @@ function CartMainItem(props) {
 
         <div className="col-2 txt__contentgrp gr1">
           <div className="text-center">
-            <FormControl 
-            >
+            <FormControl>
               <Select
                 labelId="demo-simple-select-placeholder-label-label"
                 id="demo-simple-select-placeholder-label"
@@ -93,17 +94,17 @@ function CartMainItem(props) {
 
         <div className="col-2 txt__contentgrp gr2 text-center">
           <p className="font-weight-bold">{props.unitPrice}</p>
-          <p className='previousUnitPrice'>{props.previousUnitPrice}</p>
-          <div className='savdAmount'>
-          <span className='savdAmountText'>{props.savedAmountText}</span>
-          <span>{props.savedAmount}</span>
+          <p className="previousUnitPrice">{props.previousUnitPrice}</p>
+          <div className="savdAmount">
+            <span className="savdAmountText">{props.savedAmountText}</span>
+            <span>{props.savedAmount}</span>
           </div>
         </div>
 
         <div className="col-2 txt__contentgrp gr3 text-center ">
           <p className="font-weight-bold">{props.subTotal}</p>
         </div>
-      </Row>          
+      </Row>
     </div>
   );
 }

@@ -13,9 +13,9 @@ function Cart({products}) {
       <Header showHamburger={true}/>
 
       <div className="body__wrapper putAtMiddle">
-        {products.map(prod=>(
+        {/* {products.map(prod=>( */}
         <CartRowOne />
-        ))}
+        {/* ))} */}
       </div>
 
       <StandaloneBtnGrp />

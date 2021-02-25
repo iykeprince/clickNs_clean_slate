@@ -3,7 +3,7 @@ import { Row } from "react-bootstrap";
 import CartMainItem from "./CartMainItem";
 import phone11Img from "../../assets/images/phone11.jpg";
 
-function CartRowOne() {
+function CartRowOne({products}) {
   return (
     <div className="crt_grp">
       <div className="topcartSecOne">
@@ -39,19 +39,25 @@ function CartRowOne() {
 
       <CartMainItem
         pImage={phone11Img}
+        productName={"Galaxy A50 6.4-Inch (4GB,128GB ROM) Android 9 Pie, (25MP+5MP+8MP)+ 25MP 4000mAh 4G Dual SIM Smartphone - White"}
         sellerText="THE 4DX"
         unitPrice="₦135,898"
         subTotal="₦135,898"
+        mainPrice="&#8358;24,000"
+        slashedPrice="&#8358;135,898 "
       />
 
       <CartMainItem
         pImage={phone11Img}
+        productName={"Galaxy A50 6.4-Inch (4GB,128GB ROM) Android 9 Pie, (25MP+5MP+8MP)+ 25MP 4000mAh 4G Dual SIM Smartphone - White"}
         sellerText="THE 4DX"
         savedAmountText="Savings"
         savedAmount="₦38,310"
         previousUnitPrice="₦81,900"
         unitPrice="₦43,590"
         subTotal="₦135,898"
+        mainPrice="&#8358;24,000"
+        slashedPrice="&#8358;135,898 "
       />
 
       <div className="priceTotl">

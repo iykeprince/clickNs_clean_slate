@@ -31,12 +31,12 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
   },
   paperTwo: {
-    backgroundColor: "#f7fafc !important",
+    backgroundColor: "#fff",
     border: "2px solid #0000001c",
     borderRadius: 4,
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
-    minWidth: "400px",
+    minWidth: "450px",
     minHeight: "335px",
   },
 }));

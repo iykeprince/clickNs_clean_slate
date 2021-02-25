@@ -14,6 +14,7 @@ export default function Header({ showHamburger }) {
   // EXTENDED USAGE
   // const { height, width } = useWindowDimensions();
 
+  const cartItemNumber = 0;
   const { width } = useWindowDimensions();
   return (
     <header className="header__container">
@@ -106,9 +107,10 @@ export default function Header({ showHamburger }) {
               <Link to="/cart">
                 <div className="header__option cartHeader__Section">
                   <img src="/images/cart.svg" alt="" className="cart" />
-                  <span className="purchaseCount">
-                    <span>4</span>
-                  </span>
+                 {( cartItemNumber ? <span className="purchaseCount">
+                    <span>{cartItemNumber}</span>
+                  </span> : ""
+                  )}
                   <span className="option__lineOneCart">Cart</span>
                 </div>
               </Link>
