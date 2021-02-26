@@ -14,7 +14,7 @@ export default function Header({ showHamburger }) {
   // EXTENDED USAGE
   // const { height, width } = useWindowDimensions();
 
-  const cartItemNumber = 0;
+  const cartItemNumber = 2;
   const { width } = useWindowDimensions();
   return (
     <header className="header__container">

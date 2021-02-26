@@ -1,6 +1,4 @@
 // import axios from "axios";
-// import { returnErrors } from "./messages";
-import { toastr } from "react-redux-toastr";
 
 import {
   // USER_LOADED,
@@ -11,12 +9,6 @@ import {
   LOGOUT_SUCCESS,
 } from "./types";
 
-// const base = "https://scalable-commerce-backend.herokuapp.com/api/v1";
-
-const toastrOptions = {
-  timeOut: 9000,
-  showCloseButton: true,
-};
 
 //  LOGIN USER
 export const login = (payload, history) => async (dispatch) => {
@@ -28,31 +20,46 @@ export const login = (payload, history) => async (dispatch) => {
         "Content-Type": "application/json",
       },
     });
-
     const data = await response.json();
-    if (data.message !== "user logedin successfully") {
-      toastr.error("", "Incorrect email or password", toastrOptions);
-      return;
-    }
-    toastr.success("", "Login Success", toastrOptions);
-
     dispatch({
       type: LOGIN_SUCCESS,
       payload: data,
     });
-    // history.push("/");
     return data;
-  } catch (error) {
-    toastr.error(error.message, toastrOptions);
+    } catch (error) {
     console.log(error);
     return;
   }
 };
 
+
+//  SOCIAL LOGIN USER
+export const socialLogin = (payload, history) => async (dispatch) => {
+  try {
+    const response = await fetch("https://apis.woozeee.com/api/v1/user/login?social=true", {
+      method: "POST",
+      body: JSON.stringify(payload),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    const data = await response.json();
+
+    dispatch({
+      type: LOGIN_SUCCESS,
+      payload: data,
+    });
+    return data;
+    } catch (error) {
+    console.log(error);
+    return;
+  }
+};
+
+
 // LOGOUT
 
 export const logOut = () => {
-  toastr.success("", "Logout Successful", toastrOptions);
   return {
     type: LOGOUT_SUCCESS,
   };

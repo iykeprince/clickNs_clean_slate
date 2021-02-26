@@ -13,7 +13,7 @@ import { DynamicButtonTwo } from "../Button/DynamicButton";
 import { Checkbox } from "@material-ui/core";
 import { Link, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
-import { login } from "../../redux/actions/auth";
+import { login, socialLogin } from "../../redux/actions/auth";
 import Loader from "react-loader-spinner";
 import {FaFacebookF, FaTwitter} from "react-icons/fa"
 import {FcGoogle} from "react-icons/fc"
@@ -30,7 +30,9 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(3),
   },
   textField: {
-    width: "33ch",
+    // width: "33ch",
+    width: "38ch",
+
   },
   inputField: {
     paddingTop: "0.5rem !important",
@@ -82,9 +84,10 @@ function AuthModalLogin(props) {
       isMakingRequest: !prevState.isMakingRequest,
     }));
 
+    //User Mail and Password
     if (!email || !password) return;
     const { history, loginUser } = props;
-
+    
     loginUser({ email, password }, history).then((res) => {
       setIsMakingRequest((prevState) => ({
         isMakingRequest: !prevState.isMakingRequest,
@@ -97,7 +100,22 @@ function AuthModalLogin(props) {
         setvalidationError(true)
       }
     });
+
+    //Trial for Google Login
+    const { history2, socialLoginUser } = props;
+
+    socialLoginUser({ email, password }, history2).then((res) => {
+      if (props.token) {
+        props.onLoginSuccess();
+      }else{
+        setvalidationError(true)
+      }
+    });
+
   };
+
+
+  
 
   const handleLoginClick = () => {
     setSpin(true);
@@ -288,6 +306,10 @@ const mapStateToProps = ({ auth: { token } }) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   loginUser: (userObject, history) => dispatch(login(userObject, history)),
+
+  //Trial for Google Login
+  socialLoginUser: (userObject2, history2) => dispatch(socialLogin(userObject2, history2)),
+
 });
 
 export default withRouter(

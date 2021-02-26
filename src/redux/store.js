@@ -4,6 +4,8 @@ import logger from "redux-logger";
 import { persistStore } from "redux-persist";
 import thunk from "redux-thunk";
 import rootReducer from "./reducers/rootReducer";
+
+
 const userInfo = JSON.parse(localStorage.getItem("user1"));
 const initialState = { userInfo };
 const middleware = [thunk];
@@ -13,7 +15,7 @@ if (process.env.NODE_ENV === "development") {
 }
 
 export const store = createStore(
-  rootReducer,
+  rootReducer,     
   initialState,
   composeWithDevTools(applyMiddleware(...middleware))
 );
