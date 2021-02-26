@@ -19,17 +19,11 @@
   height: 1.25rem !important;
 }
 
-// .bg_toggle.active{
-//   background-color: #f7fafc!important;
-// }
 
 .loginInputCls{
   .MuiOutlinedInput-notchedOutline {
     border-color: transparent;
 
-    &:focus {
-      border: 1px solid #053F7C !important;
-    }
   }
   
 }

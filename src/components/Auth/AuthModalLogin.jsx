@@ -38,8 +38,14 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: "0.5rem !important",
     paddingBottom: "0.5rem !important",
     fontSize: "0.875rem",
-    boxShadow: "2.5px 2.5px 5px 1px #00000012",
+    // boxShadow: "2.5px 2.5px 5px 1px #00000012",
+    border: "1px solid #E1E1E1",
     backgroundColor: "#F9F9F9",
+    borderWidth: "1px",
+
+    '&:hover':{
+
+    }
   },
 }));
 
