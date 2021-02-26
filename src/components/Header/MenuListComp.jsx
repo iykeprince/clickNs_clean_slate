@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function MenuListComp(props) {
-  const { firstName } = props;
+  const { firstName, token } = props;
 
   const classes = useStyles();
 
@@ -50,6 +50,7 @@ function MenuListComp(props) {
   const anchorRef = React.useRef(null);
   const username = `Hi, ${firstName}`;
 
+  console.log({props})
   const [openModal, setModalOpen] = React.useState(false);
 
   const handleModalClose = () => {
@@ -102,7 +103,7 @@ function MenuListComp(props) {
           onClick={handleToggle}
         >
           <span className="option__lineOne text-capitalize">
-            {props.token ? username : "Login"}
+            {token ? username : "Login"}
           </span>
           <img src="/images/arrowdown.svg" alt="" className="dropdown__icon" />
         </Button>
@@ -146,7 +147,7 @@ function MenuListComp(props) {
                         <span className="adjacentIcon__text2">Saved Items</span>
                       </MenuItem>
                     </Link>
-                    {props.token ? (
+                    {token ? (
                       <MenuItem
                         onClick={handleLogOut}
                         className="logOutTxt"
@@ -200,19 +201,6 @@ function MenuListComp(props) {
   );
 }
 
-const mapStateToProps = ({ auth }) => {
-  if (auth.user) {
-    const {
-      user: { fName, sName },
-    } = auth;
-    return {
-      firstName: fName,
-      lastName: sName,
-      token: auth.token,
-    };
-  }
-};
-
 // const mapStateToProps = ({ auth }) => {
 //   if (auth.user) {
 //     const {
@@ -228,6 +216,21 @@ const mapStateToProps = ({ auth }) => {
 // const mapStateToProps = ({ auth: { token } }) => ({
 //   token,
 // });
+
+
+
+const mapStateToProps = ({ auth }) => {
+  if (auth.user) {
+    const {
+      user: { fName, sName },
+    } = auth;
+    return {
+      firstName: fName,
+      lastName: sName,
+      token: auth.token,
+    };
+  }
+};
 
 const mapDispatchToProps = (dispatch) => ({
   logoutUser: () => dispatch(logOut()),

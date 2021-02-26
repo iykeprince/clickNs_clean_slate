@@ -13,7 +13,7 @@ import { DynamicButtonTwo } from "../Button/DynamicButton";
 import { Checkbox } from "@material-ui/core";
 import { Link, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
-import { login, socialLogin } from "../../redux/actions/auth";
+import { login } from "../../redux/actions/auth";
 import Loader from "react-loader-spinner";
 import { FaFacebookF, FaTwitter } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
@@ -31,7 +31,6 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(3),
   },
   textField: {
-    // width: "33ch",
     width: (propz) => propz.width,
   },
   inputField: {
@@ -47,7 +46,6 @@ const useStyles = makeStyles((theme) => ({
 function AuthModalLogin(props) {
   const { width } = useWindowDimensions();
   const modalWidth =  width< 468 ? width-40 : "38ch";
-  // console.log({width, modalWidth});
   const propz = { width: modalWidth };
   const classes = useStyles(propz);
 
@@ -107,15 +105,15 @@ function AuthModalLogin(props) {
     });
 
     //Trial for Google Login
-    const { history2, socialLoginUser } = props;
+    // const { history2, socialLoginUser } = props;
 
-    socialLoginUser({ email, password }, history2).then((res) => {
-      if (props.token) {
-        props.onLoginSuccess();
-      } else {
-        setvalidationError(true);
-      }
-    });
+    // socialLoginUser({ email, password }, history2).then((res) => {
+    //   if (props.token) {
+    //     props.onLoginSuccess();
+    //   } else {
+    //     setvalidationError(true);
+    //   }
+    // });
   };
 
   const handleLoginClick = () => {
@@ -136,7 +134,7 @@ function AuthModalLogin(props) {
               type="email"
               value={email}
               onChange={handleEmailChange}
-              placeholder="Email or Username"
+              placeholder="Enter Email"
               className={`${classes.inputField} loginInputCls pl-3`}
             />
           </FormControl>
@@ -149,9 +147,9 @@ function AuthModalLogin(props) {
           >
             <OutlinedInput
               type={values.showPassword ? "text" : "password"}
-              value={password}
+              value={values.password}
               onChange={handlePasswordChange("password")}
-              placeholder="Password"
+              placeholder="Enter Password"
               className={`${classes.inputField} loginInputCls pl-3`}
               endAdornment={
                 <InputAdornment position="end">
@@ -303,9 +301,9 @@ const mapStateToProps = ({ auth: { token } }) => ({
 const mapDispatchToProps = (dispatch) => ({
   loginUser: (userObject, history) => dispatch(login(userObject, history)),
 
-  //Trial for Google Login
-  socialLoginUser: (userObject2, history2) =>
-    dispatch(socialLogin(userObject2, history2)),
+  // Trial for Google Login
+  // socialLoginUser: (userObject2, history2) =>
+  //   dispatch(socialLogin(userObject2, history2)),
 });
 
 export default withRouter(

@@ -1,7 +1,7 @@
 .authModal {
   a {
-    span{
-        font-weight: 500;
+    span {
+      font-weight: 500;
     }
   }
 }
@@ -14,38 +14,46 @@
   }
 }
 
-.spinner-border{
+.spinner-border {
   width: 1.25rem !important;
   height: 1.25rem !important;
 }
 
-
-.loginInputCls{
+.loginInputCls {
   .MuiOutlinedInput-notchedOutline {
     border-color: transparent;
-
   }
-  
 }
 
-.horizontal_Line{
+.horizontal_Line {
   display: flex;
   flex-direction: row;
 }
 
-.horizontal_Line:before, .horizontal_Line:after{
+.horizontal_Line:before,
+.horizontal_Line:after {
   content: "";
   flex: 1 1;
-  border-bottom: 1px solid #E1E1E1;
+  border-bottom: 1px solid #e1e1e1;
   margin: auto;
 }
 .horizontal_Line::before {
-  margin-right: 10px
+  margin-right: 10px;
 }
 .horizontal_Line::after {
-  margin-left: 10px
+  margin-left: 10px;
 }
-.Mui__divider{
-  margin-right: 2rem !important;
+.Mui__divider {
   background-color: rgba(0, 0, 0, 0.05) !important;
+}
+
+@media screen and (min-width: 576px) {
+  .Mui__divider {
+    margin-right: 2rem !important;
+  }
+}
+@media screen and (max-width: 575px) {
+  .Mui__divider {
+    margin-right: 0.5rem !important;
+  }
 }
