@@ -2,6 +2,7 @@ import React from "react";
 import { HashRouter } from "react-router-dom";
 import AuthModalSignUp from "./AuthModalSignUp";
 import AuthModalLogin from "./AuthModalLogin";
+import { Divider } from "@material-ui/core";
 
 export default function AuthModal(props) {
   return (
@@ -24,10 +25,11 @@ export default function AuthModal(props) {
                 Login
               </a>
             </li>
+            <Divider orientation="vertical" flexItem className="Mui__divider"/>
             <li className="nav-item" role="presentation">
               <a
                 to="/signup"
-                className="nav-link orderToggle closedOrdr bg_toggle"
+                className="nav-link orderToggle bg_toggle"
                 id="signup-tab"
                 data-toggle="tab"
                 href="#signup"
@@ -35,7 +37,7 @@ export default function AuthModal(props) {
                 aria-controls="signup"
                 aria-selected="false"
               >
-                Signup
+                Sign Up
               </a>
             </li>
           </ul>

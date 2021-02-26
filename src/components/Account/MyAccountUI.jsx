@@ -1,5 +1,6 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import IconStore from "../../assets/icons/IconStore";
 
 function MyAccountUI() {
@@ -11,7 +12,7 @@ function MyAccountUI() {
           <div className="accBox__wrapper h-100">
             <div className="accBox__head">
               <span className="accBox__title">ACCOUNT DETAILS </span>
-              <span className="editIcon">{IconStore.editSolid}</span>
+              <Link to="/details" className="editIcon">{IconStore.editSolid}</Link>
             </div>
             <div className="accBox__content">
               <p  className="text1">Bukky Owolabi</p>
@@ -24,7 +25,7 @@ function MyAccountUI() {
           <div className="accBox__wrapper h-100">
             <div className="accBox__head">
               <span className="accBox__title">ADDRESS </span>
-              <span className="editIcon">{IconStore.editSolid}</span>
+              <Link to="/editAddress" className="editIcon">{IconStore.editSolid}</Link>
             </div>
             <div className="accBox__content">
             <p className="text1">Your default shipping address:</p>

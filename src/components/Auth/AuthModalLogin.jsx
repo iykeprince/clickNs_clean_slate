@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
 import IconButton from "@material-ui/core/IconButton";
@@ -7,16 +7,17 @@ import InputAdornment from "@material-ui/core/InputAdornment";
 import FormControl from "@material-ui/core/FormControl";
 import Visibility from "@material-ui/icons/Visibility";
 import VisibilityOff from "@material-ui/icons/VisibilityOff";
-// import { IoMdMail } from "react-icons/io";
 import { DynamicButtonTwo } from "../Button/DynamicButton";
+// import { IoMdMail } from "react-icons/io";
 // import { isWhiteSpaceLike } from "typescript";
 import { Checkbox } from "@material-ui/core";
 import { Link, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { login, socialLogin } from "../../redux/actions/auth";
 import Loader from "react-loader-spinner";
-import {FaFacebookF, FaTwitter} from "react-icons/fa"
-import {FcGoogle} from "react-icons/fc"
+import { FaFacebookF, FaTwitter } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
+import useWindowDimensions from "../../Hooks/UseWindowDimension";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -31,32 +32,31 @@ const useStyles = makeStyles((theme) => ({
   },
   textField: {
     // width: "33ch",
-    width: "38ch",
-
+    width: (propz) => propz.width,
   },
   inputField: {
     paddingTop: "0.5rem !important",
     paddingBottom: "0.5rem !important",
     fontSize: "0.875rem",
-    // boxShadow: "2.5px 2.5px 5px 1px #00000012",
     border: "1px solid #E1E1E1",
     backgroundColor: "#F9F9F9",
     borderWidth: "1px",
-
-    '&:hover':{
-
-    }
   },
 }));
 
 function AuthModalLogin(props) {
-  const classes = useStyles();
+  const { width } = useWindowDimensions();
+  const modalWidth =  width< 468 ? width-40 : "38ch";
+  // console.log({width, modalWidth});
+  const propz = { width: modalWidth };
+  const classes = useStyles(propz);
+
   const [values, setValues] = useState({
     showPassword: false,
   });
   const [email, setEmail] = useState("");
 
-   const [validationError, setvalidationError] = useState(false)
+  const [validationError, setvalidationError] = useState(false);
   const password = values.password;
 
   const handleEmailChange = (e) => {
@@ -93,7 +93,7 @@ function AuthModalLogin(props) {
     //User Mail and Password
     if (!email || !password) return;
     const { history, loginUser } = props;
-    
+
     loginUser({ email, password }, history).then((res) => {
       setIsMakingRequest((prevState) => ({
         isMakingRequest: !prevState.isMakingRequest,
@@ -101,9 +101,8 @@ function AuthModalLogin(props) {
 
       if (props.token) {
         props.onLoginSuccess();
-        
-      }else{
-        setvalidationError(true)
+      } else {
+        setvalidationError(true);
       }
     });
 
@@ -113,15 +112,11 @@ function AuthModalLogin(props) {
     socialLoginUser({ email, password }, history2).then((res) => {
       if (props.token) {
         props.onLoginSuccess();
-      }else{
-        setvalidationError(true)
+      } else {
+        setvalidationError(true);
       }
     });
-
   };
-
-
-  
 
   const handleLoginClick = () => {
     setSpin(true);
@@ -132,7 +127,7 @@ function AuthModalLogin(props) {
     <div className={classes.root}>
       <form onSubmit={handleSubmit}>
         <div className="m-3 d-flex flex-column justify-content-around">
-          <p className="font-sm text-dark pb-2 font-weight-500">Email</p> 
+          <p className="font-sm text-dark pb-2 font-weight-500">Email</p>
           <FormControl
             className={clsx(classes.margin, classes.textField)}
             variant="outlined"
@@ -143,21 +138,11 @@ function AuthModalLogin(props) {
               onChange={handleEmailChange}
               placeholder="Email or Username"
               className={`${classes.inputField} loginInputCls pl-3`}
-              // startAdornment={
-              //   <InputAdornment position="start">
-              //     <IconButton
-              //       aria-label="toggle password visibility"
-              //       edge="start"
-              //     >
-              //       <IoMdMail />
-              //     </IconButton>
-              //   </InputAdornment>
-              // }
             />
           </FormControl>
 
           <br />
-          <p className="font-sm text-dark pb-2 font-weight-500">Password</p> 
+          <p className="font-sm text-dark pb-2 font-weight-500">Password</p>
           <FormControl
             className={clsx(classes.margin, classes.textField)}
             variant="outlined"
@@ -184,9 +169,9 @@ function AuthModalLogin(props) {
           </FormControl>
 
           {validationError ? (
-           <div className="font-sm text-danger pt-3">
-           * Email or password incorrect
-         </div>
+            <div className="font-sm text-danger pt-3">
+              * Email or password incorrect
+            </div>
           ) : (
             ``
           )}
@@ -244,7 +229,9 @@ function AuthModalLogin(props) {
             </div>
           </DynamicButtonTwo>
 
-          <p className="text-center my-4 font-sm horizontal_Line">Or continue with</p>
+          <p className="text-center my-4 font-sm horizontal_Line">
+            Or continue with
+          </p>
 
           <DynamicButtonTwo
             color="white"
@@ -260,10 +247,11 @@ function AuthModalLogin(props) {
             type="submit"
           >
             <div className="d-flex justify-content-center align-items-center text-dark">
-              <FcGoogle/><div className="pl-3">Google Account</div>
+              <FcGoogle />
+              <div className="pl-3">Google Account</div>
             </div>
           </DynamicButtonTwo>
-            <div className="my-1"></div>
+          <div className="my-1"></div>
           <DynamicButtonTwo
             color="white"
             height="2.5rem"
@@ -278,7 +266,8 @@ function AuthModalLogin(props) {
             type="submit"
           >
             <div className="d-flex justify-content-center align-items-center">
-           <FaFacebookF/><div className="pl-3">Facebook Account</div> 
+              <FaFacebookF />
+              <div className="pl-3">Facebook Account</div>
             </div>
           </DynamicButtonTwo>
           <div className="my-1"></div>
@@ -296,7 +285,8 @@ function AuthModalLogin(props) {
             type="submit"
           >
             <div className="d-flex justify-content-center align-items-center">
-            <FaTwitter/><div className="pl-3">Twitter Account</div>
+              <FaTwitter />
+              <div className="pl-3">Twitter Account</div>
             </div>
           </DynamicButtonTwo>
           <div className="pb-2"></div>
@@ -314,8 +304,8 @@ const mapDispatchToProps = (dispatch) => ({
   loginUser: (userObject, history) => dispatch(login(userObject, history)),
 
   //Trial for Google Login
-  socialLoginUser: (userObject2, history2) => dispatch(socialLogin(userObject2, history2)),
-
+  socialLoginUser: (userObject2, history2) =>
+    dispatch(socialLogin(userObject2, history2)),
 });
 
 export default withRouter(

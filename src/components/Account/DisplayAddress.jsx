@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import IconStore from "../../assets/icons/IconStore";
 import LargeButton from "../Button/LargeButton";
 
@@ -22,7 +22,7 @@ function DisplayAddress() {
           </div>
           <div className="reEdit">
             SET AS DEFAULT
-            <span className="editIcon">{IconStore.editSolid}</span>
+            <Link to="/editAddress" className="editIcon">{IconStore.editSolid}</Link>
           </div>
         </div>
       </div>
