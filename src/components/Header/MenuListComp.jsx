@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function MenuListComp(props) {
-  const { firstName, lastName } = props;
+  const { firstName } = props;
 
   const classes = useStyles();
 
@@ -203,7 +203,7 @@ function MenuListComp(props) {
 const mapStateToProps = ({ auth }) => {
   if (auth.user) {
     const {
-      user: { fName, sName, token },
+      user: { fName, sName },
     } = auth;
     return {
       firstName: fName,
@@ -213,6 +213,18 @@ const mapStateToProps = ({ auth }) => {
   }
 };
 
+// const mapStateToProps = ({ auth }) => {
+//   if (auth.user) {
+//     const {
+//       user: { fName, sName, token },
+//     } = auth;
+//     return {
+//       firstName: fName,
+//       lastName: sName,
+//       token: auth.token,
+//     };
+//   }
+// };
 // const mapStateToProps = ({ auth: { token } }) => ({
 //   token,
 // });
