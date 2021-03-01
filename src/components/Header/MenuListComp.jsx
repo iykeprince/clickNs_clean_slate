@@ -45,7 +45,7 @@ function MenuListComp(props) {
   const { firstName, token } = props;
 
   const classes = useStyles();
-
+// console.log(userDataFromGoogle)
   const [open, setOpen] = useState(false);
   const anchorRef = React.useRef(null);
   const username = `Hi, ${firstName}`;
@@ -200,23 +200,6 @@ function MenuListComp(props) {
     </div>
   );
 }
-
-// const mapStateToProps = ({ auth }) => {
-//   if (auth.user) {
-//     const {
-//       user: { fName, sName, token },
-//     } = auth;
-//     return {
-//       firstName: fName,
-//       lastName: sName,
-//       token: auth.token,
-//     };
-//   }
-// };
-// const mapStateToProps = ({ auth: { token } }) => ({
-//   token,
-// });
-
 
 
 const mapStateToProps = ({ auth }) => {

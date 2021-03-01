@@ -5,6 +5,7 @@ import AuthModalLogin from "./AuthModalLogin";
 import { Divider } from "@material-ui/core";
 
 export default function AuthModal(props) {
+  
   return (
     <HashRouter>
       {/* Careful editing classes here in the css, coz they're used in  MyOrdersUI  */}
@@ -51,7 +52,7 @@ export default function AuthModal(props) {
               role="tabpanel"
               aria-labelledby="login-tab"
             >
-              <AuthModalLogin onLoginSuccess={props.onLoginSuccess} />
+              <AuthModalLogin onLoginSuccess={props.onLoginSuccess}/>
             </div>
             <div
               className="tab-pane fade"

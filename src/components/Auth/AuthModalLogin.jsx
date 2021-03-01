@@ -8,16 +8,15 @@ import FormControl from "@material-ui/core/FormControl";
 import Visibility from "@material-ui/icons/Visibility";
 import VisibilityOff from "@material-ui/icons/VisibilityOff";
 import { DynamicButtonTwo } from "../Button/DynamicButton";
-// import { IoMdMail } from "react-icons/io";
-// import { isWhiteSpaceLike } from "typescript";
 import { Checkbox } from "@material-ui/core";
 import { Link, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
-import { login } from "../../redux/actions/auth";
+import { login, socialLogin } from "../../redux/actions/auth";
 import Loader from "react-loader-spinner";
-import { FaFacebookF, FaTwitter } from "react-icons/fa";
-import { FcGoogle } from "react-icons/fc";
+import { FaTwitter } from "react-icons/fa";
 import useWindowDimensions from "../../Hooks/UseWindowDimension";
+import GoogleLogin from "./GoogleLogin";
+import FaceBookSignIn from "./FaceBookLogin";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -44,8 +43,10 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function AuthModalLogin(props) {
+  const [userDataFromGoogle, setuserDataFromGoogle] = React.useState("");
+  // console.log(userDataFromGoogle)
   const { width } = useWindowDimensions();
-  const modalWidth =  width< 468 ? width-40 : "38ch";
+  const modalWidth = width < 468 ? width - 40 : "38ch";
   const propz = { width: modalWidth };
   const classes = useStyles(propz);
 
@@ -92,6 +93,7 @@ function AuthModalLogin(props) {
     if (!email || !password) return;
     const { history, loginUser } = props;
 
+    console.log("props from authmodal Login", props);
     loginUser({ email, password }, history).then((res) => {
       setIsMakingRequest((prevState) => ({
         isMakingRequest: !prevState.isMakingRequest,
@@ -104,16 +106,16 @@ function AuthModalLogin(props) {
       }
     });
 
-    //Trial for Google Login
-    // const { history2, socialLoginUser } = props;
-
-    // socialLoginUser({ email, password }, history2).then((res) => {
-    //   if (props.token) {
-    //     props.onLoginSuccess();
-    //   } else {
-    //     setvalidationError(true);
-    //   }
-    // });
+    //social login - Google
+    // const { email, familyName, givenName,googleId,imageUrl,name } = userDataFromGoogle;
+    const { socialLoginUser } = props;
+    socialLoginUser(userDataFromGoogle).then((res) => {
+      if (props.token) {
+        props.onLoginSuccess();
+      } else {
+        setvalidationError(true);
+      }
+    });
   };
 
   const handleLoginClick = () => {
@@ -231,43 +233,10 @@ function AuthModalLogin(props) {
             Or continue with
           </p>
 
-          <DynamicButtonTwo
-            color="white"
-            height="2.5rem"
-            width="100%"
-            backgroundColor="#fff"
-            boxShadow="none"
-            borderRadius="5px"
-            border="1px solid #1976D2"
-            fontWeight="500"
-            fontSize="0.875rem"
-            hoverBoxShadow="0 4px 8px 0 rgb(0 0 0 / 20%)"
-            type="submit"
-          >
-            <div className="d-flex justify-content-center align-items-center text-dark">
-              <FcGoogle />
-              <div className="pl-3">Google Account</div>
-            </div>
-          </DynamicButtonTwo>
+          <GoogleLogin updateUserData={setuserDataFromGoogle} />
+
           <div className="my-1"></div>
-          <DynamicButtonTwo
-            color="white"
-            height="2.5rem"
-            width="100%"
-            backgroundColor="var(--woozBlue)"
-            boxShadow="none"
-            borderRadius="5px"
-            border="none !important"
-            fontWeight="500"
-            fontSize="0.875rem"
-            hoverBoxShadow="0 4px 8px 0 rgb(0 0 0 / 20%)"
-            type="submit"
-          >
-            <div className="d-flex justify-content-center align-items-center">
-              <FaFacebookF />
-              <div className="pl-3">Facebook Account</div>
-            </div>
-          </DynamicButtonTwo>
+          <FaceBookSignIn/>
           <div className="my-1"></div>
           <DynamicButtonTwo
             color="white"
@@ -300,10 +269,7 @@ const mapStateToProps = ({ auth: { token } }) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   loginUser: (userObject, history) => dispatch(login(userObject, history)),
-
-  // Trial for Google Login
-  // socialLoginUser: (userObject2, history2) =>
-  //   dispatch(socialLogin(userObject2, history2)),
+  socialLoginUser: (userObject) => dispatch(socialLogin(userObject)),
 });
 
 export default withRouter(
