@@ -32,3 +32,19 @@ export const CategorySideSearch = () => {
 
   );
 };
+
+
+export const HelpSearch = () => {
+
+  return (
+       <div className='header__search'>
+      <img src="/images/search.svg" alt="" className='searchIcon '/>
+      <input
+        type="text"
+        className='header__searchInput'
+        placeholder="Describe your issue"
+      />
+    </div>
+
+  );
+};

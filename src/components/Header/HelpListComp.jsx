@@ -7,6 +7,7 @@ import Popper from "@material-ui/core/Popper";
 import MenuItem from "@material-ui/core/MenuItem";
 import MenuList from "@material-ui/core/MenuList";
 import { makeStyles } from "@material-ui/core/styles";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -60,17 +61,9 @@ export default function HelpListComp() {
           aria-haspopup="true"
           onClick={handleToggle}
         >
-          <img
-                  src="/images/alertCircle.svg"
-                  alt=""
-                  className="header__icon"
-                />
-                <span className="option__lineOne">Help</span>
-                <img
-                  src="/images/arrowdown.svg"
-                  alt=""
-                  className="dropdown__icon"
-                />
+          <img src="/images/alertCircle.svg" alt="" className="header__icon" />
+          <span className="option__lineOne">Help</span>
+          <img src="/images/arrowdown.svg" alt="" className="dropdown__icon" />
         </Button>
         <Popper
           open={open}
@@ -94,14 +87,21 @@ export default function HelpListComp() {
                     id="menu-list-grow"
                     onKeyDown={handleListKeyDown}
                   >
+                    <Link to="/help">
                     <MenuItem onClick={handleClose}>Help Center</MenuItem>
-                    <MenuItem onClick={handleClose}>Place and Track Order
+                    </Link>
+                    
+                    <MenuItem onClick={handleClose}>
+                      Place and Track Order
                     </MenuItem>
-                    <MenuItem onClick={handleClose}>Order Cancellation
+                    <MenuItem onClick={handleClose}>
+                      Order Cancellation
                     </MenuItem>
-                    <MenuItem onClick={handleClose}>Returns and Refunds
+                    <MenuItem onClick={handleClose}>
+                      Returns and Refunds
                     </MenuItem>
-                    <MenuItem onClick={handleClose}>Payment and woozeee account
+                    <MenuItem onClick={handleClose}>
+                      Payment and woozeee account
                     </MenuItem>
                   </MenuList>
                 </ClickAwayListener>

@@ -44,37 +44,45 @@ const useStyles = makeStyles((theme) => ({
 
 function AuthModalLogin(props) {
   const [userDataFromGoogle, setuserDataFromGoogle] = React.useState("");
-  // console.log(userDataFromGoogle)
+  console.log(userDataFromGoogle)
+
+  //Modal size on small screen
   const { width } = useWindowDimensions();
   const modalWidth = width < 468 ? width - 40 : "38ch";
   const propz = { width: modalWidth };
+
+  //Styled component classes
   const classes = useStyles(propz);
 
-  const [values, setValues] = useState({
-    showPassword: false,
-  });
+  //Handle Email
   const [email, setEmail] = useState("");
-
   const [validationError, setvalidationError] = useState(false);
-  const password = values.password;
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
   };
+
+  //Handle Password
+  const [values, setValues] = useState({
+    showPassword: false,
+  });
+
   const handlePasswordChange = (prop) => (event) => {
     setValues({ ...values, [prop]: event.target.value });
   };
-
   const handleClickShowPassword = () => {
     setValues({ ...values, showPassword: !values.showPassword });
   };
-
-  const [spin, setSpin] = useState(false);
-  const [timeout, settimeout] = useState();
   const handleMouseDownPassword = (event) => {
     event.preventDefault();
   };
+  const password = values.password;
 
+  //Handle Spin
+  const [spin, setSpin] = useState(false);
+  const [timeout, settimeout] = useState();
+
+  //Handle Checked
   const [checked, setChecked] = React.useState(false);
 
   const handleCheckChange = (event) => {
@@ -82,6 +90,9 @@ function AuthModalLogin(props) {
   };
 
   const [isMakingRequest, setIsMakingRequest] = React.useState(false);
+
+  //Handle Submit
+  const { history, loginUser, socialLoginUser } = props;
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -91,9 +102,8 @@ function AuthModalLogin(props) {
 
     //User Mail and Password
     if (!email || !password) return;
-    const { history, loginUser } = props;
 
-    console.log("props from authmodal Login", props);
+    // console.log("props from authmodal Login", props);
     loginUser({ email, password }, history).then((res) => {
       setIsMakingRequest((prevState) => ({
         isMakingRequest: !prevState.isMakingRequest,
@@ -105,19 +115,22 @@ function AuthModalLogin(props) {
         setvalidationError(true);
       }
     });
+  };
 
-    //social login - Google
-    // const { email, familyName, givenName,googleId,imageUrl,name } = userDataFromGoogle;
-    const { socialLoginUser } = props;
+  //Social login - Google
+  function handleGoogleClick(){
+    //Trying to figure out why modal doesn't close with props.onLoginSuccess() whereas
+    // it does in 'loginUser' function above
     socialLoginUser(userDataFromGoogle).then((res) => {
-      if (props.token) {
+      if (userDataFromGoogle.googleId) {
         props.onLoginSuccess();
+        console.log(res);
       } else {
         setvalidationError(true);
       }
     });
   };
-
+  
   const handleLoginClick = () => {
     setSpin(true);
     settimeout(500);
@@ -233,10 +246,13 @@ function AuthModalLogin(props) {
             Or continue with
           </p>
 
-          <GoogleLogin updateUserData={setuserDataFromGoogle} />
+          <GoogleLogin
+            updateUserData={setuserDataFromGoogle}
+            onClick={handleGoogleClick}
+          />
 
           <div className="my-1"></div>
-          <FaceBookSignIn/>
+          <FaceBookSignIn />
           <div className="my-1"></div>
           <DynamicButtonTwo
             color="white"

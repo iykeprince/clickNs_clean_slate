@@ -30,6 +30,7 @@ import MyNewsletter from "./pages/Customer_MobileView/MyNewsletter";
 import EditAddressComp from "./components/Account/EditAddressComp";
 import MobileEditAddress from "./pages/Customer_MobileView/MobileEditAddress";
 import AuthModal from "./components/Auth/AuthModal";
+import HelpCenter from "./pages/Help/HelpCenter";
 
 function App() {
   return (
@@ -48,6 +49,8 @@ function App() {
           <Route path={"/cart"} component={Cart} />
           <Route path={"/checkout"} component={CheckOut} />
           <Route path={"/auth"} component={AuthModal} />
+          <Route path={"/help"} component={HelpCenter} />
+
 
 
           {/* Mobile View */}

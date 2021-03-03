@@ -50,7 +50,7 @@ function MenuListComp(props) {
   const anchorRef = React.useRef(null);
   const username = `Hi, ${firstName}`;
 
-  console.log({props})
+  // console.log({props})
   const [openModal, setModalOpen] = React.useState(false);
 
   const handleModalClose = () => {
