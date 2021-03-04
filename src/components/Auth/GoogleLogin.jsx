@@ -10,33 +10,47 @@ const clientId =
   "979696525592-gjddn7tafhje4d5hn8o762d6s29f6ogg.apps.googleusercontent.com";
 
 function GoogleLogin(props) {
-  // const [fName, setFName] = React.useState("");
-  // const [sName, setSName] = React.useState("");
-  // const [displayName, setDisplayName] = React.useState("");
-  // const [email, setEmail] = React.useState("");
-  // const [channel, setChannel] = React.useState("");
-  // const [roles, setRoles] = React.useState("");
-  // const [phoneNumber, setPhoneNumber] = React.useState("");
-  // const [source, setSource] = React.useState("");
+  const [fName, setFName] = React.useState("");
+  const [sName, setSName] = React.useState("");
+  const [displayName, setDisplayName] = React.useState("");
+  const [email, setEmail] = React.useState("");
+  const [channel, setChannel] = React.useState("");
+  const [roles, setRoles] = React.useState("");
+  const [phoneNumber, setPhoneNumber] = React.useState("");
+  const [source, setSource] = React.useState("");
 
   //What google initially returns => email, familyName, givenName,googleId,imageUrl,name
 
-  const updateUserData = props.updateUserData;
+  const { onClick } = props;
 
   const onSuccess = (res) => {
     const userDataFromGoogle = res.profileObj;
-    updateUserData(userDataFromGoogle);
+    console.log("userDataFromGoogle ;", userDataFromGoogle);
 
-    //Trying to pass data from here 'userDataFromGoogle' to the backend
+    setFName(userDataFromGoogle?.givenName);
+    setSName(userDataFromGoogle?.familyName);
+    setDisplayName(userDataFromGoogle?.givenName);
+    setEmail(userDataFromGoogle?.email);
+    setChannel("social-media");
+    setRoles("user");
+    setPhoneNumber(userDataFromGoogle?.phoneNumber);
+    setSource("google");
 
-    // setFName(userDataFromGoogle?.givenName)
-    // setSName(userDataFromGoogle?.familyName)
-    // setDisplayName(userDataFromGoogle?.givenName)
-    // setEmail(userDataFromGoogle?.email)
-    // setChannel("social-media")
-    // setRoles("user")
-    // setEmail(userDataFromGoogle?.phoneNumber)
-    // setSource("google")
+    const newDataToBackend = {
+      fName,
+      sName,
+      displayName,
+      email,
+      channel,
+      roles,
+      phoneNumber,
+      source,
+    };
+
+    console.log(newDataToBackend)
+    const { updateUserData } = props;
+
+    updateUserData(newDataToBackend);
 
     refreshTokenSetup(res);
   };
@@ -44,8 +58,6 @@ function GoogleLogin(props) {
   const onFailure = (res) => {
     console.log("Login failed: res:", res);
   };
-
-  const { onClick } = props;
 
   const { signIn } = useGoogleLogin({
     onSuccess,

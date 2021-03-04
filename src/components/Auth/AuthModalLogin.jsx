@@ -43,8 +43,9 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function AuthModalLogin(props) {
-  const [userDataFromGoogle, setuserDataFromGoogle] = React.useState("");
-  console.log(userDataFromGoogle)
+  const [newDataToBackend, setnewDataToBackend] = React.useState("");
+
+  console.log({newDataToBackend})
 
   //Modal size on small screen
   const { width } = useWindowDimensions();
@@ -103,7 +104,6 @@ function AuthModalLogin(props) {
     //User Mail and Password
     if (!email || !password) return;
 
-    // console.log("props from authmodal Login", props);
     loginUser({ email, password }, history).then((res) => {
       setIsMakingRequest((prevState) => ({
         isMakingRequest: !prevState.isMakingRequest,
@@ -111,7 +111,8 @@ function AuthModalLogin(props) {
 
       if (props.token) {
         props.onLoginSuccess();
-      } else {
+      } 
+      else {
         setvalidationError(true);
       }
     });
@@ -119,15 +120,12 @@ function AuthModalLogin(props) {
 
   //Social login - Google
   function handleGoogleClick(){
-    //Trying to figure out why modal doesn't close with props.onLoginSuccess() whereas
-    // it does in 'loginUser' function above
-    socialLoginUser(userDataFromGoogle).then((res) => {
-      if (userDataFromGoogle.googleId) {
+
+    socialLoginUser(newDataToBackend).then((res) => {
+      if (res?.token) {
         props.onLoginSuccess();
-        console.log(res);
-      } else {
-        setvalidationError(true);
-      }
+      } 
+      console.log(res);
     });
   };
   
@@ -247,7 +245,7 @@ function AuthModalLogin(props) {
           </p>
 
           <GoogleLogin
-            updateUserData={setuserDataFromGoogle}
+            updateUserData={setnewDataToBackend}
             onClick={handleGoogleClick}
           />
 

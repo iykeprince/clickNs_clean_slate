@@ -6,8 +6,8 @@ import thunk from "redux-thunk";
 import rootReducer from "./reducers/rootReducer";
 
 
-const userInfo = JSON.parse(localStorage.getItem("user1"));
-const initialState = { userInfo };
+const users = JSON.parse(localStorage.getItem("user"));
+const initialState = { users };
 const middleware = [thunk];
 
 if (process.env.NODE_ENV === "development") {
