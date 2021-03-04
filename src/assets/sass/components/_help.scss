@@ -12,8 +12,6 @@
 
 .help_descript_image {
   height: 1.5rem;
-  max-width: 8rem;
-  object-fit: contain;
 }
 .search_Icon_text{
   max-width: 85%;
@@ -23,5 +21,11 @@
   .customer_h2_txt {
     font-size: 1rem;
   }
-  
+}
+
+@media screen and (max-width:480px){
+  .help_descript_image {
+    max-width: 8rem;
+    object-fit: contain;
+  }
 }
