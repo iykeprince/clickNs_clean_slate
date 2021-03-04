@@ -30,9 +30,9 @@ export default function HelpCenter() {
             woozeee Customer Care
           </div>
           <p className=" py-3">How can we help you?</p>
-          <div className="w-100 py-1">
-            <HelpSearch />
-            <div className="d-flex justify-content-around font-sm mt-3">
+          <div className="w-100 py-1 search_Icon_text ">
+            <HelpSearch/>
+            <div className="d-flex justify-content-between font-sm mt-5">
               <div>
                 <img
                   src={placenTrackOrder}
