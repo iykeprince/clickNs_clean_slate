@@ -12,7 +12,16 @@
 
 .help_descript_image {
   height: 1.5rem;
+  max-width: 8rem;
+  object-fit: contain;
 }
 .search_Icon_text{
-  max-width: 70%;
+  max-width: 85%;
+}
+
+@media screen and (max-width:768px){
+  .customer_h2_txt {
+    font-size: 1rem;
+  }
+  
 }

@@ -37,7 +37,7 @@ export const CategorySideSearch = () => {
 export const HelpSearch = () => {
 
   return (
-       <div className='header__search'>
+       <div className='header__searchThree'>
       <img src="/images/search.svg" alt="" className='searchIcon '/>
       <input
         type="text"

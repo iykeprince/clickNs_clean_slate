@@ -32,8 +32,8 @@ export default function HelpCenter() {
           <p className=" py-3">How can we help you?</p>
           <div className="w-100 py-1 search_Icon_text ">
             <HelpSearch/>
-            <div className="d-flex justify-content-between font-sm mt-5">
-              <div>
+            <div className="row justify-content-between font-sm mt-5">
+              <div className="col-6 col-sm-3 text-center">
                 <img
                   src={placenTrackOrder}
                   alt=""
@@ -41,7 +41,7 @@ export default function HelpCenter() {
                 />
                 <p className="p-2">Place and Track Order</p>
               </div>
-              <div>
+              <div className="col-6 col-sm-3 text-center">
                 <img
                   src={cancellations}
                   alt=""
@@ -49,7 +49,7 @@ export default function HelpCenter() {
                 />
                 <p className="p-2">Order Cancellation</p>
               </div>
-              <div>
+              <div className="col-6 col-sm-3 text-center">
                 <img
                   src={paymentAccount}
                   alt=""
@@ -57,7 +57,7 @@ export default function HelpCenter() {
                 />
                 <p className="p-2">Return and Refunds</p>
               </div>
-              <div>
+              <div className="col-6 col-sm-3 text-center">
                 <img
                   src={returnRefunds}
                   alt=""
@@ -68,11 +68,11 @@ export default function HelpCenter() {
             </div>
           </div>
           <div>
-            <div className="row my-5 helpcard__wrapper">
+            <div className="row my-5 helpcard__wrapper mx-auto">
             <HelpCard text="Get millions of products coming from abroad at incredible prices" imgUrl={wpay}/>
-            <HelpCard text="Get millions of products coming from abroad at incredible prices" imgUrl={wprime}/>
-            <HelpCard text="Get millions of products coming from abroad at incredible prices" imgUrl={wglobal}/>
-            <HelpCard text="Get millions of products coming from abroad at incredible prices" imgUrl={official_Stores}/>
+            <HelpCard text="A free payment solution tailored for you. Simply the safest & easiest way to pay on woozeee" imgUrl={wprime}/>
+            <HelpCard text=" A loyalty program which allows its members to benefit from free delivery on their woozeee Express and woozeee Food orders" imgUrl={wglobal}/>
+            <HelpCard text="Home of brands with: 100% authentic products, Warranty available, Easy Return & Faster Delivery with woozeee Express" imgUrl={official_Stores}/>
 
             </div>
           </div>
