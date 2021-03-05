@@ -29,7 +29,7 @@ function Footer() {
   ];
   return (
     <footer className='footer'>
-      <div className='fcontainer putAtMiddle'>
+      <div className='fcontainer body__wrapper putAtMiddle'>
         <div className='Container'>
           <Row className='frowOne__wrapper'>
             <Col lg="2" className='smallInfoGroup'>

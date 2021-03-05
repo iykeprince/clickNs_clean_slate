@@ -51,7 +51,7 @@ export default function Header({ showHamburger }) {
       </Row>
 
       <div className="bgSR">
-        <div className="headerSecondRow row">
+        <div className="headerSecondRow body__wrapper row">
           <div className="sell">
             <img src="/images/blueStar.svg" alt="sell" />
             <span>Sell on woozeee</span>
@@ -79,7 +79,7 @@ export default function Header({ showHamburger }) {
         </div>
       </div>
 
-      <Row className="headerThirdRow">
+      <Row className="headerThirdRow body__wrapper">
         <div className="some__Container">
 
           {(showHamburger && <SideNav />) ||

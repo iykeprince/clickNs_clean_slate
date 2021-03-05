@@ -13,17 +13,34 @@
 .help_descript_image {
   height: 1.5rem;
 }
-.search_Icon_text{
+.search_Icon_text {
   max-width: 85%;
 }
+.help__banner__img {
+  max-width: 1170px;
+}
+.trackHeader__img {
+  width: 75px;
+  height: 75px;
+}
+.video__wrap {
+  height: 19.6rem;
+}
+.placeOrder__txt__wrap {
+  margin: 0 auto !important;
+  padding: 20px !important;
+  border-radius: 8px;
+  border: 1px solid var(--woozBlue);
+  background-color: #eff2ff;
+}
 
-@media screen and (max-width:768px){
+@media screen and (max-width: 768px) {
   .customer_h2_txt {
     font-size: 1rem;
   }
 }
 
-@media screen and (max-width:480px){
+@media screen and (max-width: 480px) {
   .help_descript_image {
     max-width: 8rem;
     object-fit: contain;

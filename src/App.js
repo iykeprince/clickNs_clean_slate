@@ -31,6 +31,7 @@ import EditAddressComp from "./components/Account/EditAddressComp";
 import MobileEditAddress from "./pages/Customer_MobileView/MobileEditAddress";
 import AuthModal from "./components/Auth/AuthModal";
 import HelpCenter from "./pages/Help/HelpCenter";
+import PlacenTrackOrder from "./pages/Help/PlacenTrackOrder";
 
 function App() {
   return (
@@ -50,6 +51,7 @@ function App() {
           <Route path={"/checkout"} component={CheckOut} />
           <Route path={"/auth"} component={AuthModal} />
           <Route path={"/help"} component={HelpCenter} />
+          <Route path={"/place-track-order"} component={PlacenTrackOrder} />
 
 
 

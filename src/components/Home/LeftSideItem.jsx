@@ -6,7 +6,7 @@ function LeftSideItem(props) {
     <div className="leftSideBar__grp">
       <img src={props.iconSource} alt="icon" className="leftSideBar__icon" />
       <Link to={props.urlDirection}>
-        <span className="leftSideBar__text">{props.iconText} </span>
+        <span className="leftSideBar__text text-nowrap">{props.iconText} </span>
       </Link>
     </div>
   );

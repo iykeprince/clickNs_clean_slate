@@ -71,8 +71,8 @@
 }
 .headerSecondRow {
   display: flex;
-  padding-left: 11.8% !important;
-  padding-right: 11.8% !important;
+  // padding-left: 11.8% !important;
+  // padding-right: 11.8% !important;
   padding-top: 0.313rem !important;
   padding-bottom: 0.313rem !important;
 }
@@ -190,78 +190,54 @@ button:focus {
   .MuiPaper-root {
     min-width: 12.875rem;
   }
-  .MuiButtonBase-root.MuiButton-root.MuiButton-text +div{
+  .MuiButtonBase-root.MuiButton-root.MuiButton-text + div {
     z-index: 20;
   }
   .MuiPaper-elevation1 {
-    box-shadow: 0 0 10px 0 rgba(0,0,0,0.15);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
   }
 }
-
 
 .adjacentIcon__text2 {
   padding-left: 1rem !important;
 }
-.logOutTxt{
+.logOutTxt {
   text-align: center !important;
   justify-content: center !important;
   font-weight: 500 !important;
   color: var(--woozRed) !important;
-  &::before{
+  &::before {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     height: 2px;
-    content: '';
+    content: "";
     background-color: #ededed;
   }
 }
-.cartHeader__Section{
+.cartHeader__Section {
   padding-left: 0.125rem !important;
 }
 
-.faIconBar{
-  font-size : 1.5rem;
+.faIconBar {
+  font-size: 1.5rem;
   cursor: pointer;
   padding-right: 1.125rem !important;
   display: flex;
   align-self: center;
 }
-.faIconBar>svg{
+.faIconBar > svg {
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.lefter.grpr{
-  .dropdown-content{
+.lefter.grpr {
+  .dropdown-content {
     min-width: 200px;
-
-}
-}
-
-
-
-
-
-
-
-
-
-
-
-
-@media only screen and (max-width: 1200px) {
-  .header__wrapper {
-    padding-left: 5% !important;
-    padding-right: 5% !important;
-  }
-  .headerSecondRow,
-  .headerThirdRow {
-    padding-left: 5% !important;
-    padding-right: 5% !important;
   }
 }
+
 @media only screen and (max-width: 992px) {
   .logwrp {
     margin-right: 0rem !important;
@@ -284,7 +260,6 @@ button:focus {
   .image__wrapper {
     display: none;
   }
-  
 }
 @media only screen and (max-width: 480px) {
   .option__lineOne,
@@ -295,7 +270,7 @@ button:focus {
   .dropdown__icon {
     display: none;
   }
-  .smallSection_wrapr{
+  .smallSection_wrapr {
     gap: 1rem;
   }
   .personIcon {
@@ -306,13 +281,5 @@ button:focus {
   }
   .some__item1 {
     padding-right: 0 !important;
-}
-}
-@media only screen and (min-width: 1280px) {
-  .headerSecondRow {
-    max-width: 1536px;
-  }
-  .headerThirdRow {
-    max-width: 1536px;
   }
 }

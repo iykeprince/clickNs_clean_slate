@@ -8,7 +8,7 @@ import IconStore from "../../assets/icons/IconStore";
 function HeaderThree() {
   return (
     <div className="header__container">
-      <Row className="headerThirdRow">
+      <Row className="headerThirdRow body__wrapper">
         <div className="some__Container">
           <WoozHeaderLogo />
 

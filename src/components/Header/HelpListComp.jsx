@@ -88,12 +88,14 @@ export default function HelpListComp() {
                     onKeyDown={handleListKeyDown}
                   >
                     <Link to="/help">
-                    <MenuItem onClick={handleClose}>Help Center</MenuItem>
+                      <MenuItem onClick={handleClose}>Help Center</MenuItem>
                     </Link>
-                    
-                    <MenuItem onClick={handleClose}>
-                      Place and Track Order
-                    </MenuItem>
+
+                    <Link to="/place-track-order">
+                      <MenuItem onClick={handleClose}>
+                        Place and Track Order
+                      </MenuItem>
+                    </Link>
                     <MenuItem onClick={handleClose}>
                       Order Cancellation
                     </MenuItem>
