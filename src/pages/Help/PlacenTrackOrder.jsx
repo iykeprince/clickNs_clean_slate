@@ -12,6 +12,8 @@ import PlaceOrderSteps from "../../components/Help/PlaceOrderSteps";
 import proceedToCheckout from "../../assets/images/help/proceedToCheckout-help.png";
 import deliveryDetails from "../../assets/images/help/deliveryDetails.png";
 import innerBanner from "../../assets/images/help/innerBanner-unblured.png";
+import searchHelp from "../../assets/images/help/search__help.png";
+
 
 export default function PlacenTrackOrder() {
   return (
@@ -75,7 +77,7 @@ export default function PlacenTrackOrder() {
                 text2=", if you already have something
                 specific in mind type what you are looking for in the search
                 field at the top of the page. You will find all related products"
-                imgUrl=""
+                imgUrl={searchHelp}
               />
 
               <PlaceOrderSteps
