@@ -4,8 +4,8 @@ import { DynamicButtonTwo } from "../Button/DynamicButton";
 import { FaFacebookF } from "react-icons/fa";
 
 export default function FaceBookSignIn() {
-  const [login, setLogin] = useState(false);
-  const [data, setData] = useState({});
+  // const [login, setLogin] = useState(false);
+  // const [data, setData] = useState({});
   // const [picture, setPicture] = useState("");
 
   const responseFacebook = (response) => {
