@@ -9,7 +9,7 @@ export default function FaceBookSignIn() {
   // const [picture, setPicture] = useState("");
 
   const responseFacebook = (response) => {
-    setData(response);
+    // setData(response);
     // setPicture(response.picture.data.url);
     // if (response.accessToken) {
     //   setLogin(true);
