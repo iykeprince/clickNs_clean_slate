@@ -8,9 +8,11 @@
   @extend .header__search;
   margin-right: 0 !important;
 }
+
 .header__searchTwo {
   margin-right: 0 !important;
 }
+
 .header__searchInput {
   height: 2.5rem;
   width: 100%;
@@ -23,6 +25,16 @@
   font-size: 0.875rem !important;
 }
 
+.header__voucher{
+  @extend .header__search;
+  margin-right: 0rem !important;
+
+}
+.header__voucherInput{
+  @extend .header__searchInput;
+  text-indent: 0.5rem;
+
+}
 .header__searchInputTwo {
   border-radius: 2.5rem;
   padding: 0.625rem !important ;

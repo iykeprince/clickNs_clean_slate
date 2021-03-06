@@ -10,47 +10,26 @@ const clientId =
   "979696525592-gjddn7tafhje4d5hn8o762d6s29f6ogg.apps.googleusercontent.com";
 
 function GoogleLogin(props) {
-  const [fName, setFName] = React.useState("");
-  const [sName, setSName] = React.useState("");
-  const [displayName, setDisplayName] = React.useState("");
-  const [email, setEmail] = React.useState("");
-  const [channel, setChannel] = React.useState("");
-  const [roles, setRoles] = React.useState("");
-  const [phoneNumber, setPhoneNumber] = React.useState("");
-  const [source, setSource] = React.useState("");
-
-  //What google initially returns => email, familyName, givenName,googleId,imageUrl,name
 
   const { onClick } = props;
 
+  const [newDataToBackend, setnewDataToBackend] = React.useState()
+
+  // let newDataToBackend
   const onSuccess = (res) => {
     const userDataFromGoogle = res.profileObj;
     console.log("userDataFromGoogle ;", userDataFromGoogle);
-
-    setFName(userDataFromGoogle?.givenName);
-    setSName(userDataFromGoogle?.familyName);
-    setDisplayName(userDataFromGoogle?.givenName);
-    setEmail(userDataFromGoogle?.email);
-    setChannel("social-media");
-    setRoles("user");
-    setPhoneNumber(userDataFromGoogle?.phoneNumber);
-    setSource("google");
-
-    const newDataToBackend = {
-      fName,
-      sName,
-      displayName,
-      email,
-      channel,
-      roles,
-      phoneNumber,
-      source,
-    };
-
-    console.log(newDataToBackend)
-    const { updateUserData } = props;
-
-    updateUserData(newDataToBackend);
+ 
+    setnewDataToBackend({
+      fName: userDataFromGoogle?.givenName,
+      sName: userDataFromGoogle?.familyName,
+      displayName: userDataFromGoogle?.givenName,
+      email: userDataFromGoogle?.email,
+      channel: "social-media",
+      roles: "user",
+      phoneNumber: userDataFromGoogle?.phoneNumber,
+      source: "google",
+    });
 
     refreshTokenSetup(res);
   };
@@ -85,7 +64,7 @@ function GoogleLogin(props) {
         // type="submit"
         onClick={() => {
           signIn();
-          onClick();
+          onClick(newDataToBackend);
         }}
       >
         <div className="d-flex justify-content-center align-items-center text-dark">

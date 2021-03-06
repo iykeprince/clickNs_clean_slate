@@ -18,6 +18,7 @@ import useWindowDimensions from "../../Hooks/UseWindowDimension";
 import GoogleLogin from "./GoogleLogin";
 import FaceBookSignIn from "./FaceBookLogin";
 
+
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
@@ -43,9 +44,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function AuthModalLogin(props) {
-  const [newDataToBackend, setnewDataToBackend] = React.useState("");
-
-  console.log({newDataToBackend})
 
   //Modal size on small screen
   const { width } = useWindowDimensions();
@@ -111,24 +109,27 @@ function AuthModalLogin(props) {
 
       if (props.token) {
         props.onLoginSuccess();
-      } 
-      else {
+      } else {
         setvalidationError(true);
       }
     });
   };
 
+  
   //Social login - Google
-  function handleGoogleClick(){
+  function handleGoogleClick(newDataToBackend) {
+
+    console.log("handleGoogleClick", newDataToBackend);
 
     socialLoginUser(newDataToBackend).then((res) => {
       if (res?.token) {
         props.onLoginSuccess();
-      } 
-      console.log(res);
+      }
+      console.log('response is :', res);
     });
-  };
-  
+
+  }
+
   const handleLoginClick = () => {
     setSpin(true);
     settimeout(500);
@@ -245,7 +246,6 @@ function AuthModalLogin(props) {
           </p>
 
           <GoogleLogin
-            updateUserData={setnewDataToBackend}
             onClick={handleGoogleClick}
           />
 

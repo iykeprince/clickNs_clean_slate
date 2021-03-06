@@ -32,6 +32,7 @@ import MobileEditAddress from "./pages/Customer_MobileView/MobileEditAddress";
 import AuthModal from "./components/Auth/AuthModal";
 import HelpCenter from "./pages/Help/HelpCenter";
 import PlacenTrackOrder from "./pages/Help/PlacenTrackOrder";
+import Pay from "./pages/Pay"
 
 function App() {
   return (
@@ -52,6 +53,7 @@ function App() {
           <Route path={"/auth"} component={AuthModal} />
           <Route path={"/help"} component={HelpCenter} />
           <Route path={"/place-track-order"} component={PlacenTrackOrder} />
+          <Route path={"/pay"} component={Pay} />
 
 
 

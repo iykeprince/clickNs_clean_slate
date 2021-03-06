@@ -6,28 +6,19 @@ import { FaFacebookF } from "react-icons/fa";
 export default function FaceBookSignIn() {
   const [login, setLogin] = useState(false);
   const [data, setData] = useState({});
-  const [picture, setPicture] = useState("");
+  // const [picture, setPicture] = useState("");
 
   const responseFacebook = (response) => {
     setData(response);
-    setPicture(response.picture.data.url);
-    if (response.accessToken) {
-      setLogin(true);
-    } else {
-      setLogin(false);
-    }
+    // setPicture(response.picture.data.url);
+    // if (response.accessToken) {
+    //   setLogin(true);
+    // } else {
+    //   setLogin(false);
+    // }
     console.log(
       "response :",
       response,
-      "\n",
-      "data :",
-      data,
-      "\n",
-      "login :",
-      login,
-      "\n",
-      "picture :",
-      picture
     );
   };
 

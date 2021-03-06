@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 // import CartMainItem from "../Cart/CartMainItem";
 import phone11Img from "../../assets/images/phone11.jpg";
 import CheckRightSection from "./CheckRightSection";
+import CheckPayment from "./CheckPayment";
 
 function CheckoutRowOne() {
   const [value, setValue] = React.useState("firstChoice");
@@ -47,14 +48,14 @@ function CheckoutRowOne() {
             <div className="addressCheckout_leftBottom">
               <div className="check__deliveryTitle">
                 <span className="listInfoSection__infoIcon">
-                  {IconStore.greyedCheckMark}
+                  {IconStore.coloredCheckMark}
                 </span>
                 <span className="checktitle__numbr">2. </span>
                 <span className="checktitle__name">DELIVERY METHOD</span>
               </div>
               <div className="deliveryMethod__details">
                 <p className="deliveryMethod__descrip">
-                  How do you want your order delivered?{" "}
+                  How do you want your order delivered?
                 </p>
 
                 <div className="check_formcontrol">
@@ -126,11 +127,15 @@ function CheckoutRowOne() {
                         and taxes as required by the postal office at delivery."
                         data7="The International Shipping and custom Fee is NON-REFUNDABLE in case of a return"
                       />
+                      <p className="text-primary font-weight-500 pl-5 pt-2">SELECT PICKUP STATION</p>
                     </RadioGroup>
                   </FormControl>
                 </div>
               </div>
             </div>
+
+            <CheckPayment/>
+            
           </div>
         </div>
 

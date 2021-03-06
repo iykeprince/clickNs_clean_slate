@@ -42,7 +42,7 @@ function CheckListItem(props) {
             <li>{props.data5}</li>
             <p>
               <span>{props.data6a}</span>
-              <Link className="listInfoSection__data6b">{props.data6b}</Link>
+              <Link to="" className="listInfoSection__data6b">{props.data6b}</Link>
               <span>{props.data6c}</span>
             </p>
             <p className="listInfoSection__data7">{props.data7}</p>

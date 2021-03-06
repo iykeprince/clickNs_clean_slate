@@ -1,6 +1,6 @@
 .helpCenter__images {
-  width: 72px;
-  height: 72px;
+  width: 4.5rem;
+  height: 4.5rem;
 }
 .customer_h2_txt {
   font-size: 2rem;
@@ -9,7 +9,6 @@
 .customer_img_icon {
   font-size: 2.5rem !important;
 }
-
 .help_descript_image {
   height: 1.5rem;
 }
@@ -20,19 +19,33 @@
   max-width: 1170px;
 }
 .trackHeader__img {
-  width: 75px;
-  height: 75px;
+  width: 4.688rem;
+  height: 4.688rem;
 }
 .video__wrap {
   height: 19.6rem;
 }
 .placeOrder__txt__wrap {
   margin: 0 auto !important;
-  padding: 20px !important;
-  border-radius: 8px;
+  padding: 1.25rem !important;
+  border-radius: 0.5rem;
   border: 1px solid var(--woozBlue);
   background-color: #eff2ff;
 }
+.gateway_img{
+  height: 3.125rem;
+}
+.help_footer_hr{
+  margin-top: 1.25rem;
+  border: 0;
+  border-color: #fbfbfb;
+  border-top: 1px solid #ccc;
+  clear: both;
+  display: block;
+  margin-bottom: 0;
+  width: 100%;
+}
+
 
 @media screen and (max-width: 768px) {
   .customer_h2_txt {
