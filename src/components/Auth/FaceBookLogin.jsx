@@ -3,10 +3,15 @@ import FacebookLogin from "react-facebook-login/dist/facebook-login-render-props
 import { DynamicButtonTwo } from "../Button/DynamicButton";
 import { FaFacebookF } from "react-icons/fa";
 
-export default function FaceBookSignIn() {
+export default function FaceBookSignIn(props) {
   // const [login, setLogin] = useState(false);
   // const [data, setData] = useState({});
   // const [picture, setPicture] = useState("");
+  const { onClick } = props;
+
+
+  const [newDataToBackend, setnewDataToBackend] = React.useState()
+
 
   const responseFacebook = (response) => {
     // setData(response);
@@ -16,6 +21,20 @@ export default function FaceBookSignIn() {
     // } else {
     //   setLogin(false);
     // }
+    // const userDataFromFacebook = response.profileObj;
+    // console.log("userDataFromFacebook ;", userDataFromFacebook);
+ 
+    // setnewDataToBackend({
+    //   fName: userDataFromFacebook?.givenName,
+    //   sName: userDataFromFacebook?.familyName,
+    //   displayName: userDataFromFacebook?.givenName,
+    //   email: userDataFromFacebook?.email,
+    //   channel: "social-media",
+    //   roles: "user",
+    //   phoneNumber: userDataFromFacebook?.phoneNumber,
+    //   source: "facebook",
+    // });
+
     console.log(
       "response :",
       response,
@@ -47,6 +66,7 @@ export default function FaceBookSignIn() {
             onClick={() => {
               renderProps.onClick();
               responseFacebook();
+              onClick(newDataToBackend);
             }}
           >
             <div className="d-flex justify-content-center align-items-center">

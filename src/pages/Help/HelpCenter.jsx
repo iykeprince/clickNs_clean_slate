@@ -29,7 +29,7 @@ export default function HelpCenter() {
           <div className="py-3 customer_h2_txt text-primary font-weight-bold">
             woozeee Customer Care
           </div>
-          <p className=" py-3">How can we help you?</p>
+          <p className="py-3">How can we help you?</p>
           <div className="w-100 py-1 search_Icon_text ">
             <HelpSearch/>
             <div className="row justify-content-between font-sm mt-5">

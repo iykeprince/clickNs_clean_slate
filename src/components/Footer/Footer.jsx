@@ -131,11 +131,11 @@ function Footer() {
           </Row>
 
           <Row className='lastRow'>
-            <Col md="6" className='eConnectLimited'>
+            <div className='eConnectLimited col-12 col-lg-6'>
               <p>2020, eConnect NetPower Limited. All Rights Reserved</p>
-            </Col>
+            </div>
 
-            <Col md="6" className='playSection'>
+            <div className='playSection col-12 col-lg-6'>
               <div className='secondRow'>
                 <span className='econnectLogo'>
                   <img src="/images/econnect.png" alt="econnect" />
@@ -147,7 +147,7 @@ function Footer() {
                   <img src="/images/AppStore.svg" alt="apple store" />
                 </span>
               </div>
-            </Col>
+            </div>
           </Row>
         </div>
       </div>

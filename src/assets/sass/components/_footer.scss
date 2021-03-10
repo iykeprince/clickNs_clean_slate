@@ -56,7 +56,7 @@
       line-height: 1.25rem;
   }
   .secondRow{
-      float: right;
+      float: none;
   }
   .bonusimg{
     width: 100%;
@@ -99,4 +99,10 @@ font-weight: 700;
     .fcontainer{
         max-width: 1536px;
     }
+}
+
+@media screen and (min-width:992px){
+   .secondRow{
+      float: right;
+  }
 }

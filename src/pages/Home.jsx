@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import HomeBodyTop from "../components/Home/HomeBodyTop";
@@ -8,39 +8,38 @@ import DealsSection from "../components/DealsSection/DealsSection";
 import FeaturedSection from "../components/FeaturedSection/FeaturedSection";
 import DealsSectionTwo from "../components/DealsSection/DealsSectionTwo";
 import DoubleImage from "../components/ImageCard/DoubleImage";
-import SingleImage from '../components/ImageCard/SingleImage';
-import DealsSectionFour from '../components/DealsSection/DealsSectionFour';
-import DealsSectionThree from '../components/DealsSection/DealsSectionThree';
+import SingleImage from "../components/ImageCard/SingleImage";
+import DealsSectionFour from "../components/DealsSection/DealsSectionFour";
+import DealsSectionThree from "../components/DealsSection/DealsSectionThree";
 
+let homeImgs = {
+  shoe: "/images/imageSection/ShoesAd.png",
+  youghurt: "/images/imageSection/youghurtAd.png",
+  megaSale: "/images/imageSection/megaSale.png",
+  nailPolish: "/images/imageSection/nailPolish.png",
+  blackFriday: "/images/imageSection/blackFridayImage.png",
+};
 
-let homeImgs ={
-    shoe: "/images/imageSection/ShoesAd.png",
-    youghurt:"/images/imageSection/youghurtAd.png",
-    megaSale:"/images/imageSection/megaSale.png",
-    nailPolish:"/images/imageSection/nailPolish.png",
-    blackFriday:"/images/imageSection/blackFridayImage.png",
-}
 function Home() {
-    return (
-        <div>
-            
-            <Header />
-            <div className='body__wrapper putAtMiddle'>
-            <HomeBodyTop />
-            <BodyNav />
-            <DealsSection />
-            <DealsSectionTwo/>
-            <SingleImage img={homeImgs.blackFriday}/>
-            <FeaturedSection />
-            <DoubleImage img1={homeImgs.shoe} img2={homeImgs.youghurt}/>
-            <DealsSectionThree/>
-            <DealsSectionFour/>
-            <DoubleImage img1={homeImgs.megaSale} img2={homeImgs.nailPolish}/>
-            <BottomAboutSection />
-            </div>
-            <Footer/>
-        </div>
-    )
+  return (
+    <div>
+      <Header />
+      <div className="body__wrapper putAtMiddle">
+        <HomeBodyTop />
+        <BodyNav />
+        <DealsSection />
+        <DealsSectionTwo />
+        <SingleImage img={homeImgs.blackFriday} />
+        <FeaturedSection />
+        <DoubleImage img1={homeImgs.shoe} img2={homeImgs.youghurt} />
+        <DealsSectionThree />
+        <DealsSectionFour />
+        <DoubleImage img1={homeImgs.megaSale} img2={homeImgs.nailPolish} />
+        <BottomAboutSection />
+      </div>
+      <Footer />
+    </div>
+  );
 }
 
-export default Home
+export default Home;

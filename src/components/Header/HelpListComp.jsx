@@ -96,15 +96,25 @@ export default function HelpListComp() {
                         Place and Track Order
                       </MenuItem>
                     </Link>
-                    <MenuItem onClick={handleClose}>
-                      Order Cancellation
-                    </MenuItem>
-                    <MenuItem onClick={handleClose}>
-                      Returns and Refunds
-                    </MenuItem>
+
+                    <Link to="/cancel-order">
+                      <MenuItem onClick={handleClose}>
+                        Order Cancellation
+                      </MenuItem>
+                    </Link>
+
+                    <Link to="/returns-refunds">
+                      <MenuItem onClick={handleClose}>
+                        Returns and Refunds
+                      </MenuItem>
+                    </Link>
+
+                    <Link to="/how-to-pay">
                     <MenuItem onClick={handleClose}>
                       Payment and woozeee account
                     </MenuItem>
+                    </Link>
+                    
                   </MenuList>
                 </ClickAwayListener>
               </Paper>

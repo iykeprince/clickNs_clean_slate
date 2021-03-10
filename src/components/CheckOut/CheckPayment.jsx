@@ -52,7 +52,7 @@ export default function CheckPayment() {
                 <ol>
                   - Paypal payment is accepted for Nigerian Paypal account only.
                 </ol>
-                <ol>- Enjoy faster refund with Jumiapay.</ol>
+                <ol>- Enjoy faster refund with woozeeepay.</ol>
                 <ol>
                   - New customers get a 20% discount capped at 2000 NGN when you
                   shop with your MasterCard. Campaign dates: 1st March to 7th
@@ -71,7 +71,7 @@ export default function CheckPayment() {
               <div className="pl-5">
                 <div className="font-sm ">
                   <strong>
-                    Got a Jumia voucher / SureGifts voucher? Use it below:
+                    Got a woozeee voucher / SureGifts voucher? Use it below:
                   </strong>
                   <div className="d-flex my-3">
                     <VoucherInput />

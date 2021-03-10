@@ -29,10 +29,13 @@ import MyPassword from "./pages/Customer_MobileView/MyPassword";
 import MyNewsletter from "./pages/Customer_MobileView/MyNewsletter";
 import EditAddressComp from "./components/Account/EditAddressComp";
 import MobileEditAddress from "./pages/Customer_MobileView/MobileEditAddress";
-import AuthModal from "./components/Auth/AuthModal";
+// import AuthModal from "./components/Auth/AuthModal";
 import HelpCenter from "./pages/Help/HelpCenter";
 import PlacenTrackOrder from "./pages/Help/PlacenTrackOrder";
-import Pay from "./pages/Pay"
+import Pay from "./pages/Pay";
+import OrderCancellation from "./pages/Help/OrderCancellation";
+import ReturnRefunds from "./pages/Help/ReturnRefunds";
+import HowToPay from "./pages/Help/HowToPay";
 
 function App() {
   return (
@@ -50,12 +53,12 @@ function App() {
           <Route path={"/recentlyViewed"} component={RecentlyViewed} />
           <Route path={"/cart"} component={Cart} />
           <Route path={"/checkout"} component={CheckOut} />
-          <Route path={"/auth"} component={AuthModal} />
+          {/* <Route path={"/auth"} component={AuthModal} /> */}
           <Route path={"/help"} component={HelpCenter} />
           <Route path={"/place-track-order"} component={PlacenTrackOrder} />
           <Route path={"/pay"} component={Pay} />
-
-
+          <Route path={"/cancel-order"} component={OrderCancellation} />
+          <Route path={"/how-to-pay"} component={HowToPay} />
 
           {/* Mobile View */}
           <Route path={"/account"} component={MyAccount} />
@@ -69,7 +72,7 @@ function App() {
           <Route path="/newsletter" component={MyNewsletter} />
           <Route path="/editAddress" component={EditAddressComp} />
           <Route path="/editAddress_m" component={MobileEditAddress} />
-
+          <Route path="/returns-refunds" component={ReturnRefunds} />
 
           {/* Categories */}
           <Route path={"/phones-tablets"} component={PhonenTablet} />
