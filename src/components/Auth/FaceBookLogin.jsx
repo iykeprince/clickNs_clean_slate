@@ -7,10 +7,11 @@ export default function FaceBookSignIn(props) {
   // const [login, setLogin] = useState(false);
   // const [data, setData] = useState({});
   // const [picture, setPicture] = useState("");
-  const { onClick } = props;
+  
+  // const { onClick } = props;
 
 
-  const [newDataToBackend, setnewDataToBackend] = React.useState()
+  // const [newDataToBackend, setnewDataToBackend] = React.useState()
 
 
   const responseFacebook = (response) => {
@@ -21,6 +22,8 @@ export default function FaceBookSignIn(props) {
     // } else {
     //   setLogin(false);
     // }
+
+    
     // const userDataFromFacebook = response.profileObj;
     // console.log("userDataFromFacebook ;", userDataFromFacebook);
  
@@ -66,7 +69,7 @@ export default function FaceBookSignIn(props) {
             onClick={() => {
               renderProps.onClick();
               responseFacebook();
-              onClick(newDataToBackend);
+              // onClick(newDataToBackend);
             }}
           >
             <div className="d-flex justify-content-center align-items-center">
