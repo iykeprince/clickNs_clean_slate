@@ -68,7 +68,7 @@ export default function FaceBookSignIn(props) {
             fontSize="0.875rem"
             hoverBoxShadow="0 4px 8px 0 rgb(0 0 0 / 20%)"
             onClick={() => {
-              renderProps.onClick();
+              renderProps.onClick(newDataToBackend);
               responseFacebook();
               onClick(newDataToBackend);
             }}
