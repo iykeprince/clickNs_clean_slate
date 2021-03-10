@@ -24,17 +24,17 @@ export default function FaceBookSignIn(props) {
     // }
 
 
-    const userDataFromFacebook = response;
-    console.log("userDataFromFacebook ;", userDataFromFacebook);
+    // const userDataFromFacebook = response;
+    // console.log("userDataFromFacebook ;", userDataFromFacebook);
  
     setnewDataToBackend({
-      fName: userDataFromFacebook?.name,
-      sName: userDataFromFacebook?.name,
-      displayName: userDataFromFacebook?.name,
-      email: userDataFromFacebook?.email,
+      fName: response?.name,
+      sName: response?.name,
+      displayName: response?.name,
+      email: "unavailable",
       channel: "social-media",
       roles: "user",
-      phoneNumber: userDataFromFacebook?.phoneNumber,
+      phoneNumber: "unavailable",
       source: "facebook",
     });
 
