@@ -28,8 +28,8 @@ export default function FaceBookSignIn(props) {
     console.log("userDataFromFacebook ;", userDataFromFacebook);
  
     setnewDataToBackend({
-      fName: userDataFromFacebook?.name.split(' ').slice(-1).join(' '),
-      sName: userDataFromFacebook?.name.split(' ').slice(0).join(' '),
+      fName: userDataFromFacebook?.name,
+      sName: userDataFromFacebook?.name,
       displayName: userDataFromFacebook?.name,
       email: userDataFromFacebook?.email,
       channel: "social-media",
