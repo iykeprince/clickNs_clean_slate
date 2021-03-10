@@ -117,9 +117,22 @@ function AuthModalLogin(props) {
 
   
   //Social login - Google
-  function handleSocialClick(newDataToBackend) {
+  function handleGoogleClick(newDataToBackend) {
 
-    console.log("handleSocialClick", newDataToBackend);
+    console.log("handleGoogleClick", newDataToBackend);
+
+    socialLoginUser(newDataToBackend).then((res) => {
+      if (res?.token) {
+        props.onLoginSuccess();
+      }
+      console.log('response is :', res);
+    });
+
+  }
+
+  function handleFacebookClick(newDataToBackend) {
+
+    console.log("handleFacebookClick", newDataToBackend);
 
     socialLoginUser(newDataToBackend).then((res) => {
       if (res?.token) {
@@ -246,11 +259,11 @@ function AuthModalLogin(props) {
           </p>
 
           <GoogleLogin
-            onClick={handleSocialClick}
+            onClick={handleGoogleClick}
           />
 
           <div className="my-1"></div>
-          <FaceBookSignIn  onClick={handleSocialClick}/>
+          <FaceBookSignIn  onClick={handleFacebookClick}/>
           <div className="my-1"></div>
           <DynamicButtonTwo
             color="white"
