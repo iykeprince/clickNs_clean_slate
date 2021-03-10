@@ -8,10 +8,10 @@ export default function FaceBookSignIn(props) {
   // const [data, setData] = useState({});
   // const [picture, setPicture] = useState("");
   
-  // const { onClick } = props;
+  const { onClick } = props;
 
 
-  // const [newDataToBackend, setnewDataToBackend] = React.useState()
+  const [newDataToBackend, setnewDataToBackend] = React.useState()
 
 
   const responseFacebook = (response) => {
@@ -23,24 +23,25 @@ export default function FaceBookSignIn(props) {
     //   setLogin(false);
     // }
 
-    
-    // const userDataFromFacebook = response.profileObj;
-    // console.log("userDataFromFacebook ;", userDataFromFacebook);
+
+    const userDataFromFacebook = response;
+    console.log("userDataFromFacebook ;", userDataFromFacebook);
  
-    // setnewDataToBackend({
-    //   fName: userDataFromFacebook?.givenName,
-    //   sName: userDataFromFacebook?.familyName,
-    //   displayName: userDataFromFacebook?.givenName,
-    //   email: userDataFromFacebook?.email,
-    //   channel: "social-media",
-    //   roles: "user",
-    //   phoneNumber: userDataFromFacebook?.phoneNumber,
-    //   source: "facebook",
-    // });
+    setnewDataToBackend({
+      fName: userDataFromFacebook?.name.split(' ').slice(-1).join(' '),
+      sName: userDataFromFacebook?.name.split(' ').slice(0).join(' '),
+      displayName: userDataFromFacebook?.name,
+      email: userDataFromFacebook?.email,
+      channel: "social-media",
+      roles: "user",
+      phoneNumber: userDataFromFacebook?.phoneNumber,
+      source: "facebook",
+    });
 
     console.log(
       "response :",
       response,
+      newDataToBackend,
     );
   };
 
@@ -69,7 +70,7 @@ export default function FaceBookSignIn(props) {
             onClick={() => {
               renderProps.onClick();
               responseFacebook();
-              // onClick(newDataToBackend);
+              onClick(newDataToBackend);
             }}
           >
             <div className="d-flex justify-content-center align-items-center">

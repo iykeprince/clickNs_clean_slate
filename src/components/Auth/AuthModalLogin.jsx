@@ -117,9 +117,9 @@ function AuthModalLogin(props) {
 
   
   //Social login - Google
-  function handleGoogleClick(newDataToBackend) {
+  function handleSocialClick(newDataToBackend) {
 
-    console.log("handleGoogleClick", newDataToBackend);
+    console.log("handleSocialClick", newDataToBackend);
 
     socialLoginUser(newDataToBackend).then((res) => {
       if (res?.token) {
@@ -246,11 +246,11 @@ function AuthModalLogin(props) {
           </p>
 
           <GoogleLogin
-            onClick={handleGoogleClick}
+            onClick={handleSocialClick}
           />
 
           <div className="my-1"></div>
-          <FaceBookSignIn />
+          <FaceBookSignIn  onClick={handleSocialClick}/>
           <div className="my-1"></div>
           <DynamicButtonTwo
             color="white"
