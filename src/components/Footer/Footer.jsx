@@ -13,6 +13,12 @@ function Footer() {
     "Delivery Information",
     "Terms and Conditions",
   ];
+  // const item1_url = [
+  //   "/information",
+  //   "/about",
+  //   "/privacy-policy",
+  //   "/privacy-policy",
+  // ]
   const item2 = [
     "My Account",
     "Help & FAQ",

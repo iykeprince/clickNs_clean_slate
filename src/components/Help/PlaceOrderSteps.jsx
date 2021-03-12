@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function PlaceOrderSteps(props) {
     return (
-        <div>
+        <div className="mt-3">
             <div className="text-left font-sm placeOrder__txt__wrap">
                 {props.text1}
                 <strong> {props.strongText} </strong>

@@ -1,6 +1,8 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "./SlimCard.css";
+
 const SlimCard = (props) => {
   return (
     <Row className="slimRow">
@@ -23,9 +25,12 @@ const SlimCard = (props) => {
             </Col>
 
             <div className="slimButton">
+              <Link to="/cart">
               <button type="button" className="mediumButton">
                 Buy Now
               </button>
+              </Link>
+             
             </div>
             </Row>
             

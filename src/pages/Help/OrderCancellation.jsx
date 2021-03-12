@@ -15,12 +15,12 @@ export default function OrderCancellation() {
             </h5>
 
             <div className="row mt-3 align-items-center">
-              <div className="col-12 col-sm-6 p-3">
-                <div className="video__wrap  d-flex align-items-center">
+              <div className="col-12 col-lg-6 p-3">
+                <div className="d-flex align-items-center">
                   <img src={fakeVideo} alt="" className="w-100" />
                 </div>
               </div>
-              <div className="col-12 col-sm-6 text-left pt-0 px-3 pb-3 pt-sm-3 ">
+              <div className="col-12 col-lg-6 text-left pt-0 px-3 pb-3 pt-sm-3 ">
                 <p>
                   <strong>FREQUENTLY ASKED QUESTIONS</strong>
                 </p>
@@ -64,27 +64,27 @@ export default function OrderCancellation() {
                 STEPS TO CANCEL YOUR ORDER
               </h5>
               <div className="row text-left pt-3">
-                <div className="col p-2 d-flex flex-column justify-content-between">
+                <div className="col-12 col-md-4 mt-3 mt-md-0  p-2 d-flex flex-column justify-content-between">
                   <div className="p-2">
                     1. From the list of Orders in your woozeee Account, Click See
                     Details in front of the order you wish to cancel.
                   </div>
-                  <div className="video__wrap">
+                  <div className="">
                     <img src={fakeVideo} alt="" className="w-100" />
                   </div>
                 </div>
-                <div className="col p-2 d-flex flex-column justify-content-between">
+                <div className="col-12 col-md-4 mt-3 mt-md-0  p-2 d-flex flex-column justify-content-between">
                   <div className="p-2">2. Click the Cancel Item button</div>
-                  <div className="video__wrap">
+                  <div className="">
                     <img src={fakeVideo} alt="" className="w-100" />
                   </div>
                 </div>
-                <div className="col p-2 d-flex flex-column justify-content-between">
+                <div className="col-12 col-md-4 mt-3 mt-md-0  p-2 d-flex flex-column justify-content-between">
                   <div className="p-2">
                     3. Select the right quantity and cancellation reason from
                     the drop-down list, and submit.
                   </div>
-                  <div className="video__wrap">
+                  <div className="">
                     <img src={fakeVideo} alt="" className="w-100" />
                   </div>
                 </div>

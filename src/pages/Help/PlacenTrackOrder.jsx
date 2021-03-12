@@ -14,7 +14,6 @@ import deliveryDetails from "../../assets/images/help/deliveryDetails.png";
 import innerBanner from "../../assets/images/help/innerBanner-unblured.png";
 import searchHelp from "../../assets/images/help/search__help.png";
 
-
 export default function PlacenTrackOrder() {
   return (
     <div>
@@ -27,39 +26,41 @@ export default function PlacenTrackOrder() {
               alt=""
               className="rounded w-100 help__banner__img"
             />
-            <div className="row bg-white rounded-bottom shadow-sm align-items-center py-3">
-              <div className="col text-left font-weight-500 pl-5 text-nowrap">
+            <div className="d-flex flex-column flex-sm-row bg-white rounded-bottom shadow-sm align-items-center py-3 ">
+              <div className="text-left font-weight-500 pl-md-5 pl-2 text-nowrap">
                 <p>Need help placing an order?</p>
                 <strong className="font-xl">Call: 01 699 6969</strong>
               </div>
-              <div className="col">
-                <div className="trackHeader__img mx-auto p-3 bg-white rounded-circle">
-                  <img src={findproduct} alt="" className="w-100" />
+              <div className="d-flex w-100">
+                <div className="col">
+                  <div className="trackHeader__img mx-auto p-3 bg-white rounded-circle">
+                    <img src={findproduct} alt="" className="w-100" />
+                  </div>
+                  <p className="font-sm">Place Order</p>
                 </div>
-                <p className="font-sm">Place Order</p>
-              </div>
-              <div className="col">
-                <div className="trackHeader__img mx-auto p-3 bg-white rounded-circle">
-                  <img src={deliveryTimeline} className="w-100" alt="" />
+                <div className="col">
+                  <div className="trackHeader__img mx-auto p-3 bg-white rounded-circle">
+                    <img src={deliveryTimeline} className="w-100" alt="" />
+                  </div>
+                  <p className="font-sm">Delivery Timelines</p>
                 </div>
-                <p className="font-sm">Delivery Timelines</p>
-              </div>
-              <div className="col">
-                <div className="trackHeader__img mx-auto p-3 bg-white rounded-circle">
-                  <img src={trackOrder} className="w-100" alt="" />
+                <div className="col">
+                  <div className="trackHeader__img mx-auto p-3 bg-white rounded-circle">
+                    <img src={trackOrder} className="w-100" alt="" />
+                  </div>
+                  <p className=" font-sm">Track Order</p>
                 </div>
-                <p className=" font-sm">Track Order</p>
               </div>
-              <div className="col"></div>
+              <div className="col d-none d-md-flex"></div>
             </div>
           </div>
           <div className="d-flex second__section__wrap mx-auto justify-content-center">
-            <div className="col-6 py-3">
-              <div className="video__wrap">
+            <div className="col-12 col-md-9 col-lg-6 py-3">
+              <div className="">
                 <img src={fakeVideo} alt="" className="w-100" />
               </div>
               <div className="text-left">
-                <h5 className="pt-5 pb-3">
+                <h5 className="pt-1 pt-sm-3 mt-5 pb-3">
                   <strong>
                     You can find a product by following these steps:
                   </strong>
