@@ -197,14 +197,6 @@ svg {
   bottom: 0.75rem;
 }
 
-
-
-
-
-
-
-
-
 .accLeftRow__wrapper .nav-link {
   font-size: 0.875rem !important;
 }
@@ -247,23 +239,6 @@ svg {
   border-right-color: transparent !important;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .addressBookDetail__wrapper {
   max-width: 23.313rem;
   border: 0.063rem solid #e8e8e8;
@@ -280,7 +255,8 @@ svg {
 .button__wrap2 {
   margin-left: auto !important;
 }
-.button__wrap3, .button__wrap2{
+.button__wrap3,
+.button__wrap2 {
   display: flex;
   width: 12.063rem;
 }
@@ -328,7 +304,8 @@ svg {
 .MuiIconButton-colorSecondary:hover {
   background-color: rgba(0, 41, 245, 0.04) !important;
 }
-.logoutTxt, .logoutTxt:hover {
+.logoutTxt,
+.logoutTxt:hover {
   color: var(--woozBlue) !important;
 }
 .newsButton__wrapper {
@@ -419,8 +396,8 @@ svg {
   color: var(--woozBlue) !important;
 }
 
-.rightIconMobile{
-  svg{
+.rightIconMobile {
+  svg {
     font-size: 0.75rem;
   }
 }
@@ -432,7 +409,7 @@ svg {
   .changePassword__wrapper {
     width: 80%;
   }
-  .rightr{
+  .rightr {
     font-size: 0.875rem;
   }
   .orderImage {
@@ -441,11 +418,9 @@ svg {
 }
 
 @media screen and (max-width: 768px) {
-  
   .rightr {
     margin-top: 1.25rem !important;
     padding-left: 0rem !important;
-
   }
   .changePassword__wrapper {
     width: 100%;
@@ -455,28 +430,33 @@ svg {
     font-weight: 500;
     margin-bottom: 0rem !important;
     padding-left: 1rem !important ;
-}
-.orderAvailableDataRow,.OpenClosedNav{
-  font-size: 0.875rem;
+  }
+  .orderAvailableDataRow,
+  .OpenClosedNav {
+    font-size: 0.875rem;
+  }
 }
 
-}
-
-@media screen and (max-width:576px){
+@media screen and (max-width: 576px) {
   .orderToggle {
     margin-right: 0.5rem !important;
     font-size: 0.875rem;
   }
-  .closedOrdr{
+  .closedOrdr {
     margin-top: 1rem !important;
   }
 }
 
-@media screen and (max-width:375px){
-  .makeStyles-phoneNumberFieldr-13{
-    .MuiFormLabel-root.MuiInputLabel-root.MuiInputLabel-formControl.MuiInputLabel-animated{
+@media screen and (max-width: 375px) {
+  .makeStyles-phoneNumberFieldr-13 {
+    .MuiFormLabel-root.MuiInputLabel-root.MuiInputLabel-formControl.MuiInputLabel-animated {
       display: none;
+    }
   }
+  .titleHeader {
+    padding-left: 0rem !important ;
   }
-
+  .orderImage {
+    width: 100%;
+  }
 }
