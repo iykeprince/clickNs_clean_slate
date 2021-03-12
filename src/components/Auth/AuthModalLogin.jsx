@@ -130,11 +130,11 @@ function AuthModalLogin(props) {
 
   }
 
-  function handleFacebookClick(newDataToBackend) {
+  function handleFacebookClick(facebookDataToBackend) {
 
-    console.log("handleFacebookClick", newDataToBackend);
+    console.log("handleFacebookClick", facebookDataToBackend);
 
-    socialLoginUser(newDataToBackend).then((res) => {
+    socialLoginUser(facebookDataToBackend).then((res) => {
       if (res?.token) {
         props.onLoginSuccess();
       }

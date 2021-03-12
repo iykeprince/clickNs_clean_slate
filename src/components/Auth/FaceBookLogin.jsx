@@ -8,7 +8,7 @@ export default function FaceBookSignIn(props) {
   const { onClick } = props;
 
 
-  const [newDataToBackend, setnewDataToBackend] = React.useState()
+  const [facebookDataToBackend, setfacebookDataToBackend] = React.useState()
 
 
   const responseFacebook = (response) => {
@@ -16,7 +16,7 @@ export default function FaceBookSignIn(props) {
     const userDataFromFacebook = response;
     console.log("userDataFromFacebook ;", userDataFromFacebook);
  
-    // setnewDataToBackend({
+    // setfacebookDataToBackend({
     //   fName: response?.name,
     //   sName: response?.name,
     //   displayName: response?.name,
@@ -26,7 +26,7 @@ export default function FaceBookSignIn(props) {
     //   phoneNumber: "unavailable",
     //   source: "facebook",
     // });
-    setnewDataToBackend({
+    setfacebookDataToBackend({
       fName: "Cyril",
       sName: "Mmojekwu",
       displayName: "Cyril",
@@ -40,7 +40,7 @@ export default function FaceBookSignIn(props) {
     console.log(
       "response :",
       response,
-      newDataToBackend,
+      facebookDataToBackend,
     );
   };
 
@@ -50,7 +50,7 @@ export default function FaceBookSignIn(props) {
       <FacebookLogin
         appId="2744707745746971"
         autoLoad={false}
-        fields="name,email,picture" 
+        fields="email,name,picture" 
         scope="public_profile,user_friends"
         callback={responseFacebook}
         render={(renderProps) => (
@@ -68,7 +68,7 @@ export default function FaceBookSignIn(props) {
             onClick={() => {
               renderProps.onClick();
               responseFacebook();
-              onClick(newDataToBackend);
+              onClick(facebookDataToBackend);
             }}
           >
             <div className="d-flex justify-content-center align-items-center">
