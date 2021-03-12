@@ -24,7 +24,7 @@ export default function PlacenTrackOrder() {
             <img
               src={placeOrder}
               alt=""
-              className="rounded w-100 help__banner__img"
+              className="rounded w-100 help__banner__img min-height-xs object-fit-cover"
             />
             <div className="d-flex flex-column flex-sm-row bg-white rounded-bottom shadow-sm align-items-center py-3 ">
               <div className="text-left font-weight-500 pl-md-5 pl-2 text-nowrap">

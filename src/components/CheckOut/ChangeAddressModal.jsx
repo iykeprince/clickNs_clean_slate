@@ -10,6 +10,9 @@ import Radio from "@material-ui/core/Radio";
 import RadioGroup from "@material-ui/core/RadioGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import FormControl from "@material-ui/core/FormControl";
+import EditIcon from "@material-ui/icons/Edit";
+import DeleteIcon from "@material-ui/icons/Delete";
+import { DynamicButtonTwo } from "../Button/DynamicButton";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -122,8 +125,19 @@ export default function ChangeAddressModal(props) {
                           </div>
                         </div>
                         <div className="font-xs font-weight-600 text-primary">
-                          <div>EDIT</div>
-                          <div className="pt-2">REMOVE</div>
+                          <Button className="px-2">
+                            <span className="pr-2 font-xs font-weight-600  text-primary">
+                              EDIT
+                            </span>
+                            <EditIcon className="font-sm" color="primary" />
+                          </Button>
+                          <br />
+                          <Button className="px-2">
+                            <span className="pr-2 font-xs font-weight-600  text-primary">
+                              REMOVE
+                            </span>
+                            <DeleteIcon className="font-sm" color="primary" />
+                          </Button>
                         </div>
                       </div>
                     </div>
@@ -149,14 +163,44 @@ export default function ChangeAddressModal(props) {
                           </div>
                         </div>
                         <div className="font-xs font-weight-600 text-primary">
-                          <div>EDIT</div>
-                          <div className="pt-2">REMOVE</div>
+                          <Button className="px-2">
+                            <span className="pr-2 font-xs font-weight-600  text-primary">
+                              EDIT
+                            </span>
+                            <EditIcon className="font-sm" color="primary" />
+                          </Button>
+                          <br />
+                          <Button className="px-2">
+                            <span className="pr-2 font-xs font-weight-600  text-primary">
+                              REMOVE
+                            </span>
+                            <DeleteIcon className="font-sm" color="primary" />
+                          </Button>
                         </div>
                       </div>
                     </div>
                   </RadioGroup>
                 </FormControl>
+
+             
               </div>
+              <div className="px-3 py-4 mt-3 border-top">
+                  <DynamicButtonTwo
+                    color="white"
+                    width="100%"
+                    height="42px"
+                    backgroundColor="var(--woozBlue)"
+                    boxShadow="0 4px 8px 0 rgb(0 0 0 / 15%)"
+                    borderRadius="4px"
+                    border="none !important"
+                    marginBottom=""
+                    fontWeight="600"
+                    fontSize="0.875rem"
+                    hoverBoxShadow="0 4px 8px 0 rgb(0 0 0 / 15%)"
+                  >
+                    USE THIS ADDRESS
+                  </DynamicButtonTwo>
+                </div>
             </div>
           </div>
         </Fade>

@@ -8,6 +8,7 @@ export default function HelpCard(props) {
         <img src={props.imgUrl} alt="" className="help_descript_image" />
       </div>
       <p className="py-3 pr-3 md:pr-5 font-sm">{props.text}</p>
+      
       <DynamicButtonTwo
         color="white"
         height="1.5rem"
