@@ -5,10 +5,10 @@ import { FaFacebookF } from "react-icons/fa";
 
 export default function FaceBookSignIn(props) {
   
-  // const { onClick } = props;
+  const { onClick } = props;
 
 
-  // const [newDataToBackend, setnewDataToBackend] = React.useState()
+  const [newDataToBackend, setnewDataToBackend] = React.useState()
 
 
   const responseFacebook = (response) => {
@@ -16,21 +16,21 @@ export default function FaceBookSignIn(props) {
     // const userDataFromFacebook = response;
     // console.log("userDataFromFacebook ;", userDataFromFacebook);
  
-    // setnewDataToBackend({
-    //   fName: response?.name,
-    //   sName: response?.name,
-    //   displayName: response?.name,
-    //   email: "unavailable",
-    //   channel: "social-media",
-    //   roles: "user",
-    //   phoneNumber: "unavailable",
-    //   source: "facebook",
-    // });
+    setnewDataToBackend({
+      fName: response?.name,
+      sName: response?.name,
+      displayName: response?.name,
+      email: "unavailable",
+      channel: "social-media",
+      roles: "user",
+      phoneNumber: "unavailable",
+      source: "facebook",
+    });
 
     console.log(
       "response :",
       response,
-      // newDataToBackend,
+      newDataToBackend,
     );
   };
 
@@ -58,7 +58,7 @@ export default function FaceBookSignIn(props) {
             onClick={() => {
               renderProps.onClick();
               responseFacebook();
-              // onClick(newDataToBackend);
+              onClick(newDataToBackend);
             }}
           >
             <div className="d-flex justify-content-center align-items-center">
