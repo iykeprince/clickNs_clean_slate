@@ -13,8 +13,8 @@ export default function FaceBookSignIn(props) {
 
   const responseFacebook = (response) => {
 
-    // const userDataFromFacebook = response;
-    // console.log("userDataFromFacebook ;", userDataFromFacebook);
+    const userDataFromFacebook = response;
+    console.log("userDataFromFacebook ;", userDataFromFacebook);
  
     setnewDataToBackend({
       fName: response?.name,
