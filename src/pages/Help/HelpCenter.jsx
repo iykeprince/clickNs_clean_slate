@@ -68,7 +68,7 @@ export default function HelpCenter() {
             </div>
           </div>
           <div>
-            <div className="row my-5 helpcard__wrapper mx-auto">
+            <div className="row my-5 helpcard__wrapper mx-auto justify-content-center">
             <HelpCard text="Get millions of products coming from abroad at incredible prices" imgUrl={wpay}/>
             <HelpCard text="A free payment solution tailored for you. Simply the safest & easiest way to pay on woozeee" imgUrl={wprime}/>
             <HelpCard text=" A loyalty program which allows its members to benefit from free delivery on their woozeee Express and woozeee Food orders" imgUrl={wglobal}/>

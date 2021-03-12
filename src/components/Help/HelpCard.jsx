@@ -3,7 +3,7 @@ import { DynamicButtonTwo } from "../Button/DynamicButton";
 
 export default function HelpCard(props) {
   return (
-    <div className="col-6 col-sm-3 text-left d-flex flex-column my-5">
+    <div className="col-6 col-md-3 text-left d-flex flex-column my-5">
       <div>
         <img src={props.imgUrl} alt="" className="help_descript_image" />
       </div>
