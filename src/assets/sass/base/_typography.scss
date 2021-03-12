@@ -16,6 +16,9 @@
 .font-weight-500 {
   font-weight: 500;
 }
+.font-weight-600 {
+  font-weight: 600;
+}
 .bg-primary {
   background-color: var(--woozBlue) !important;
 }
@@ -34,25 +37,3 @@
 .object-fit-cover {
   object-fit: cover;
 }
-//FOR REDUX TOASTER
-
-// .redux-toastr .toastr .rrt-middle-container {
-//   margin-left: 80px !important;
-//   padding: 10px 5px !important;
-// }
-
-// .redux-toastr .toastr .rrt-progress-container {
-//   margin: 0 -20px -20px -60px !important;
-// }
-
-// .redux-toastr .toastr .rrt-left-container .toastr-icon {
-//   margin-top: 5px !important;
-// }
-
-// .rrt-text {
-//   padding-top: 0.6rem !important;
-// }
-
-// .redux-toastr .toastr .rrt-left-container .rrt-holder {
-//   margin-top: -30px !important;
-// }

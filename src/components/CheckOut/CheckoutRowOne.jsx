@@ -3,11 +3,12 @@ import IconStore from "../../assets/icons/IconStore";
 import RadioGroup from "@material-ui/core/RadioGroup";
 import FormControl from "@material-ui/core/FormControl";
 import CheckListItem from "./CheckListItem";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 // import CartMainItem from "../Cart/CartMainItem";
 import phone11Img from "../../assets/images/phone11.jpg";
 import CheckRightSection from "./CheckRightSection";
 import CheckPayment from "./CheckPayment";
+import ChangeAddressModal from "./ChangeAddressModal";
 
 function CheckoutRowOne() {
   const [value, setValue] = React.useState("firstChoice");
@@ -32,9 +33,11 @@ function CheckoutRowOne() {
                   <span className="checktitle__name">ADDRESS DETAILS</span>
                 </div>
                 <div>
-                  <Link to="/customer#/editAddress">
+                  {/* <Link to="/customer#/editAddress"> */}
+                  <ChangeAddressModal>
                     <p className="checktitle__fn">CHANGE</p>
-                  </Link>
+                    </ChangeAddressModal>
+                  {/* </Link> */}
                 </div>
               </div>
               <div className="check__addressDetail">
