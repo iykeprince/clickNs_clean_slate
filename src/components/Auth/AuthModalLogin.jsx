@@ -130,18 +130,18 @@ function AuthModalLogin(props) {
 
   }
 
-  function handleFacebookClick(newDataToBackend) {
+  // function handleFacebookClick(newDataToBackend) {
 
-    console.log("handleFacebookClick", newDataToBackend);
+  //   console.log("handleFacebookClick", newDataToBackend);
 
-    socialLoginUser(newDataToBackend).then((res) => {
-      if (res?.token) {
-        props.onLoginSuccess();
-      }
-      console.log('response is :', res);
-    });
+  //   socialLoginUser(newDataToBackend).then((res) => {
+  //     if (res?.token) {
+  //       props.onLoginSuccess();
+  //     }
+  //     console.log('response is :', res);
+  //   });
 
-  }
+  // }
 
   const handleLoginClick = () => {
     setSpin(true);
@@ -263,7 +263,9 @@ function AuthModalLogin(props) {
           />
 
           <div className="my-1"></div>
-          <FaceBookSignIn  onClick={handleFacebookClick}/>
+          <FaceBookSignIn />
+
+          {/* <FaceBookSignIn  onClick={handleFacebookClick}/> */}
           <div className="my-1"></div>
           <DynamicButtonTwo
             color="white"
