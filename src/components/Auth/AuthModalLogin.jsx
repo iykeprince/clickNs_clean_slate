@@ -134,12 +134,12 @@ function AuthModalLogin(props) {
 
     console.log("handleFacebookClick", newDataToBackend);
 
-    // socialLoginUser(newDataToBackend).then((res) => {
-    //   if (res?.token) {
-    //     props.onLoginSuccess();
-    //   }
-    //   console.log('response is :', res);
-    // });
+    socialLoginUser(newDataToBackend).then((res) => {
+      if (res?.token) {
+        props.onLoginSuccess();
+      }
+      console.log('response is :', res);
+    });
 
   }
 
