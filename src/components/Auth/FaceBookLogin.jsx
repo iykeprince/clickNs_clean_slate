@@ -16,14 +16,24 @@ export default function FaceBookSignIn(props) {
     const userDataFromFacebook = response;
     console.log("userDataFromFacebook ;", userDataFromFacebook);
  
+    // setnewDataToBackend({
+    //   fName: response?.name,
+    //   sName: response?.name,
+    //   displayName: response?.name,
+    //   email: "unavailable",
+    //   channel: "social-media",
+    //   roles: "user",
+    //   phoneNumber: "unavailable",
+    //   source: "facebook",
+    // });
     setnewDataToBackend({
-      fName: response?.name,
-      sName: response?.name,
-      displayName: response?.name,
-      email: "unavailable",
+      fName: "Cyril",
+      sName: "Mmojekwu",
+      displayName: "Cyril",
+      email: "echezonnachukwu@gmail.com",
       channel: "social-media",
       roles: "user",
-      phoneNumber: "unavailable",
+      phoneNumber: "08130405179",
       source: "facebook",
     });
 
