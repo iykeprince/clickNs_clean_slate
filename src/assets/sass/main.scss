@@ -3,10 +3,12 @@
 
 // import base
 @import "./base/typography";
+@import "./base/variable";
 
 
 //scss files for components
 @import "./components/header";
+@import "./components/footer_new";
 @import "./components/footer";
 @import "./components/home_bodynav";
 @import "./components/home_bottom_about";

@@ -1,6 +1,5 @@
 import React from "react";
 import Header from "../components/Header/Header";
-import Footer from "../components/Footer/Footer";
 import HomeBodyTop from "../components/Home/HomeBodyTop";
 import BodyNav from "../components/BodyNav/BodyNav";
 import BottomAboutSection from "../components/BottomAboutSection/BottomAboutSection";
@@ -11,6 +10,8 @@ import DoubleImage from "../components/ImageCard/DoubleImage";
 import SingleImage from "../components/ImageCard/SingleImage";
 import DealsSectionFour from "../components/DealsSection/DealsSectionFour";
 import DealsSectionThree from "../components/DealsSection/DealsSectionThree";
+import NewFooter from "../components/Footer/NewFooter";
+// import Footer from "../components/Footer/Footer";
 
 let homeImgs = {
   shoe: "/images/imageSection/ShoesAd.png",
@@ -37,7 +38,7 @@ function Home() {
         <DoubleImage img1={homeImgs.megaSale} img2={homeImgs.nailPolish} />
         <BottomAboutSection />
       </div>
-      <Footer />
+      <NewFooter />
     </div>
   );
 }
