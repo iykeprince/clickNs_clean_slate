@@ -1,11 +1,12 @@
 import React from 'react'
 import AccountOtherRows from "../../components/Account/AccountOtherRows";
-import Footer from "../../components/Footer/Footer";
+// import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import IconStore from "../../assets/icons/IconStore";
 import useWindowDimensions from "../../Hooks/UseWindowDimension";
 import { Link, Redirect } from "react-router-dom";
 import DetailsUI from '../../components/Account/DetailsUI';
+import NewFooter from '../../components/Footer/NewFooter';
 
 
 export default function MyDetails() {
@@ -29,7 +30,7 @@ export default function MyDetails() {
               </div>
               <AccountOtherRows />
             </div>
-            <Footer />
+            <NewFooter />
           </div>
         );
       }

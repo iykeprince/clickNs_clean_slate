@@ -1,11 +1,12 @@
 import React from 'react'
 import AccountOtherRows from "../../components/Account/AccountOtherRows";
-import Footer from "../../components/Footer/Footer";
+// import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import IconStore from "../../assets/icons/IconStore";
 import useWindowDimensions from "../../Hooks/UseWindowDimension";
 import { Link, Redirect } from "react-router-dom";
 import ChangePasswordUI from '../../components/Account/ChangePasswordUI';
+import NewFooter from '../../components/Footer/NewFooter';
 
 export default function MyPassword() {
     const { width } = useWindowDimensions();
@@ -28,7 +29,7 @@ export default function MyPassword() {
               </div>
               <AccountOtherRows />
             </div>
-            <Footer />
+            <NewFooter />
           </div>
         );
       }

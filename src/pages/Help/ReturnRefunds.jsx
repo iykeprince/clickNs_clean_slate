@@ -3,11 +3,12 @@ import returnPolicyImg from "../../assets/images/help/cb-returnss-policy.png";
 import Header from "../../components/Header/Header";
 import requestReturn from "../../assets/images/help/request-for-return.png";
 import { DynamicButtonTwo } from "../../components/Button/DynamicButton";
-import Footer from "../../components/Footer/Footer";
+// import Footer from "../../components/Footer/Footer";
 import bag from "../../assets/images/help/bag.png";
 import bus from "../../assets/images/help/bus.png";
 import processed from "../../assets/images/help/processed.png";
 import easyReturn from "../../assets/images/help/easy-return.png";
+import NewFooter from "../../components/Footer/NewFooter";
 
 export default function ReturnRefunds() {
   return (
@@ -90,7 +91,7 @@ export default function ReturnRefunds() {
           </div>
         </div>
       </div>
-      <Footer />
+      <NewFooter />
     </div>
   );
 }

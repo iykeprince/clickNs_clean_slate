@@ -1,11 +1,12 @@
 import React from "react";
-import Footer from "../../components/Footer/Footer";
+// import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import IconStore from "../../assets/icons/IconStore";
 import payAcc from "../../assets/images/help/payment-account-related---otherss.png";
 import wpay from "../../assets/images/help/wpay.png";
 import payCheckout from "../../assets/images/help/paymentCheckout.png";
 import { DynamicButtonTwo } from "../../components/Button/DynamicButton";
+import NewFooter from "../../components/Footer/NewFooter";
 
 export default function HowToPay() {
   return (
@@ -120,7 +121,7 @@ export default function HowToPay() {
           </div>
         </div>
       </div>
-      <Footer />
+      <NewFooter />
     </div>
   );
 }

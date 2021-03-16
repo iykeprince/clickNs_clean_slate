@@ -1,6 +1,6 @@
 import React from "react";
 import CategoryDisplay from ".";
-import Footer from "../../components/Footer/Footer";
+// import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import CATSIDENAV from "../../components/Category/CatSideNav/Index";
 import { CategoryProvider } from "../../Contexts/CategoryContext";
@@ -19,6 +19,7 @@ import {
   ProductOrders ,
   bannerImage,
 } from "../../DB/Categories/SportsData";
+import NewFooter from "../../components/Footer/NewFooter";
 
 export default function Sports() {
   const category = { catName: "Sports" };
@@ -82,7 +83,7 @@ export default function Sports() {
           <CATSIDENAV products={ProductOrders} />
         </CategoryProvider>
       </div>
-      <Footer />
+      <NewFooter />
     </React.Fragment>
   );
 }

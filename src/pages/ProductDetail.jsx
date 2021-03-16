@@ -5,9 +5,10 @@ import ProductDetailRowTwo from "../components/Product/ProductDetailRowTwo";
 import ProductDetailRowThree from "../components/Product/ProductDetailRowThree";
 import ProductDetailRowFour from "../components/Product/ProductDetailRowFour";
 import ProductDetailRowFive from "../components/Product/ProductDetailRowFive";
-import Footer from "../components/Footer/Footer";
+// import Footer from "../components/Footer/Footer";
 import ProductLocation from "../components/Product/ProductLocation";
 import { connect } from "react-redux";
+import NewFooter from "../components/Footer/NewFooter";
 
 function ProductDetail({products}) {
   return (
@@ -21,7 +22,7 @@ function ProductDetail({products}) {
         <ProductDetailRowFour />
         <ProductDetailRowFive />
       </div>
-      <Footer />
+      <NewFooter />
     </div>
   );
 }

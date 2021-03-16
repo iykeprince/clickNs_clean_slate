@@ -1,7 +1,8 @@
 import React from "react";
 import CardGroupTitle from "../components/Cards/CardGroupTitle";
 import ProductCardGroupBig from "../components/Cards/ProductCardGroupBig";
-import Footer from "../components/Footer/Footer";
+// import Footer from "../components/Footer/Footer";
+import NewFooter from "../components/Footer/NewFooter";
 import Header from "../components/Header/Header";
 
 function RecentlyViewed() {
@@ -23,7 +24,7 @@ function RecentlyViewed() {
         </div>
       </div>
 
-      <Footer />
+      <NewFooter />
     </div>
   );
 }

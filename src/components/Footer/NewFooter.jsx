@@ -5,13 +5,18 @@ import facebookImg from "../../assets/images/footer/facebook.png";
 import instaImg from "../../assets/images/footer/instagram.png";
 import twitterImg from "../../assets/images/footer/twitter.png";
 import wifiImg from "../../assets/images/footer/wifi.png";
-import upImg from "../../assets/images/footer/up.png";
+// import upImg  from "../../assets/images/footer/up.png";
+import ExpandLessRoundedIcon from "@material-ui/icons/ExpandLessRounded";
 import woozImg from "../../assets/images/footer/wooz.png";
+import GPlay from "../../assets/images/GooglePlay.svg";
+import AStore from "../../assets/images/AppStore.svg";
+import econnectWhite from "../../assets/images/econnect-white.svg";
 import entertainImg from "../../assets/images/footer/entertainment.png";
 import eleganceImg from "../../assets/images/footer/elegance.png";
 import excellenceImg from "../../assets/images/footer/excellence.png";
 import getInTouchImg from "../../assets/images/footer/get-intouch.png";
 import { DynamicButtonTwo } from "../Button/DynamicButton";
+import ScrollToTop from "react-scroll-to-top";
 
 function NewFooter() {
   return (
@@ -19,35 +24,38 @@ function NewFooter() {
       <footer className="mt-5">
         <div className="footer-red">
           <div className="body__wrapper mx-auto position-relative">
-            <div className="move-up">
+            {/* <div className="move-up mr-3 mr-sm-5">
               <img src={upImg} alt="Move up" />
+            </div> */}
+            <div className="d-none d-sm-block">
+              <ScrollToTop smooth component={<ExpandLessRoundedIcon />} />
             </div>
           </div>
         </div>
         <div className="affirmation-block text-white">
-          <div className="body__wrapper mx-auto position-relative">
+          <div className="body__wrapper mx-auto position-relative pt-4 pb-5 pb-lg-2">
             <div className="small-circle affirm-circle"></div>
             <img
               src={woozImg}
               alt="Woozeee logo"
               className="affirm-logo mx-auto"
             />
-            <div className="col-9 mx-auto">
+            <div className="col-12 col-lg-9 mx-auto pt-3 pl-lg-9">
               <Row className="mt-3">
-                <Col md={{ span: 4, offset: 3 }}>
-                  <div className="affirmation">
+                <Col md={4}>
+                  <div className="affirmation py-3 py-md-0">
                     <img src={entertainImg} alt="Entertainment" />
                     <p className="white">Entertainment</p>
                   </div>
                 </Col>
                 <Col md={4}>
-                  <div className="affirmation">
+                  <div className="affirmation py-3 py-md-0">
                     <img src={eleganceImg} alt="Entertainment" />
                     <p className="white">Elegance</p>
                   </div>
                 </Col>
                 <Col md={4}>
-                  <div className="affirmation">
+                  <div className="affirmation py-3 py-md-0">
                     <img src={excellenceImg} alt="Entertainment" />
                     <p className="white">Excellence</p>
                   </div>
@@ -61,31 +69,43 @@ function NewFooter() {
             <img src={getInTouchImg} alt="Get in touch" className="intouch" />
             <div>
               <Row>
-                <Col md={2}>
-                  <h3 className="white w-bold">CONTACT INFO</h3>
+                <Col md={2} className="pr-3">
+                  <h3 className="white font-weight-bold mt-4 mt-md-0">
+                    CONTACT INFO
+                  </h3>
                   <div className="mt-3">
-                    <h4 className="white w-bold font-sm mb-0">ADDRESS:</h4>
-                    <p className="white font-sm">
+                    <h4 className="white w-bold mt-4 mt-md-0 font-sm mb-0">
+                      ADDRESS:
+                    </h4>
+                    <address className="white font-xs pt-2">
                       60 Landbridge Avenue, Oniru, VI
-                    </p>
+                    </address>
                   </div>
                   <div className="mt-3">
-                    <h4 className="white w-bold font-sm mb-0">PHONE:</h4>
-                    <p className="white font-sm">09088877765</p>
+                    <h4 className="white w-bold mt-4 mt-md-0 font-sm mb-0">
+                      PHONE:
+                    </h4>
+                    <p className="white font-xs pt-2">09088877765</p>
                   </div>
                   <div className="mt-3">
-                    <h4 className="white w-bold font-sm mb-0">EMAIL:</h4>
-                    <p className="white font-sm">info@woozeee.com</p>
+                    <h4 className="white w-bold mt-4 mt-md-0 font-sm mb-0">
+                      EMAIL:
+                    </h4>
+                    <p className="white font-xs pt-2">info@woozeee.com</p>
                   </div>
                   <div className="mt-3">
-                    <h4 className="white w-bold font-sm mb-0">
+                    <h4 className="white w-bold mt-4 mt-md-0 font-xs pt-2 mb-0">
                       WORKING DAYS/HOUR:
                     </h4>
-                    <p className="white font-sm">Mon - Fri / 9:00AM - 5:00PM</p>
+                    <p className="white font-xs pt-2">
+                      Mon - Fri / 9:00AM - 5:00PM
+                    </p>
                   </div>
                 </Col>
-                <Col md={2}>
-                  <h3 className="white w-bold">WHO WE ARE</h3>
+                <Col md={2} className="pr-3">
+                  <h3 className="white font-weight-bold mt-4 mt-md-0">
+                    WHO WE ARE
+                  </h3>
                   <div className="quick-links">
                     <Link to="/about" className="white d-block">
                       About
@@ -98,8 +118,10 @@ function NewFooter() {
                     </Link>
                   </div>
                 </Col>
-                <Col md={2}>
-                  <h3 className="white w-bold">woozeee</h3>
+                <Col md={2} className="pr-3">
+                  <h3 className="white font-weight-bold mt-4 mt-md-0">
+                    woozeee
+                  </h3>
                   <div className="quick-links">
                     <Link to="/" className="white d-block">
                       Features
@@ -139,8 +161,10 @@ function NewFooter() {
                     </Link>
                   </div>
                 </Col>
-                <Col md={2}>
-                  <h3 className="white w-bold">MORE INFORMATION</h3>
+                <Col md={2} className="pr-3">
+                  <h3 className="white font-weight-bold mt-4 mt-md-0">
+                    MORE INFORMATION
+                  </h3>
                   <div className="quick-links">
                     <Link to="/" className="white d-block">
                       Sell on SmartShop
@@ -162,14 +186,13 @@ function NewFooter() {
                     </Link>
                   </div>
                 </Col>
-                <Col md={2}>
-                  <h3 className="white w-bold">Support</h3>
+                <Col md={2} className="pr-3">
+                  <h3 className="white font-weight-bold mt-4 mt-md-0">
+                    SUPPORT
+                  </h3>
                   <div className="quick-links">
-                    <Link to="/" className="white d-block">
+                    <Link to="/help" className="white d-block">
                       Help & FAQS
-                    </Link>
-                    <Link to="/" className="white d-block">
-                      Documentation
                     </Link>
                     <Link to="/" className="white d-block">
                       Customization
@@ -189,48 +212,57 @@ function NewFooter() {
                   </div>
                 </Col>
                 <Col md={2}>
-                  <h3 className="white w-bold">Subscribe newsletter</h3>
-                  <p className="white font-sm white">
+                  <h3 className="white font-weight-bold mt-4 mt-md-0">
+                    SUBSCRIBE NEWSLETTER
+                  </h3>
+                  <p className="white font-xs white">
                     Get all the latest information on events, sales, challenges
                     and offers. Sign up for newsletter:
                   </p>
-                  <form className="mt-2">
+                  <form className="mt-3">
                     <Form.Group>
-                      <Form.Control type="email" placeholder="Email address" className="w-100 px-2" />
+                      <Form.Control
+                        type="email"
+                        placeholder="Email address"
+                        className="w-100 px-2 font-sm "
+                      />
                     </Form.Group>
                     <div className="mt-2">
-                    <DynamicButtonTwo
-                      color="white"
-                      height="2.5rem"
-                      width="8rem"
-                      backgroundColor="var(--woozRed)"
-                      boxShadow="none"
-                      borderRadius="5px"
-                      border="none !important"
-                      fontWeight="500"
-                      fontSize="0.875rem"
-                      hoverBoxShadow="0 4px 8px 0 rgb(0 0 0 / 20%)"
-                    >
+                      <DynamicButtonTwo
+                        color="white"
+                        height="2.5rem"
+                        width="8rem"
+                        backgroundColor="var(--woozRed)"
+                        boxShadow="none"
+                        borderRadius="5px"
+                        border="none !important"
+                        fontWeight="500"
+                        fontSize="0.875rem"
+                        hoverBoxShadow="0 4px 8px 0 rgb(0 0 0 / 20%)"
+                      >
                         Subscribe
-                    </DynamicButtonTwo>
+                      </DynamicButtonTwo>
                     </div>
-                   
                   </form>
                 </Col>
               </Row>
-              <div className="footer-apps">
-                <img src="/images/econnect.png" alt="econnect logo" />
-                <img src="/images/GooglePlay.svg" alt="app" />
-                <img src="/images/AppStore.svg" alt="app" />
-
+              <div className="footer-apps pt-5 pb-4 d-flex flex-wrap">
+                <div className="col-lg-6"></div>
+                <div className="col-12 col-sm-6 col-lg-2 text-left text-md-right">
+                  <img src={econnectWhite} alt="econnect logo" />
+                </div>
+                <div className="col-12 col-sm-6 col-lg-4 text-left text-md-right">
+                  <img src={GPlay} alt="app" className="pr-4" />
+                  <img src={AStore} alt="app" />
+                </div>
               </div>
             </div>
           </div>
         </div>
         <div className="bg-white">
           <div className="body__wrapper mx-auto">
-            <div className="social-feeds">
-              <div className="social-media-icons">
+            <div className="social-feeds row">
+              <div className="social-media-icons col-12 col-md-6">
                 <Link to="/">
                   <img src={twitterImg} alt="Twitter field" />
                 </Link>
@@ -244,13 +276,13 @@ function NewFooter() {
                   <img src={instaImg} alt="Twitter field" />
                 </Link>
               </div>
-              <div>
+              <div className="col-12 col-md-6 pt-3 pt-md-0">
                 <p className="copyright font-sm">
                   COPYRIGHT woozeee 2020 -
-                  <Link to="/" className="black">
+                  <Link to="/" className="black px-2 underline">
                     TERMS & CONDITIONS
                   </Link>
-                  <Link to="/" className="black">
+                  <Link to="/" className="black underline">
                     PRIVACY POLICY
                   </Link>
                 </p>

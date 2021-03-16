@@ -46,3 +46,12 @@
 .object-fit-cover {
   object-fit: cover;
 }
+.underline{
+  text-decoration: underline !important;
+}
+
+@media (min-width: 992px){
+  .pl-lg-9{
+    padding-left: 7rem !important;
+  }
+}

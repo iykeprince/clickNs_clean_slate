@@ -1,6 +1,7 @@
 import React from 'react'
 import CheckoutRowOne from '../components/CheckOut/CheckoutRowOne'
-import Footer from '../components/Footer/Footer'
+// import Footer from '../components/Footer/Footer'
+import NewFooter from '../components/Footer/NewFooter'
 import HeaderThree from '../components/Header/HeaderThree'
 
 function CheckOut() {
@@ -11,7 +12,7 @@ function CheckOut() {
             <CheckoutRowOne/>
             
             </div>
-            <Footer/>
+            <NewFooter/>
             
         </div>
     )
