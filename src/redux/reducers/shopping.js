@@ -1,8 +1,8 @@
 import * as actionTypes from "../actions/types";
 
 const INITIAL_STATE = {
-  products: [],
-  cart: [],
+  products: [], //{id, title, price, descr, img}
+  cart: [], //{id, title, price, descr, img}
   currentItem: null,
 };
 const shopReducer = (state = INITIAL_STATE, action) => {

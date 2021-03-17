@@ -17,12 +17,15 @@ const useStyles = makeStyles((theme) => ({
     width: "8ch",
     paddingRight: "0.8rem !important",
   },
+  menuPaper: {
+    maxHeight: 100,
+  },
 }));
 
 function CartMainItem(props) {
   const classes = useStyles();
 
-  const [prefix, setPrefix] = React.useState("");
+  const [prefix, setPrefix] = React.useState(1);
 
   const handleChange = (event) => {
     setPrefix(event.target.value);
@@ -42,7 +45,7 @@ function CartMainItem(props) {
               <p className="prodDescrpt"> {props.productName}</p>
               <div className="productPrice__Wrap">
                 <span className="iconDescrpt__wrapper mainPrice">
-                   {props.mainPrice}
+                  {props.mainPrice}
                 </span>
                 <span className="slashedPrice">{props.slashedPrice}</span>
               </div>
@@ -81,12 +84,24 @@ function CartMainItem(props) {
                 onChange={handleChange}
                 displayEmpty
                 className={classes.numberSelect}
+                MenuProps={{ classes: { paper: classes.menuPaper } }}
               >
-                <MenuItem value="">
-                  <p>1</p>
-                </MenuItem>
-                <MenuItem value={235}>2</MenuItem>
-                <MenuItem value={236}>3</MenuItem>
+                {/* 
+                <MenuItem value={1}>1</MenuItem>
+                <MenuItem value={2}>2</MenuItem>
+                <MenuItem value={3}>3</MenuItem>
+                <MenuItem value={4}>4</MenuItem>
+                <MenuItem value={5}>5</MenuItem>
+                <MenuItem value={6}>6</MenuItem>
+                <MenuItem value={7}>7</MenuItem>
+                <MenuItem value={8}>8</MenuItem>
+                <MenuItem value={9}>9</MenuItem> 
+                <MenuItem value={10}>10</MenuItem>
+                */}
+
+                {/* THIS ONE-LINER DOES THE COMMENTED CODE ABOVE */}
+                {[...Array(11)].map((e, i) => (<MenuItem value={i} key={i}>{i}</MenuItem>)).slice(1)}
+                
               </Select>
             </FormControl>
           </div>
