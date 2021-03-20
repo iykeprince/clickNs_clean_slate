@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { HeaderSearch } from "../Search/Search";
 import SideNav from "./SideNav";
@@ -9,12 +9,28 @@ import WoozHeaderLogo from "./WoozHeaderLogo";
 import MenuListComp from "./MenuListComp";
 import HelpListComp from "./HelpListComp";
 import useWindowDimensions from "../../Hooks/UseWindowDimension";
+import { connect } from "react-redux";
 
-export default function Header({ showHamburger }) {
+
+function Header({ showHamburger,cart }) {
+
+  const [cartCount, setCartCount] = useState(0);
+
+
+  useEffect(() => {
+    let count = 0;
+    cart.forEach((item) => {
+      count += item.qty;
+    });
+
+    setCartCount(count);
+  }, [cart, cartCount]);
+
   // EXTENDED USAGE
   // const { height, width } = useWindowDimensions();
 
-  const cartItemNumber = 2;
+  
+
   const { width } = useWindowDimensions();
   return (
     <header className="header__container">
@@ -107,8 +123,8 @@ export default function Header({ showHamburger }) {
               <Link to="/cart">
                 <div className="header__option cartHeader__Section">
                   <img src="/images/cart.svg" alt="" className="cart" />
-                 {( cartItemNumber ? <span className="purchaseCount">
-                    <span>{cartItemNumber}</span>
+                 {( cartCount ? <span className="purchaseCount">
+                    <span>{cartCount}</span>
                   </span> : ""
                   )}
                   <span className="option__lineOneCart">Cart</span>
@@ -121,3 +137,11 @@ export default function Header({ showHamburger }) {
     </header>
   );
 }
+
+const mapStateToProps = (state) => {
+  return {
+    cart: state.shop.cart,
+  };
+};
+
+export default connect(mapStateToProps)(Header);

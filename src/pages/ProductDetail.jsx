@@ -16,7 +16,7 @@ function ProductDetail({products}) {
       <Header showHamburger={true} />
       <div className="body__wrapper putAtMiddle">
         <ProductLocation />
-        <ProductDetailRowOne />
+        <ProductDetailRowOne product={products}/>
         <ProductDetailRowTwo />
         <ProductDetailRowThree />
         <ProductDetailRowFour />

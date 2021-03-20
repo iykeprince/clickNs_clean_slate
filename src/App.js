@@ -1,7 +1,7 @@
 import React from "react";
 import "./assets/sass/main.scss";
 import Home from "./pages/Home";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Redirect, Route, Switch } from "react-router-dom";
 import ProductDetail from "./pages/ProductDetail";
 import PhonenTablet from "./pages/Categry/PhonenTablet";
 import Supermarket from "./pages/Categry/Supermarket";
@@ -37,7 +37,7 @@ import ReturnRefunds from "./pages/Help/ReturnRefunds";
 import HowToPay from "./pages/Help/HowToPay";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core";
 
-function App() {
+function App({current}) {
   const theme = createMuiTheme({
     palette: {
       primary: {
@@ -60,7 +60,7 @@ function App() {
 
           <Switch>
             <Route path={"/"} exact component={Home} />
-            <Route path={"/product"} component={ProductDetail} />
+            {/* <Route path={"/product"} component={ProductDetail} /> */}
             <Route path={"/customer/"} component={Account} />
             <Route path={"/recentlyViewed"} component={RecentlyViewed} />
             <Route path={"/cart"} component={Cart} />
@@ -71,6 +71,13 @@ function App() {
             <Route path={"/pay"} component={Pay} />
             <Route path={"/cancel-order"} component={OrderCancellation} />
             <Route path={"/how-to-pay"} component={HowToPay} />
+
+            {/* {!current ? (
+            <Redirect to="/" />
+          ) : ( */}
+            <Route exact path="/product/:id" component={ProductDetail} />
+           {/* )}  */}
+
 
             {/* Mobile View */}
             <Route path={"/account"} component={MyAccount} />

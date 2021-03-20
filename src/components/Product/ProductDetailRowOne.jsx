@@ -1,6 +1,5 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
-// import "./ProductDetailRowOne.css";
 import imgPrev from "../../assets/images/prevLeft.svg";
 import phonesmall1 from "../../assets/images/phoneSmall47.svg";
 import phonesmall2 from "../../assets/images/phoneSmall45.svg";
@@ -8,13 +7,20 @@ import phonesmall3 from "../../assets/images/phoneSmall46.svg";
 import nextImg from "../../assets/images/nextRight.svg";
 import VariableImage from "../ImageCard/VariableImage";
 import DiscountPercent from "../DiscountPercent/DiscountPercent";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import * as FaIcon from "react-icons/fa";
 import LargeButton from "../Button/LargeButton";
 import { HeartRating, ReadOnlyRating } from "../Rating/Rating";
 import IconStore from "../../assets/icons/IconStore";
 
-function ProductDetailRowOne() {
+// Redux
+import { connect } from "react-redux";
+import { loadCurrentItem, addToCart } from "../../redux/actions/shopping";
+
+function ProductDetailRowOne({ current, product, addToCart}) {
+
+  const history = useHistory();
+
   return (
     <Row className="rowOne__wrapper">
       <Col lg="9">
@@ -22,9 +28,9 @@ function ProductDetailRowOne() {
           <Col md="4">
             <div className="productImageDisplay_wrap">
               <img
-                src="/images/phoneProduct.png"
+                src={current?.productImg}
                 alt="phone"
-                className="productImageDisplay"
+                className="productImageDisplay w-100"
               />
             </div>
             <div className="prevNext">
@@ -42,13 +48,11 @@ function ProductDetailRowOne() {
               <span className="socialFacebook">{IconStore.facebookIcon}</span>
               <span className="socialTwitter">{IconStore.twitterIcon}</span>
             </div>
-
           </Col>
           <Col md="8">
             <div>
               <div className="topSec">
-                <span className="textBig">{`Samsung Galaxy A50 6.4-Inch (4GB,128GB ROM) Android 9 Pie,
-              (25MP+5MP+ 8MP)+ 25MP 4000mAh 4G Dual SIM Smartphone - White`}</span>
+                <span className="textBig">{current?.productName}</span>
                 <HeartRating />
               </div>
 
@@ -58,18 +62,25 @@ function ProductDetailRowOne() {
 
             <div className="ratings__wrapper">
               <span>
-                <ReadOnlyRating size="small" ratingCount="4" />
+                <ReadOnlyRating size="small" ratingCount={current?.rating} />
               </span>
-              <Link className="textSmallThree"> (4 ratings) </Link>
+              <Link className="textSmallThree"> ({current?.rating} ratings) </Link>
             </div>
 
-            <p className="originalPrice">&#8358; 124,000</p>
-            <span className="discountedPrice">&#8358; 150,000</span>
+            <p className="originalPrice">&#8358; {current?.mainPrice?.toLocaleString()}</p>
+            <span className="discountedPrice">&#8358; {current?.slashedPrice?.toLocaleString()}</span>
             <DiscountPercent DiscountText="-10%" />
             <div className="largeButton__wrapper">
-              <Link to="/cart">
-                <LargeButton buttonName="ADD TO CART" />
-              </Link>
+
+              {/* THIS IS WHERE I'M STUCK, LOADING CURRENT ITEM TO REDUX  */}
+              <LargeButton
+                buttonName="ADD TO CART"
+                onClick={() => {
+                  addToCart(current.id)
+                  // addToCart(product.id)
+                  history.push("/cart");
+                }}
+              />
             </div>
             <div className="offers">
               <span>3 offers starting from &#8358;124,990</span>
@@ -224,4 +235,23 @@ function ProductDetailRowOne() {
   );
 }
 
-export default ProductDetailRowOne;
+// export default ProductDetailRowOne;
+
+
+const mapStateToProps = (state) => {
+  return {
+    current: state.shop.currentItem,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addToCart: (id) => {
+      console.log(id);
+      dispatch(addToCart(id));
+    },
+    loadCurrentItem: (item) => dispatch(loadCurrentItem(item)),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(ProductDetailRowOne);

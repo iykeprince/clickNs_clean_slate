@@ -3,15 +3,19 @@ import Header from "../components/Header/Header";
 import HomeBodyTop from "../components/Home/HomeBodyTop";
 import BodyNav from "../components/BodyNav/BodyNav";
 import BottomAboutSection from "../components/BottomAboutSection/BottomAboutSection";
-import DealsSection from "../components/DealsSection/DealsSection";
+import DealsSection from "../components/Product/DealsSection";
 import FeaturedSection from "../components/FeaturedSection/FeaturedSection";
-import DealsSectionTwo from "../components/DealsSection/DealsSectionTwo";
+// import DealsSectionTwo from "../components/DealsSection/DealsSectionTwo";
 import DoubleImage from "../components/ImageCard/DoubleImage";
 import SingleImage from "../components/ImageCard/SingleImage";
-import DealsSectionFour from "../components/DealsSection/DealsSectionFour";
-import DealsSectionThree from "../components/DealsSection/DealsSectionThree";
+// import DealsSectionFour from "../components/DealsSection/DealsSectionFour";
+// import DealsSectionThree from "../components/DealsSection/DealsSectionThree";
 import NewFooter from "../components/Footer/NewFooter";
 // import Footer from "../components/Footer/Footer";
+
+
+// Redux
+// import { connect } from "react-redux"; 
 
 let homeImgs = {
   shoe: "/images/imageSection/ShoesAd.png",
@@ -28,13 +32,13 @@ function Home() {
       <div className="body__wrapper putAtMiddle">
         <HomeBodyTop />
         <BodyNav />
-        <DealsSection />
-        <DealsSectionTwo />
+        <DealsSection title="Recommended for you" className1="" className2="bgWhite"/>
+        <DealsSection title="Deals of The Day" className1="dealsSectionTwo" className2="bgRed"/>
         <SingleImage img={homeImgs.blackFriday} />
         <FeaturedSection />
         <DoubleImage img1={homeImgs.shoe} img2={homeImgs.youghurt} />
-        <DealsSectionThree />
-        <DealsSectionFour />
+        <DealsSection title="Deals of The Day" className1="dealsSectionTwo" className2="bgYellow"/>
+        <DealsSection title="Deals of The Day" className1="dealsSectionTwo" className2="bgGreen"/>
         <DoubleImage img1={homeImgs.megaSale} img2={homeImgs.nailPolish} />
         <BottomAboutSection />
       </div>

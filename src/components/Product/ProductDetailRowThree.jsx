@@ -4,7 +4,7 @@ import RightSideCard from "./RightSideCard";
 import samsungGalaxyA70 from "../../assets/images/samsungGalaxyA70.png";
 import samsungFrontBack from "../../assets/images/samsungFrontBack.png";
 import { HashRouter, NavLink, Route } from "react-router-dom";
-import DetailSection from "./DetailSection";
+import DetailSection from "./ProductDetailSection";
 import SpecificationSection from "./SpecificationSection";
 import ReviewSection from "./ReviewSection";
 

@@ -18,12 +18,13 @@ export const removeFromCart = (itemID) => {
   };
 };
 
-export const adjustQty = (itemID, value) => {
+export const adjustItemQty = (itemID, value,finalTotalPrice) => {
   return {
     type: actionTypes.EDIT_QTY,
     payload: {
       id: itemID,
       qty: value,
+      finalTotalPrice: finalTotalPrice,
     },
   };
 };

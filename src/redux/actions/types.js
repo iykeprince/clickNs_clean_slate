@@ -39,8 +39,4 @@ export const ADD_TO_CART = "ADD_TO_CART"
 export const REMOVE_FROM_CART = "REMOVE_FROM_CART"
 export const EDIT_QTY = "EDIT_QTY"
 export const GET_CURRENT_ITEM = "GET_CURRENT_ITEM"
-//
-
-          
-          
-          
+//   

@@ -1,13 +1,15 @@
 import React from "react";
 import { Row } from "react-bootstrap";
 import CartMainItem from "./CartMainItem";
-import phone11Img from "../../assets/images/phone11.jpg";
+import { connect } from "react-redux";
 
-function CartRowOne({products}) {
+function CartRowOne({ cart}) {
+  console.log("cart", cart);
+
   return (
     <div className="crt_grp">
       <div className="topcartSecOne">
-        <h5>Cart (2 items)</h5>
+        <h5>Cart ({cart.length} items)</h5>
         {/* <div>
           <img src="" alt="woozeeLogo" />
           <img src="" alt="dispatchImg" />
@@ -37,33 +39,16 @@ function CartRowOne({products}) {
         </div>
       </Row>
 
-      <CartMainItem
-        pImage={phone11Img}
-        productName={"Galaxy A50 6.4-Inch (4GB,128GB ROM) Android 9 Pie, (25MP+5MP+8MP)+ 25MP 4000mAh 4G Dual SIM Smartphone - White"}
-        sellerText="THE 4DX"
-        unitPrice="₦135,898"
-        subTotal="₦135,898"
-        mainPrice="&#8358;24,000"
-        slashedPrice="&#8358;135,898 "
-      />
-
-      <CartMainItem
-        pImage={phone11Img}
-        productName={"Galaxy A50 6.4-Inch (4GB,128GB ROM) Android 9 Pie, (25MP+5MP+8MP)+ 25MP 4000mAh 4G Dual SIM Smartphone - White"}
-        sellerText="THE 4DX"
-        savedAmountText="Savings"
-        savedAmount="₦38,310"
-        previousUnitPrice="₦81,900"
-        unitPrice="₦43,590"
-        subTotal="₦135,898"
-        mainPrice="&#8358;24,000"
-        slashedPrice="&#8358;135,898 "
-      />
+      {cart.map((item) => (
+        <CartMainItem key={item.id} itemData={item} />
+      ))}
 
       <div className="priceTotl">
         <div>
           <span className="totlText">Total:</span>
-          <span className="amount">₦179,488</span>
+          <span className="amount">
+            {/* &#8358; {totalPrice?.toLocaleString()} */}
+          </span>
           <p className="delFee">Delivery fee not included yet</p>
         </div>
       </div>
@@ -71,4 +56,10 @@ function CartRowOne({products}) {
   );
 }
 
-export default CartRowOne;
+const mapStateToProps = (state) => {
+  return {
+    cart: state.shop.cart,
+  };
+};
+
+export default connect(mapStateToProps)(CartRowOne);
