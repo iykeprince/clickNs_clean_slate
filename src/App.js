@@ -1,7 +1,7 @@
 import React from "react";
 import "./assets/sass/main.scss";
 import Home from "./pages/Home";
-import { BrowserRouter as Router, Redirect, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ProductDetail from "./pages/ProductDetail";
 import PhonenTablet from "./pages/Categry/PhonenTablet";
 import Supermarket from "./pages/Categry/Supermarket";
