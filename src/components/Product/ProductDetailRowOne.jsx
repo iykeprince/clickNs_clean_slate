@@ -33,6 +33,7 @@ function ProductDetailRowOne({ current, product, addToCart}) {
                 className="productImageDisplay w-100"
               />
             </div>
+            
             <div className="prevNext">
               <VariableImage Img={imgPrev} altText="previous" />
               <VariableImage Img={phonesmall1} altText="phoneSmall" />
@@ -41,6 +42,7 @@ function ProductDetailRowOne({ current, product, addToCart}) {
               <VariableImage Img={phonesmall1} altText="phoneSmall" />
               <VariableImage Img={nextImg} altText="next" />
             </div>
+
             <hr className="separator" />
 
             <div className="product__share pb-3 d-none d-md-block">

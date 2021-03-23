@@ -5,6 +5,7 @@ const INITIAL_STATE = {
   products: [...dealsData], //{id, title, price, descr, img}
   cart: [], //{id, title, price, descr, img, qty}
   currentItem: null,
+  totalPrice: 0,
 };
 
 const shopReducer = (state = INITIAL_STATE, action) => {
@@ -23,29 +24,49 @@ const shopReducer = (state = INITIAL_STATE, action) => {
         cart: inCart
           ? state.cart.map((item) =>
               item.id === action.payload.id
-                ? { ...item, qty: item.qty + 1, finalTotalPrice: item.finalTotalPrice }
+                ? {
+                    ...item,
+                    qty: item.qty + 1,
+                    // finalTotalPrice: item.finalTotalPrice,
+                  }
                 : item
             )
-          : [...state.cart, { ...item, qty: 1, finalTotalPrice: item.finalTotalPrice }],
+          : [
+              ...state.cart,
+              {
+                ...item,
+                qty: 1,
+                //  finalTotalPrice: item.finalTotalPrice
+              },
+            ],
+            totalPrice: state.totalPrice,
       };
     case actionTypes.REMOVE_FROM_CART:
       return {
         ...state,
         cart: state.cart.filter((item) => item.id !== action.payload.id),
+        totalPrice: state.totalPrice,
       };
     case actionTypes.EDIT_QTY:
       return {
         ...state,
         cart: state.cart.map((item) =>
           item.id === action.payload.id
-            ? { ...item, qty: + action.payload.qty }
+            ? { ...item, qty: +action.payload.qty }
             : item
         ),
+        totalPrice: state.totalPrice,
       };
     case actionTypes.GET_CURRENT_ITEM:
       return {
         ...state,
         currentItem: action.payload,
+      };
+
+      case actionTypes.SET_TOTAL_PRICE:
+      return {
+        ...state,
+        totalPrice: action.payload,
       };
 
     default:

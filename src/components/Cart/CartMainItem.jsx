@@ -6,7 +6,11 @@ import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
 import { makeStyles } from "@material-ui/core/styles";
 import { connect } from "react-redux";
-import { adjustItemQty, removeFromCart } from "../../redux/actions/shopping";
+import {
+  adjustItemQty,
+  removeFromCart,
+  updateTotalPrice,
+} from "../../redux/actions/shopping";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -23,15 +27,20 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function CartMainItem({ cart, itemData, adjustQty, removeFromCart, ...props }) {
+function CartMainItem({
+  cart,
+  totalPrice,
+  itemData,
+  adjustQty,
+  removeFromCart,
+  setTPrice,
+  ...props
+}) {
   const classes = useStyles();
-
   const [itemNumber, setitemNumber] = useState(itemData.qty);
-
   console.log("totalItem|cart", cart);
 
-  //CALCULATION
-  const [totalPrice, setTotalPrice] = useState(0);
+  // CALCULATION
   const [totalItems, setTotalItems] = useState(0);
 
   useEffect(() => {
@@ -42,16 +51,21 @@ function CartMainItem({ cart, itemData, adjustQty, removeFromCart, ...props }) {
       items += item.qty;
       price += item.qty * item.mainPrice;
     });
-    console.log("totalItem|items", items, "\ntotalItem|price", price);
 
     setTotalItems(items);
-    setTotalPrice(price);
-  }, [cart, totalPrice, totalItems, setTotalPrice, setTotalItems]);
+    setTPrice(price);
+  }, [cart, totalPrice, totalItems, setTotalItems, setTPrice]);
+
+  console.log(
+    "totalItem|to redux",
+    totalItems,
+    "\n totalPrice|to redux",
+    totalPrice
+  );
 
   const singleItemTotal = itemNumber * itemData.mainPrice;
-  const savedAmount = (itemData.mainPrice)-(itemData.slashedPrice);
-
-  //END OF CALCULATION
+  const savedAmount = itemData.mainPrice - itemData.slashedPrice;
+  // END OF CALCULATION
 
   const handleChange = (event) => {
     setitemNumber(event.target.value);
@@ -150,7 +164,9 @@ function CartMainItem({ cart, itemData, adjustQty, removeFromCart, ...props }) {
         </div>
 
         <div className="col-2 txt__contentgrp gr3 text-center ">
-          <p className="font-weight-bold">&#8358; {singleItemTotal?.toLocaleString()}</p>
+          <p className="font-weight-bold">
+            &#8358; {singleItemTotal?.toLocaleString()}
+          </p>
         </div>
       </Row>
     </div>
@@ -160,6 +176,7 @@ function CartMainItem({ cart, itemData, adjustQty, removeFromCart, ...props }) {
 const mapStateToProps = (state) => {
   return {
     cart: state.shop.cart,
+    totalPrice: state.shop.totalPrice,
   };
 };
 
@@ -167,6 +184,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     adjustQty: (id, value) => dispatch(adjustItemQty(id, value)),
     removeFromCart: (id) => dispatch(removeFromCart(id)),
+    setTPrice: (price) => dispatch(updateTotalPrice(price)),
   };
 };
 

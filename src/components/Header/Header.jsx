@@ -11,7 +11,6 @@ import HelpListComp from "./HelpListComp";
 import useWindowDimensions from "../../Hooks/UseWindowDimension";
 import { connect } from "react-redux";
 
-
 function Header({ showHamburger,cart }) {
 
   const [cartCount, setCartCount] = useState(0);

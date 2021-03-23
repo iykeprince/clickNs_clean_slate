@@ -1,21 +1,33 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Row } from "react-bootstrap";
 import CartMainItem from "./CartMainItem";
 import { connect } from "react-redux";
 
-function CartRowOne({ cart}) {
+function CartRowOne({totalPrice, cart }) {
+
   console.log("cart", cart);
+  const [cartCount, setCartCount] = useState(0);
+
+  useEffect(() => {
+    let count = 0;
+    cart.forEach((item) => {
+      count += item.qty;
+    });
+
+    setCartCount(count);
+  }, [cart, cartCount]);
 
   return (
     <div className="crt_grp">
       <div className="topcartSecOne">
-        <h5>Cart ({cart.length} items)</h5>
+        <h5>Cart ({cartCount} items)</h5>
         {/* <div>
-          <img src="" alt="woozeeLogo" />
-          <img src="" alt="dispatchImg" />
-          <span>Dispatch</span>
-          <span>items on your Cart are eligible for Free Shipping.</span>
-        </div> */}
+            <img src="" alt="woozeeLogo" />
+            <img src="" alt="dispatchImg" />
+            <span>Dispatch</span>
+            <span>items on your Cart are eligible for Free Shipping.</span>
+          </div> */}
+
         <p className="eligiblTxt">
           Items on your Cart are eligible for Free Shipping.
         </p>
@@ -47,7 +59,7 @@ function CartRowOne({ cart}) {
         <div>
           <span className="totlText">Total:</span>
           <span className="amount">
-            {/* &#8358; {totalPrice?.toLocaleString()} */}
+            &#8358; {totalPrice?.toLocaleString()}
           </span>
           <p className="delFee">Delivery fee not included yet</p>
         </div>
@@ -59,6 +71,7 @@ function CartRowOne({ cart}) {
 const mapStateToProps = (state) => {
   return {
     cart: state.shop.cart,
+    totalPrice: state.shop.totalPrice,
   };
 };
 
