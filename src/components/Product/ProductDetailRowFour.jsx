@@ -1,23 +1,17 @@
 import React from "react";
 import { Row} from "react-bootstrap";
-import CardGroupTitle from "../Cards/CardGroupTitle";
-import ProductCardGroupSmall from "../Cards/ProductCardGroupSmall";
+import DealsSectionSm from "./DealsSectionSm";
 
 
 function ProductDetailRowFour() {
   return (
     <Row>
       <div className="prodDetailWrapper col-lg-9 col-12">
-        <div className="prodSmallWrapper">
-          <CardGroupTitle titleText={`Customers who viewed this also viewed`} />
-          <ProductCardGroupSmall />
-        </div>
-        <br />
-        <div  className="prodSmallWrapper">
-          <CardGroupTitle titleText={`Customers Also Bought`} />
-          <ProductCardGroupSmall />
-        </div>
-        <br />
+        
+        <DealsSectionSm titleText="Customers who viewed this also viewed" sliceFrom={12} sliceTo={18}/>
+
+        <DealsSectionSm titleText="Customers Also Bought" sliceFrom={12} sliceTo={18}/>
+
       </div>
     </Row>
   );

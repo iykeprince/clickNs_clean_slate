@@ -1,25 +1,16 @@
-export const carouselData = [
+export const advertData = [
   {
     id: "",
+    name: "",
     img: "",
   },
   {
     id: "",
+    name: "",
     img: "",
   },
 ];
 
-export const recommendedData = [
-  {
-    id: 1,
-    productImg: "../../assets/images/carouselImg.svg",
-    productName:
-      "Samsung Galaxy A50 6.4-Inch (4GB,128GB ROM) Android 9 Pie, (25MP+5MP+ 8MP)+ 25MP 4000mAh 4G Dual SIM Smartphone - White",
-    mainPrice: "₦ 100,000",
-    slashedPrice: "₦ 80,000",
-    percentage: "20%",
-  },
-];
 
 export const dealsData = [
   {
@@ -37,7 +28,7 @@ export const dealsData = [
     id: 2,
     productImg: "/images/Products/shoe.png",
     productName: "Journeys Rainbow Vans Old School",
-    mainPrice: 100000,
+    mainPrice: 112000,
     slashedPrice: 80000,
     percentDiscount: "20%",
     sellerName: "THE 4DX",
@@ -47,7 +38,7 @@ export const dealsData = [
     id: 3,
     productImg: "/images/Products/laptop.png",
     productName: "Vostro 14 5000 Small Business Laptop",
-    mainPrice: 100000,
+    mainPrice: 110000,
     slashedPrice: 80000,
     percentDiscount: "20%",
     sellerName: "THE 4DX",
@@ -57,7 +48,7 @@ export const dealsData = [
     id: 4,
     productImg: "/images/Products/dress.png",
     productName: "Black and Blue Ombre Prom Dress",
-    mainPrice: 100000,
+    mainPrice: 130000,
     slashedPrice: 80000,
     percentDiscount: "20%",
     sellerName: "THE 4DX",
@@ -68,7 +59,7 @@ export const dealsData = [
     productImg: "/images/Products/fridge.png",
     productName:
       "SAMSUNG Family Hub RF56M9540SR/EU American-Style Smart Fridge Freezer - Real Stainless",
-    mainPrice: 100000,
+    mainPrice: 80000,
     slashedPrice: 80000,
     percentDiscount: "20%",
     sellerName: "THE 4DX",
@@ -78,7 +69,127 @@ export const dealsData = [
     id: 6,
     productImg: "/images/Products/shoe.png",
     productName: "Journeys Rainbow Vans Old School",
+    mainPrice: 90000,
+    slashedPrice: 80000,
+    percentDiscount: "20%",
+    sellerName: "THE 4DX",
+    rating: 5,
+  },
+  {
+    id: 7,
+    productImg: "/images/phone790.png",
+    productName: "Samsung Galaxy A50 6.4-Inch (4GB,128GB ROM) Android 9 Pie, (25MP+5MP+ 8MP)+ 25MP 4000mAh 4G Dual SIM Smartphone - White",
+    mainPrice: 110000,
+    slashedPrice: 80000,
+    percentDiscount: "20%",
+    sellerName: "THE 4DX",
+    rating: 5,
+  },
+  {
+    id: 8,
+    productImg: "/images/phone792.png",
+    productName: "Samsung Galaxy A50 6.4-Inch (4GB,128GB ROM) Android 9 Pie, (25MP+5MP+ 8MP)+ 25MP 4000mAh 4G Dual SIM Smartphone - White",
+    mainPrice: 140000,
+    slashedPrice: 80000,
+    percentDiscount: "20%",
+    sellerName: "THE 4DX",
+    rating: 5,
+  },
+  {
+    id: 9,
+    productImg: "/images/phone791.png",
+    productName: "Samsung Galaxy A50 6.4-Inch (4GB,128GB ROM) Android 9 Pie, (25MP+5MP+ 8MP)+ 25MP 4000mAh 4G Dual SIM Smartphone - White",
+    mainPrice: 130000,
+    slashedPrice: 80000,
+    percentDiscount: "20%",
+    sellerName: "THE 4DX",
+    rating: 5,
+  },
+  {
+    id: 10,
+    productImg: "/images/phone790.png",
+    productName: "Samsung Galaxy A50 6.4-Inch (4GB,128GB ROM) Android 9 Pie, (25MP+5MP+ 8MP)+ 25MP 4000mAh 4G Dual SIM Smartphone - White",
+    mainPrice: 120000,
+    slashedPrice: 80000,
+    percentDiscount: "20%",
+    sellerName: "THE 4DX",
+    rating: 5,
+  },
+  {
+    id: 11,
+    productImg: "/images/phone790.png",
+    productName: "Samsung Galaxy A50 6.4-Inch (4GB,128GB ROM) Android 9 Pie, (25MP+5MP+ 8MP)+ 25MP 4000mAh 4G Dual SIM Smartphone - White",
     mainPrice: 100000,
+    slashedPrice: 80000,
+    percentDiscount: "20%",
+    sellerName: "THE 4DX",
+    rating: 5,
+  },
+  {
+    id: 12,
+    productImg: "/images/powerBank795.png",
+    productName: "Samsung Galaxy A50 6.4-Inch (4GB,128GB ROM) Android 9 Pie, (25MP+5MP+ 8MP)+ 25MP 4000mAh 4G Dual SIM Smartphone - White",
+    mainPrice: 110000,
+    slashedPrice: 80000,
+    percentDiscount: "20%",
+    sellerName: "THE 4DX",
+    rating: 5,
+  },
+  {
+    id: 13,
+    productImg: "/images/samsungFrontBack.png",
+    productName: "Samsung Galaxy A50 6.4-Inch (4GB,128GB ROM) Android 9 Pie, (25MP+5MP+ 8MP)+ 25MP 4000mAh 4G Dual SIM Smartphone - White",
+    mainPrice: 200000,
+    slashedPrice: 80000,
+    percentDiscount: "20%",
+    sellerName: "THE 4DX",
+    rating: 5,
+  },
+  {
+    id: 14,
+    productImg: "/images/samsungFrontBack.png",
+    productName: "Samsung Galaxy A50 6.4-Inch (4GB,128GB ROM) Android 9 Pie, (25MP+5MP+ 8MP)+ 25MP 4000mAh 4G Dual SIM Smartphone - White",
+    mainPrice: 190000,
+    slashedPrice: 80000,
+    percentDiscount: "20%",
+    sellerName: "THE 4DX",
+    rating: 5,
+  },
+  {
+    id: 15,
+    productImg: "/images/samsungFrontBack.png",
+    productName: "Samsung Galaxy A50 6.4-Inch (4GB,128GB ROM) Android 9 Pie, (25MP+5MP+ 8MP)+ 25MP 4000mAh 4G Dual SIM Smartphone - White",
+    mainPrice: 130000,
+    slashedPrice: 80000,
+    percentDiscount: "20%",
+    sellerName: "THE 4DX",
+    rating: 5,
+  },
+  {
+    id: 16,
+    productImg: "/images/samsungFrontBack.png",
+    productName: "Samsung Galaxy A50 6.4-Inch (4GB,128GB ROM) Android 9 Pie, (25MP+5MP+ 8MP)+ 25MP 4000mAh 4G Dual SIM Smartphone - White",
+    mainPrice: 180000,
+    slashedPrice: 80000,
+    percentDiscount: "20%",
+    sellerName: "THE 4DX",
+    rating: 5,
+  },
+  {
+    id: 17,
+    productImg: "/images/samsungFrontBack.png",
+    productName: "Samsung Galaxy A50 6.4-Inch (4GB,128GB ROM) Android 9 Pie, (25MP+5MP+ 8MP)+ 25MP 4000mAh 4G Dual SIM Smartphone - White",
+    mainPrice: 160000,
+    slashedPrice: 80000,
+    percentDiscount: "20%",
+    sellerName: "THE 4DX",
+    rating: 5,
+  },
+  {
+    id: 18,
+    productImg: "/images/samsungFrontBack.png",
+    productName: "Samsung Galaxy A50 6.4-Inch (4GB,128GB ROM) Android 9 Pie, (25MP+5MP+ 8MP)+ 25MP 4000mAh 4G Dual SIM Smartphone - White",
+    mainPrice: 190000,
     slashedPrice: 80000,
     percentDiscount: "20%",
     sellerName: "THE 4DX",
@@ -86,16 +197,3 @@ export const dealsData = [
   },
 ];
 
-export const advertOneData = [{}];
-
-export const featuredData = [{}];
-
-export const advertTwoData = [{}];
-
-export const dealsDataTwo = [{}];
-
-export const dealsDataThree = [{}];
-
-// export const advertTwoData = [{}];
-
-// export const advertTwoData = [{}];

@@ -32,13 +32,13 @@ function Home() {
       <div className="body__wrapper putAtMiddle">
         <HomeBodyTop />
         <BodyNav />
-        <DealsSection title="Recommended for you" className1="" className2="bgWhite"/>
-        <DealsSection title="Deals of The Day" className1="dealsSectionTwo" className2="bgRed"/>
+        <DealsSection title="Recommended for you" className1="" className2="bgWhite" sliceFrom={0} sliceTo={6}/>
+        <DealsSection title="Deals of The Day" className1="dealsSectionTwo" className2="bgRed" sliceFrom={0} sliceTo={6}/>
         <SingleImage img={homeImgs.blackFriday} />
         <FeaturedSection />
         <DoubleImage img1={homeImgs.shoe} img2={homeImgs.youghurt} />
-        <DealsSection title="Deals of The Day" className1="dealsSectionTwo" className2="bgYellow"/>
-        <DealsSection title="Deals of The Day" className1="dealsSectionTwo" className2="bgGreen"/>
+        <DealsSection title="Deals of The Day" className1="dealsSectionTwo" className2="bgYellow" sliceFrom={0} sliceTo={6}/>
+        <DealsSection title="Deals of The Day" className1="dealsSectionTwo" className2="bgGreen" sliceFrom={0} sliceTo={6}/>
         <DoubleImage img1={homeImgs.megaSale} img2={homeImgs.nailPolish} />
         <BottomAboutSection />
       </div>

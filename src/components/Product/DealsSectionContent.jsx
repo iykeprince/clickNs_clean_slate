@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { loadCurrentItem, addToCart } from "../../redux/actions/shopping";
 
-const DealsSectionContent = ({ productData, addToCart, loadCurrentItem }) => {
-  return (productData || []).map((data, index) => {
+const DealsSectionContent = ({ productData, addToCart, loadCurrentItem, ...props }) => {
+  return (productData || []).slice(props.sliceFrom, props.sliceTo).map((data, index) => {
     return (
       <Link
         to={`/product/${(data || []).id}`}

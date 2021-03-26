@@ -1,22 +1,29 @@
 import React from "react";
-import ProductCardGroupBig from "../Cards/ProductCardGroupBig";
-import CardGroupTitle from "../Cards/CardGroupTitle";
+import DealsSection from "./DealsSection";
 
 
 function ProductDetailRowFive() {
   return (
-    <div className="prodWrapper">
-      <div className="prodBigWrapper">
-        <CardGroupTitle titleText={`More Items From This Seller `} />
-        <ProductCardGroupBig />
-      </div>
-      <br />
-      <div className="prodBigWrapper"> 
-        <CardGroupTitle titleText={`Recently Viewed`} />
-        <ProductCardGroupBig />
-      </div>
-      <br />
+    <div>
+    <div className="mt-4">
+      <DealsSection
+        title="Recommended for you"
+        className1=""
+        className2="bgWhite"
+        sliceFrom={6}
+        sliceTo={12}
+      />
     </div>
+    <div className="mt-4">
+      <DealsSection
+        title="Recommended for you"
+        className1=""
+        className2="bgWhite"
+        sliceFrom={6}
+        sliceTo={12}
+      />
+    </div>
+  </div>
   );
 }
 

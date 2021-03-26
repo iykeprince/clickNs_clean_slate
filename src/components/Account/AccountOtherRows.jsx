@@ -1,20 +1,27 @@
 import React from "react";
-import CardGroupTitle from "../Cards/CardGroupTitle";
-import ProductCardGroupBig from "../Cards/ProductCardGroupBig";
+import DealsSection from "../Product/DealsSection";
 
 function AccountOtherRows() {
   return (
-    <div className="prodWrapper">
-      <div className="prodBigWrapper">
-        <CardGroupTitle titleText="Recommended For You" />
-        <ProductCardGroupBig />
+    <div>
+      <div className="mt-4">
+        <DealsSection
+          title="Recommended for you"
+          className1=""
+          className2="bgWhite"
+          sliceFrom={6}
+          sliceTo={12}
+        />
       </div>
-      <br />
-      <div className="prodBigWrapper">
-        <CardGroupTitle titleText="Recently Viewed" />
-        <ProductCardGroupBig />
+      <div className="mt-4">
+        <DealsSection
+          title="Recommended for you"
+          className1=""
+          className2="bgWhite"
+          sliceFrom={6}
+          sliceTo={12}
+        />
       </div>
-      <br />
     </div>
   );
 }

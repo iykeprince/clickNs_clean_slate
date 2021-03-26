@@ -14,7 +14,7 @@ function DealsSection({ products, ...props }) {
             </div>
           </Col>
 
-          <DealsSectionContent productData={products} />
+          <DealsSectionContent productData={products} sliceFrom={props.sliceFrom} sliceTo={props.sliceTo}/>
         </Row>
       </Container>
     </div>

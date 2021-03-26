@@ -18,7 +18,7 @@ const SlimCard = (props) => {
           <Col className="slimText">
             <Row className='flex-wrap flex-lg-nowrap'>
             <Col xs='auto' md='5' className='slimTextContainer'>
-              <p className="slimTextBig">&#8358; 99,500</p>
+              <p className="slimTextBig text-nowrap">&#8358; 99,500</p>
               <p className="slimTextSmall">
                 Samsung Galaxy A50 6.4-Inch (4GB,128GB ROM)
               </p>
