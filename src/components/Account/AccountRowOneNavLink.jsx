@@ -12,8 +12,10 @@ import IconStore from "../../assets/icons/IconStore";
 import { Route, NavLink, HashRouter } from "react-router-dom";
 import EditAddressComp from "./EditAddressComp";
 import * as FaIcon from "react-icons/fa";
+import { useHistory } from "react-router-dom";
 
 export default function AccountRowOneNavLink() {
+  const history = useHistory();
   return (
     <HashRouter>
       <div className="row accRowOne__wrapper">
@@ -86,6 +88,10 @@ export default function AccountRowOneNavLink() {
 
             <a
               href="/recentlyViewed"
+              onClick={(e) => {
+                e.preventDefault();
+                history.push("/recentlyViewed");
+              }}
               className="nav-link  d-flex justify-content-between"
             >
               <span>

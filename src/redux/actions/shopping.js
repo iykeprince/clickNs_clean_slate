@@ -18,7 +18,7 @@ export const removeFromCart = (itemID) => {
   };
 };
 
-export const adjustItemQty = (itemID, value, finalTotalPrice) => {
+export const adjustItemQty = (itemID, value) => {
   return {
     type: actionTypes.EDIT_QTY,
     payload: {

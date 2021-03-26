@@ -39,5 +39,4 @@ export const REMOVE_FROM_CART = "REMOVE_FROM_CART";
 export const EDIT_QTY = "EDIT_QTY";
 export const GET_CURRENT_ITEM = "GET_CURRENT_ITEM";
 export const SET_TOTAL_PRICE = "SET_TOTAL_PRICE";
-
 //
