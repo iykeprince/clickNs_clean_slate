@@ -29,7 +29,7 @@ const DealsSectionContentSm = ({
             <div className="productCardImg">
               <img src={data?.productImg} alt="product" className="w-100"/>
             </div>
-            <div className="productName productName__sm">
+            <div className="productName productName__sm pt-2 pt-lg-0">
               <p className="">{data?.productName} </p>
             </div>
             <div className="currentProductPrice">

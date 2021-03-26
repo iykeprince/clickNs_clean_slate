@@ -26,7 +26,7 @@ function ProductDetailRowOne({ current, product, addToCart}) {
       <Col lg="9">
         <Row className="rows__wrapper">
           <Col md="4">
-            <div className="productImageDisplay_wrap">
+            <div className="productImageDisplay_wrap px-3">
               <img
                 src={current?.productImg}
                 alt="phone"

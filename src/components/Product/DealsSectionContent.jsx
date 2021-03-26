@@ -19,7 +19,7 @@ const DealsSectionContent = ({ productData, addToCart, loadCurrentItem, ...props
         <div className="productImage">
           <img src={data?.productImg} alt="product" />
         </div>
-        <div className="productName">
+        <div className="productName pt-2 pt-lg-0">
           <p className="">{data?.productName}</p>
         </div>
         <div className="currentProductPrice">

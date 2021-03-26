@@ -82,7 +82,7 @@ function CartMainItem({
               <img
                 src={itemData?.productImg}
                 alt="productImage"
-                className="pImage"
+                className="pImage w-100 object-fit-contain"
               />
             </div>
 
