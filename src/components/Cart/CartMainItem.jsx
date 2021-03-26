@@ -89,14 +89,14 @@ function CartMainItem({
             <div className="col-10 pText__wrapper">
               <p className="selrText">Seller: {itemData?.sellerName}</p>
               <p className="prodDescrpt"> {itemData?.productName}</p>
-              <div className="productPrice__Wrap">
+              {/* <div className="productPrice__Wrap">
                 <span className="iconDescrpt__wrapper mainPrice">
-                  {/* &#8358; {itemData?.mainPrice} */}
+                  &#8358; {itemData?.mainPrice}
                 </span>
                 <span className="slashedPrice">
-                  {/* &#8358; {itemData?.slashedPrice} */}
+                  &#8358; {itemData?.slashedPrice}
                 </span>
-              </div>
+              </div> */}
               <div className="iconWithText__wrap">
                 <span>
                   <button className="iconDescrpt__wrapper bg-white border-0">
@@ -159,7 +159,7 @@ function CartMainItem({
           </p>
           <div className="savdAmount">
             <span className="savdAmountText"> {props.savedAmountText}</span>
-            <span>&#8358; {savedAmount?.toLocaleString()}</span>
+            <span>Savings  &#8358; {savedAmount?.toLocaleString()}</span>
           </div>
         </div>
 
