@@ -6,6 +6,7 @@ const INITIAL_STATE = {
   cart: [], //{id, title, price, descr, img, qty}
   currentItem: null,
   totalPrice: 0,
+  contact: [],
 };
 
 const shopReducer = (state = INITIAL_STATE, action) => {
@@ -27,7 +28,6 @@ const shopReducer = (state = INITIAL_STATE, action) => {
                 ? {
                     ...item,
                     qty: item.qty + 1,
-                    // finalTotalPrice: item.finalTotalPrice,
                   }
                 : item
             )
@@ -36,10 +36,9 @@ const shopReducer = (state = INITIAL_STATE, action) => {
               {
                 ...item,
                 qty: 1,
-                //  finalTotalPrice: item.finalTotalPrice
               },
             ],
-            totalPrice: state.totalPrice,
+        totalPrice: state.totalPrice,
       };
     case actionTypes.REMOVE_FROM_CART:
       return {
@@ -63,10 +62,15 @@ const shopReducer = (state = INITIAL_STATE, action) => {
         currentItem: action.payload,
       };
 
-      case actionTypes.SET_TOTAL_PRICE:
+    case actionTypes.SET_TOTAL_PRICE:
       return {
         ...state,
         totalPrice: action.payload,
+      };
+    case actionTypes.SET_USER_CONTACT:
+      return {
+        ...state,
+        userContact: action.payload,
       };
 
     default:

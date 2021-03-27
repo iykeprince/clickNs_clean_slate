@@ -40,3 +40,4 @@ export const EDIT_QTY = "EDIT_QTY";
 export const GET_CURRENT_ITEM = "GET_CURRENT_ITEM";
 export const SET_TOTAL_PRICE = "SET_TOTAL_PRICE";
 //
+export const SET_USER_CONTACT = "SET_USER_CONTACT";

@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 
 function CartRowOne({totalPrice, cart }) {
 
-  console.log("cart", cart);
+  // console.log("cart", cart);
   const [cartCount, setCartCount] = useState(0);
 
   useEffect(() => {

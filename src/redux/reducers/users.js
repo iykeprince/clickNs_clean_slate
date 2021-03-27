@@ -1,7 +1,4 @@
-import {GET_ALL_USERS, LOADING_USERS} from '../actions/types'
-
-
-
+import * as actionTypes from "../actions/types";
 
 
 const initialState = {
@@ -11,13 +8,13 @@ const initialState = {
 
 const users = (state = initialState, action) => {
   switch(action.type) {
-    case GET_ALL_USERS:
+    case actionTypes.GET_ALL_USERS:
       return {
         ...state,
         loadingUsers: false,
         users: [...state.users, ...action.payload]
       }
-    case LOADING_USERS: 
+    case actionTypes.LOADING_USERS: 
       return {
         ...state,
         loadingUsers: true

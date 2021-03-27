@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { toastr } from 'react-redux-toastr'
 import { toastrOptions } from '../../utils/helpers'
-import { CREATE_CATEGORY, GET_CATEGORIES, GET_CATEGORY, DELETE_CATEGORY, EDIT_CATEGORY } from './types'
+import * as actionTypes from "./types";
 
 
 export const handleCreateCategory = (data) => async (dispatch, getState) => {
@@ -20,7 +20,7 @@ export const handleCreateCategory = (data) => async (dispatch, getState) => {
     const response = await axios(config)
     console.log(response)
     dispatch({
-      type: CREATE_CATEGORY,
+      type: actionTypes.CREATE_CATEGORY,
       payload: response.data.data
     })
     toastr.success('', 'Category created successfully', toastrOptions)
@@ -50,7 +50,7 @@ export const handleGetCategories = () => async (dispatch, getState) => {
     const response = await axios(config)
     console.log(response)
     dispatch({
-      type: GET_CATEGORIES,
+      type: actionTypes.GET_CATEGORIES,
       payload: response.data.data
     })
     return;
@@ -78,7 +78,7 @@ export const handleDeleteCategory = (data) => async (dispatch, getState) => {
     const response = await axios(config)
     console.log(data)
     dispatch({
-      type: DELETE_CATEGORY,
+      type: actionTypes.DELETE_CATEGORY,
       payload: data
     })
     toastr.success('', 'Category deleted successfully', toastrOptions)
@@ -107,7 +107,7 @@ export const handleEditcategory = (data, id) => async (dispatch, getState) => {
     const response = await axios(config)
     console.log(response)
     dispatch({
-      type: EDIT_CATEGORY,
+      type: actionTypes.EDIT_CATEGORY,
       payload: response.data.data
     })
     toastr.success('', 'Hashtag edited successfully', toastrOptions)

@@ -1,15 +1,15 @@
-import { CREATE_MESSAGE,GET_ERRORS } from './types'
+import * as actionTypes from "./types";
 
 export const createMessage = msg => {
   return {
-    type: CREATE_MESSAGE,
+    type: actionTypes.CREATE_MESSAGE,
     payload: msg
   }
 }
 
 export const returnErrors = (msg, status) => {
   return {
-    type: GET_ERRORS,
+    type: actionTypes.GET_ERRORS,
     payload: { msg,status }
   }
 }

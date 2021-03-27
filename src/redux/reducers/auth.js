@@ -1,9 +1,4 @@
-import {
-  USER_LOADED,
-  USER_LOADING,
-  LOGIN_SUCCESS,
-  LOGOUT_SUCCESS,
-} from "../actions/types";
+import * as actionTypes from "../actions/types";
 
 const initialState = {
   token: null,
@@ -14,19 +9,19 @@ const initialState = {
 
 export default function auth(state = initialState, action) {
   switch (action.type) {
-    case USER_LOADING:
+    case actionTypes.USER_LOADING:
       return {
         ...state,
         isLoading: true,
       };
-    case USER_LOADED:
+    case actionTypes.USER_LOADED:
       return {
         ...state,
         isLoading: false,
         isAuthenticated: true,
         user: action.payload,
       };
-    case LOGIN_SUCCESS:
+    case actionTypes.LOGIN_SUCCESS:
       console.log({ payload: action.payload });
       return {
         ...state,
@@ -35,7 +30,7 @@ export default function auth(state = initialState, action) {
         isLoading: false,
         token: action.payload.token,
       };
-    case LOGOUT_SUCCESS:
+    case actionTypes.LOGOUT_SUCCESS:
       localStorage.removeItem("persist:root");
       return {
         ...state,

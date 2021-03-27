@@ -52,7 +52,6 @@ export const ControlledRating = () => {
 
 export const ReadOnlyRating = (prop) => {
   const [value] = React.useState(prop);
-  console.log('ratingCount',value.ratingCount)
   return (
       <Box component="fieldset" mb={3} borderColor="transparent">
         <Rating name="read-only" value={value.ratingCount} readOnly size={value.size}/>

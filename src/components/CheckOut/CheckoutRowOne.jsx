@@ -1,21 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import IconStore from "../../assets/icons/IconStore";
 import RadioGroup from "@material-ui/core/RadioGroup";
 import FormControl from "@material-ui/core/FormControl";
 import CheckListItem from "./CheckListItem";
-// import { Link } from "react-router-dom";
-// import CartMainItem from "../Cart/CartMainItem";
-import phone11Img from "../../assets/images/phone11.jpg";
 import CheckRightSection from "./CheckRightSection";
 import CheckPayment from "./CheckPayment";
 import ChangeAddressModal from "./ChangeAddressModal";
+import { connect } from "react-redux";
 
-function CheckoutRowOne() {
-  const [value, setValue] = React.useState("firstChoice");
+function CheckoutRowOne({ totalPrice, cart }) {
+  const [value, setValue] = useState("firstChoice");
 
   const handleChange = (event) => {
     setValue(event.target.value);
   };
+
+  const [cartCount, setCartCount] = useState(0);
+
+  useEffect(() => {
+    let count = 0;
+    cart.forEach((item) => {
+      count += item.qty;
+    });
+
+    setCartCount(count);
+  }, [cart, cartCount]);
 
   return (
     <div className="checkout_row">
@@ -36,7 +45,7 @@ function CheckoutRowOne() {
                   {/* <Link to="/customer#/editAddress"> */}
                   <ChangeAddressModal>
                     <p className="checktitle__fn">CHANGE</p>
-                    </ChangeAddressModal>
+                  </ChangeAddressModal>
                   {/* </Link> */}
                 </div>
               </div>
@@ -130,15 +139,16 @@ function CheckoutRowOne() {
                         and taxes as required by the postal office at delivery."
                         data7="The International Shipping and custom Fee is NON-REFUNDABLE in case of a return"
                       />
-                      <p className="text-primary font-weight-500 pl-5 pt-2">SELECT PICKUP STATION</p>
+                      <p className="text-primary font-weight-500 pl-5 pt-2">
+                        SELECT PICKUP STATION
+                      </p>
                     </RadioGroup>
                   </FormControl>
                 </div>
               </div>
             </div>
 
-            <CheckPayment/>
-            
+            <CheckPayment />
           </div>
         </div>
 
@@ -146,13 +156,20 @@ function CheckoutRowOne() {
           <p className="checkoutTxt">ORDER SUMMARY</p>
           <div className="addressCheckout_rightTop">
             <div className="check__orderTitle">
-              <span className="ordertitle__numbr">YOUR ORDER (1 Item)</span>
+              <span className="ordertitle__numbr">
+                YOUR ORDER ({cartCount} Item)
+              </span>
             </div>
-            <CheckRightSection pImage={phone11Img} sellerText="THE 4DX" />
-            <CheckRightSection pImage={phone11Img} sellerText="THE 4DX" />
+
+            {cart.map((item) => (
+              <CheckRightSection key={item.id} itemData={item} />
+            ))}
 
             <div className="p-3 mt-3 border-top d-flex justify-content-between align-content-center">
-              <span className="totalStyle align-self-center">Total:</span> <span className="totalPriceStyle"> N179,4888</span>
+              <span className="totalStyle align-self-center">Total:</span>
+              <span className="totalPriceStyle">
+                &#8358; {totalPrice?.toLocaleString()}
+              </span>
             </div>
           </div>
         </div>
@@ -161,4 +178,11 @@ function CheckoutRowOne() {
   );
 }
 
-export default CheckoutRowOne;
+const mapStateToProps = (state) => {
+  return {
+    cart: state.shop.cart,
+    totalPrice: state.shop.totalPrice,
+  };
+};
+
+export default connect(mapStateToProps)(CheckoutRowOne);
