@@ -42,12 +42,3 @@ export const updateTotalPrice = (totalPrice) => {
   };
 };
 
-export const updateUserContact = (userID, userContact) => {
-  return {
-    type: actionTypes.SET_USER_CONTACT,
-    payload: {
-      id: userID,
-      userContact: userContact,
-    },
-  };
-};

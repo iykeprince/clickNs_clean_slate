@@ -1,7 +1,9 @@
 import React from "react";
+// import DealsSectionContent from "../../Product/DealsSectionContent";
 import TableContent from "./TableContent";
+import { connect } from "react-redux";
 
-export function OfficialStore({ ...props }) {
+function OfficialStore({ products, ...props }) {
   return (
     <React.Fragment>
       <div className="conatine">
@@ -12,7 +14,22 @@ export function OfficialStore({ ...props }) {
             return <TableContent key={i} img={e.img} info={e.info} />;
           })}
         </div>
+        {/* <div className="row">
+          <DealsSectionContent
+            productData={products}
+            sliceFrom={6}
+            sliceTo={12}
+          />
+        </div> */}
       </div>
     </React.Fragment>
   );
 }
+
+const mapStateToProps = (state) => {
+  return {
+    products: state.shop.products,
+  };
+};
+
+export default connect(mapStateToProps)(OfficialStore);

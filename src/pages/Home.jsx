@@ -36,10 +36,10 @@ function Home() {
         <DealsSection title="Deals of The Day" className1="dealsSectionTwo" className2="bgRed" sliceFrom={0} sliceTo={6}/>
         <SingleImage img={homeImgs.blackFriday} />
         <FeaturedSection />
-        <DoubleImage img1={homeImgs.shoe} img2={homeImgs.youghurt} />
+        <DoubleImage img1={homeImgs.shoe} img2={homeImgs.youghurt} linksTo="fashion"/>
         <DealsSection title="Deals of The Day" className1="dealsSectionTwo" className2="bgYellow" sliceFrom={0} sliceTo={6}/>
         <DealsSection title="Deals of The Day" className1="dealsSectionTwo" className2="bgGreen" sliceFrom={0} sliceTo={6}/>
-        <DoubleImage img1={homeImgs.megaSale} img2={homeImgs.nailPolish} />
+        <DoubleImage img1={homeImgs.megaSale} img2={homeImgs.nailPolish} linksTo="fashion"/>
         <BottomAboutSection />
       </div>
       <NewFooter />

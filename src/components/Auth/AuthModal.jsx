@@ -8,7 +8,11 @@ export default function AuthModal(props) {
   
   return (
     <HashRouter>
-      {/* Careful editing classes here in the css, coz they're used in  MyOrdersUI  */}
+      {/* Careful editing 
+          classes here in the css, 
+          coz they're used in  MyOrdersUI  
+      */}
+
       <div className="authModal">
         <div className="OpenClosedNav my-3  d-flex justify-content-center">
           <ul className="nav nav-tabs" id="myTab" role="tablist">

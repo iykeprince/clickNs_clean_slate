@@ -6,18 +6,19 @@ const INITIAL_STATE = {
   cart: [], //{id, title, price, descr, img, qty}
   currentItem: null,
   totalPrice: 0,
-  contact: [],
 };
 
 const shopReducer = (state = INITIAL_STATE, action) => {
+  let inCart;
   switch (action.type) {
     case actionTypes.ADD_TO_CART:
       // Create Item data from products array
       const item = state.products.find(
         (product) => product.id === action.payload.id
       );
+      
       // Check if Item is in cart already
-      const inCart = state.cart.find((item) =>
+      inCart = state.cart.find((item) =>
         item.id === action.payload.id ? true : false
       );
       return {
@@ -44,7 +45,7 @@ const shopReducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         cart: state.cart.filter((item) => item.id !== action.payload.id),
-        totalPrice: state.totalPrice,
+        totalPrice: inCart ? state.totalPrice : 0,
       };
     case actionTypes.EDIT_QTY:
       return {
@@ -66,11 +67,6 @@ const shopReducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         totalPrice: action.payload,
-      };
-    case actionTypes.SET_USER_CONTACT:
-      return {
-        ...state,
-        userContact: action.payload,
       };
 
     default:

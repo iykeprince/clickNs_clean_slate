@@ -18,6 +18,7 @@ import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { logOut } from "../../redux/actions/auth";
 
+
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
@@ -45,7 +46,7 @@ function MenuListComp(props) {
   const { firstName, token } = props;
 
   const classes = useStyles();
-// console.log(userDataFromGoogle)
+  // console.log(userDataFromGoogle)
   const [open, setOpen] = useState(false);
   const anchorRef = React.useRef(null);
   const username = `Hi, ${firstName}`;
@@ -65,7 +66,7 @@ function MenuListComp(props) {
     setModalOpen(true);
   };
   const handleLogOut = () => {
-    props.logoutUser()
+    props.logoutUser();
   };
 
   const handleClose = (event) => {
@@ -148,10 +149,7 @@ function MenuListComp(props) {
                       </MenuItem>
                     </Link>
                     {token ? (
-                      <MenuItem
-                        onClick={handleLogOut}
-                        className="logOutTxt"
-                      >
+                      <MenuItem onClick={handleLogOut} className="logOutTxt">
                         LOGOUT
                       </MenuItem>
                     ) : (
@@ -193,14 +191,13 @@ function MenuListComp(props) {
       >
         <Fade in={openModal}>
           <div className={classes.paperTwo}>
-            <AuthModal onLoginSuccess={handleModalClose}/>
+            <AuthModal onLoginSuccess={handleModalClose} />
           </div>
         </Fade>
       </Modal>
     </div>
   );
 }
-
 
 const mapStateToProps = ({ auth }) => {
   if (auth.user) {
@@ -222,3 +219,5 @@ const mapDispatchToProps = (dispatch) => ({
 export default withRouter(
   connect(mapStateToProps, mapDispatchToProps)(MenuListComp)
 );
+
+// export default connect(mapStateToProps, mapDispatchToProps)(MenuListComp);

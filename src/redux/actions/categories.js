@@ -1,6 +1,4 @@
 import axios from 'axios'
-import { toastr } from 'react-redux-toastr'
-import { toastrOptions } from '../../utils/helpers'
 import * as actionTypes from "./types";
 
 
@@ -23,15 +21,15 @@ export const handleCreateCategory = (data) => async (dispatch, getState) => {
       type: actionTypes.CREATE_CATEGORY,
       payload: response.data.data
     })
-    toastr.success('', 'Category created successfully', toastrOptions)
+    console.log('', 'Category created successfully')
     return 'success';
   } catch (error) {
     console.log(error.response);
     if (error.response.data.message === 'category already exists') {
-      toastr.error('', `Category already exists`, toastrOptions)
+      console.log('', `Category already exists`)
       return;
     }
-    toastr.error(`${error.response.data.message}`, toastrOptions)
+    console.log(`${error.response.data.message}`)
     return
   }
 }
@@ -56,7 +54,7 @@ export const handleGetCategories = () => async (dispatch, getState) => {
     return;
   } catch (error) {
     console.log(error.response);
-    toastr.error(`An error occured getting the categorues`, toastrOptions)
+    console.log(`An error occured getting the categorues`)
     return
   }
 }
@@ -81,11 +79,11 @@ export const handleDeleteCategory = (data) => async (dispatch, getState) => {
       type: actionTypes.DELETE_CATEGORY,
       payload: data
     })
-    toastr.success('', 'Category deleted successfully', toastrOptions)
+    console.log('', 'Category deleted successfully')
     return;
   } catch (error) {
     console.log(error.response);
-    toastr.error(`An error occured in deleting category`, toastrOptions)
+    console.log(`An error occured in deleting category`)
     return
   }
 }
@@ -110,11 +108,11 @@ export const handleEditcategory = (data, id) => async (dispatch, getState) => {
       type: actionTypes.EDIT_CATEGORY,
       payload: response.data.data
     })
-    toastr.success('', 'Hashtag edited successfully', toastrOptions)
+    console.log('', 'Hashtag edited successfully')
     return 'success';
   } catch (error) {
     console.log(error.response);
-    toastr.error(`An error occured editing the hashtag`, toastrOptions)
+    console.log(`An error occured editing the hashtag`)
     return
   }
 }

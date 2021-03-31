@@ -1,11 +1,11 @@
 import { combineReducers}from 'redux';
-import {reducer as toastrReducer} from 'react-redux-toastr'
 import { persistReducer } from 'redux-persist'
 import storage from 'redux-persist/lib/storage';
 import auth from './auth';
 import messages from './messages';
 import users from './users';
 import shopReducer from './shopping';
+import contactReducer from './contact';
 
 
 const persistConfig = {
@@ -18,8 +18,8 @@ const rootReducer = combineReducers({
   auth,
   messages,
   users,
-  toastr: toastrReducer,
   shop: shopReducer,
+  contact: contactReducer,
 });
 
 export default persistReducer(persistConfig, rootReducer)

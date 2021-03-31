@@ -8,7 +8,7 @@ import CheckPayment from "./CheckPayment";
 import ChangeAddressModal from "./ChangeAddressModal";
 import { connect } from "react-redux";
 
-function CheckoutRowOne({ totalPrice, cart }) {
+function CheckoutRowOne({ totalPrice, cart, contact }) {
   const [value, setValue] = useState("firstChoice");
 
   const handleChange = (event) => {
@@ -25,6 +25,11 @@ function CheckoutRowOne({ totalPrice, cart }) {
 
     setCartCount(count);
   }, [cart, cartCount]);
+
+  const defaultContact = contact.find(
+    (obj) => obj.default === true
+  );
+
 
   return (
     <div className="checkout_row">
@@ -50,10 +55,10 @@ function CheckoutRowOne({ totalPrice, cart }) {
                 </div>
               </div>
               <div className="check__addressDetail">
-                <p className="prsnName">Bukky Owolabi </p>
-                <p> 60 Landbridge</p>
-                <p>Oniru-Estate Victoria, Lagos </p>
-                <p> +2348100892368</p>
+                <p className="prsnName"> {`${defaultContact.firstName} ${defaultContact.lastName}`} </p>
+                <p>{defaultContact.address}, </p>
+                <p>{`${defaultContact.town}, ${defaultContact.city}`}</p>
+                <p>{`${defaultContact.phonePrefix}${defaultContact.phoneNumber}`}</p>
               </div>
             </div>
 
@@ -182,6 +187,7 @@ const mapStateToProps = (state) => {
   return {
     cart: state.shop.cart,
     totalPrice: state.shop.totalPrice,
+    contact: state.contact.contacts,
   };
 };
 

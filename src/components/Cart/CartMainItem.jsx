@@ -38,7 +38,7 @@ function CartMainItem({
 }) {
   const classes = useStyles();
   const [itemNumber, setitemNumber] = useState(itemData.qty);
-  console.log("totalItem|cart", cart);
+  // console.log("totalItem|cart", cart);
 
   // CALCULATION
   const [totalItems, setTotalItems] = useState(0);
@@ -56,12 +56,12 @@ function CartMainItem({
     setTPrice(price);
   }, [cart, totalPrice, totalItems, setTotalItems, setTPrice]);
 
-  console.log(
-    "totalItem|to redux",
-    totalItems,
-    "\n totalPrice|to redux",
-    totalPrice
-  );
+  // console.log(
+  //   "totalItem|to redux",
+  //   totalItems,
+  //   "\n totalPrice|to redux",
+  //   totalPrice
+  // );
 
   const singleItemTotal = itemNumber * itemData.mainPrice;
   const savedAmount = itemData.mainPrice - itemData.slashedPrice;
@@ -71,7 +71,7 @@ function CartMainItem({
     setitemNumber(event.target.value);
     adjustQty(itemData.id, event.target.value);
   };
-  console.log("itemData", itemData);
+  // console.log("itemData", itemData);
 
   return (
     <div>

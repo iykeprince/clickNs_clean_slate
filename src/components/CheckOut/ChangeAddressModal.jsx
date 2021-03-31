@@ -13,6 +13,14 @@ import FormControl from "@material-ui/core/FormControl";
 import EditIcon from "@material-ui/icons/Edit";
 import DeleteIcon from "@material-ui/icons/Delete";
 import { DynamicButtonTwo } from "../Button/DynamicButton";
+import NewAddressModal from "./NewAddressModal";
+import { connect } from "react-redux";
+import {
+  addUserContact,
+  removeUserContact,
+  updateUserContact,
+  loadCurrentContact,
+} from "../../redux/actions/contact";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -43,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function ChangeAddressModal(props) {
+function ChangeAddressModal({ contact, removeUserContact, ...props }) {
   const classes = useStyles();
 
   const anchorRef = React.useRef(null);
@@ -58,11 +66,15 @@ export default function ChangeAddressModal(props) {
     setModalOpen(true);
   };
 
-  const [value, setValue] = React.useState("firstChoice");
+  const [value, setValue] = React.useState();
 
   const handleChange = (event) => {
     setValue(event.target.value);
   };
+
+  const defaultContact = contact.find((obj) => obj.default === true);
+  const otherContact = contact.filter((obj) => obj.default === false);
+  // console.log(otherContact);
 
   return (
     <div className={`${classes.root} d-none d-sm-block`}>
@@ -90,12 +102,16 @@ export default function ChangeAddressModal(props) {
                 <h5>Address Book</h5>
                 <CloseRoundedIcon onClick={handleModalClose} />
               </div>
+
               <div className="d-flex p-3 pl-4 align-items-center border-bottom">
-                <AddCircleRoundedIcon color="primary" />
-                <p className="font-weight-500 text-primary pl-2 font-sm">
-                  ADD A NEW ADDRESS
-                </p>
+                <NewAddressModal>
+                  <AddCircleRoundedIcon color="primary" />
+                  <span className="font-weight-500 text-primary pl-2 font-sm">
+                    ADD A NEW ADDRESS
+                  </span>
+                </NewAddressModal>
               </div>
+
               <div className="p-3">
                 <FormControl component="fieldset" className={classes.fieldset}>
                   <RadioGroup
@@ -113,7 +129,7 @@ export default function ChangeAddressModal(props) {
                           <FormControlLabel
                             value="firstChoice"
                             control={<Radio />}
-                            label="Bukky Owolabi"
+                            label={`${defaultContact.firstName} ${defaultContact.lastName}`}
                             className={classes.formControlLabel}
                           />
                           <div className="pl-5 font-xs mt-n1">
@@ -146,61 +162,63 @@ export default function ChangeAddressModal(props) {
                       <p className="font-xs pl-2 font-weight-600 text-secondary">
                         SAVED ADDRESSES
                       </p>
-                      <div className="d-flex justify-content-between w-100">
-                        <div>
-                          <FormControlLabel
-                            value="secondChoice"
-                            control={<Radio />}
-                            label="Light Balla"
-                            className={classes.formControlLabel}
-                          />
-                          <div className="pl-5 font-xs mt-n1">
-                            <p className="">
-                              8 Kehinde Odusote Street, Anthony Village, Lagos.,
-                              Ikeja (GRA) , Lagos
-                            </p>
-                            <p className="">+2348094140232</p>
+                      {otherContact.map((contact) => (
+                        <div className="d-flex justify-content-between w-100">
+                          <div>
+                            <FormControlLabel
+                              value={contact.city}
+                              control={<Radio />}
+                              label={`${contact.firstName} ${contact.lastName}`}
+                              className={classes.formControlLabel}
+                            />
+                            <div className="pl-5 font-xs mt-n1">
+                              <p className="">
+                                {`${contact.address}, ${contact.town},${contact.city}`}
+                              </p>
+                              <p className="">+2348094140232</p>
+                            </div>
+                          </div>
+                          <div className="font-xs font-weight-600 text-primary">
+                            <Button className="px-2">
+                              <span className="pr-2 font-xs font-weight-600  text-primary">
+                                EDIT
+                              </span>
+                              <EditIcon className="font-sm" color="primary" />
+                            </Button>
+                            <br />
+                            <Button
+                              className="px-2"
+                              onClick={() => removeUserContact(contact.userID)}
+                            >
+                              <span className="pr-2 font-xs font-weight-600  text-primary">
+                                REMOVE
+                              </span>
+                              <DeleteIcon className="font-sm" color="primary" />
+                            </Button>
                           </div>
                         </div>
-                        <div className="font-xs font-weight-600 text-primary">
-                          <Button className="px-2">
-                            <span className="pr-2 font-xs font-weight-600  text-primary">
-                              EDIT
-                            </span>
-                            <EditIcon className="font-sm" color="primary" />
-                          </Button>
-                          <br />
-                          <Button className="px-2">
-                            <span className="pr-2 font-xs font-weight-600  text-primary">
-                              REMOVE
-                            </span>
-                            <DeleteIcon className="font-sm" color="primary" />
-                          </Button>
-                        </div>
-                      </div>
+                      ))}
                     </div>
                   </RadioGroup>
                 </FormControl>
-
-             
               </div>
               <div className="px-3 py-4 mt-3 border-top">
-                  <DynamicButtonTwo
-                    color="white"
-                    width="100%"
-                    height="42px"
-                    backgroundColor="var(--woozBlue)"
-                    boxShadow="0 4px 8px 0 rgb(0 0 0 / 15%)"
-                    borderRadius="4px"
-                    border="none !important"
-                    marginBottom=""
-                    fontWeight="600"
-                    fontSize="0.875rem"
-                    hoverBoxShadow="0 4px 8px 0 rgb(0 0 0 / 15%)"
-                  >
-                    USE THIS ADDRESS
-                  </DynamicButtonTwo>
-                </div>
+                <DynamicButtonTwo
+                  color="white"
+                  width="100%"
+                  height="42px"
+                  backgroundColor="var(--woozBlue)"
+                  boxShadow="0 4px 8px 0 rgb(0 0 0 / 15%)"
+                  borderRadius="4px"
+                  border="none !important"
+                  marginBottom=""
+                  fontWeight="600"
+                  fontSize="0.875rem"
+                  hoverBoxShadow="0 4px 8px 0 rgb(0 0 0 / 15%)"
+                >
+                  USE THIS ADDRESS
+                </DynamicButtonTwo>
+              </div>
             </div>
           </div>
         </Fade>
@@ -208,3 +226,20 @@ export default function ChangeAddressModal(props) {
     </div>
   );
 }
+
+const mapStateToProps = (state) => {
+  return {
+    contact: state.contact.contacts,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addUserContact: (userID) => dispatch(addUserContact(userID)),
+    removeUserContact: (userID) => dispatch(removeUserContact(userID)),
+    updateUserContact: (userID, userContact) => dispatch(updateUserContact(userID, userContact)),
+    loadCurrentContact: (userID) => dispatch(loadCurrentContact(userID)),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(ChangeAddressModal);

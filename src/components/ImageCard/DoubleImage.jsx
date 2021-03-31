@@ -1,8 +1,10 @@
 import React from 'react'
 import { Container, Row} from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 export default function DoubleImage(prop) {
     return (
+        <Link to={`/${prop.linksTo}`}>
         <div  className='imageDisplaySection'>
             <Container fluid className='displayImageContainer'>
                 <Row className='displayImage__wrapper'>
@@ -15,6 +17,7 @@ export default function DoubleImage(prop) {
                 </Row>
             </Container>
         </div>
+        </Link>
     )
 }
 

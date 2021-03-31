@@ -9,11 +9,11 @@ import { PriceSlashII } from "../../components/Category/PriceSlashII";
 import { PriceSlashIII } from "../../components/Category/PriceSlashIII";
 import { PriceSlashIV } from "../../components/Category/PriceSlashIV";
 import { PriceSlashV } from "../../components/Category/PriceSlashV";
-import { OfficialStore } from "../../components/Category/OfficialStore";
 import { OfficialStoreI } from "../../components/Category/OfficialStoreI";
 import { CatBannerImageI, CatBannerImageII } from "../../components/Category/CatBannerImage";
 import CategoryDirection from "../../components/Category/CategoryDirection";
 import CategoryAdvert from "../../components/Category/CategoryAdvert";
+import OfficialStore from "../../components/Category/OfficialStore";
 
 const CategoryDisplay = ({
   categoryDirectionProps,
