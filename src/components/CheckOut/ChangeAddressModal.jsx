@@ -124,38 +124,45 @@ function ChangeAddressModal({ contact, removeUserContact, ...props }) {
                       <p className="font-xs pl-2 font-weight-600 text-secondary">
                         DEFAULT ADDRESS
                       </p>
-                      <div className="d-flex justify-content-between w-100">
-                        <div>
-                          <FormControlLabel
-                            value="firstChoice"
-                            control={<Radio />}
-                            label={`${defaultContact.firstName} ${defaultContact.lastName}`}
-                            className={classes.formControlLabel}
-                          />
-                          <div className="pl-5 font-xs mt-n1">
-                            <p className="">
-                              8 Kehinde Odusote Street, Anthony Village, Lagos.,
-                              Ikeja (GRA) , Lagos
-                            </p>
-                            <p className="">+2348094140232</p>
+
+                      {defaultContact && (
+                        <div className="d-flex justify-content-between w-100">
+                          <div>
+                            <FormControlLabel
+                              value="firstChoice"
+                              control={<Radio />}
+                              label={`${defaultContact.firstName} ${defaultContact.lastName}`}
+                              className={classes.formControlLabel}
+                            />
+                            <div className="pl-5 font-xs mt-n1">
+                              <p className="">
+                                {`${defaultContact.address}, ${defaultContact.town},${defaultContact.city}`}
+                              </p>
+                              <p className="">{`${defaultContact.phonePrefix}${defaultContact.phoneNumber}`}</p>
+                            </div>
+                          </div>
+                          <div className="font-xs font-weight-600 text-primary">
+                            <Button className="px-2">
+                              <span className="pr-2 font-xs font-weight-600  text-primary">
+                                EDIT
+                              </span>
+                              <EditIcon className="font-sm" color="primary" />
+                            </Button>
+                            <br />
+                            <Button
+                              className="px-2"
+                              onClick={() =>
+                                removeUserContact(defaultContact.userID)
+                              }
+                            >
+                              <span className="pr-2 font-xs font-weight-600  text-primary">
+                                REMOVE
+                              </span>
+                              <DeleteIcon className="font-sm" color="primary" />
+                            </Button>
                           </div>
                         </div>
-                        <div className="font-xs font-weight-600 text-primary">
-                          <Button className="px-2">
-                            <span className="pr-2 font-xs font-weight-600  text-primary">
-                              EDIT
-                            </span>
-                            <EditIcon className="font-sm" color="primary" />
-                          </Button>
-                          <br />
-                          <Button className="px-2">
-                            <span className="pr-2 font-xs font-weight-600  text-primary">
-                              REMOVE
-                            </span>
-                            <DeleteIcon className="font-sm" color="primary" />
-                          </Button>
-                        </div>
-                      </div>
+                      )}
                     </div>
 
                     <div className="pt-3">
@@ -175,7 +182,7 @@ function ChangeAddressModal({ contact, removeUserContact, ...props }) {
                               <p className="">
                                 {`${contact.address}, ${contact.town},${contact.city}`}
                               </p>
-                              <p className="">+2348094140232</p>
+                              <p className="">{`${contact.phonePrefix}${contact.phoneNumber}`}</p>
                             </div>
                           </div>
                           <div className="font-xs font-weight-600 text-primary">
@@ -237,7 +244,8 @@ const mapDispatchToProps = (dispatch) => {
   return {
     addUserContact: (userID) => dispatch(addUserContact(userID)),
     removeUserContact: (userID) => dispatch(removeUserContact(userID)),
-    updateUserContact: (userID, userContact) => dispatch(updateUserContact(userID, userContact)),
+    updateUserContact: (userID, userContact) =>
+      dispatch(updateUserContact(userID, userContact)),
     loadCurrentContact: (userID) => dispatch(loadCurrentContact(userID)),
   };
 };

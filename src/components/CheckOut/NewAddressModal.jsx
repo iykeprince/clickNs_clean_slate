@@ -28,7 +28,8 @@ const useStyles = makeStyles((theme) => ({
   },
   paperTwo: {
     backgroundColor: "#fff",
-    border: "2px solid #0000001c",
+    // border: "2px solid #0000001c",
+    outline: "none",
     borderRadius: 4,
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),

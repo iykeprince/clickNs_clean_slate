@@ -7,13 +7,20 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import { DynamicButtonTwo } from "../Button/DynamicButton";
 import { Link } from "react-router-dom";
 import { VoucherInput } from "../Search/VoucherInput";
+import { connect } from "react-redux";
 
-export default function CheckPayment() {
+function CheckPayment({  totalPrice }) {
   const [value, setValue] = React.useState("");
 
   const handleChange = (event) => {
     setValue(event.target.value);
   };
+
+  const subTotal = totalPrice;
+  const deliveryPrice = 586;
+  const finalTotalPrice = subTotal + deliveryPrice;
+  
+console.log(totalPrice)
   return (
     <div className="addressCheckout_leftBottom mt-3">
       <div className="check__deliveryTitle">
@@ -83,18 +90,18 @@ export default function CheckPayment() {
                     <div className="pb-2">Subtotal</div>
                     <div>
                       <span className="" data-currencyiso="NGN">
-                        ₦
+                      &#8358;
                       </span>
-                      <span data-price="">586</span>
+                      <span data-price="">{subTotal.toLocaleString()}</span>
                     </div>
                   </div>
                   <div className="d-flex align-items-center justify-content-between font-sm font-weight-500">
                     <div className="">Delivery Fee</div>
                     <div>
                       <strong className="" data-currencyiso="NGN">
-                        ₦
+                      &#8358;
                       </strong>
-                      <strong data-price="">1,250</strong>
+                      <strong data-price="">{deliveryPrice.toLocaleString()}</strong>
                     </div>
                   </div>
                   <hr className="my-3" />
@@ -102,9 +109,9 @@ export default function CheckPayment() {
                     <div className="">Total</div>
                     <div>
                       <strong className="" data-currencyiso="NGN">
-                        ₦
+                      &#8358;
                       </strong>
-                      <strong data-price="">1,836</strong>
+                      <strong data-price="">{finalTotalPrice.toLocaleString()}</strong>
                     </div>
                   </div>
                 </div>
@@ -136,3 +143,11 @@ export default function CheckPayment() {
     </div>
   );
 }
+
+const mapStateToProps = (state) => {
+  return {
+    totalPrice: state.shop.totalPrice,
+    };
+};
+
+export default connect(mapStateToProps)(CheckPayment);

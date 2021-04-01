@@ -8,7 +8,7 @@ export const usersData = [
     address: "60 Landbridge Oniru-Estate",
     town: "Victoria Island",
     city: "Lagos",
-    default: true,
+    default: false,
   },
   {
     userID: 113657863,
@@ -19,7 +19,7 @@ export const usersData = [
     address: "12 Adebola Igbenisan Street",
     town: "Ikotun",
     city: "Lagos",
-    default: false,
+    default: true,
   },
   {
     userID: 113757863,

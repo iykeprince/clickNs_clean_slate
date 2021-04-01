@@ -7,22 +7,37 @@ const INITIAL_STATE = {
 
 const contactReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-      //adding,receiving, editing, deleting
+    //adding,receiving, editing, deleting
     case actionTypes.ADD_USER_CONTACT:
       return {
         ...state,
         contacts: state.contacts.push(action.payload),
       };
     case actionTypes.REMOVE_USER_CONTACT:
+      const isDefaultExist = state.contacts
+        .filter((user) => user.userID !== action.payload.id)
+        .some((contact) => contact.default === true);
+    //   console.log(isDefaultExist); //returns true or false
+
       return {
         ...state,
-        contacts: state.contacts.filter((user) => user.userID !== action.payload.id),
-
+        // Here, After removing a contact by userID, if at least one of the contact is default (default of true),
+        // Just leave the contact as is, if not, set just the first contact to have default to true
+        contacts: state.contacts
+          .filter((user) => user.userID !== action.payload.id)
+          .map((contact, index) => {
+            return isDefaultExist
+              ? contact
+              : index === 0
+              ? { ...contact, default: true }
+              : contact;
+          }),
       };
     case actionTypes.SET_USER_CONTACT:
       return {
         ...state,
       };
+
     case actionTypes.GET_USER_CONTACT:
       return {
         ...state,

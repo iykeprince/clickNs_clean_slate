@@ -69,11 +69,11 @@ export default function EditAddressComp() {
       </NavLink>
 
       <div className="editAddressComp_wrap">
-        <form className={classes.root} noValidate autoComplete="off" onSubmit="/">
+        <form className={classes.root} noValidate autoComplete="off" onSubmit="">
           <div>
             <Row>
               <Col lg="6">
-                <TextField label="First Name" defaultValue="Bukky" />
+                <TextField label="First Name" defaultValue="" />
 
                 <Row className="editAddressComp_rowOneInner">
                   <Col>
@@ -117,7 +117,7 @@ export default function EditAddressComp() {
               </Col>
 
               <Col lg="6">
-                <TextField label="Last Name" defaultValue="Owolabi" />
+                <TextField label="Last Name" defaultValue="" />
                 <Row>
                   <Col>
                     <span>
@@ -247,3 +247,4 @@ export default function EditAddressComp() {
     </div>
   );
 }
+
