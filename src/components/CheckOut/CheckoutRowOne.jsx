@@ -5,7 +5,7 @@ import FormControl from "@material-ui/core/FormControl";
 import CheckListItem from "./CheckListItem";
 import CheckRightSection from "./CheckRightSection";
 import CheckPayment from "./CheckPayment";
-import ChangeAddressModal from "./ChangeAddressModal";
+import CheckAddressModal from "./CheckAddressModal";
 import { connect } from "react-redux";
 
 function CheckoutRowOne({ totalPrice, cart, contact }) {
@@ -45,9 +45,9 @@ function CheckoutRowOne({ totalPrice, cart, contact }) {
                 </div>
                 <div>
                   {/* <Link to="/customer#/editAddress"> */}
-                  <ChangeAddressModal>
+                  <CheckAddressModal>
                     <p className="checktitle__fn">CHANGE</p>
-                  </ChangeAddressModal>
+                  </CheckAddressModal>
                   {/* </Link> */}
                 </div>
               </div>
@@ -55,7 +55,7 @@ function CheckoutRowOne({ totalPrice, cart, contact }) {
                 {defaultContact ? (
                   <div>
                     <p className="prsnName">
-                      {`${defaultContact.firstName} ${defaultContact.lastName}`}{" "}
+                      {`${defaultContact.firstName} ${defaultContact.lastName}`}
                     </p>
                     <p>{defaultContact.address}, </p>
                     <p>{`${defaultContact.town}, ${defaultContact.city}`}</p>

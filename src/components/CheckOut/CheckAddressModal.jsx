@@ -13,7 +13,7 @@ import FormControl from "@material-ui/core/FormControl";
 import EditIcon from "@material-ui/icons/Edit";
 import DeleteIcon from "@material-ui/icons/Delete";
 import { DynamicButtonTwo } from "../Button/DynamicButton";
-import NewAddressModal from "./NewAddressModal";
+import UpdateAddressModal from "./UpdateAddressModal";
 import { connect } from "react-redux";
 import {
   addUserContact,
@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function ChangeAddressModal({ contact, removeUserContact, ...props }) {
+function CheckAddressModal({ contact, removeUserContact, ...props }) {
   const classes = useStyles();
 
   const anchorRef = React.useRef(null);
@@ -72,7 +72,10 @@ function ChangeAddressModal({ contact, removeUserContact, ...props }) {
     setValue(event.target.value);
   };
 
+  //returns an object
   const defaultContact = contact.find((obj) => obj.default === true);
+
+  //returns an array
   const otherContact = contact.filter((obj) => obj.default === false);
   // console.log(otherContact);
 
@@ -104,12 +107,12 @@ function ChangeAddressModal({ contact, removeUserContact, ...props }) {
               </div>
 
               <div className="d-flex p-3 pl-4 align-items-center border-bottom">
-                <NewAddressModal>
+                <UpdateAddressModal title="Add Address">
                   <AddCircleRoundedIcon color="primary" />
                   <span className="font-weight-500 text-primary pl-2 font-sm">
                     ADD A NEW ADDRESS
                   </span>
-                </NewAddressModal>
+                </UpdateAddressModal>
               </div>
 
               <div className="p-3">
@@ -142,13 +145,12 @@ function ChangeAddressModal({ contact, removeUserContact, ...props }) {
                             </div>
                           </div>
                           <div className="font-xs font-weight-600 text-primary">
-                            <Button className="px-2">
+                            <UpdateAddressModal title="Edit Address">
                               <span className="pr-2 font-xs font-weight-600  text-primary">
                                 EDIT
                               </span>
                               <EditIcon className="font-sm" color="primary" />
-                            </Button>
-                            <br />
+                            </UpdateAddressModal>
                             <Button
                               className="px-2"
                               onClick={() =>
@@ -186,13 +188,12 @@ function ChangeAddressModal({ contact, removeUserContact, ...props }) {
                             </div>
                           </div>
                           <div className="font-xs font-weight-600 text-primary">
-                            <Button className="px-2">
+                            <UpdateAddressModal title="Edit Address">
                               <span className="pr-2 font-xs font-weight-600  text-primary">
                                 EDIT
                               </span>
                               <EditIcon className="font-sm" color="primary" />
-                            </Button>
-                            <br />
+                            </UpdateAddressModal>
                             <Button
                               className="px-2"
                               onClick={() => removeUserContact(contact.userID)}
@@ -250,4 +251,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(ChangeAddressModal);
+export default connect(mapStateToProps, mapDispatchToProps)(CheckAddressModal);

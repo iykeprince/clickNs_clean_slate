@@ -37,7 +37,10 @@ import ReturnRefunds from "./pages/Help/ReturnRefunds";
 import HowToPay from "./pages/Help/HowToPay";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core";
 
+
 function App({current}) {
+
+  
   const theme = createMuiTheme({
     palette: {
       primary: {
