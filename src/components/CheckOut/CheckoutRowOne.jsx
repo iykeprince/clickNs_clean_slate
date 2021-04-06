@@ -26,7 +26,7 @@ function CheckoutRowOne({ totalPrice, cart, contact }) {
     setCartCount(count);
   }, [cart, cartCount]);
 
-  const defaultContact = contact.find((obj) => obj.default === true);
+  const defaultContact = contact.find((obj) => obj.defaultAddress === true);
 
   return (
     <div className="checkout_row">
@@ -59,7 +59,7 @@ function CheckoutRowOne({ totalPrice, cart, contact }) {
                     </p>
                     <p>{defaultContact.address}, </p>
                     <p>{`${defaultContact.town}, ${defaultContact.city}`}</p>
-                    <p>{`${defaultContact.phonePrefix}${defaultContact.phoneNumber}`}</p>
+                    <p>{`+${defaultContact.phonePrefix}${defaultContact.phoneNumber}`}</p>
                   </div>
                 ) : (
                   "You don't have a default address"

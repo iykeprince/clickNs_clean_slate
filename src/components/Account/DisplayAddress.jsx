@@ -5,8 +5,7 @@ import IconStore from "../../assets/icons/IconStore";
 import LargeButton from "../Button/LargeButton";
 
 function DisplayAddress({ contact }) {
-  
-  const defaultContact = contact.find((obj) => obj.default === true);
+  const defaultContact = contact.find((obj) => obj.defaultAddress === true);
 
   return (
     <div>
@@ -20,14 +19,25 @@ function DisplayAddress({ contact }) {
         </h3>
         <div className="addressBookDetail__wrapper">
           <div className="addresstext_detail">
-            <h6 className="nameOf">{`${defaultContact.firstName} ${defaultContact.lastName}`}</h6>
-            <p>{defaultContact.address}, </p>
-            <p>{`${defaultContact.town}, ${defaultContact.city}`}</p>
-            <h6 className="defaultAdress">Default Address</h6>
+            {defaultContact ? (
+              <div>
+                <h6 className="nameOf">{`${defaultContact?.firstName} ${defaultContact?.lastName}`}</h6>
+                <p>{defaultContact?.address}, </p>
+                <p>{`${defaultContact?.town}, ${defaultContact?.city}`}</p>
+                <h6 className="defaultAdress">Default Address</h6>
+              </div>
+            ) : (
+              <div>You have no Addresses</div>
+            )}
           </div>
           <div className="reEdit">
             SET AS DEFAULT
-            <Link to="/editAddress" className="editIcon">
+            <Link 
+            to={{
+              pathname: "/editAddress",
+              defaultContact: defaultContact,
+            }}
+            className="editIcon">
               {IconStore.editSolid}
             </Link>
           </div>

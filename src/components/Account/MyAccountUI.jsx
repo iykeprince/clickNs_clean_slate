@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import IconStore from "../../assets/icons/IconStore";
 
 function MyAccountUI({ contact }) {
-  const defaultContact = contact?.find((obj) => obj.default === true);
+  const defaultContact = contact?.find((obj) => obj.defaultAddress === true);
 
   return (
     <div>
@@ -31,7 +31,13 @@ function MyAccountUI({ contact }) {
           <div className="accBox__wrapper h-100">
             <div className="accBox__head">
               <span className="accBox__title">ADDRESS </span>
-              <Link to="/editAddress" className="editIcon">
+              <Link
+                to={{
+                  pathname: "/editAddress",
+                  defaultContact: defaultContact,
+                }}
+                className="editIcon"
+              >
                 {IconStore?.editSolid}
               </Link>
             </div>
@@ -44,10 +50,12 @@ function MyAccountUI({ contact }) {
                   <p className="text-black-50">{defaultContact?.address}</p>
                   <p className="text-black-50">{`${defaultContact?.town} ${defaultContact?.city}`}</p>
                   <p className="text-black-50">
-                    {`${defaultContact?.phonePrefix} ${defaultContact?.phoneNumber}`}
+                    {`+${defaultContact?.phonePrefix} ${defaultContact?.phoneNumber}`}
                   </p>
                 </div>
-              ): "You have no default address"}
+              ) : (
+                "You have no default address"
+              )}
             </div>
           </div>
         </Col>

@@ -73,10 +73,10 @@ function CheckAddressModal({ contact, removeUserContact, ...props }) {
   };
 
   //returns an object
-  const defaultContact = contact.find((obj) => obj.default === true);
+  const defaultContact = contact.find((obj) => obj.defaultAddress === true);
 
   //returns an array
-  const otherContact = contact.filter((obj) => obj.default === false);
+  const otherContact = contact.filter((obj) => obj.defaultAddress === false);
   // console.log(otherContact);
 
   return (
@@ -141,11 +141,11 @@ function CheckAddressModal({ contact, removeUserContact, ...props }) {
                               <p className="">
                                 {`${defaultContact.address}, ${defaultContact.town},${defaultContact.city}`}
                               </p>
-                              <p className="">{`${defaultContact.phonePrefix}${defaultContact.phoneNumber}`}</p>
+                              <p className="">{`+${defaultContact.phonePrefix}${defaultContact.phoneNumber}`}</p>
                             </div>
                           </div>
                           <div className="font-xs font-weight-600 text-primary">
-                            <UpdateAddressModal title="Edit Address">
+                            <UpdateAddressModal title="Edit Address" contact={defaultContact}>
                               <span className="pr-2 font-xs font-weight-600  text-primary">
                                 EDIT
                               </span>
@@ -184,11 +184,11 @@ function CheckAddressModal({ contact, removeUserContact, ...props }) {
                               <p className="">
                                 {`${contact.address}, ${contact.town},${contact.city}`}
                               </p>
-                              <p className="">{`${contact.phonePrefix}${contact.phoneNumber}`}</p>
+                              <p className="">{`+${contact.phonePrefix}${contact.phoneNumber}`}</p>
                             </div>
                           </div>
                           <div className="font-xs font-weight-600 text-primary">
-                            <UpdateAddressModal title="Edit Address">
+                            <UpdateAddressModal title="Edit Address" contact={contact}>
                               <span className="pr-2 font-xs font-weight-600  text-primary">
                                 EDIT
                               </span>

@@ -8,7 +8,8 @@ import InputLabel from "@material-ui/core/InputLabel";
 import MenuItem from "@material-ui/core/MenuItem";
 import Select from "@material-ui/core/Select";
 import Checkbox from "@material-ui/core/Checkbox";
-
+import { connect } from "react-redux";
+import { addUserContact } from "../../redux/actions/contact";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -63,289 +64,279 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function AddressForm(props) {
+function AddressForm({contactProp, ...props}) {
   const classes = useStyles();
- 
-  //Initial States
-  const [firstName, setfirstName] = useState("");
-  const [lastName, setlastName] = useState("");
-  const [phonePrefix, setPhonePrefix] = useState("");
-  const [secondPhonePrefix, setsecondPhonePrefix] = useState("");
-  const [phoneNumber, setphoneNumber] = useState("");
-  const [additionalPhoneNumber, setadditionalPhoneNumber] = useState("");
-  const [address, setaddress] = useState("");
-  const [additionalInformation, setadditionalInformation] = useState("");
-  const [city, setCity] = useState("");
-  const [region, setRegion] = useState("");
-  const [defaultAddress, setDefaultAddress] = useState(false);
 
-  //Handlers
-  const handleFirstName = (event) => {
-    setfirstName(event.target.value);
+  console.log(contactProp)
+  
+  const [formValues, setformValues] = useState( contactProp? {...contactProp} :{
+    userID: Date.now(),
+    firstName: "",
+    lastName: "",
+    phonePrefix: 234,
+    secondPhonePrefix: 234,
+    phoneNumber: "",
+    additionalPhoneNumber: "",
+    address: "",
+    additionalInformation: "",
+    city: "",
+    region: "",
+    defaultAddress: false,
+  });
+
+  const handleFormChange = (prop) => (event) => {
+    setformValues({ ...formValues, [prop]: event.target.value });
   };
-  const handleLastName = (event) => {
-    setlastName(event.target.value);
+  const handleDefaultAddress = () => {
+    setformValues({
+      ...formValues,
+      defaultAddress: !formValues.defaultAddress,
+    });
   };
   const handlePhoneNumber = (event) => {
-    setphoneNumber(event.target.value.replace(/[^0-9]/g, ""));
+    setformValues({
+      ...formValues,
+      phoneNumber: event.target.value.replace(/[^0-9]/g, ""),
+    });
   };
   const handleAdditionalPhoneNumber = (event) => {
-    setadditionalPhoneNumber(event.target.value.replace(/[^0-9]/g, ""));
+    setformValues({
+      ...formValues,
+      additionalPhoneNumber: event.target.value.replace(/[^0-9]/g, ""),
+    });
   };
-  const handlePhonePrefixChange = (event) => {
-    setPhonePrefix(event.target.value);
-  };
-  const handleSecondPhonePrefixChange = (event) => {
-    setsecondPhonePrefix(event.target.value);
-  };
-  const handleCity = (event) => {
-    setCity(event.target.value);
-  };
-  const handleRegion = (event) => {
-    setRegion(event.target.value);
-  };
-  const handleAddress = (event) => {
-    setaddress(event.target.value);
-  };
-  const handleDefaultAddress = (event) => {
-    setDefaultAddress(event.target.checked);
-  };
-  const handleAdditionalInformation = (event) => {
-    setadditionalInformation(event.target.value);
-  };
-
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
-    // postUserContact({
-    //   firstName,
-    //   lastName,
-    //   phonePrefix,
-    //   secondPhonePrefix,
-    //   phoneNumber,
-    //   additionalPhoneNumber,
-    //   address,
-    //   additionalInformation,
-    //   city,
-    //   region,
-    //   defaultAddress,
-    // });
+    // postUserContact(formValues);
+    addUserContact(formValues);
+    console.log(formValues);
   };
 
-    return (
-        <div className="editAddressComp_wrap">
-        <form
-          className={`${classes.root} flex-column px-4`}
-          noValidate
-          autoComplete="off"
-          onSubmit={handleSubmit}
-        >
-          <div>
-            <Row>
-              <Col lg="6">
-                <TextField
-                  label="First Name"
-                  defaultValue={props.firstName}
-                  value={firstName}
-                  onChange={handleFirstName}
-                />
-
-                <Row className="editAddressComp_rowOneInner">
-                  <Col>
-                    <span>
-                      <FormControl
-                        className={`prefixAdditionalStyle ${classes.formControlr}`}
-                      >
-                        <InputLabel
-                          shrink
-                          id="demo-simple-select-placeholder-label-label"
-                        >
-                          Prefix
-                        </InputLabel>
-                        <Select
-                          labelId="demo-simple-select-placeholder-label-label"
-                          id="demo-simple-select-placeholder-label"
-                          value={phonePrefix}
-                          onChange={handlePhonePrefixChange}
-                          displayEmpty
-                          className={classes.phoneSelectr}
-                        >
-                          <MenuItem value="">
-                            <p>+234</p>
-                          </MenuItem>
-                          <MenuItem value={235}>+235</MenuItem>
-                          <MenuItem value={236}>+236</MenuItem>
-                        </Select>
-                      </FormControl>
-                    </span>
-                  </Col>
-
-                  <Col>
-                    <span className="phoneField__wrapper">
-                      <TextField
-                        label="Phone Number"
-                        className={classes.phoneNumberFieldr}
-                        value={phoneNumber}
-                        onChange={handlePhoneNumber}
-                        inputProps={{ maxLength: 10 }}
-                        defaultValue={props.phoneNumber}
-                      />
-                    </span>
-                  </Col>
-                </Row>
-              </Col>
-
-              <Col lg="6">
-                <TextField
-                  label="Last Name"
-                  value={lastName}
-                  onChange={handleLastName}
-                  defaultValue={props.lastName}
-                />
-                <Row>
-                  <Col>
-                    <span>
-                      <FormControl
-                        className={`prefixAdditionalStyle ${classes.formControlr}`}
-                      >
-                        <InputLabel
-                          shrink
-                          id="demo-simple-select-placeholder-label-label"
-                        >
-                          Prefix
-                        </InputLabel>
-                        <Select
-                          labelId="demo-simple-select-placeholder-label-label"
-                          id="demo-simple-select-placeholder-label"
-                          value={secondPhonePrefix}
-                          onChange={handleSecondPhonePrefixChange}
-                          displayEmpty
-                          className={classes.phoneSelectr}
-                        >
-                          <MenuItem value="">
-                            <p>+234</p>
-                          </MenuItem>
-                          <MenuItem value={235}>+235</MenuItem>
-                          <MenuItem value={236}>+236</MenuItem>
-                        </Select>
-                      </FormControl>
-                    </span>
-                  </Col>
-
-                  <Col>
-                    <span className="phoneField__wrapper">
-                      <TextField
-                        label="Additional Phone Number"
-                        className={classes.phoneNumberFieldr}
-                        value={additionalPhoneNumber}
-                        onChange={handleAdditionalPhoneNumber}
-                        inputProps={{ maxLength: 10 }}
-                        defaultValue={props.additionalPhoneNumber}
-                      />
-                    </span>
-                  </Col>
-                </Row>
-              </Col>
-            </Row>
-
-            <Row>
+  return (
+    <div className="editAddressComp_wrap">
+      <form
+        className={`${classes.root} flex-column px-4`}
+        noValidate
+        autoComplete="off"
+        onSubmit={handleSubmit}
+      >
+        <div>
+          <Row>
+            <Col lg="6">
               <TextField
-                label="Address"
-                value={address}
-                onChange={handleAddress}
-                defaultValue={props.address}
-                className="txtField_edit"
+                label="First Name"
+                defaultValue={props?.firstName}
+                value={formValues?.firstName}
+                onChange={handleFormChange("firstName")}
               />
-            </Row>
 
-            <Row>
+              <Row className="editAddressComp_rowOneInner">
+                <Col>
+                  <span>
+                    <FormControl
+                      className={`prefixAdditionalStyle ${classes.formControlr}`}
+                    >
+                      <InputLabel
+                        shrink
+                        id="demo-simple-select-placeholder-label-label"
+                      >
+                        Prefix
+                      </InputLabel>
+                      <Select
+                        labelId="demo-simple-select-placeholder-label-label"
+                        id="demo-simple-select-placeholder-label"
+                        value={formValues?.phonePrefix}
+                        onChange={handleFormChange("phonePrefix")}
+                        displayEmpty
+                        className={classes.phoneSelectr}
+                      >
+                        <MenuItem value={234}>
+                          <p>+234</p>
+                        </MenuItem>
+                        <MenuItem value={235}>+235</MenuItem>
+                        <MenuItem value={236}>+236</MenuItem>
+                      </Select>
+                    </FormControl>
+                  </span>
+                </Col>
+
+                <Col>
+                  <span className="phoneField__wrapper">
+                    <TextField
+                      label="Phone Number"
+                      className={classes.phoneNumberFieldr}
+                      onChange={handlePhoneNumber}
+                      value={formValues?.phoneNumber}
+                      inputProps={{ maxLength: 10 }}
+                      defaultValue={props?.phoneNumber}
+                    />
+                  </span>
+                </Col>
+              </Row>
+            </Col>
+
+            <Col lg="6">
               <TextField
-                label="Additional Information"
-                value={additionalInformation}
-                onChange={handleAdditionalInformation}
-                defaultValue={props.additionalInformation}
-                className="txtField_edit"
+                label="Last Name"
+                value={formValues?.lastName}
+                onChange={handleFormChange("lastName")}
+                defaultValue={props?.lastName}
               />
-            </Row>
+              <Row>
+                <Col>
+                  <span>
+                    <FormControl
+                      className={`prefixAdditionalStyle ${classes.formControlr}`}
+                    >
+                      <InputLabel
+                        shrink
+                        id="demo-simple-select-placeholder-label-label"
+                      >
+                        Prefix
+                      </InputLabel>
+                      <Select
+                        labelId="demo-simple-select-placeholder-label-label"
+                        id="demo-simple-select-placeholder-label"
+                        value={formValues?.secondPhonePrefix}
+                        onChange={handleFormChange("secondPhonePrefix")}
+                        displayEmpty
+                        className={classes.phoneSelectr}
+                      >
+                        <MenuItem value={234}>
+                          <p>+234</p>
+                        </MenuItem>
+                        <MenuItem value={235}>+235</MenuItem>
+                        <MenuItem value={236}>+236</MenuItem>
+                      </Select>
+                    </FormControl>
+                  </span>
+                </Col>
 
-            <Row>
-              <Col lg="6">
-                <FormControl className={classes.formContrl2}>
-                  <InputLabel
-                    shrink
-                    id="demo-simple-select-placeholder-label-label"
-                  >
-                    Region
-                  </InputLabel>
-                  <Select
-                    labelId="demo-simple-select-placeholder-label-label"
-                    id="demo-simple-select-placeholder-label"
-                    value={region}
-                    onChange={handleRegion}
-                    displayEmpty
-                    className=""
-                    defaultValue={props.region}
-                  >
-                    <MenuItem value="Lagos">Lagos</MenuItem>
-                    <MenuItem value="Ekiti">Ekiti</MenuItem>
-                    <MenuItem value="Ibadan">Ibadan</MenuItem>
-                  </Select>
-                </FormControl>
-              </Col>
+                <Col>
+                  <span className="phoneField__wrapper">
+                    <TextField
+                      label="Additional Phone Number"
+                      className={classes.phoneNumberFieldr}
+                      onChange={handleAdditionalPhoneNumber}
+                      value={formValues?.additionalPhoneNumber}
+                      inputProps={{ maxLength: 10 }}
+                      defaultValue={props?.additionalPhoneNumber}
+                    />
+                  </span>
+                </Col>
+              </Row>
+            </Col>
+          </Row>
 
-              <Col lg="6">
-                <FormControl className={classes.formContrl2}>
-                  <InputLabel
-                    shrink
-                    id="demo-simple-select-placeholder-label-label"
-                  >
-                    City
-                  </InputLabel>
-                  <Select
-                    labelId="demo-simple-select-placeholder-label-label"
-                    id="demo-simple-select-placeholder-label"
-                    value={city}
-                    onChange={handleCity}
-                    displayEmpty
-                    defaultValue={props.city}
-                    className=""
-                  >
-                    <MenuItem value="Victoria Island">
-                      Victoria Island
-                    </MenuItem>
-                    <MenuItem value="Yaba">Yaba</MenuItem>
-                    <MenuItem value="Ketu">Ketu</MenuItem>
-                  </Select>
-                </FormControl>
-              </Col>
-            </Row>
-          </div>
-
-          <div className="editAddressCheckBox_wrap">
-            <Checkbox
-              checked={defaultAddress}
-              color="primary"
-              onChange={handleDefaultAddress}
-              inputProps={{ "aria-label": "secondary checkbox" }}
+          <Row>
+            <TextField
+              label="Address"
+              value={formValues?.address}
+              onChange={handleFormChange("address")}
+              defaultValue={props?.address}
+              className="txtField_edit"
             />
-            <span className="font-weight-500 font-sm">
-              Set as Default Address
-            </span>
-          </div>
+          </Row>
 
-          <div className="accButton__wrapper2">
-            <LargeButton
-              buttonName="SAVE"
-              type="submit"
-              onClick={(e) => {
-                e.preventDefault();
-                // history.push("/");
-                props.handleModalClose();
-              }}
+          <Row>
+            <TextField
+              label="Additional Information"
+              value={formValues?.additionalInformation}
+              onChange={handleFormChange("additionalInformation")}
+              defaultValue={props?.additionalInformation}
+              className="txtField_edit"
             />
-          </div>
-        </form>
-      </div>
-    )
+          </Row>
+
+          <Row>
+            <Col lg="6">
+              <FormControl className={classes.formContrl2}>
+                <InputLabel
+                  shrink
+                  id="demo-simple-select-placeholder-label-label"
+                >
+                  Region
+                </InputLabel>
+                <Select
+                  labelId="demo-simple-select-placeholder-label-label"
+                  id="demo-simple-select-placeholder-label"
+                  value={formValues?.region}
+                  onChange={handleFormChange("region")}
+                  displayEmpty
+                  className=""
+                  defaultValue={props?.region}
+                >
+                  <MenuItem value="Lagos">Lagos</MenuItem>
+                  <MenuItem value="Ekiti">Ekiti</MenuItem>
+                  <MenuItem value="Ibadan">Ibadan</MenuItem>
+                </Select>
+              </FormControl>
+            </Col>
+
+            <Col lg="6">
+              <FormControl className={classes.formContrl2}>
+                <InputLabel
+                  shrink
+                  id="demo-simple-select-placeholder-label-label"
+                >
+                  City
+                </InputLabel>
+                <Select
+                  labelId="demo-simple-select-placeholder-label-label"
+                  id="demo-simple-select-placeholder-label"
+                  value={formValues?.city}
+                  onChange={handleFormChange("city")}
+                  displayEmpty
+                  defaultValue={props?.city}
+                  className=""
+                >
+                  <MenuItem value="Victoria Island">Victoria Island</MenuItem>
+                  <MenuItem value="Yaba">Yaba</MenuItem>
+                  <MenuItem value="Ketu">Ketu</MenuItem>
+                </Select>
+              </FormControl>
+            </Col>
+          </Row>
+        </div>
+
+        <div className="editAddressCheckBox_wrap">
+          <Checkbox
+            checked={formValues?.defaultAddress}
+            color="primary"
+            onChange={handleDefaultAddress}
+            inputProps={{ "aria-label": "secondary checkbox" }}
+          />
+          <span className="font-weight-500 font-sm">
+            Set as Default Address
+          </span>
+        </div>
+
+        <div className="accButton__wrapper2">
+          <LargeButton
+            buttonName="SAVE"
+            type="submit"
+            onClick={(e) => {
+              props?.handleModalClose();
+            }}
+          />
+        </div>
+      </form>
+    </div>
+  );
 }
+
+const mapStateToProps = (state) => {
+  return {
+    contacts: state.contact.contacts,
+  };
+};
+
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addUserContact: ( userContact) => dispatch(addUserContact(userContact)),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(AddressForm);

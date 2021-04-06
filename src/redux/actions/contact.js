@@ -1,14 +1,15 @@
 // import axios from "axios";
 import * as actionTypes from "./types";
 
-export const addUserContact = (userID) => {
+export const addUserContact = (userContact) => {
   return {
     type: actionTypes.ADD_USER_CONTACT,
     payload: {
-      id: userID,
+      userContact,
     },
   };
 };
+
 
 export const removeUserContact = (userID) => {
   return {

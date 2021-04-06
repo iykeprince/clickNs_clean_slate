@@ -60,7 +60,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function UpdateAddressModal(props) {
+export default function UpdateAddressModal({contact, ...props}) {
   const classes = useStyles();
 
   const [openModal, setModalOpen] = useState(false);
@@ -98,7 +98,7 @@ export default function UpdateAddressModal(props) {
                 <h5>{props.title}</h5>
                 <CloseRoundedIcon onClick={handleModalClose} />
               </div>
-              <AddressForm handleModalClose={handleModalClose}/>
+              <AddressForm handleModalClose={handleModalClose} contactProp={contact}/>
             </div>
           </div>
         </Fade>

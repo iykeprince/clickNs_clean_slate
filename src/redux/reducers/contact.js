@@ -7,12 +7,14 @@ const INITIAL_STATE = {
 
 const contactReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    //adding,receiving, editing, deleting
+
     case actionTypes.ADD_USER_CONTACT:
+      //TO FIX, NOT WORKING YET
       return {
         ...state,
-        contacts: state.contacts.push(action.payload),
+        contacts: [...state.contacts, action.payload]
       };
+
     case actionTypes.REMOVE_USER_CONTACT:
       const isDefaultExist = state.contacts
         .filter((user) => user.userID !== action.payload.id)
