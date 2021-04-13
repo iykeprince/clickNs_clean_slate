@@ -36,6 +36,9 @@ import OrderCancellation from "./pages/Help/OrderCancellation";
 import ReturnRefunds from "./pages/Help/ReturnRefunds";
 import HowToPay from "./pages/Help/HowToPay";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core";
+import Terms from "./pages/Markerting/Terms";
+import PrivacyPolicy from "./pages/Markerting/PrivacyPolicy";
+import Partners from "./pages/Markerting/Partners";
 
 
 function App({current}) {
@@ -63,17 +66,20 @@ function App({current}) {
 
           <Switch>
             <Route path={"/"} exact component={Home} />
-            {/* <Route path={"/product"} component={ProductDetail} /> */}
             <Route path={"/customer/"} component={Account} />
             <Route path={"/recentlyViewed"} component={RecentlyViewed} />
             <Route path={"/cart"} component={Cart} />
             <Route path={"/checkout"} component={CheckOut} />
-            {/* <Route path={"/auth"} component={AuthModal} /> */}
             <Route path={"/help"} component={HelpCenter} />
             <Route path={"/place-track-order"} component={PlacenTrackOrder} />
             <Route path={"/pay"} component={Pay} />
             <Route path={"/cancel-order"} component={OrderCancellation} />
             <Route path={"/how-to-pay"} component={HowToPay} />
+            <Route path={"/terms-of-use"} component={Terms} />
+            <Route path={"/privacy"} component={PrivacyPolicy} />
+            <Route path={"/logistics-partner"} component={Partners} />
+
+
 
             {/* {!current ? (
             <Redirect to="/" />

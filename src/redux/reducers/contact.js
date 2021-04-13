@@ -18,7 +18,7 @@ const contactReducer = (state = INITIAL_STATE, action) => {
     case actionTypes.REMOVE_USER_CONTACT:
       const isDefaultExist = state.contacts
         .filter((user) => user.userID !== action.payload.id)
-        .some((contact) => contact.default === true);
+        .some((contact) => contact.defaultAddress === true);
     //   console.log(isDefaultExist); //returns true or false
 
       return {
@@ -31,7 +31,7 @@ const contactReducer = (state = INITIAL_STATE, action) => {
             return isDefaultExist
               ? contact
               : index === 0
-              ? { ...contact, default: true }
+              ? { ...contact, defaultAddress: true }
               : contact;
           }),
       };

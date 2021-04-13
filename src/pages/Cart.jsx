@@ -7,11 +7,10 @@ import Header from "../components/Header/Header";
 import { connect } from "react-redux";
 import NewFooter from "../components/Footer/NewFooter";
 
-
-function Cart({products}) {
+function Cart({ products }) {
   return (
     <div>
-      <Header showHamburger={true}/>
+      <Header showHamburger={true} />
 
       <div className="body__wrapper putAtMiddle">
         {/* {products.map(prod=>( */}

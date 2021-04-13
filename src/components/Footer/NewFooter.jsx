@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import facebookImg from "../../assets/images/footer/facebook.png";
 import instaImg from "../../assets/images/footer/instagram.png";
 import twitterImg from "../../assets/images/footer/twitter.png";
-import wifiImg from "../../assets/images/footer/wifi.png";
+// import wifiImg from "../../assets/images/footer/wifi.png";
 // import upImg  from "../../assets/images/footer/up.png";
 import ExpandLessRoundedIcon from "@material-ui/icons/ExpandLessRounded";
 import woozImg from "../../assets/images/footer/wooz.png";
@@ -17,8 +17,10 @@ import excellenceImg from "../../assets/images/footer/excellence.png";
 import getInTouchImg from "../../assets/images/footer/get-intouch.png";
 import { DynamicButtonTwo } from "../Button/DynamicButton";
 import ScrollToTop from "react-scroll-to-top";
+import IconStore from "../../assets/icons/IconStore"
 
 function NewFooter() {
+
   return (
     <React.Fragment>
       <footer className="mt-5">
@@ -68,8 +70,8 @@ function NewFooter() {
           <div className="body__wrapper mx-auto">
             <img src={getInTouchImg} alt="Get in touch" className="intouch" />
             <div>
-              <Row>
-                <Col md={2} className="pr-3">
+              <Row className="mb-5 justify-content-between">
+                <Col md={3} className="pr-3">
                   <h3 className="white font-weight-bold mt-4 mt-md-0">
                     CONTACT INFO
                   </h3>
@@ -110,64 +112,21 @@ function NewFooter() {
                     <Link to="/about" className="white d-block">
                       About
                     </Link>
-                    <Link to="/team" className="white d-block">
-                      Team
-                    </Link>
-                    <Link to="/carrers" className="white d-block">
+                    <Link to="/careers" className="white d-block">
                       Work With Us
                     </Link>
-                  </div>
-                </Col>
-                <Col md={2} className="pr-3">
-                  <h3 className="white font-weight-bold mt-4 mt-md-0">
-                    woozeee
-                  </h3>
-                  <div className="quick-links">
-                    <Link to="/" className="white d-block">
-                      Features
-                    </Link>
-                    <Link to="/" className="white d-block">
-                      Payments
-                    </Link>
-                    <Link to="/" className="white d-block">
-                      Marketing
-                    </Link>
-                    <Link to="/" className="white d-block">
-                      Shipping
-                    </Link>
-                    <Link to="/" className="white d-block">
-                      Extension store
-                    </Link>
-                    <Link to="/" className="white d-block">
-                      eCommerce blog
-                    </Link>
-                    <Link to="/" className="white d-block">
-                      Development blog
-                    </Link>
-                    <Link to="/" className="white d-block">
-                      Ideas board
-                    </Link>
-                    <Link to="/" className="white d-block">
-                      Mobile App
-                    </Link>
-                    <Link to="/" className="white d-block">
-                      Community
-                    </Link>
-                    <Link to="/" className="white d-block">
-                      Style Guide
-                    </Link>
-                    <Link to="/" className="white d-block">
-                      Email Newsletter
+                    <Link to="/dispatch" className="white d-block">
+                      woozeee Dispatch
                     </Link>
                   </div>
                 </Col>
-                <Col md={2} className="pr-3">
+                <Col md={3} className="pr-3">
                   <h3 className="white font-weight-bold mt-4 mt-md-0">
                     MORE INFORMATION
                   </h3>
                   <div className="quick-links">
                     <Link to="/" className="white d-block">
-                      Sell on SmartShop
+                      Sell on woozeee
                     </Link>
                     <Link to="/" className="white d-block">
                       Participate in challeges
@@ -175,7 +134,7 @@ function NewFooter() {
                     <Link to="/" className="white d-block">
                       Become an Affiliate Partner
                     </Link>
-                    <Link to="/" className="white d-block">
+                    <Link to="/logistics-partner" className="white d-block">
                       Become a Logistics Service Partner
                     </Link>
                     <Link to="/" className="white d-block">
@@ -194,24 +153,15 @@ function NewFooter() {
                     <Link to="/help" className="white d-block">
                       Help & FAQS
                     </Link>
-                    <Link to="/" className="white d-block">
-                      Customization
+                    <Link to="/privacy" className="white d-block">
+                      Privacy Policy
                     </Link>
-                    <Link to="/" className="white d-block">
-                      Support Policy
-                    </Link>
-                    <Link to="/" className="white d-block">
-                      Contact
-                    </Link>
-                    <Link to="/" className="white d-block">
-                      COVID-19 Resources
-                    </Link>
-                    <Link to="/" className="white d-block">
+                    <Link to="/terms-of-use" className="white d-block">
                       Terms and Conditions
                     </Link>
                   </div>
                 </Col>
-                <Col md={2}>
+                <Col md={2} className="">
                   <h3 className="white font-weight-bold mt-4 mt-md-0">
                     SUBSCRIBE NEWSLETTER
                   </h3>
@@ -264,25 +214,25 @@ function NewFooter() {
             <div className="social-feeds row">
               <div className="social-media-icons col-12 col-md-6">
                 <Link to="/">
-                  <img src={twitterImg} alt="Twitter field" />
+                  <img src={twitterImg} alt="Twitter" />
                 </Link>
                 <Link to="/">
-                  <img src={facebookImg} alt="Twitter field" />
+                  <img src={facebookImg} alt="facebook" />
                 </Link>
                 <Link to="/">
-                  <img src={wifiImg} alt="Twitter field" />
+                  {IconStore.youtubeIcon}
                 </Link>
                 <Link to="/">
-                  <img src={instaImg} alt="Twitter field" />
+                  <img src={instaImg} alt="instagram" />
                 </Link>
               </div>
               <div className="col-12 col-md-6 pt-3 pt-md-0">
                 <p className="copyright font-sm">
-                  COPYRIGHT woozeee 2020 -
-                  <Link to="/" className="black px-2 underline">
+                  COPYRIGHT woozeee {new Date().getFullYear()} -
+                  <Link to="/terms-of-use" className="black px-2 underline ">
                     TERMS & CONDITIONS
                   </Link>
-                  <Link to="/" className="black underline">
+                  <Link to="/privacy" className="black underline">
                     PRIVACY POLICY
                   </Link>
                 </p>
