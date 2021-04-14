@@ -8,7 +8,7 @@ import Supermarket from "./pages/Categry/Supermarket";
 import Account from "./pages/Account";
 import RecentlyViewed from "./pages/RecentlyViewed";
 import Cart from "./pages/Cart";
-import CheckOut from "./pages/CheckOut";
+import CheckOut from "./pages/CheckOut/CheckOut";
 import Fashion from "./pages/Categry/Fashion";
 import HealthnBeauty from "./pages/Categry/HealthnBeauty";
 import HomenOffice from "./pages/Categry/HomenOffice";
@@ -39,6 +39,8 @@ import { MuiThemeProvider, createMuiTheme } from "@material-ui/core";
 import Terms from "./pages/Markerting/Terms";
 import PrivacyPolicy from "./pages/Markerting/PrivacyPolicy";
 import Partners from "./pages/Markerting/Partners";
+import ChangeAddress from "./pages/CheckOut/ChangeAdress";
+import UpdateAddress from "./pages/CheckOut/UpdateAddress";
 
 
 function App({current}) {
@@ -70,6 +72,9 @@ function App({current}) {
             <Route path={"/recentlyViewed"} component={RecentlyViewed} />
             <Route path={"/cart"} component={Cart} />
             <Route path={"/checkout"} component={CheckOut} />
+            <Route path={"/changeAddress"} component={ChangeAddress} />
+            <Route path={"/updateAddress"} component={UpdateAddress} />
+
             <Route path={"/help"} component={HelpCenter} />
             <Route path={"/place-track-order"} component={PlacenTrackOrder} />
             <Route path={"/pay"} component={Pay} />

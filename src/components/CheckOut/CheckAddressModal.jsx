@@ -37,7 +37,13 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 4,
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
-    minWidth: "850px",
+    minWidth: "none",
+    [theme.breakpoints.up("sm")]: {
+      minWidth: "550px",
+    },
+    [theme.breakpoints.up("md")]: {
+      minWidth: "850px",
+    },
     minHeight: "335px",
   },
   formControlLabel: {

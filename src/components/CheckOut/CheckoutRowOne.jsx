@@ -7,8 +7,13 @@ import CheckRightSection from "./CheckRightSection";
 import CheckPayment from "./CheckPayment";
 import CheckAddressModal from "./CheckAddressModal";
 import { connect } from "react-redux";
+import useWindowDimensions from "../../Hooks/UseWindowDimension";
+import { Link } from "react-router-dom";
+import Button from "@material-ui/core/Button";
 
 function CheckoutRowOne({ totalPrice, cart, contact }) {
+  const { width } = useWindowDimensions();
+
   const [value, setValue] = useState("firstChoice");
 
   const handleChange = (event) => {
@@ -43,13 +48,19 @@ function CheckoutRowOne({ totalPrice, cart, contact }) {
                   <span className="checktitle__numbr">1. </span>
                   <span className="checktitle__name">ADDRESS DETAILS</span>
                 </div>
-                <div>
-                  {/* <Link to="/customer#/editAddress"> */}
-                  <CheckAddressModal>
-                    <p className="checktitle__fn">CHANGE</p>
-                  </CheckAddressModal>
-                  {/* </Link> */}
-                </div>
+              
+                  {width > 576 ? (
+                      <div>
+                    <CheckAddressModal>
+                      <p className="checktitle__fn">CHANGE</p>
+                    </CheckAddressModal>
+                    </div>
+                  ) : (
+                    <Link to="/changeAddress">
+                      <Button className="font-sm text-primary">CHANGE</Button>
+                    </Link>
+                  )}
+                
               </div>
               <div className="check__addressDetail">
                 {defaultContact ? (

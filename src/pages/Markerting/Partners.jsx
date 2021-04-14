@@ -3,7 +3,7 @@ import Header from "../../components/Header/Header";
 import NewFooter from "../../components/Footer/NewFooter";
 // import DynamicButton from "../../components/Button/DynamicButton";
 // import { Link } from "react-router-dom";
-import AddressForm from "../../components/Form/AddressForm";
+import LogisticsPartnerForm from "../../components/Form/LogisticsPartnerForm";
 
 export default function Partners() {
   return (
@@ -12,20 +12,23 @@ export default function Partners() {
 
       <div className="body__wrapper putAtMiddle">
         {/* <div className="mt-4 bg-white"> */}
-        <div className="prodWrapper mb-5">
-          <div className="prodBigWrapper">
-            <div className="text-center pt-3">
-              <h3 className="text-primary">
+        <div className="prodWrapper mb-5 col-12 col-lg-9 mx-auto">
+          <div className="bg-white rounded shadow-sm">
+            <div className="text-center pt-3 bg-primary rounded-top text-white">
+              <h3 className="text-white">
                 Want to Become a woozeee Partner?
               </h3>
-              <p className="py-4">
+              <div className="py-4 font-sm col-9 mx-auto">
                 Jumia has multifold opportunities in field of express logistics
                 in last mile delivery and line haul. If you are willing to
                 partner with us, please fill the following form to register your
                 interest.
-              </p>
+              </div>
             </div>
-            <AddressForm />
+            <div className="mt-4">
+            <LogisticsPartnerForm />
+
+            </div>
           </div>
         </div>
       </div>

@@ -25,54 +25,29 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 4,
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
-    minWidth: "850px",
-    minHeight: "335px",
-  },
-  formControlLabel: {
-    "& span": {
-      fontSize: "0.875rem",
-      fontWeight: "500",
+    minWidth: "none",
+    [theme.breakpoints.up("sm")]: {
+      minWidth: "550px",
     },
-  },
-  fieldset: {
-    width: "100%",
-  },
-
-  formControlr: {
-    minWidth: 120,
-    width: "100%",
-    marginTop: "0.6rem !important",
-    marginLeft: "0.6rem !important",
-  },
-  formContrl2: {
-    minWidth: 120,
-    width: "80%",
-    marginTop: "0.6rem !important",
-    marginLeft: "0.6rem !important",
-  },
-  phoneSelectr: {
-    width: "7ch",
-  },
-  phoneNumberFieldr: {
-    width: "110% !important",
-    minWidth: 120,
-    whiteSpace: "nowrap",
+    [theme.breakpoints.up("md")]: {
+      minWidth: "850px",
+    },
+    minHeight: "335px",
   },
 }));
 
-export default function UpdateAddressModal({contact, ...props}) {
+export default function UpdateAddressModal({ contact, ...props }) {
   const classes = useStyles();
 
   const [openModal, setModalOpen] = useState(false);
   const anchorRef = useRef(null);
- 
+
   const handleModalClose = () => {
     setModalOpen(false);
   };
   const handleModalOpen = () => {
     setModalOpen(true);
   };
-
 
   return (
     <div className={`${classes.root}`}>
@@ -98,7 +73,10 @@ export default function UpdateAddressModal({contact, ...props}) {
                 <h5>{props.title}</h5>
                 <CloseRoundedIcon onClick={handleModalClose} />
               </div>
-              <AddressForm handleModalClose={handleModalClose} contactProp={contact}/>
+              <AddressForm
+                handleModalClose={handleModalClose}
+                contactProp={contact}
+              />
             </div>
           </div>
         </Fade>

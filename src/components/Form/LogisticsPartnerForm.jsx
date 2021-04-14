@@ -7,7 +7,6 @@ import LargeButton from "../Button/LargeButton";
 import InputLabel from "@material-ui/core/InputLabel";
 import MenuItem from "@material-ui/core/MenuItem";
 import Select from "@material-ui/core/Select";
-import Checkbox from "@material-ui/core/Checkbox";
 import { connect } from "react-redux";
 import { addUserContact } from "../../redux/actions/contact";
 
@@ -29,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 4,
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
-    minWidth: "100%",
+    minWidth: "850px",
     minHeight: "335px",
   },
   formControlLabel: {
@@ -43,35 +42,34 @@ const useStyles = makeStyles((theme) => ({
   },
 
   formControlr: {
-    // minWidth: 120,
+    minWidth: 120,
     width: "100%",
     marginTop: "0.6rem !important",
     marginLeft: "0.6rem !important",
   },
   formContrl2: {
-    // minWidth: 120,
-    width: "90%",
-    [theme.breakpoints.up("lg")]: {
-      width: "80%",
-    },
-    marginTop: "0.6rem !important",
+    minWidth: 120,
+    width: "80%",
+    // marginTop: "0.6rem !important",
     marginLeft: "0.6rem !important",
   },
   formContrl3: {
-    width: "90% !important",
+    minWidth: 120,
+    width: "90%",
+    // marginTop: "0.6rem !important",
+    marginLeft: "0.6rem !important",
   },
   phoneSelectr: {
     width: "5.8ch",
   },
   phoneNumberFieldr: {
-    width: "100% !important",
-    // width: "110% !important",
-    // minWidth: 120,
+    width: "110% !important",
+    minWidth: 120,
     whiteSpace: "nowrap",
   },
 }));
 
-function AddressForm({ contactProp, ...props }) {
+function LogisticsPartnerForm({ contactProp, ...props }) {
   const classes = useStyles();
 
   console.log(contactProp);
@@ -83,14 +81,15 @@ function AddressForm({ contactProp, ...props }) {
           userID: Date.now(),
           firstName: "",
           lastName: "",
+          email: "",
           phonePrefix: 234,
           secondPhonePrefix: 234,
           phoneNumber: "",
           additionalPhoneNumber: "",
           address: "",
-          additionalInformation: "",
           city: "",
           region: "",
+          country: "",
           defaultAddress: false,
         }
   );
@@ -98,12 +97,7 @@ function AddressForm({ contactProp, ...props }) {
   const handleFormChange = (prop) => (event) => {
     setformValues({ ...formValues, [prop]: event.target.value });
   };
-  const handleDefaultAddress = () => {
-    setformValues({
-      ...formValues,
-      defaultAddress: !formValues.defaultAddress,
-    });
-  };
+
   const handlePhoneNumber = (event) => {
     setformValues({
       ...formValues,
@@ -173,8 +167,8 @@ function AddressForm({ contactProp, ...props }) {
                       <Select
                         labelId="demo-simple-select-placeholder-label-label"
                         id="demo-simple-select-placeholder-label"
-                        value={formValues?.phonePrefix}
-                        onChange={handleFormChange("phonePrefix")}
+                        value={formValues?.secondPhonePrefix}
+                        onChange={handleFormChange("secondPhonePrefix")}
                         displayEmpty
                         className={classes.phoneSelectr}
                       >
@@ -191,12 +185,12 @@ function AddressForm({ contactProp, ...props }) {
                 <Col>
                   <span className="phoneField__wrapper">
                     <TextField
-                      label="Phone Number"
+                      label="Additional Phone Number"
                       className={classes.phoneNumberFieldr}
-                      onChange={handlePhoneNumber}
-                      value={formValues?.phoneNumber}
+                      onChange={handleAdditionalPhoneNumber}
+                      value={formValues?.additionalPhoneNumber}
                       inputProps={{ maxLength: 10 }}
-                      defaultValue={props?.phoneNumber}
+                      defaultValue={props?.additionalPhoneNumber}
                     />
                   </span>
                 </Col>
@@ -237,43 +231,64 @@ function AddressForm({ contactProp, ...props }) {
                 <Col>
                   <span className="phoneField__wrapper">
                     <TextField
-                      label="Additional Phone Number"
+                      label="Phone Number"
                       className={classes.phoneNumberFieldr}
-                      onChange={handleAdditionalPhoneNumber}
-                      value={formValues?.additionalPhoneNumber}
+                      onChange={handlePhoneNumber}
+                      value={formValues?.phoneNumber}
                       inputProps={{ maxLength: 10 }}
-                      defaultValue={props?.additionalPhoneNumber}
+                      defaultValue={props?.phoneNumber}
                     />
                   </span>
                 </Col>
               </Row>
             </Col>
           </Row>
-
+         
           <Row>
+            <TextField
+              label="Email"
+              value={formValues?.email}
+              onChange={handleFormChange("email")}
+              defaultValue={props?.email}
+              className="txtField_edit"
+            />
+          </Row>
+          <Row className="pt-2">
+            <FormControl className={classes.formContrl3}>
+              <InputLabel
+                shrink
+                id="demo-simple-select-placeholder-label-label"
+              >
+                Country
+              </InputLabel>
+              <Select
+                labelId="demo-simple-select-placeholder-label-label"
+                id="demo-simple-select-placeholder-label"
+                value={formValues?.country}
+                onChange={handleFormChange("country")}
+                displayEmpty
+                defaultValue="Nigeria"
+                className=""
+              >
+                <MenuItem value="">
+                  <p>Nigeria</p>
+                </MenuItem>
+                <MenuItem value="ghn">Ghana</MenuItem>
+                <MenuItem value="SA">South Africa</MenuItem>
+              </Select>
+            </FormControl>
+          </Row>
+          <Row className="pt-2">
             <TextField
               label="Address"
               value={formValues?.address}
               onChange={handleFormChange("address")}
               defaultValue={props?.address}
-              // className="txtField_edit"
-              className={classes.formContrl3}
+              className="txtField_edit"
             />
           </Row>
-
-          <Row>
-            <TextField
-              label="Additional Information"
-              value={formValues?.additionalInformation}
-              onChange={handleFormChange("additionalInformation")}
-              defaultValue={props?.additionalInformation}
-              // className="txtField_edit"
-              className={classes.formContrl3}
-            />
-          </Row>
-
-          <Row>
-            <Col lg="6">
+          <Row className="pt-2">
+            <Col sm="6">
               <FormControl className={classes.formContrl2}>
                 <InputLabel
                   shrink
@@ -297,7 +312,7 @@ function AddressForm({ contactProp, ...props }) {
               </FormControl>
             </Col>
 
-            <Col lg="6">
+            <Col sm="6">
               <FormControl className={classes.formContrl2}>
                 <InputLabel
                   shrink
@@ -321,28 +336,54 @@ function AddressForm({ contactProp, ...props }) {
               </FormControl>
             </Col>
           </Row>
-        </div>
-
-        <div className="editAddressCheckBox_wrap">
-          <Checkbox
-            checked={formValues?.defaultAddress}
-            color="primary"
-            onChange={handleDefaultAddress}
-            inputProps={{ "aria-label": "secondary checkbox" }}
-          />
-          <span className="font-weight-500 font-sm">
-            Set as Default Address
-          </span>
+          <Row className="pt-3">
+            <FormControl className={classes.formContrl3}>
+              <InputLabel
+                shrink
+                id="demo-simple-select-placeholder-label-label"
+              >
+                Do you have prior experience in logistics?
+              </InputLabel>
+              <Select
+                labelId="demo-simple-select-placeholder-label-label"
+                id="demo-simple-select-placeholder-label"
+                value={formValues?.region}
+                onChange={handleFormChange("region")}
+                displayEmpty
+                className=""
+                defaultValue={props?.region}
+              >
+                <MenuItem value="Yes">Yes</MenuItem>
+                <MenuItem value="No">No</MenuItem>
+              </Select>
+            </FormControl>
+          </Row>
+          <Row className="pt-3">
+            <FormControl className={classes.formContrl3}>
+              <InputLabel
+                shrink
+                id="demo-simple-select-placeholder-label-label"
+              >
+                Have you managed e-commerce logistics in the past?
+              </InputLabel>
+              <Select
+                labelId="demo-simple-select-placeholder-label-label"
+                id="demo-simple-select-placeholder-label"
+                value={formValues?.region}
+                onChange={handleFormChange("region")}
+                displayEmpty
+                className=""
+                defaultValue={props?.region}
+              >
+                <MenuItem value="Yes">Yes</MenuItem>
+                <MenuItem value="No">No</MenuItem>
+              </Select>
+            </FormControl>
+          </Row>
         </div>
 
         <div className="accButton__wrapper2">
-          <LargeButton
-            buttonName="SAVE"
-            type="submit"
-            onClick={(e) => {
-              props?.handleModalClose();
-            }}
-          />
+          <LargeButton buttonName="SAVE" type="submit" onClick={""} />
         </div>
       </form>
     </div>
@@ -361,4 +402,7 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(AddressForm);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(LogisticsPartnerForm);
