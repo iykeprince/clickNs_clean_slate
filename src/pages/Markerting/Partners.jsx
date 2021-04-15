@@ -15,7 +15,7 @@ export default function Partners() {
         <div className="prodWrapper mb-5 col-12 col-lg-9 mx-auto">
           <div className="bg-white rounded shadow-sm">
             <div className="text-center pt-3 bg-primary rounded-top text-white">
-              <h3 className="text-white">
+              <h3 className="text-white font-sm-">
                 Want to Become a woozeee Partner?
               </h3>
               <div className="py-4 font-sm col-9 mx-auto">

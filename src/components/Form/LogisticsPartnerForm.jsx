@@ -336,7 +336,7 @@ function LogisticsPartnerForm({ contactProp, ...props }) {
               </FormControl>
             </Col>
           </Row>
-          <Row className="pt-3">
+          <Row className="pt-3 mt-3">
             <FormControl className={classes.formContrl3}>
               <InputLabel
                 shrink
@@ -358,7 +358,7 @@ function LogisticsPartnerForm({ contactProp, ...props }) {
               </Select>
             </FormControl>
           </Row>
-          <Row className="pt-3">
+          <Row className="pt-3 mt-3">
             <FormControl className={classes.formContrl3}>
               <InputLabel
                 shrink
@@ -380,10 +380,86 @@ function LogisticsPartnerForm({ contactProp, ...props }) {
               </Select>
             </FormControl>
           </Row>
+          <Row className="pt-3 mt-3">
+            <FormControl className={classes.formContrl3}>
+              <InputLabel
+                shrink
+                id="demo-simple-select-placeholder-label-label"
+              >
+                Is your company registered with a courier licence as per the statutory requirement in your country?
+              </InputLabel>
+              <Select
+                labelId="demo-simple-select-placeholder-label-label"
+                id="demo-simple-select-placeholder-label"
+                value={formValues?.region}
+                onChange={handleFormChange("region")}
+                displayEmpty
+                className="pt-3"
+                defaultValue={props?.region}
+              >
+                <MenuItem value="Yes">Yes</MenuItem>
+                <MenuItem value="No">No</MenuItem>
+              </Select>
+            </FormControl>
+          </Row>
+          <Row className="pt-3 mt-3">
+            <FormControl className={classes.formContrl3}>
+              <InputLabel
+                shrink
+                id="demo-simple-select-placeholder-label-label"
+              >
+                How much capital are you willing to invest in your business with us?
+              </InputLabel>
+              <Select
+                labelId="demo-simple-select-placeholder-label-label"
+                id="demo-simple-select-placeholder-label"
+                value={formValues?.region}
+                onChange={handleFormChange("region")}
+                displayEmpty
+                className=""
+                defaultValue={props?.region}
+              >
+                <MenuItem value="Yes">Yes</MenuItem>
+                <MenuItem value="No">No</MenuItem>
+              </Select>
+            </FormControl>
+          </Row>
+          <Row className="pt-3 mt-3">
+            <FormControl className={classes.formContrl3}>
+              <InputLabel
+                shrink
+                id="demo-simple-select-placeholder-label-label"
+              >
+                How much capital are you willing to invest in your business with us?
+              </InputLabel>
+              <Select
+                labelId="demo-simple-select-placeholder-label-label"
+                id="demo-simple-select-placeholder-label"
+                value={formValues?.region}
+                onChange={handleFormChange("region")}
+                displayEmpty
+                className=""
+                defaultValue={props?.region}
+              >
+                <MenuItem value="Yes">USD 0 - 5,000</MenuItem>
+                <MenuItem value="No">USD 0 - 5,000</MenuItem>
+              </Select>
+            </FormControl>
+          </Row>
+          <Row className="mt-2">
+            <TextField
+              label="Additional Information you want to share with us?"
+              value={formValues?.additionalInformation}
+              onChange={handleFormChange("additionalInformation")}
+              defaultValue={props?.additionalInformation}
+              // className="txtField_edit"
+              className={`${classes.formContrl3} py-3 py-md-0`}
+            />
+          </Row>
         </div>
 
         <div className="accButton__wrapper2">
-          <LargeButton buttonName="SAVE" type="submit" onClick={""} />
+          <LargeButton buttonName="Submit Form" type="submit" onClick={""} />
         </div>
       </form>
     </div>

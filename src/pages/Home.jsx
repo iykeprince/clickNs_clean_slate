@@ -5,17 +5,16 @@ import BodyNav from "../components/BodyNav/BodyNav";
 import BottomAboutSection from "../components/BottomAboutSection/BottomAboutSection";
 import DealsSection from "../components/Product/DealsSection";
 import FeaturedSection from "../components/FeaturedSection/FeaturedSection";
-// import DealsSectionTwo from "../components/DealsSection/DealsSectionTwo";
 import DoubleImage from "../components/ImageCard/DoubleImage";
 import SingleImage from "../components/ImageCard/SingleImage";
+import NewFooter from "../components/Footer/NewFooter";
+// import DealsSectionTwo from "../components/DealsSection/DealsSectionTwo";
 // import DealsSectionFour from "../components/DealsSection/DealsSectionFour";
 // import DealsSectionThree from "../components/DealsSection/DealsSectionThree";
-import NewFooter from "../components/Footer/NewFooter";
 // import Footer from "../components/Footer/Footer";
 
-
 // Redux
-// import { connect } from "react-redux"; 
+// import { connect } from "react-redux";
 
 let homeImgs = {
   shoe: "/images/imageSection/ShoesAd.png",

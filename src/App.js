@@ -74,7 +74,6 @@ function App({current}) {
             <Route path={"/checkout"} component={CheckOut} />
             <Route path={"/changeAddress"} component={ChangeAddress} />
             <Route path={"/updateAddress"} component={UpdateAddress} />
-
             <Route path={"/help"} component={HelpCenter} />
             <Route path={"/place-track-order"} component={PlacenTrackOrder} />
             <Route path={"/pay"} component={Pay} />
