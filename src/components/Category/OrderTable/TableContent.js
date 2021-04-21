@@ -3,7 +3,7 @@ import React from "react";
 const TableContent = (props) => {
   return (
     <React.Fragment>
-      <div className='col-lg-2 col-xs-4 col-6 mb-3'>
+      <div className='col-lg-2 col-sm-4 col-6 mb-3'>
         <div className="ps_card">
           <img src={props.img} className="ps_card_img" alt="iphone 11" />
         </div>

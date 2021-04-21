@@ -58,7 +58,7 @@ function App({current}) {
   });
 
   return (
-    <Router>
+    <Router >
       <MuiThemeProvider theme={theme}>
         <div className="App">
           <header className="App-header">

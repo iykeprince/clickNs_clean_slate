@@ -8,12 +8,6 @@ import FeaturedSection from "../components/FeaturedSection/FeaturedSection";
 import DoubleImage from "../components/ImageCard/DoubleImage";
 import SingleImage from "../components/ImageCard/SingleImage";
 import NewFooter from "../components/Footer/NewFooter";
-// import DealsSectionTwo from "../components/DealsSection/DealsSectionTwo";
-// import DealsSectionFour from "../components/DealsSection/DealsSectionFour";
-// import DealsSectionThree from "../components/DealsSection/DealsSectionThree";
-// import Footer from "../components/Footer/Footer";
-
-// Redux
 // import { connect } from "react-redux";
 
 let homeImgs = {

@@ -1,18 +1,20 @@
 import React from "react";
-import TableContent from "../PriceSlash/TableContent";
+// import TableContent from "../PriceSlash/TableContent";
 import * as FaIcon from "react-icons/fa";
+import { connect } from "react-redux";
+import DealsSectionContent from "../../Product/DealsSectionContent";
 
-export function PriceSlashII({...props}) {
-    return (
-      <React.Fragment>
-        <div className="conatine">
-          <div className="bp-span">
-            <span>SEE ALL</span> <FaIcon.FaAngleRight />
-          </div>
+function PriceSlashII({ products, ...props }) {
+  return (
+    <React.Fragment>
+      <div className="conatine">
+        <div className="bp-span">
+          <span>SEE ALL</span> <FaIcon.FaAngleRight />
+        </div>
 
-          <h3 className="heading__Title">{props.headingTitle}</h3>
+        <h3 className="heading__Title">{props.headingTitle}</h3>
 
-          <div class="griddd-container row">
+        {/* <div class="griddd-container row">
             {props.PriceSlashDataII.map((e, i) => {
               return (
                 <TableContent
@@ -25,8 +27,24 @@ export function PriceSlashII({...props}) {
                 />
               );
             })}
-          </div>
+          </div> */}
+
+        <div className="row">
+          <DealsSectionContent
+            productData={products}
+            sliceFrom={12}
+            sliceTo={18}
+          />
         </div>
-      </React.Fragment>
-    );
-  }
+      </div>
+    </React.Fragment>
+  );
+}
+
+const mapStateToProps = (state) => {
+  return {
+    products: state.shop.products,
+  };
+};
+
+export default connect(mapStateToProps)(PriceSlashII);

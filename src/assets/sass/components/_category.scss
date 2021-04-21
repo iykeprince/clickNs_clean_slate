@@ -1,6 +1,9 @@
 .heading__Title {
   font-weight: bold;
   font-size: 20px;
+  @media screen and (max-width:576px) {
+    font-size: 1rem;
+  }
 }
 .link_dirGroup {
   margin-top: 1rem !important;

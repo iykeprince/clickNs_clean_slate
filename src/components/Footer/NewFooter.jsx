@@ -129,7 +129,7 @@ function NewFooter() {
                       Sell on woozeee
                     </Link>
                     <Link to="/" className="white d-block">
-                      Participate in challeges
+                      Participate in challenges
                     </Link>
                     <Link to="/" className="white d-block">
                       Become an Affiliate Partner

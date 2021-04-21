@@ -1,8 +1,11 @@
 import React from "react";
-import TableContent from "../PriceSlash/TableContent";
+// import TableContent from "../PriceSlash/TableContent";
 import * as FaIcon from "react-icons/fa";
+import { connect } from "react-redux";
+import DealsSectionContent from "../../Product/DealsSectionContent";
 
-export function PriceSlashV({...props}) {
+
+export function PriceSlashV({products,...props}) {
     return (
       <React.Fragment>
         <div className="conatine">
@@ -12,7 +15,7 @@ export function PriceSlashV({...props}) {
 
           <h3 className="heading__Title">{props.headingTitle}</h3>
 
-          <div class="griddd-container row">
+          {/* <div class="griddd-container row">
             {props.PriceSlashDataV.map((e, i) => {
               return (
                 <TableContent
@@ -25,9 +28,26 @@ export function PriceSlashV({...props}) {
                 />
               );
             })}
-          </div>
+          </div> */}
+
+          <div className="row">
+          <DealsSectionContent
+            productData={products}
+            sliceFrom={12}
+            sliceTo={18}
+          />
+        </div>
         </div>
       </React.Fragment>
     );
   }
 
+
+  const mapStateToProps = (state) => {
+    return {
+      products: state.shop.products,
+    };
+  };
+  
+  export default connect(mapStateToProps)(PriceSlashV);
+  
