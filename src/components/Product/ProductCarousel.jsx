@@ -7,7 +7,6 @@ import phonesmall1 from "../../assets/images/phoneSmall47.svg";
 // import phonesmall3 from "../../assets/images/phoneSmall46.svg";
 // import nextImg from "../../assets/images/nextRight.svg";
 import VariableImage from "../ImageCard/VariableImage";
-import "./style.css"
 
 // import CustomCard from "./card";
 

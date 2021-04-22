@@ -20,7 +20,7 @@ export default function SpecificationSection() {
         sollicitudin aliquam ultrices sagittis. Dictumst quisque sagittis purus
         sit amet volutpat. Adipiscing vitae proin sagittis nisl. Dignissim
         convallis aenean et tortor. Pellentesque habitant morbi tristique
-        senectus et netus et. Arcu non sodales neque sodales ut etiam sit.
+        senectus et netus et. Acru non sodales neque sodales ut etiam sit.
         Vulputate ut pharetra sit amet aliquam.
       </p>
     </div>
