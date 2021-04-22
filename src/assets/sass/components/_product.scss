@@ -423,10 +423,10 @@
 }
 
 
-//REACT MULTI CAROUSEL
-// ul.react-multi-carousel-track li:nth-child(1) .ant-card:nth-child(1) {
-//   margin-left: 20px;
-// }
+// REACT MULTI CAROUSEL
+ul.react-multi-carousel-track li:nth-child(1) .ant-card:nth-child(1) {
+  margin-left: 20px;
+}
 
 // button {
 //   display: inline-block;
@@ -438,23 +438,23 @@
 //   min-width: 40px;
 // }
 
-// .react-multiple-carousel__arrow--right {
-//   right: calc(0% + 1px) !important;
-// }
+.react-multiple-carousel__arrow--right {
+  right: calc(0% + 1px) !important;
+}
 
-// .react-multiple-carousel__arrow--left {
-//   left: calc(0% + 1px) !important;
-// }
+.react-multiple-carousel__arrow--left {
+  left: calc(0% + 1px) !important;
+}
 
-// .react-multi-carousel-track {
-//   padding-left: 1rem !important;
-//   padding-right: 1rem !important;
-// }
+.react-multi-carousel-track {
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
 
-// .react-multiple-carousel__arrow.react-multiple-carousel__arrow--right,
-// .react-multiple-carousel__arrow.react-multiple-carousel__arrow--left {
-//   transform: scale(0.75) !important;
-// }
+.react-multiple-carousel__arrow.react-multiple-carousel__arrow--right,
+.react-multiple-carousel__arrow.react-multiple-carousel__arrow--left {
+  transform: scale(0.75) !important;
+}
 
 @media screen and (max-width: 768px) {
   .Descriptions a {

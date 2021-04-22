@@ -39,7 +39,7 @@ class Carousels extends React.Component {
         additionalTransfrom={0}
         arrows
         centerMode
-        containerClass="container"
+        containerClass=""
         draggable
         focusOnSelect={false}
         keyBoardControl
