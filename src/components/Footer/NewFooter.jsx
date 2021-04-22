@@ -30,7 +30,7 @@ function NewFooter() {
               <img src={upImg} alt="Move up" />
             </div> */}
             <div className="d-none d-sm-block">
-              <ScrollToTop smooth component={<ExpandLessRoundedIcon />} />
+              <ScrollToTop smooth component={<ExpandLessRoundedIcon color="primary"/>} />
             </div>
           </div>
         </div>

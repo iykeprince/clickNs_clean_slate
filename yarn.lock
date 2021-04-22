@@ -9887,6 +9887,11 @@ react-loader-spinner@^4.0.0:
   dependencies:
     prop-types "^15.7.2"
 
+react-multi-carousel@^2.6.2:
+  version "2.6.2"
+  resolved "https://registry.yarnpkg.com/react-multi-carousel/-/react-multi-carousel-2.6.2.tgz#c78d38fbfab704394a72f26ffa161b8963138a1f"
+  integrity sha512-qSrupBGazqYS/LVQAUCWiEAPhCrO0QufP5PcpDCA6Klig3egdNMwIdkkoU6Xlm9zEQ/hFp57bNr7F4sd0ANLyA==
+
 react-overlays@^4.1.0:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/react-overlays/-/react-overlays-4.1.1.tgz#0060107cbe1c5171a744ccda3fbf0556d064bc5f"

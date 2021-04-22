@@ -1,17 +1,12 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
-import imgPrev from "../../assets/images/prevLeft.svg";
-import phonesmall1 from "../../assets/images/phoneSmall47.svg";
-import phonesmall2 from "../../assets/images/phoneSmall45.svg";
-import phonesmall3 from "../../assets/images/phoneSmall46.svg";
-import nextImg from "../../assets/images/nextRight.svg";
-import VariableImage from "../ImageCard/VariableImage";
 import DiscountPercent from "../DiscountPercent/DiscountPercent";
 import { Link, useHistory } from "react-router-dom";
 import * as FaIcon from "react-icons/fa";
 import LargeButton from "../Button/LargeButton";
 import { HeartRating, ReadOnlyRating } from "../Rating/Rating";
 import IconStore from "../../assets/icons/IconStore";
+import ProductCarousel from "./ProductCarousel"
 
 // Redux
 import { connect } from "react-redux";
@@ -34,13 +29,8 @@ function ProductDetailRowOne({ current, product, addToCart}) {
               />
             </div>
             
-            <div className="prevNext">
-              <VariableImage Img={imgPrev} altText="previous" />
-              <VariableImage Img={phonesmall1} altText="phoneSmall" />
-              <VariableImage Img={phonesmall2} altText="phoneSmall" />
-              <VariableImage Img={phonesmall3} altText="phoneSmall" />
-              <VariableImage Img={phonesmall1} altText="phoneSmall" />
-              <VariableImage Img={nextImg} altText="next" />
+            <div className="prevNext mr-4">
+              <ProductCarousel count={10}/>
             </div>
 
             <hr className="separator" />

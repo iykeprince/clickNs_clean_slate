@@ -331,11 +331,19 @@
 }
 .rightSideCard {
   padding: 0.938rem !important;
+
 }
 .rightSideImg {
   text-align: center;
 }
-
+.textgrp__rightSideCard{
+  @media screen and (min-width:0px) and (max-width:478px) {
+    max-width: 75%;
+  }
+  @media screen and (min-width:478px) and (max-width:576px) {
+    max-width: 50%;
+  }
+}
 //ROW Three
 .productDescription {
   background: #ffffff;
