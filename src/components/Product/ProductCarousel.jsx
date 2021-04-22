@@ -50,7 +50,7 @@ class Carousels extends React.Component {
               max: 9216,
               min: 464
             },
-            items: 3,
+            items: 2,
             paritialVisibilityGutter: 30
           },
           mobile: {
