@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "@material-ui/core/Button";
 import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 import Grow from "@material-ui/core/Grow";
@@ -7,7 +7,6 @@ import Popper from "@material-ui/core/Popper";
 import MenuItem from "@material-ui/core/MenuItem";
 import MenuList from "@material-ui/core/MenuList";
 import { makeStyles } from "@material-ui/core/styles";
-import { Link } from "react-router-dom";
 import IconStore from "../../../assets/icons/IconStore";
 
 const useStyles = makeStyles((theme) => ({
@@ -21,7 +20,8 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Sort() {
   const classes = useStyles();
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
+  const [sortValue, setsortValue] = useState("Popularity");
   const anchorRef = React.useRef(null);
 
   const handleToggle = () => {
@@ -32,10 +32,12 @@ export default function Sort() {
     if (anchorRef.current && anchorRef.current.contains(event.target)) {
       return;
     }
-
     setOpen(false);
   };
 
+  const handleMenuItemClose = (dValue) => {
+    setsortValue(dValue);
+  };
   function handleListKeyDown(event) {
     if (event.key === "Tab") {
       event.preventDefault();
@@ -62,7 +64,7 @@ export default function Sort() {
           aria-haspopup="true"
           onClick={handleToggle}
         >
-          <span className="option__lineOne">Sort by: popularity</span>
+          <span className="option__lineOne">Sort by: {sortValue}</span>
           <span className="dropdown__icon">{IconStore.arrowDown}</span>
         </Button>
         <Popper
@@ -87,26 +89,41 @@ export default function Sort() {
                     id="menu-list-grow"
                     onKeyDown={handleListKeyDown}
                   >
-                    <Link to="#">
-                      <MenuItem onClick={handleClose}>
-                        <span>Popularity</span>
-                      </MenuItem>
-                    </Link>
-                    <Link to="#">
-                      <MenuItem onClick={handleClose}>
-                        <span>Newest Arrivals</span>
-                      </MenuItem>
-                    </Link>
-                    <Link to="#">
-                      <MenuItem onClick={handleClose}>
-                        <span>Price: Low to High</span>
-                      </MenuItem>
-                    </Link>
-                    <Link to="#">
-                      <MenuItem onClick={handleClose}>
-                        <span>Product Rating </span>
-                      </MenuItem>
-                    </Link>
+                    <MenuItem
+                      value="Popularity"
+                      onClick={(event) => {
+                        handleClose(event);
+                        handleMenuItemClose("Popularity");
+                      }}
+                    >
+                      <span>Popularity</span>
+                    </MenuItem>
+
+                    <MenuItem
+                      value="Newest Arrivals"
+                      onClick={(event) => {
+                        handleClose(event);
+                        handleMenuItemClose("Newest Arrivals");
+                      }}
+                    >
+                      <span>Newest Arrivals</span>
+                    </MenuItem>
+                    <MenuItem
+                      value="Price: Low to High"
+                      onClick={(event) => {
+                        handleClose(event);
+                        handleMenuItemClose("Price: Low to High");
+                      }}                    >
+                      <span>Price: Low to High</span>
+                    </MenuItem>
+                    <MenuItem
+                      value="Product Rating"
+                      onClick={(event) => {
+                        handleClose(event);
+                        handleMenuItemClose("Product Rating");
+                      }}                     >
+                      <span>Product Rating </span>
+                    </MenuItem>
                   </MenuList>
                 </ClickAwayListener>
               </Paper>

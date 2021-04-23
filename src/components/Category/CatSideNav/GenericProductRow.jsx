@@ -1,10 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-import DynamicButton, {DynamicButtonTwo} from "../../Button/DynamicButton";
+import DynamicButton, { DynamicButtonTwo } from "../../Button/DynamicButton";
 import { ReadOnlyRating } from "../../Rating/Rating";
+import { Link, useHistory } from "react-router-dom";
+import { connect } from "react-redux";
+import { loadCurrentItem, addToCart } from "../../../redux/actions/shopping";
+// import ScrollToTop from "../../../Hooks/ScrollToTop";
 
-const ProductRow = (props) => {
+const ProductRow = ({ addToCart, current, loadCurrentItem, ...props }) => {
   let btnClass = classNames("", {
     thumbnail: props.listView,
     " col-6 col-md-4 col-lg-3 thumbnail-grid": props.gridView,
@@ -64,17 +68,22 @@ const ProductRow = (props) => {
       addToCart_buttonGrid: props.gridView,
     }),
     classNames("", {
-        captionLG_List: props.listView,
-        captionLG_Grid: props.gridView,
+      captionLG_List: props.listView,
+      captionLG_Grid: props.gridView,
     }),
   ];
+  const history = useHistory();
 
   return (
     <div className={btnClass}>
       <div className={`caption ${listClass} ${captionLG}`}>
-        <div className={`list_productImg ${withOne}`}>
+        <Link
+          to={`/product/phones/#${(props.data || []).id}`}
+          onClick={() => loadCurrentItem(props.data)}
+          className={`list_productImg ${withOne}  d-block`}
+        >
           <img src={props.data.productImg} alt="productImage" />
-        </div>
+        </Link>
 
         <div className={`${listClass} ${withTwo} ${rowList}`}>
           <div className={`${colFullList}`}>
@@ -89,14 +98,18 @@ const ProductRow = (props) => {
                     />
                   </span>
 
-                  <span className='ratNum'>({`${props.data.ratingsNumber}`})</span>
+                  <span className="ratNum">
+                    ({`${props.data.ratingsNumber}`})
+                  </span>
                 </div>
               </div>
 
               <div className={`${col3List}`}>
-                <p className="font-weight-bold">{props.data.productPrice}</p>
+                <p className="font-weight-bold">
+                  &#8358; {props.data.mainPrice?.toLocaleString()}
+                </p>
                 <span className="list_slashedPrice">
-                  {props.data.slashedPrice}
+                  &#8358; {props.data.slashedPrice?.toLocaleString()}
                 </span>
                 <span className="percentDiscount2">
                   <span className="percentDiscount__text2">
@@ -115,7 +128,7 @@ const ProductRow = (props) => {
                   ratingCount={props.data.ratingsCount}
                 />
               </span>
-              <span className='ratNum'>({`${props.data.ratingsNumber}`})</span>
+              <span className="ratNum">({`${props.data.ratingsNumber}`})</span>
             </div>
             <DynamicButton
               color="white"
@@ -130,7 +143,12 @@ const ProductRow = (props) => {
               COMPARE PRICES
             </DynamicButton>
 
-            <span className={addToCart_button}>
+            <span className={addToCart_button} onClick={() => {
+              console.log('props.data from genericProductRow',props.data)
+                  loadCurrentItem(props.data);
+                  addToCart(props.data.id);
+                  history.push("/cart");
+                }}>
               <DynamicButtonTwo
                 color="white"
                 height="2.5rem"
@@ -158,4 +176,22 @@ ProductRow.propTypes = {
   gridView: PropTypes.bool,
 };
 
-export default ProductRow;
+// const mapStateToProps = (state) => {
+//   return {
+//     current: state.shop.currentItem,
+//   };
+// };
+const mapStateToProps = (state) => {
+  return {
+    ...state,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addToCart: (id) => dispatch(addToCart(id)),
+    loadCurrentItem: (item) => dispatch(loadCurrentItem(item)),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(ProductRow);

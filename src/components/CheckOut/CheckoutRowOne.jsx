@@ -178,7 +178,7 @@ function CheckoutRowOne({ totalPrice, cart, contact }) {
           <div className="addressCheckout_rightTop">
             <div className="check__orderTitle">
               <span className="ordertitle__numbr">
-                YOUR ORDER ({cartCount} Item)
+                YOUR ORDER ({cartCount} {cartCount>1?"Items":"Item"})
               </span>
             </div>
 

@@ -1,8 +1,9 @@
 import * as actionTypes from "../actions/types";
 import { dealsData } from "../../DB/HomePage/HomePageData";
+import {ProductOrders} from "../../DB/Categories/PhonenTabletData";
 
 const INITIAL_STATE = {
-  products: [...dealsData], //{id, title, price, descr, img}
+  products: [...dealsData,...ProductOrders], //{id, title, price, descr, img}
   cart: [], //{id, title, price, descr, img, qty}
   currentItem: null,
   totalPrice: 0,

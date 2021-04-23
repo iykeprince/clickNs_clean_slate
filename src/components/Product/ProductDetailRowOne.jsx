@@ -69,7 +69,6 @@ function ProductDetailRowOne({ current, product, addToCart}) {
                 buttonName="ADD TO CART"
                 onClick={() => {
                   addToCart(current.id)
-                  // addToCart(product.id)
                   history.push("/cart");
                 }}
               />
