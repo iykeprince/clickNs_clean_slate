@@ -9,7 +9,7 @@ export default function RIGHTCATSIDENAV({ products }) {
   return (
     <div className="mainer">
       <div className="d-flex">
-        <span className="listGridTopic">{category.catName}</span>
+        <span className="listGridTopic text-nowrap">{category.catName}</span>
 
         <span className="lefter">
           <Sort/>

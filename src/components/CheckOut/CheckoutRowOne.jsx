@@ -10,6 +10,7 @@ import { connect } from "react-redux";
 import useWindowDimensions from "../../Hooks/UseWindowDimension";
 import { Link } from "react-router-dom";
 import Button from "@material-ui/core/Button";
+import EditIcon from "@material-ui/icons/Edit";
 
 function CheckoutRowOne({ totalPrice, cart, contact }) {
   const { width } = useWindowDimensions();
@@ -46,7 +47,7 @@ function CheckoutRowOne({ totalPrice, cart, contact }) {
                     {IconStore.coloredCheckMark}
                   </span>
                   <span className="checktitle__numbr">1. </span>
-                  <span className="checktitle__name">ADDRESS DETAILS</span>
+                  <span className="checktitle__name text-nowrap">ADDRESS DETAILS</span>
                 </div>
               
                   {width > 576 ? (
@@ -57,7 +58,7 @@ function CheckoutRowOne({ totalPrice, cart, contact }) {
                     </div>
                   ) : (
                     <Link to="/changeAddress">
-                      <Button className="font-sm text-primary">CHANGE</Button>
+                      <Button className="font-sm text-primary"><EditIcon className="font-sm" color="primary" /></Button>
                     </Link>
                   )}
                 

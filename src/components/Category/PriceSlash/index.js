@@ -29,7 +29,7 @@ function PriceSlash({ products, ...props }) {
           })}
         </div> */}
 
-        <div className="row">
+        <div className="row  w-100">
           <DealsSectionContent
             productData={products}
             sliceFrom={6}

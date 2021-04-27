@@ -21,7 +21,6 @@ function DealsSection({ products, ...props }) {
   );
 }
 
-
 const mapStateToProps = (state) => {
   return {
     products: state.shop.products,

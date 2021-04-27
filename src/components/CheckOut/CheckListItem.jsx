@@ -12,7 +12,7 @@ function CheckListItem(props) {
         control={<Radio />}
         label={props.labelName}
       />
-      <div className="deliveryDateTxt">
+      <div className="deliveryDateTxt pt-2">
         <span>{props.txt1}</span>
         <span className="checkListItem__deliveryDate1">
           {props.deliveryDate1}

@@ -1,17 +1,19 @@
 import React from "react";
+import useWindowDimensions from "../../Hooks/UseWindowDimension";
 import { DynamicButtonTwo } from "../Button/DynamicButton";
 
 export const VoucherInput = () => {
+  const {width} = useWindowDimensions()
     return (
-      <div className="header__voucher">
+      <div className="header__voucher py-3">
         <input
           type="text"
           className="header__voucherInput rounded-0"
-          placeholder="Enter voucher / SureGifts code here"
+          placeholder= { width > 480 ? "Enter voucher / SureGifts code here" : "Enter voucher"}
         />
         <DynamicButtonTwo
             color="white"
-            width="10rem"
+            width={ width > 480 ? "10rem" : "6rem"}
             height="40px"
             backgroundColor="var(--woozBlue)"
             boxShadow="none"
@@ -22,7 +24,7 @@ export const VoucherInput = () => {
             fontSize="0.875rem"
             hoverBoxShadow="0 4px 8px 0 rgb(0 0 0 / 15%)"
           >
-            ADD VOUCHER
+           { width > 480 ? "ADD VOUCHER" : "ADD"}
           </DynamicButtonTwo>
       </div>
     );

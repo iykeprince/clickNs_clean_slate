@@ -6,13 +6,16 @@ import { ReadOnlyRating } from "../../Rating/Rating";
 import { Link, useHistory } from "react-router-dom";
 import { connect } from "react-redux";
 import { loadCurrentItem, addToCart } from "../../../redux/actions/shopping";
-// import ScrollToTop from "../../../Hooks/ScrollToTop";
+import { priceFilter } from "../../../redux/actions/filters";
+import useWindowDimensions from "../../../Hooks/UseWindowDimension";
+// import Filter from "./Filters";
 
 const ProductRow = ({ addToCart, current, loadCurrentItem, ...props }) => {
   let btnClass = classNames("", {
     thumbnail: props.listView,
     " col-6 col-md-4 col-lg-3 thumbnail-grid": props.gridView,
   });
+
   let [
     listClass,
     withOne,
@@ -73,6 +76,40 @@ const ProductRow = ({ addToCart, current, loadCurrentItem, ...props }) => {
     }),
   ];
   const history = useHistory();
+  const { width } = useWindowDimensions();
+
+  function abbrNum(number, decPlaces) {
+    // 2 decimal places => 100, 3 => 1000, etc
+    decPlaces = Math.pow(10, decPlaces);
+
+    // Enumerate number abbreviations
+    var abbrev = ["k", "m", "b", "t"];
+
+    // Go through the array backwards, so we do the largest first
+    for (var i = abbrev.length - 1; i >= 0; i--) {
+      // Convert array index to "1000", "1000000", etc
+      var size = Math.pow(10, (i + 1) * 3);
+
+      // If the number is bigger or equal do the abbreviation
+      if (size <= number) {
+        // Here, we multiply by decPlaces, round, and then divide by decPlaces.
+        // This gives us nice rounding to a particular decimal place.
+        number = Math.round((number * decPlaces) / size) / decPlaces;
+
+        // Handle special case where we round up to the next abbreviation
+        if (number === 1000 && i < abbrev.length - 1) {
+          number = 1;
+          i++;
+        }
+        // Add the letter for the abbreviation
+        number += abbrev[i];
+
+        // We are done... stop
+        break;
+      }
+    }
+    return number;
+  }
 
   return (
     <div className={btnClass}>
@@ -84,6 +121,8 @@ const ProductRow = ({ addToCart, current, loadCurrentItem, ...props }) => {
         >
           <img src={props.data.productImg} alt="productImage" />
         </Link>
+
+        {/* <Filter /> */}
 
         <div className={`${listClass} ${withTwo} ${rowList}`}>
           <div className={`${colFullList}`}>
@@ -98,18 +137,20 @@ const ProductRow = ({ addToCart, current, loadCurrentItem, ...props }) => {
                     />
                   </span>
 
-                  <span className="ratNum">
-                    ({`${props.data.ratingsNumber}`})
+                  <span className="ratNum pl-2">
+                    {width > 480
+                      ? ` (${props.data.ratingsNumber})`
+                      : abbrNum(props.data.ratingsNumber, 1)}
                   </span>
                 </div>
               </div>
 
-              <div className={`${col3List}`}>
+              <div className={`${col3List} py-1`}>
                 <p className="font-weight-bold">
                   &#8358; {props.data.mainPrice?.toLocaleString()}
                 </p>
-                <span className="list_slashedPrice">
-                  &#8358; {props.data.slashedPrice?.toLocaleString()}
+                <span className="list_slashedPrice text-nowrap">
+                  &#8358;{props.data.slashedPrice?.toLocaleString()}
                 </span>
                 <span className="percentDiscount2">
                   <span className="percentDiscount__text2">
@@ -128,27 +169,35 @@ const ProductRow = ({ addToCart, current, loadCurrentItem, ...props }) => {
                   ratingCount={props.data.ratingsCount}
                 />
               </span>
-              <span className="ratNum">({`${props.data.ratingsNumber}`})</span>
+              <span className="ratNum">
+                {width > 480
+                  ? ` (${props.data.ratingsNumber})`
+                  : abbrNum(props.data.ratingsNumber, 1)}
+              </span>
             </div>
+
             <DynamicButton
               color="white"
-              height="25px"
-              width="8rem"
+              height="1.5rem"
+              width={width > 480 ? "8rem" : "6rem"}
               backgroundColor="var(--woozRed)"
               boxShadow="none"
               fontWeight="700"
               fontSize="0.75rem"
               hoverBoxShadow="none"
             >
-              COMPARE PRICES
+              {width > 480 ? "COMPARE PRICES" : "COMPARE"}
             </DynamicButton>
 
-            <span className={addToCart_button} onClick={() => {
-              console.log('props.data from genericProductRow',props.data)
-                  loadCurrentItem(props.data);
-                  addToCart(props.data.id);
-                  history.push("/cart");
-                }}>
+            <span
+              className={addToCart_button}
+              onClick={() => {
+                console.log("props.data from genericProductRow", props.data);
+                loadCurrentItem(props.data);
+                addToCart(props.data.id);
+                history.push("/cart");
+              }}
+            >
               <DynamicButtonTwo
                 color="white"
                 height="2.5rem"
@@ -191,6 +240,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     addToCart: (id) => dispatch(addToCart(id)),
     loadCurrentItem: (item) => dispatch(loadCurrentItem(item)),
+    priceFilter: (products, price) => dispatch(priceFilter(products, price)),
   };
 };
 

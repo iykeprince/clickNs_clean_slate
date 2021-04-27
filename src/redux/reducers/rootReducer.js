@@ -6,7 +6,7 @@ import messages from './messages';
 import users from './users';
 import shopReducer from './shopping';
 import contactReducer from './contact';
-
+import filterReducer from "./filters"
 
 const persistConfig = {
   key: 'woozadmin',
@@ -20,6 +20,7 @@ const rootReducer = combineReducers({
   users,
   shop: shopReducer,
   contact: contactReducer,
+  filters: filterReducer,
 });
 
 export default persistReducer(persistConfig, rootReducer)

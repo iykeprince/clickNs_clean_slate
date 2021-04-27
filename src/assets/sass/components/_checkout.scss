@@ -96,6 +96,10 @@ hr.listItem_seperator {
 }
 .deliveryDateTxt {
   padding-left: 3rem !important;
+  @media screen and (max-width: 480px) {
+    padding-left: 1rem !important;
+
+  }
 }
 
 .listInfoSection {
@@ -118,49 +122,49 @@ hr.listItem_seperator {
 .listInfoSection__data6b:hover {
   color: var(--woozBlue) !important;
 }
-.iconNote, .checktitle__name{
-    padding-left: 0.5rem !important;
+.iconNote,
+.checktitle__name {
+  padding-left: 0.5rem !important;
 }
-.listInfoSection__infoIconGrp, .check__deliveryTitle{
-    display: flex;
-    align-items: center;
+.listInfoSection__infoIconGrp,
+.check__deliveryTitle {
+  display: flex;
+  align-items: center;
 }
-.listInfoSection__infoIcon{
-    display: flex;
+.listInfoSection__infoIcon {
+  display: flex;
 }
 .prodDescrpt2 {
   padding-top: 0.3rem !important;
   font-size: 0.75rem;
   font-weight: 500;
 }
-.totalPriceStyle{
+.totalPriceStyle {
   font-size: 1.25rem;
-  color: #043E7D;
+  color: #043e7d;
 }
-.totalStyle{
+.totalStyle {
   font-size: 1.125rem;
 }
 
-
-
-@media screen and (max-width:576px){
+@media screen and (max-width: 576px) {
   .listInfoSection {
     margin-top: 1rem !important;
     padding: 0.625rem 2.125rem 0.625rem 0.625rem !important;
     border: 1px solid #cbcbcb;
     border-radius: 5px;
     margin-left: 0 !important;
-}
-.check_top_wrapper{
-  padding-right: 0 !important;
-}
-.deliveryMethod__details{
-  padding: 1rem !important;
-}
-.check_formcontrol{
-  padding-right: 1rem !important;
-}
-hr.listItem_seperator {
-   margin-left: 0 !important;
-}
+  }
+  .check_top_wrapper {
+    padding-right: 0 !important;
+  }
+  .deliveryMethod__details {
+    padding: 1rem 0.5rem !important;
+  }
+  .check_formcontrol {
+    padding-right: 1rem !important;
+  }
+  hr.listItem_seperator {
+    margin-left: 0 !important;
+  }
 }

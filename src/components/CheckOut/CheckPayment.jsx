@@ -75,7 +75,7 @@ console.log(totalPrice)
                 className="my-2"
               />
 
-              <div className="pl-5">
+              <div className="pl-3 pl-sm-5">
                 <div className="font-sm ">
                   <strong>
                     Got a woozeee voucher / SureGifts voucher? Use it below:
