@@ -22,7 +22,7 @@ export const MobileHeaderSearch = () => {
       <img src="/images/search.svg" alt="" className="searchIcon " />
       <input
         type="text"
-        className="header__searchInput  bg-light border border-light"
+        className="header__searchInput  bg-f5 border border-light"
         placeholder={`Search Products & Brands`}
       />
     </div>
