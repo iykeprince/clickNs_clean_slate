@@ -10,6 +10,21 @@
   height: 3.5rem;
   object-fit: cover;
   padding-top: 0.625rem !important;
+  @media screen and (max-width: 576px) {
+    width: 50%;
+    height: 2.25rem;
+  }
+  @media screen and (max-width: 375px) {
+    width: 80%;
+  }
+}
+.cancelBtn__header{
+  position: absolute;
+  top: 30%;
+  right: 0.5rem;
+  @media screen and (max-width: 480px) {
+    top: 25%;
+  }
 }
 .header__logo {
   margin-top: auto !important ;
@@ -71,8 +86,6 @@
 }
 .headerSecondRow {
   display: flex;
-  // padding-left: 11.8% !important;
-  // padding-right: 11.8% !important;
   padding-top: 0.313rem !important;
   padding-bottom: 0.313rem !important;
 }
@@ -87,6 +100,10 @@
   position: sticky;
   top: 0;
   z-index: 10;
+  @media screen and (max-width:576px) {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+  }
 }
 .some__Container {
   display: flex;
@@ -256,15 +273,16 @@ button:focus {
     flex: 1;
   }
 }
-@media only screen and (max-width: 576px) {
-  .image__wrapper {
-    display: none;
-  }
-}
+
+// @media only screen and (max-width: 576px) {
+//   .image__wrapper {
+//     display: none;
+//   }
+// }
+
 @media only screen and (max-width: 480px) {
   .option__lineOne,
   .option__lineOneCart,
-  .image__wrapper,
   .header__icon,
   .helpSection,
   .dropdown__icon {

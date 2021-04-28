@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { HeaderSearch } from "../Search/Search";
+import { MobileHeaderSearch } from "../Search/Search";
 import SideNav from "./SideNav";
 import { Row, Col } from "react-bootstrap";
 import * as Ai from "react-icons/ai";
@@ -10,11 +11,10 @@ import MenuListComp from "./MenuListComp";
 import HelpListComp from "./HelpListComp";
 import useWindowDimensions from "../../Hooks/UseWindowDimension";
 import { connect } from "react-redux";
+import CancelRoundedIcon from "@material-ui/icons/CancelRounded";
 
-function Header({ showHamburger,cart }) {
-
+function Header({ showHamburger, cart }) {
   const [cartCount, setCartCount] = useState(0);
-
 
   useEffect(() => {
     let count = 0;
@@ -25,43 +25,72 @@ function Header({ showHamburger,cart }) {
     setCartCount(count);
   }, [cart, cartCount]);
 
-  // EXTENDED USAGE
-  // const { height, width } = useWindowDimensions();
-
-  
-
   const { width } = useWindowDimensions();
+
+  const [showHeaderBanner, setshowHeaderBanner] = useState(true);
+
   return (
     <header className="header__container">
       <Row>
         <Col md="12">
-          <div className="image__wrapper">
-            <img
-              src="/images/header/blackFridayAnimation.gif"
-              alt="top advert"
-              className="advertImage"
-            />
-            <img
-              src="/images/orangeRectangle.svg"
-              alt="top advert"
-              className="rectImage"
-            />
-            <img
-              src="/images/orangeRectangle.svg"
-              alt="top advert"
-              className="rectImageTwo"
-            />
-            <img
-              src="/images/header/calendarWhite.gif"
-              alt="top advert"
-              className="advertImage__two"
-            />
-            <img
-              src="/images/header/calendarWhite.gif"
-              alt="top advert"
-              className="advertImage__three"
-            />
-          </div>
+          {showHeaderBanner && (
+            <div className="image__wrapper">
+              <span className="flex">
+                <img
+                  src="/images/header/blackFridayAnimation.gif"
+                  alt="top advert"
+                  className="advertImage"
+                />
+                {width < 768 ? (
+                  <CancelRoundedIcon
+                    style={{ color: "#fff" }}
+                    fontSize="small"
+                    className="cancelBtn__header"
+                    onClick={() => setshowHeaderBanner(false)}
+                  />
+                ) : (
+                  ""
+                )}
+              </span>
+
+              {width > 576 ? (
+                <img
+                  src="/images/orangeRectangle.svg"
+                  alt="top advert"
+                  className="rectImage"
+                />
+              ) : (
+                ""
+              )}
+              {width > 576 ? (
+                <img
+                  src="/images/orangeRectangle.svg"
+                  alt="top advert"
+                  className="rectImageTwo"
+                />
+              ) : (
+                ""
+              )}
+              {width > 576 ? (
+                <img
+                  src="/images/header/calendarWhite.gif"
+                  alt="top advert"
+                  className="advertImage__two"
+                />
+              ) : (
+                ""
+              )}
+              {width > 576 ? (
+                <img
+                  src="/images/header/calendarWhite.gif"
+                  alt="top advert"
+                  className="advertImage__three"
+                />
+              ) : (
+                ""
+              )}
+            </div>
+          )}
         </Col>
       </Row>
 
@@ -95,8 +124,7 @@ function Header({ showHamburger,cart }) {
       </div>
 
       <Row className="headerThirdRow body__wrapper">
-        <div className="some__Container">
-
+        <div className="some__Container ml-n2 ml-sm-0">
           {(showHamburger && <SideNav />) ||
             (width <= 992 ? <SideNav /> : null)}
 
@@ -122,9 +150,12 @@ function Header({ showHamburger,cart }) {
               <Link to="/cart">
                 <div className="header__option cartHeader__Section">
                   <img src="/images/cart.svg" alt="" className="cart" />
-                 {( cartCount ? <span className="purchaseCount">
-                    <span>{cartCount}</span>
-                  </span> : ""
+                  {cartCount ? (
+                    <span className="purchaseCount">
+                      <span>{cartCount}</span>
+                    </span>
+                  ) : (
+                    ""
                   )}
                   <span className="option__lineOneCart">Cart</span>
                 </div>
@@ -132,6 +163,7 @@ function Header({ showHamburger,cart }) {
             </div>
           </div>
         </div>
+        {width < 768 ? <MobileHeaderSearch /> : ""}
       </Row>
     </header>
   );

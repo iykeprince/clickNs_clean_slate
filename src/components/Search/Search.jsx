@@ -16,6 +16,20 @@ export const HeaderSearch = () => {
   );
 };
 
+export const MobileHeaderSearch = () => {
+  return (
+    <div className="header__search mx-1 pt-2 ">
+      <img src="/images/search.svg" alt="" className="searchIcon " />
+      <input
+        type="text"
+        className="header__searchInput  bg-light border border-light"
+        placeholder={`Search Products & Brands`}
+      />
+    </div>
+  );
+};
+
+
 export const CategorySideSearch = () => {
   return (
     <div className="header__search header__searchTwo">

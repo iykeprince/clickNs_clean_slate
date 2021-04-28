@@ -3,6 +3,9 @@
   flex: 1;
   align-items: center;
   margin-right: 1.25rem !important;
+  @media screen and (max-width:768px) {
+    margin-right: 0 !important;
+  }
 }
 .header__searchThree {
   @extend .header__search;

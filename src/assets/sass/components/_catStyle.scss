@@ -61,11 +61,7 @@ p.toolTip-show {
   padding: 10px;
   margin-bottom: 10px;
   background: #fff;
-  // height: 100%;
 }
-/* .grid-group-item .list-group-item-heading {
-    word-break: break-all;
-} */
 
 .grid-group-item .table-row {
   display: none;
@@ -238,6 +234,9 @@ p.list-status.list-text-block {
   overflow: hidden;
   max-height: 3.6em;
   line-height: 1.7em;
+  @media screen and (max-width:480px) {
+    line-height: 1.5em;
+  }
 }
 .productName__sm{
   max-height: 1.7em;
@@ -295,7 +294,10 @@ p.list-status.list-text-block {
 }
 
 
-
+.productNameListGrid {
+  @extend .productName;
+  line-height: 1.7em !important;
+}
 
 
 .rowCatApp_wrap #list,

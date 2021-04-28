@@ -72,6 +72,7 @@ function CartMainItem({
     adjustQty(itemData.id, event.target.value);
   };
   // console.log("itemData", itemData);
+//  const [itemNumberTwo, setitemNumberTwo] = useState(1)
 
   return (
     <div>
@@ -116,6 +117,8 @@ function CartMainItem({
                     {IconStore.plusCircleIcon}
                   </span>
                   <span>1</span>
+                  {/* <span onClick={()=>{setitemNumberTwo(itemNumberTwo+1)}}>{itemNumberTwo}</span> */}
+
                   <span className="minusCircleIcon">
                     {IconStore.minusCircleIcon}
                   </span>
@@ -159,7 +162,7 @@ function CartMainItem({
           </p>
           <div className="savdAmount">
             <span className="savdAmountText"> {props.savedAmountText}</span>
-            <span>Savings  &#8358; {savedAmount?.toLocaleString()}</span>
+            <span>Savings &#8358; {savedAmount?.toLocaleString()}</span>
           </div>
         </div>
 

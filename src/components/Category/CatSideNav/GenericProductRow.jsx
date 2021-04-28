@@ -8,7 +8,6 @@ import { connect } from "react-redux";
 import { loadCurrentItem, addToCart } from "../../../redux/actions/shopping";
 import { priceFilter } from "../../../redux/actions/filters";
 import useWindowDimensions from "../../../Hooks/UseWindowDimension";
-// import Filter from "./Filters";
 
 const ProductRow = ({ addToCart, current, loadCurrentItem, ...props }) => {
   let btnClass = classNames("", {
@@ -122,13 +121,11 @@ const ProductRow = ({ addToCart, current, loadCurrentItem, ...props }) => {
           <img src={props.data.productImg} alt="productImage" />
         </Link>
 
-        {/* <Filter /> */}
-
         <div className={`${listClass} ${withTwo} ${rowList}`}>
           <div className={`${colFullList}`}>
             <div className={rowList}>
               <div className={`${col9List} prod__Desciption`}>
-                <p className="productName">{props.data.productName}</p>
+                <p className="productNameListGrid">{props.data.productName}</p>
                 <div className={ratings_wrapOne}>
                   <span>
                     <ReadOnlyRating
