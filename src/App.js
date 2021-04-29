@@ -1,5 +1,6 @@
 import React from "react";
 import "./assets/sass/main.scss";
+import 'swiper/swiper.scss'
 import Home from "./pages/Home";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ProductDetail from "./pages/ProductDetail";

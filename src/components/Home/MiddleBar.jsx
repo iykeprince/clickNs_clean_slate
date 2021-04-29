@@ -33,14 +33,14 @@ function MiddleBar() {
           <Carousel.Caption></Carousel.Caption>
         </Carousel.Item>
 
-        {/* <Carousel.Item className="CarouselItem">
+        <Carousel.Item className="CarouselItem">
           <img
             src={carouselImg}
             alt=""
             className="d-block w-100 h-100 imgSize"
           />
           <Carousel.Caption></Carousel.Caption>
-        </Carousel.Item> */}
+        </Carousel.Item>
       </Carousel>
     </div>
   );
