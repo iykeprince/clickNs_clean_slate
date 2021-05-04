@@ -1,6 +1,6 @@
 import React from 'react'
 import CheckAddressLink from '../../components/CheckOut/CheckAddressLink'
-import NewFooter from '../../components/Footer/NewFooter'
+import Footer from '../../components/Footer/Footer'
 import HeaderThree from '../../components/Header/HeaderThree'
 
 function ChangeAddress() {
@@ -11,7 +11,7 @@ function ChangeAddress() {
             <CheckAddressLink/>
             
             </div>
-            <NewFooter/>
+            <Footer/>
             
         </div>
     )

@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../../components/Header/Header";
-import NewFooter from "../../components/Footer/NewFooter";
+import NewFooter from "../../components/Footer/Footer";
 import DynamicButton from "../../components/Button/DynamicButton";
 import { Link } from "react-router-dom";
 

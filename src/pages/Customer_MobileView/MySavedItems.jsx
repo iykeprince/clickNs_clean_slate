@@ -1,12 +1,11 @@
 import React from 'react'
 import AccountOtherRows from "../../components/Account/AccountOtherRows";
-// import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import IconStore from "../../assets/icons/IconStore";
 import useWindowDimensions from "../../Hooks/UseWindowDimension";
 import { Link, Redirect } from "react-router-dom";
 import MySavedItemsUI from '../../components/Account/MySavedItemsUI';
-import NewFooter from '../../components/Footer/NewFooter';
+import Footer from '../../components/Footer/Footer';
 
 export default function MySavedItems() {
     const { width } = useWindowDimensions();
@@ -29,7 +28,7 @@ export default function MySavedItems() {
               </div>
               <AccountOtherRows />
             </div>
-            <NewFooter />
+            <Footer />
           </div>
         );
       }

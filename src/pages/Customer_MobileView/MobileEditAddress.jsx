@@ -1,11 +1,10 @@
 import React from "react";
 import AccountOtherRows from "../../components/Account/AccountOtherRows";
-// import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import useWindowDimensions from "../../Hooks/UseWindowDimension";
 import { Redirect } from "react-router-dom";
 import EditAddressComp from "../../components/Account/EditAddressComp";
-import NewFooter from "../../components/Footer/NewFooter";
+import Footer from "../../components/Footer/Footer";
 
 export default function MobileEditAddress() {
   const { width } = useWindowDimensions();
@@ -22,7 +21,7 @@ export default function MobileEditAddress() {
           </div>
           <AccountOtherRows />
         </div>
-        <NewFooter />
+        <Footer />
       </div>
     );
   }

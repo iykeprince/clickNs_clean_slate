@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../../components/Header/Header";
-import NewFooter from "../../components/Footer/NewFooter";
+import Footer from "../../components/Footer/Footer";
 // import DynamicButton from "../../components/Button/DynamicButton";
 // import { Link } from "react-router-dom";
 import LogisticsPartnerForm from "../../components/Form/LogisticsPartnerForm";
@@ -32,7 +32,7 @@ export default function Partners() {
           </div>
         </div>
       </div>
-      <NewFooter />
+      <Footer />
     </div>
   );
 }

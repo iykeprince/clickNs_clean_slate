@@ -1,8 +1,7 @@
 import React from "react";
-// import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import fakeVideo from "../../assets/images/help/photoshoped-video.png";
-import NewFooter from "../../components/Footer/NewFooter";
+import Footer from "../../components/Footer/Footer";
 
 export default function OrderCancellation() {
   return (
@@ -94,7 +93,7 @@ export default function OrderCancellation() {
           </div>
         </div>
       </div>
-      <NewFooter />
+      <Footer />
     </div>
   );
 }

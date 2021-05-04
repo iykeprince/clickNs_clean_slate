@@ -2,10 +2,9 @@ import React from "react";
 import StandaloneBtnGrp from "../components/Button/StandaloneBtnGrp";
 import CartOtherRows from "../components/Cart/CartOtherRows";
 import CartRowOne from "../components/Cart/CartRowOne";
-// import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 import { connect } from "react-redux";
-import NewFooter from "../components/Footer/NewFooter";
+import Footer from "../components/Footer/Footer";
 
 function Cart({ products }) {
   return (
@@ -24,7 +23,7 @@ function Cart({ products }) {
         <CartOtherRows />
       </div>
 
-      <NewFooter />
+      <Footer />
     </div>
   );
 }

@@ -1,5 +1,4 @@
 import React from "react";
-// import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import placeOrder from "../../assets/images/cb-place-order-d.jpg";
 import findproduct from "../../assets/images/help/how-to-find-a-product-v2.png";
@@ -13,7 +12,7 @@ import proceedToCheckout from "../../assets/images/help/proceedToCheckout-help.p
 import deliveryDetails from "../../assets/images/help/deliveryDetails.png";
 import innerBanner from "../../assets/images/help/innerBanner-unblured.png";
 import searchHelp from "../../assets/images/help/search__help.png";
-import NewFooter from "../../components/Footer/NewFooter";
+import Footer from "../../components/Footer/Footer";
 
 export default function PlacenTrackOrder() {
   return (
@@ -114,7 +113,7 @@ export default function PlacenTrackOrder() {
           </div>
         </div>
       </div>
-      <NewFooter />
+      <Footer />
     </div>
   );
 }

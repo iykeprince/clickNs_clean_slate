@@ -1,5 +1,4 @@
 import React from "react";
-// import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import { RiCustomerService2Fill } from "react-icons/ri";
 import { HelpSearch } from "../../components/Search/Search";
@@ -12,7 +11,7 @@ import wpay from "../../assets/images/help/wpay.png";
 import wprime from "../../assets/images/help/wprime.png";
 import wglobal from "../../assets/images/help/wglobal.png";
 import official_Stores from "../../assets/images/help/official-stores.png";
-import NewFooter from "../../components/Footer/NewFooter";
+import Footer from "../../components/Footer/Footer";
 
 export default function HelpCenter() {
   return (
@@ -79,7 +78,7 @@ export default function HelpCenter() {
           </div>
         </div>
       </div>
-      <NewFooter />
+      <Footer />
     </div>
   );
 }

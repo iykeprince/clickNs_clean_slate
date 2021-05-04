@@ -1,6 +1,5 @@
 import React from "react";
 import CategoryDisplay from ".";
-// import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import CATSIDENAV from "../../components/Category/CatSideNav/Index";
 import { CategoryProvider } from "../../Contexts/CategoryContext";
@@ -19,7 +18,7 @@ import {
   ProductOrders ,
   bannerImage,
 } from "../../DB/Categories/ElectronicsData";
-import NewFooter from "../../components/Footer/NewFooter";
+import Footer from "../../components/Footer/Footer";
 
 export default function Electronics() {
   const category = { catName: "Electronics" };
@@ -83,7 +82,7 @@ export default function Electronics() {
           <CATSIDENAV products={ProductOrders} />
         </CategoryProvider>
       </div>
-      <NewFooter />
+      <Footer />
     </React.Fragment>
   );
 }

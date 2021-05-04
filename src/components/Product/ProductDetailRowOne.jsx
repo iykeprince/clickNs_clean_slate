@@ -226,8 +226,6 @@ function ProductDetailRowOne({ current, product, addToCart}) {
   );
 }
 
-// export default ProductDetailRowOne;
-
 
 const mapStateToProps = (state) => {
   return {

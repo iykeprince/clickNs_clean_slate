@@ -1,5 +1,5 @@
 import React from 'react'
-import NewFooter from '../../components/Footer/NewFooter'
+import Footer from '../../components/Footer/Footer'
 import HeaderThree from '../../components/Header/HeaderThree'
 import UpdateAddressLink from '../../components/CheckOut/UpdateAddressLink'
 
@@ -10,7 +10,7 @@ export default function UpdateAddress() {
         <div className='body__wrapper putAtMiddle'>
         <UpdateAddressLink/>
         </div>
-        <NewFooter/>
+        <Footer/>
         
     </div>
     )

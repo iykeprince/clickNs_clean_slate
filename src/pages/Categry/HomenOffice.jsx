@@ -1,6 +1,5 @@
 import React from "react";
 import CategoryDisplay from ".";
-// import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import CATSIDENAV from "../../components/Category/CatSideNav/Index";
 import { CategoryProvider } from "../../Contexts/CategoryContext";
@@ -19,7 +18,7 @@ import {
   ProductOrders ,
   bannerImage,
 } from "../../DB/Categories/HomenOfficeData";
-import NewFooter from "../../components/Footer/NewFooter";
+import Footer from "../../components/Footer/Footer";
 
 export default function HomenOffice() {
   const category = { catName: "Home & Office" };
@@ -83,7 +82,7 @@ export default function HomenOffice() {
           <CATSIDENAV products={ProductOrders} />
         </CategoryProvider>
       </div>
-      <NewFooter />
+      <Footer />
     </React.Fragment>
   );
 }

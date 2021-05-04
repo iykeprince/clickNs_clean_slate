@@ -1,6 +1,6 @@
 import React from "react";
 import CardGroupTitle from "../components/Cards/CardGroupTitle";
-import NewFooter from "../components/Footer/NewFooter";
+import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 import DealsSectionContent from "../components/Product/DealsSectionContent";
 import { connect } from "react-redux";
@@ -56,7 +56,7 @@ function RecentlyViewed({ products}) {
         </div>
       </div>
 
-      <NewFooter />
+      <Footer />
     </div>
   );
 }

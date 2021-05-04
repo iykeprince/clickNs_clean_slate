@@ -1,8 +1,11 @@
-.font-sm {
-  font-size: 0.875rem !important;
+.font-xxs {
+  font-size: 0.625rem !important;
 }
 .font-xs {
   font-size: 0.75rem !important;
+}
+.font-sm {
+  font-size: 0.875rem !important;
 }
 .font-medium {
   font-size: 1rem !important;
@@ -55,7 +58,10 @@
 .underline{
   text-decoration: underline !important;
 }
-
+.slashedText{
+    text-decoration: line-through;
+    text-decoration-color: red;
+}
 @media (min-width: 992px){
   .pl-lg-9{
     padding-left: 7rem !important;

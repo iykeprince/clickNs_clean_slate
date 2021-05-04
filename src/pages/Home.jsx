@@ -7,7 +7,7 @@ import DealsSection from "../components/Product/DealsSection";
 import FeaturedSection from "../components/FeaturedSection/FeaturedSection";
 import DoubleImage from "../components/ImageCard/DoubleImage";
 import SingleImage from "../components/ImageCard/SingleImage";
-import NewFooter from "../components/Footer/NewFooter";
+import Footer from "../components/Footer/Footer";
 // import { connect } from "react-redux";
 
 let homeImgs = {
@@ -35,7 +35,7 @@ function Home() {
         <DoubleImage img1={homeImgs.megaSale} img2={homeImgs.nailPolish} linksTo="fashion"/>
         <BottomAboutSection />
       </div>
-      <NewFooter />
+      <Footer />
     </div>
   );
 }
