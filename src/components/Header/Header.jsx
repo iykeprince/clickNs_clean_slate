@@ -54,38 +54,31 @@ function Header({ showHamburger, cart }) {
               </span>
 
               {width > 576 ? (
-                <img
-                  src="/images/orangeRectangle.svg"
-                  alt="top advert"
-                  className="rectImage"
-                />
-              ) : (
-                ""
-              )}
-              {width > 576 ? (
-                <img
-                  src="/images/orangeRectangle.svg"
-                  alt="top advert"
-                  className="rectImageTwo"
-                />
-              ) : (
-                ""
-              )}
-              {width > 576 ? (
-                <img
-                  src="/images/header/calendarWhite.gif"
-                  alt="top advert"
-                  className="advertImage__two"
-                />
-              ) : (
-                ""
-              )}
-              {width > 576 ? (
-                <img
-                  src="/images/header/calendarWhite.gif"
-                  alt="top advert"
-                  className="advertImage__three"
-                />
+                <>
+                  <img
+                    src="/images/orangeRectangle.svg"
+                    alt="top advert"
+                    className="rectImage"
+                  />
+
+                  <img
+                    src="/images/orangeRectangle.svg"
+                    alt="top advert"
+                    className="rectImageTwo"
+                  />
+
+                  <img
+                    src="/images/header/calendarWhite.gif"
+                    alt="top advert"
+                    className="advertImage__two"
+                  />
+
+                  <img
+                    src="/images/header/calendarWhite.gif"
+                    alt="top advert"
+                    className="advertImage__three"
+                  />
+                </>
               ) : (
                 ""
               )}
@@ -123,7 +116,7 @@ function Header({ showHamburger, cart }) {
         </div>
       </div>
 
-      <Row className="headerThirdRow body__wrapper">
+      <Row className="headerThirdRow body__wrapper stickyHeaderTop">
         <div className="some__Container ml-n2 ml-sm-0">
           {(showHamburger && <SideNav />) ||
             (width <= 992 ? <SideNav /> : null)}

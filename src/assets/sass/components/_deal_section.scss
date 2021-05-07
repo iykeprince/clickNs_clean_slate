@@ -85,7 +85,9 @@ a:hover {
   background: #ffffff;
 }
 .dealsProduct:hover {
-  box-shadow: 0rem 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.03);
+  @media screen and (min-width:576px) {
+    box-shadow: 0rem 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.03);
+  }
 }
 .productName > p {
   font-size: 0.875rem;

@@ -6,9 +6,7 @@ import * as FaIcon from "react-icons/fa";
 import LargeButton from "../Button/LargeButton";
 import { HeartRating, ReadOnlyRating } from "../Rating/Rating";
 import IconStore from "../../assets/icons/IconStore";
-import ProductCarousel from "./ProductCarousel"
-
-// Redux
+import ProductCarousel from "./ProductCarousel";
 import { connect } from "react-redux";
 import { loadCurrentItem, addToCart } from "../../redux/actions/shopping";
 
@@ -212,12 +210,12 @@ function ProductDetailRowOne({ current, product, addToCart}) {
           </div>
         </div>
 
-        <div className="toSell">
+        <div className="toSell align-items-center justify-content-between">
           <div>
             <p>Have one to Sell?</p>
             <p>Click here to list your product</p>
           </div>
-          <div className="rightIcon">
+          <div>
             <FaIcon.FaChevronRight />
           </div>
         </div>

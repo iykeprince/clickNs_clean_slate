@@ -8,7 +8,7 @@ import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 
 
 
-export const HeartRating=()=> {
+export const HeartRating=(props)=> {
 
     const StyledRating = withStyles({
         iconFilled: {
@@ -20,7 +20,7 @@ export const HeartRating=()=> {
       })(Rating);
       
   return (
-    <div className=''>
+    <div className={props.className}>
       <StyledRating
         name="customized-color"
         defaultValue={0}

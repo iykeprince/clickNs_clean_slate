@@ -46,17 +46,17 @@
 .smallTextHeadr {
   font-size: 0.875rem;
 }
-.textBig,
-.textSmallOne,
-.textSmallTwo {
+.textBig {
   font-size: 1.25rem;
   font-weight: 500;
 }
 .textSmallOne,
 .textSmallTwo {
-  @media screen and (max-width: 576px) {
-    font-size: 0.8rem;
-    font-weight: 400;
+  font-size: 0.8rem;
+  font-weight: 400;
+  @media screen and (min-width: 576px) {
+    font-size: 0.875rem;
+    font-weight: 500;
   }
 }
 .textBig {
@@ -131,10 +131,10 @@
   padding: 0.813rem 0.875rem 1.188rem 1.25rem !important;
   border-radius: 0.313rem;
 }
-.rightIcon {
-  padding-top: 0.625rem !important;
-  padding-left: 1rem !important;
-}
+// .rightIcon {
+//   padding-top: 0.625rem !important;
+//   padding-left: 1rem !important;
+// }
 .prevNext,
 .shareProduct {
   padding-left: 0.75rem !important;
@@ -161,6 +161,12 @@
   padding-left: 1.063rem !important;
   padding-bottom: 0.625rem !important;
   border-bottom: 0.125rem solid #f1f1f1;
+  @media screen and (min-width: 0px) and (max-width: 576px) {
+    font-size: 0.75rem;
+    padding-top: 0.5rem !important;
+    padding-left: 1rem !important;
+    padding-bottom: 0.5rem !important;
+  }
 }
 .offers {
   border-top: 0.063rem solid #e3e3e3;
@@ -226,14 +232,17 @@
   border-top: 0.063rem solid #e3e3e3;
   font-weight: 500;
   font-size: 0.875rem;
+  @media screen and (min-width: 0px) and (max-width: 576px) {
+    padding-top: 0 !important;
+  }
 }
 .promotionLineOne {
   padding-top: 0.25rem !important;
   padding-bottom: 0.438rem !important;
 }
-.promotionLineOne,.promotionLineTwo {
+.promotionLineOne,
+.promotionLineTwo {
   display: flex;
-
 }
 .promotionLineOne > span,
 .promotionLineTwo > span {
@@ -260,8 +269,8 @@
   height: 17.875rem;
   object-fit: contain;
 }
-.productImageDisplay_wrap{
- text-align: center;
+.productImageDisplay_wrap {
+  text-align: center;
 }
 .woozSell {
   font-size: 0.875rem;
@@ -293,7 +302,6 @@
 .sellerGroup span {
   font-size: 0.75rem;
 }
-
 
 //Row Two
 .slimCard__wrapper {
@@ -335,16 +343,15 @@
 }
 .rightSideCard {
   padding: 0.938rem !important;
-
 }
 .rightSideImg {
   text-align: center;
 }
-.textgrp__rightSideCard{
-  @media screen and (min-width:0px) and (max-width:478px) {
+.textgrp__rightSideCard {
+  @media screen and (min-width: 0px) and (max-width: 478px) {
     max-width: 75%;
   }
-  @media screen and (min-width:478px) and (max-width:576px) {
+  @media screen and (min-width: 478px) and (max-width: 576px) {
     max-width: 50%;
   }
 }
@@ -371,7 +378,7 @@
   border-bottom: 0.125rem solid #f1f1f1;
 }
 .innerDetail {
-  p{
+  p {
     font-size: 0.875rem;
   }
 }
@@ -420,12 +427,11 @@
 .Descriptions .nav-tabs {
   border-bottom: 0rem;
 }
-.imgProduct{
+.imgProduct {
   max-width: 100%;
   height: auto;
   object-fit: contain;
 }
-
 
 // REACT MULTI CAROUSEL
 ul.react-multi-carousel-track li:nth-child(1) .ant-card:nth-child(1) {
@@ -450,6 +456,29 @@ ul.react-multi-carousel-track li:nth-child(1) .ant-card:nth-child(1) {
   transform: scale(0.75) !important;
 }
 
+.cartStickyBottom {
+  position: sticky;
+  bottom: 0;
+  box-shadow: 0px -4px 12px rgba(0, 0, 0, 0.05);
+
+  .call {
+    padding: 0.75rem !important;
+  }
+  .bx-call {
+    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.13);
+  }
+}
+.stickyHeaderTop {
+  position: sticky;
+  top: 0;
+}
+
+.svgUploadColor {
+  path {
+    fill: var(--woozRed);
+  }
+}
+
 @media screen and (max-width: 768px) {
   .Descriptions a {
     font-size: 0.875rem;
@@ -459,7 +488,6 @@ ul.react-multi-carousel-track li:nth-child(1) .ant-card:nth-child(1) {
     padding-left: 1.25rem !important;
     padding-right: 1.25rem !important;
   }
-  
 }
 
 @media screen and (max-width: 576px) {
@@ -471,7 +499,7 @@ ul.react-multi-carousel-track li:nth-child(1) .ant-card:nth-child(1) {
     background-color: transparent;
   }
 
-  .Descriptions .navGrp{
+  .Descriptions .navGrp {
     font-weight: bold;
     font-size: 0.875rem;
     color: rgba(0, 0, 0, 0.5);
@@ -484,16 +512,18 @@ ul.react-multi-carousel-track li:nth-child(1) .ant-card:nth-child(1) {
     height: 9rem;
     object-fit: contain;
   }
-  .productLocation, .product__share,.borderWrapperOne, .borderWrapperTwo{
+  .productLocation,
+  .product__share,
+  .borderWrapperOne,
+  .borderWrapperTwo {
     display: none;
   }
-  .rowOne__wrapper{
+  .rowOne__wrapper {
     margin-top: 1rem !important;
   }
-  .textBig{
+  .textBig {
     font-size: 0.875rem;
   }
-
 }
 
 @media screen and (max-width: 992px) {
@@ -507,7 +537,7 @@ ul.react-multi-carousel-track li:nth-child(1) .ant-card:nth-child(1) {
   .rows__wrapper {
     padding-left: 1rem !important;
   }
-  
+
   .separator {
     width: 100%;
   }

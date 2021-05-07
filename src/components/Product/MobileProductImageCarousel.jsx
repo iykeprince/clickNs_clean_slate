@@ -11,31 +11,26 @@ const MobileProductImageCarousel = (props) => {
       clickable: true,
     },
   };
+
   const detailedImages = props.current?.detailedImages
 //   const detailedImages = Object.values(props.current.detailedImages)
 //   console.log(`"${props.current?.productImg}"`)
 
   return (
-    <div className=""> 
+    <div className="d-flex"> 
       {/* SWIPPER DISAPEARS WHEN CLICKED FROM ANY OTHER PLACE, BUT SHOW WHEN COMING FROM HOMEPAGE  */}
     <Swiper {...params}>
-      <span className="" style={{ width: "60%" }}>
+      <span className="bg-white mr-2 rounded h-100" style={{ width: "60%" }}>
         <img
           src={props.current?.productImg}
           alt=""
-          className="d-block h-100 w-100 object-fit-cover"
+          className="d-block h-100 w-100 py-2 object-fit-cover"
         />
       </span>
-      {/* <span className="" style={{ width: "60%" }}>
-        <img
-          src={props.current.productImg}
-          alt=""
-          className="d-block h-100 w-100 object-fit-cover"
-        />
-      </span> */}
+   
      {detailedImages ? Object.values(detailedImages).map((data, index)=>
-        <span className="" style={{ width: "60%" }} key={index}>
-        <img src={data} alt="" className="d-block h-100 w-100 object-fit-cover" />
+        <span className="bg-white mr-2 rounded h-100" style={{ width: "60%" }} key={index}>
+        <img src={data} alt="" className="d-block h-100 w-100 p-2 object-fit-cover" />
       </span>
      ) :""}
     </Swiper>

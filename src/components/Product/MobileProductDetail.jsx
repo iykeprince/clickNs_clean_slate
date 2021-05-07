@@ -1,129 +1,103 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
 import DiscountPercent from "../DiscountPercent/DiscountPercent";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import * as FaIcon from "react-icons/fa";
-import LargeButton from "../Button/LargeButton";
+// import LargeButton from "../Button/LargeButton";
+import { ReactComponent as UploadIcon } from "../../assets/images/upload.svg";
 import { HeartRating, ReadOnlyRating } from "../Rating/Rating";
 import IconStore from "../../assets/icons/IconStore";
 import MobileProductImageCarousel from "./MobileProductImageCarousel";
 import { connect } from "react-redux";
 import { loadCurrentItem, addToCart } from "../../redux/actions/shopping";
+import BottomCartNav from "../Footer/BottomCartNav";
 
 function MobileProductDetail({ current, product, addToCart }) {
-  const history = useHistory();
-
+  //   const history = useHistory();
   return (
     <Row className="rowOne__wrapper">
       <Col lg="9">
-        <Row className="rows__wrapper">
-          <Col md="4">
-            <MobileProductImageCarousel current={current} />
+        <div className="ml-2 mb-2 rounded-0">
+          <MobileProductImageCarousel current={current} />
+        </div>
 
-            <div className="product__share pb-3 d-none d-md-block">
-              <p className="shareProduct">SHARE THIS PRODUCT</p>
-              <span className="socialFacebook">{IconStore.facebookIcon}</span>
-              <span className="socialTwitter">{IconStore.twitterIcon}</span>
-            </div>
-          </Col>
-          <Col md="8">
-            <div>
-              <div className="">
-                <span className="textBig w-100">{current?.productName}</span>
-              </div>
-
-              <div className="font-sm py-2">
-                <span className="textSmallOne">Brand: </span>
-                <span className="textSmallTwo">{`Samsung | Similar products from Samsung`}</span>
-              </div>
+        <div className="p-3 bg-white rounded-0">
+          <div>
+            <div className="">
+              <span className="textBig w-100">{current?.productName}</span>
             </div>
 
-            <p className="originalPrice">
-              &#8358; {current?.mainPrice?.toLocaleString()}
-            </p>
+            <div className="font-xs py-2">
+              <span className="textSmallOne">Brand: </span>
+              <span className="textSmallTwo">{`Samsung | Similar products from Samsung`}</span>
+            </div>
+          </div>
+
+          <div className="originalPrice">
+            &#8358; {current?.mainPrice?.toLocaleString()}
+          </div>
+          <div>
             <span className="discountedPrice slashedText text-black-50">
               &#8358; {current?.slashedPrice?.toLocaleString()}
             </span>
             <DiscountPercent DiscountText="-10%" />
+          </div>
+          <div className="mt-2">
+            <ReadOnlyRating size="small" ratingCount={current?.rating} />
+          </div>
 
-            <div className="mt-2">
-              <ReadOnlyRating size="small" ratingCount={current?.rating} />
+          <div className="d-flex align-items-center justify-content-between">
+            <span className="textSmallThree">({current?.rating} ratings)</span>
+            <div className="d-flex">
+              <UploadIcon className="mr-3 svgUploadColor" />
+
+              <HeartRating className="svgUploadColor" />
             </div>
+          </div>
 
-            <div className="d-flex align-items-center justify-content-between">
-              <span className="textSmallThree">
-                ({current?.rating} ratings)
+          <Row className="borderWrapperOne">
+            <Col sm="1">
+              <img src="/images/econnectProtect.svg" alt="" />
+            </Col>
+            <Col sm="11" className="protectPolicy">
+              <span>Econnect Protect - Device Insurance </span>
+              <p>+ &#8358; 19,650 </p>
+            </Col>
+          </Row>
+          <div className="borderWrapperTwo">
+            <div>
+              <p className="totalPriceText">Total Price: </p>
+              <p className="totalPriceFig">+ &#8358; 19,650 </p>
+            </div>
+            <div>
+              <button type="button" className="smallButton">
+                BUY BOTH
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div className="promotionsWrapper pb-3 pt-0 bg-white mb-3 border-0">
+          <p className="rightSectionTitle"> PROMOTIONS</p>
+          <div className="px-3">
+            <div className="promotionLineOne">
+              <span className="font-medium pr-2">{IconStore.promoIcon}</span>
+              <span>
+                Buy airtime {`&`} data on woozeee and get up to &#8358; 19,650
               </span>
-              <HeartRating />
             </div>
+            <div className="promotionLineTwo">
+              <span className="font-medium pr-2">{IconStore.promoIcon}</span>
 
-            <div className="largeButton__wrapper">
-              {/* THIS IS WHERE I'M STUCK, LOADING CURRENT ITEM TO REDUX  */}
-              <LargeButton
-                buttonName="ADD TO CART"
-                onClick={() => {
-                  addToCart(current.id);
-                  history.push("/cart");
-                }}
-              />
+              <span>
+                woozeee prime: Enjoy Free Delivery on all local orders
+              </span>
             </div>
-            <div className="offers">
-              <span>3 offers starting from &#8358;124,990</span>
-              <Link to="" className="textLink">See More Offers</Link>
-            </div>
-            <div className="offers2">
-              <span>YOU CAN ALSO BUY:</span>
-              <Link  to="" className="textLink">Details</Link>
-            </div>
-            <Row className="borderWrapperOne">
-              <Col sm="1">
-                <img src="/images/econnectProtect.svg" alt="" />
-              </Col>
-              <Col sm="11" className="protectPolicy">
-                <span>Econnect Protect - Device Insurance </span>
-                <p>+ &#8358; 19,650 </p>
-              </Col>
-            </Row>
-            <div className="borderWrapperTwo">
-              <div>
-                <p className="totalPriceText">Total Price: </p>
-                <p className="totalPriceFig">+ &#8358; 19,650 </p>
-              </div>
-              <div>
-                <button type="button" className="smallButton">
-                  BUY BOTH
-                </button>
-              </div>
-            </div>
-
-            <div className="promotionsWrapper">
-              <p className="promotionTitle"> PROMOTIONS</p>
-              <div className="promotionLineOne">
-                <img
-                  src="/images/promotionsBadge.svg"
-                  alt="promotionsBadge"
-                  className="promotionIcon"
-                />
-                <span>
-                  Buy airtime {`&`} data on woozeee and get up to &#8358; 19,650
-                </span>
-              </div>
-              <div className="promotionLineTwo">
-                <img
-                  src="/images/starBadge.svg"
-                  alt="starBadge"
-                  className="promotionIcon"
-                />
-                <span>
-                  woozeee prime: Enjoy Free Delivery on all local orders{" "}
-                </span>
-              </div>
-            </div>
-          </Col>
-        </Row>
+          </div>
+        </div>
       </Col>
       <Col lg="3" className="rightSide">
-        <div className="rightSectionOne">
+        <div className="rightSectionOne  rounded-0 shadow-none">
           <p className="rightSectionTitle">DELIVERY AND RETURNS</p>
           <Row className="newRowWrap">
             <div className="rightSectionWrapper col">
@@ -139,7 +113,9 @@ function MobileProductDetail({ current, product, addToCart }) {
                     Shipped from abroad. Delivered between Thursday 19 Dec and
                     Thursday 26 Dec.
                   </p>
-                  <Link  to="" className="smallText textLink">See more </Link>
+                  <Link to="" className="smallText textLink">
+                    See more
+                  </Link>
                 </div>
               </div>
 
@@ -155,7 +131,9 @@ function MobileProductDetail({ current, product, addToCart }) {
                     Free return within 15 days for Jumia Mall items and 7 days
                     for other eligible items.
                   </p>
-                  <Link  to="" className="smallText textLink">See more </Link>
+                  <Link to="" className="smallText textLink">
+                    See more
+                  </Link>
                 </div>
               </div>
 
@@ -174,7 +152,7 @@ function MobileProductDetail({ current, product, addToCart }) {
           </Row>
         </div>
 
-        <div className="sellerInfo">
+        <div className="sellerInfo rounded-0 shadow-none">
           <div>
             <p className="rightSectionTitle">SELLER INFORMATION</p>
           </div>
@@ -206,16 +184,17 @@ function MobileProductDetail({ current, product, addToCart }) {
           </div>
         </div>
 
-        <div className="toSell">
+        <div className="toSell shadow-none rounded-0 align-items-center justify-content-between">
           <div>
             <p>Have one to Sell?</p>
             <p>Click here to list your product</p>
           </div>
-          <div className="rightIcon">
+          <div>
             <FaIcon.FaChevronRight />
           </div>
         </div>
       </Col>
+      <BottomCartNav current={current} />
     </Row>
   );
 }
