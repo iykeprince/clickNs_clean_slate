@@ -13,7 +13,7 @@ export const advertData = [
 
 export const dealsData = [
   {
-    id: 1,
+    id: "1",
     productImg: "/images/Products/samsungGalaxy.png",
     detailedImages: {
       img1:
@@ -30,7 +30,7 @@ export const dealsData = [
     rating: 4,
   },
   {
-    id: 2,
+    id: "2",
     productImg: "/images/Products/shoe.png",
     productName: "Journeys Rainbow Vans Old School",
     detailedImages: {
@@ -46,7 +46,7 @@ export const dealsData = [
     rating: 5,
   },
   {
-    id: 3,
+    id: "3",
     productImg: "/images/Products/laptop.png",
     productName: "Vostro 14 5000 Small Business Laptop",
     detailedImages: {
@@ -62,7 +62,7 @@ export const dealsData = [
     rating: 5,
   },
   {
-    id: 4,
+    id: "4",
     productImg: "/images/Products/dress.png",
     productName: "Black and Blue Ombre Prom Dress",
     detailedImages: {
@@ -78,7 +78,7 @@ export const dealsData = [
     rating: 5,
   },
   {
-    id: 5,
+    id: "5",
     productImg: "/images/Products/fridge.png",
     productName:
       "SAMSUNG Family Hub RF56M9540SR/EU American-Style Smart Fridge Freezer - Real Stainless",
@@ -95,7 +95,7 @@ export const dealsData = [
     rating: 4,
   },
   {
-    id: 6,
+    id: "6",
     productImg: "/images/Products/shoe.png",
     productName: "Journeys Rainbow Vans Old School",
     detailedImages: {
@@ -111,7 +111,7 @@ export const dealsData = [
     rating: 5,
   },
   {
-    id: 7,
+    id: "7",
     productImg: "/images/phone790.png",
     productName:
       "Samsung Galaxy A50 6.4-Inch (4GB,128GB ROM) Android 9 Pie, (25MP+5MP+ 8MP)+ 25MP 4000mAh 4G Dual SIM Smartphone - White",
@@ -128,7 +128,7 @@ export const dealsData = [
     rating: 5,
   },
   {
-    id: 8,
+    id: "8",
     productImg: "/images/phone792.png",
     detailedImages: {
       img1:
@@ -145,7 +145,7 @@ export const dealsData = [
     rating: 5,
   },
   {
-    id: 9,
+    id: "9",
     productImg: "/images/phone791.png",
     detailedImages: {
       img1:
@@ -162,7 +162,7 @@ export const dealsData = [
     rating: 5,
   },
   {
-    id: 10,
+    id: "10",
     productImg: "/images/phone790.png",
     detailedImages: {
       img1:
@@ -179,7 +179,7 @@ export const dealsData = [
     rating: 5,
   },
   {
-    id: 11,
+    id: "11",
     productImg: "/images/phone790.png",
     detailedImages: {
       img1:
@@ -196,7 +196,7 @@ export const dealsData = [
     rating: 5,
   },
   {
-    id: 12,
+    id: "12",
     productImg: "/images/powerBank795.png",
     detailedImages: {
       img1:
@@ -213,7 +213,7 @@ export const dealsData = [
     rating: 5,
   },
   {
-    id: 13,
+    id: "13",
     productImg: "/images/samsungFrontBack.png",
     detailedImages: {
       img1:
@@ -230,7 +230,7 @@ export const dealsData = [
     rating: 5,
   },
   {
-    id: 14,
+    id: "14",
     productImg: "/images/samsungFrontBack.png",
     detailedImages: {
       img1:
@@ -247,7 +247,7 @@ export const dealsData = [
     rating: 5,
   },
   {
-    id: 15,
+    id: "15",
     productImg: "/images/samsungFrontBack.png",
     detailedImages: {
       img1:
@@ -264,7 +264,7 @@ export const dealsData = [
     rating: 5,
   },
   {
-    id: 16,
+    id: "16",
     productImg: "/images/samsungFrontBack.png",
     detailedImages: {
       img1:
@@ -281,7 +281,7 @@ export const dealsData = [
     rating: 5,
   },
   {
-    id: 17,
+    id: "17",
     productImg: "/images/samsungFrontBack.png",
     detailedImages: {
       img1:
@@ -298,7 +298,7 @@ export const dealsData = [
     rating: 5,
   },
   {
-    id: 18,
+    id: "18",
     productImg: "/images/samsungFrontBack.png",
     detailedImages: {
       img1:

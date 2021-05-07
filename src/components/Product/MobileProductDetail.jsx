@@ -34,7 +34,7 @@ function MobileProductDetail({ current, product, addToCart }) {
 
               <div className="font-sm py-2">
                 <span className="textSmallOne">Brand: </span>
-                <Link className="textSmallTwo">{`Samsung | Similar products from Samsung`}</Link>
+                <span className="textSmallTwo">{`Samsung | Similar products from Samsung`}</span>
               </div>
             </div>
 
@@ -51,9 +51,9 @@ function MobileProductDetail({ current, product, addToCart }) {
             </div>
 
             <div className="d-flex align-items-center justify-content-between">
-              <Link className="textSmallThree">
+              <span className="textSmallThree">
                 ({current?.rating} ratings)
-              </Link>
+              </span>
               <HeartRating />
             </div>
 
@@ -69,11 +69,11 @@ function MobileProductDetail({ current, product, addToCart }) {
             </div>
             <div className="offers">
               <span>3 offers starting from &#8358;124,990</span>
-              <Link className="textLink">See More Offers</Link>
+              <Link to="" className="textLink">See More Offers</Link>
             </div>
             <div className="offers2">
               <span>YOU CAN ALSO BUY:</span>
-              <Link className="textLink">Details</Link>
+              <Link  to="" className="textLink">Details</Link>
             </div>
             <Row className="borderWrapperOne">
               <Col sm="1">
@@ -139,7 +139,7 @@ function MobileProductDetail({ current, product, addToCart }) {
                     Shipped from abroad. Delivered between Thursday 19 Dec and
                     Thursday 26 Dec.
                   </p>
-                  <Link className="smallText textLink">See more </Link>
+                  <Link  to="" className="smallText textLink">See more </Link>
                 </div>
               </div>
 
@@ -155,7 +155,7 @@ function MobileProductDetail({ current, product, addToCart }) {
                     Free return within 15 days for Jumia Mall items and 7 days
                     for other eligible items.
                   </p>
-                  <Link className="smallText textLink">See more </Link>
+                  <Link  to="" className="smallText textLink">See more </Link>
                 </div>
               </div>
 

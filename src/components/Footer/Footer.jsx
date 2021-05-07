@@ -262,13 +262,10 @@ function NewFooter() {
           }}
         >
           <div className="pb-2" style={{background: "#053F7C"}} onClick={scrollToTop}>
-            <Link to="/">
             <div className="w-50 mx-auto">
               <ExpandLessRoundedIcon />
             </div>
-            <div className="w-50 mx-auto"> BACK TO TOP</div>
-            </Link>
-         
+            <div className="w-50 mx-auto"> BACK TO TOP</div>         
           </div>
 
           <Divider style={{ backgroundColor: "rgba(255, 255, 255, 0.25)" }} />

@@ -49,14 +49,14 @@ function ProductDetailRowOne({ current, product, addToCart}) {
               </div>
 
               <span className="textSmallOne">Brand: </span>
-              <Link className="textSmallTwo">{`Samsung | Similar products from Samsung`}</Link>
+              <span className="textSmallTwo">{`Samsung | Similar products from Samsung`}</span>
             </div>
 
             <div className="ratings__wrapper">
               <span>
                 <ReadOnlyRating size="small" ratingCount={current?.rating} />
               </span>
-              <Link className="textSmallThree"> ({current?.rating} ratings) </Link>
+              <span className="textSmallThree"> ({current?.rating} ratings) </span>
             </div>
 
             <p className="originalPrice">&#8358; {current?.mainPrice?.toLocaleString()}</p>
@@ -75,11 +75,11 @@ function ProductDetailRowOne({ current, product, addToCart}) {
             </div>
             <div className="offers">
               <span>3 offers starting from &#8358;124,990</span>
-              <Link className="textLink">See More Offers</Link>
+              <Link to="" className="textLink">See More Offers</Link>
             </div>
             <div className="offers2">
               <span>YOU CAN ALSO BUY:</span>
-              <Link className="textLink">Details</Link>
+              <Link to="" className="textLink">Details</Link>
             </div>
             <Row className="borderWrapperOne">
               <Col sm="1">
@@ -145,7 +145,7 @@ function ProductDetailRowOne({ current, product, addToCart}) {
                     Shipped from abroad. Delivered between Thursday 19 Dec and
                     Thursday 26 Dec.
                   </p>
-                  <Link className="smallText textLink">See more </Link>
+                  <Link to="" className="smallText textLink">See more </Link>
                 </div>
               </div>
 
@@ -161,7 +161,7 @@ function ProductDetailRowOne({ current, product, addToCart}) {
                     Free return within 15 days for Jumia Mall items and 7 days
                     for other eligible items.
                   </p>
-                  <Link className="smallText textLink">See more </Link>
+                  <Link to="" className="smallText textLink">See more </Link>
                 </div>
               </div>
 

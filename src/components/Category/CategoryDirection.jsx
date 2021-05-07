@@ -14,9 +14,7 @@ function CategoryDirection(props) {
       <span className="dir">
         <b>{`>`}</b>
       </span>
-      <Link>
         <span className="link_dir2 active">{category.catName}</span>
-      </Link>
     </div>
   );
 }

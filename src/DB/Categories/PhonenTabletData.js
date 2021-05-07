@@ -509,6 +509,12 @@ export const ProductOrders = [
   address1: '6556 Evergreen Boulevard Apt 76',
   address2: 'Royalston, MA 01368',
   productImg:'https://www.naijatechguide.com/wp-content/uploads/2020/05/Umidigi-A70-Pro.jpg',
+    detailedImages: {
+      img1:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/2.jpg?1080",
+      img2:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/3.jpg?1085",
+    },
   mainPrice:45900,
   slashedPrice:800000,
   ratingsCount:4,
@@ -522,6 +528,12 @@ export const ProductOrders = [
   address1: '6556 Evergreen Boulevard Apt 76',
   address2: 'Royalston, MA 01368',
   productImg:'https://www.naijatechguide.com/wp-content/uploads/2020/05/Umidigi-A70-Pro.jpg',
+    detailedImages: {
+      img1:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/2.jpg?1080",
+      img2:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/3.jpg?1085",
+    },
   mainPrice:45900,
   slashedPrice:800000,
   ratingsCount:3,
@@ -535,6 +547,12 @@ export const ProductOrders = [
   address1: '6556 Evergreen Boulevard Apt 76',
   address2: 'Royalston, MA 01368',
   productImg:'https://www.naijatechguide.com/wp-content/uploads/2020/05/Umidigi-A70-Pro.jpg',
+    detailedImages: {
+      img1:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/2.jpg?1080",
+      img2:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/3.jpg?1085",
+    },
   mainPrice:45900,
   slashedPrice:800000,
   ratingsCount:4,
@@ -548,6 +566,12 @@ export const ProductOrders = [
   address1: '6556 Evergreen Boulevard Apt 76',
   address2: 'Royalston, MA 01368',
   productImg:'https://www.naijatechguide.com/wp-content/uploads/2020/05/Umidigi-A70-Pro.jpg',
+    detailedImages: {
+      img1:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/2.jpg?1080",
+      img2:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/3.jpg?1085",
+    },
   mainPrice:45900,
   slashedPrice:800000,
   ratingsCount:4,
@@ -561,6 +585,12 @@ export const ProductOrders = [
   address1: '6556 Evergreen Boulevard Apt 76',
   address2: 'Royalston, MA 01368',
   productImg:'https://www.naijatechguide.com/wp-content/uploads/2020/05/Umidigi-A70-Pro.jpg',
+    detailedImages: {
+      img1:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/2.jpg?1080",
+      img2:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/3.jpg?1085",
+    },
   mainPrice:45900,
   slashedPrice:800000,
   ratingsCount:4,
@@ -574,6 +604,12 @@ export const ProductOrders = [
   address1: '6556 Evergreen Boulevard Apt 76',
   address2: 'Royalston, MA 01368',
   productImg:'https://www.naijatechguide.com/wp-content/uploads/2020/05/Umidigi-A70-Pro.jpg',
+    detailedImages: {
+      img1:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/2.jpg?1080",
+      img2:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/3.jpg?1085",
+    },
   mainPrice:45900,
   slashedPrice:800000,
   ratingsCount:4,
@@ -587,6 +623,12 @@ export const ProductOrders = [
   address1: '6556 Evergreen Boulevard Apt 76',
   address2: 'Royalston, MA 01368',
   productImg:'https://www.naijatechguide.com/wp-content/uploads/2020/05/Umidigi-A70-Pro.jpg',
+    detailedImages: {
+      img1:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/2.jpg?1080",
+      img2:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/3.jpg?1085",
+    },
   mainPrice:45900,
   slashedPrice:800000,
   ratingsCount:4,
@@ -600,6 +642,12 @@ export const ProductOrders = [
   address1: '6556 Evergreen Boulevard Apt 76',
   address2: 'Royalston, MA 01368',
   productImg:'https://www.naijatechguide.com/wp-content/uploads/2020/05/Umidigi-A70-Pro.jpg',
+    detailedImages: {
+      img1:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/2.jpg?1080",
+      img2:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/3.jpg?1085",
+    },
   mainPrice:45900,
   slashedPrice:800000,
   ratingsCount:4,
@@ -612,6 +660,12 @@ export const ProductOrders = [
   address1: '6556 Evergreen Boulevard Apt 76',
   address2: 'Royalston, MA 01368',
   productImg:'https://www.naijatechguide.com/wp-content/uploads/2020/05/Umidigi-A70-Pro.jpg',
+    detailedImages: {
+      img1:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/2.jpg?1080",
+      img2:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/3.jpg?1085",
+    },
   mainPrice:45900,
   slashedPrice:800000,
   ratingsCount:4,
@@ -624,6 +678,12 @@ export const ProductOrders = [
   address1: '6556 Evergreen Boulevard Apt 76',
   address2: 'Royalston, MA 01368',
   productImg:'https://www.naijatechguide.com/wp-content/uploads/2020/05/Umidigi-A70-Pro.jpg',
+    detailedImages: {
+      img1:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/2.jpg?1080",
+      img2:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/3.jpg?1085",
+    },
   mainPrice:45900,
   slashedPrice:800000,
   ratingsCount:4,
@@ -636,6 +696,12 @@ export const ProductOrders = [
   address1: '6556 Evergreen Boulevard Apt 76',
   address2: 'Royalston, MA 01368',
   productImg:'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/66/218916/1.jpg?6847',
+    detailedImages: {
+      img1:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/2.jpg?1080",
+      img2:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/3.jpg?1085",
+    },
   mainPrice:45900,
   slashedPrice:800000,
   ratingsCount:4,
@@ -648,6 +714,12 @@ export const ProductOrders = [
   address1: '6556 Evergreen Boulevard Apt 76',
   address2: 'Royalston, MA 01368',
   productImg:'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/66/218916/1.jpg?6847',
+    detailedImages: {
+      img1:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/2.jpg?1080",
+      img2:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/3.jpg?1085",
+    },
   mainPrice:45900,
   slashedPrice:800000,
   ratingsCount:4,
@@ -661,6 +733,12 @@ export const ProductOrders = [
   address1: '6556 Evergreen Boulevard Apt 76',
   address2: 'Royalston, MA 01368',
   productImg:'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/66/218916/1.jpg?6847',
+    detailedImages: {
+      img1:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/2.jpg?1080",
+      img2:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/3.jpg?1085",
+    },
   mainPrice:45900,
   slashedPrice:800000,
   ratingsCount:4,
@@ -674,6 +752,12 @@ export const ProductOrders = [
   address1: '6556 Evergreen Boulevard Apt 76',
   address2: 'Royalston, MA 01368',
   productImg:'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/66/218916/1.jpg?6847',
+    detailedImages: {
+      img1:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/2.jpg?1080",
+      img2:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/3.jpg?1085",
+    },
   mainPrice:45900,
   slashedPrice:800000,
   ratingsCount:4,
@@ -687,6 +771,12 @@ export const ProductOrders = [
   address1: '6556 Evergreen Boulevard Apt 76',
   address2: 'Royalston, MA 01368',
   productImg:'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/66/218916/1.jpg?6847',
+    detailedImages: {
+      img1:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/2.jpg?1080",
+      img2:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/3.jpg?1085",
+    },
   mainPrice:45900,
   slashedPrice:800000,
   ratingsCount:4,
@@ -700,6 +790,12 @@ export const ProductOrders = [
   address1: '6556 Evergreen Boulevard Apt 76',
   address2: 'Royalston, MA 01368',
   productImg:'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/66/218916/1.jpg?6847',
+    detailedImages: {
+      img1:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/2.jpg?1080",
+      img2:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/3.jpg?1085",
+    },
   mainPrice:45900,
   slashedPrice:800000,
   ratingsCount:4,
@@ -713,6 +809,12 @@ export const ProductOrders = [
   address1: '6556 Evergreen Boulevard Apt 76',
   address2: 'Royalston, MA 01368',
   productImg:'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/66/218916/1.jpg?6847',
+    detailedImages: {
+      img1:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/2.jpg?1080",
+      img2:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/3.jpg?1085",
+    },
   mainPrice:45900,
   slashedPrice:800000,
   ratingsCount:4,
@@ -726,6 +828,12 @@ export const ProductOrders = [
   address1: '6556 Evergreen Boulevard Apt 76',
   address2: 'Royalston, MA 01368',
   productImg:'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/66/218916/1.jpg?6847',
+    detailedImages: {
+      img1:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/2.jpg?1080",
+      img2:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/3.jpg?1085",
+    },
   mainPrice:45900,
   slashedPrice:800000,
   ratingsCount:4,
@@ -739,6 +847,12 @@ export const ProductOrders = [
   address1: '6556 Evergreen Boulevard Apt 76',
   address2: 'Royalston, MA 01368',
   productImg:'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/66/218916/1.jpg?6847',
+    detailedImages: {
+      img1:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/2.jpg?1080",
+      img2:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/3.jpg?1085",
+    },
   mainPrice:45900,
   slashedPrice:800000,
   ratingsCount:4,
@@ -765,6 +879,12 @@ export const ProductOrders = [
   address1: '6556 Evergreen Boulevard Apt 76',
   address2: 'Royalston, MA 01368',
   productImg:'https://www.naijatechguide.com/wp-content/uploads/2020/05/Umidigi-A70-Pro.jpg',
+    detailedImages: {
+      img1:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/2.jpg?1080",
+      img2:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/3.jpg?1085",
+    },
   mainPrice:45900,
   slashedPrice:800000,
   ratingsCount:4,
@@ -778,6 +898,12 @@ export const ProductOrders = [
   address1: '6556 Evergreen Boulevard Apt 76',
   address2: 'Royalston, MA 01368',
   productImg:'https://www.naijatechguide.com/wp-content/uploads/2020/05/Umidigi-A70-Pro.jpg',
+    detailedImages: {
+      img1:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/2.jpg?1080",
+      img2:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/3.jpg?1085",
+    },
   mainPrice:45900,
   slashedPrice:800000,
   ratingsCount:3,
@@ -791,6 +917,12 @@ export const ProductOrders = [
   address1: '6556 Evergreen Boulevard Apt 76',
   address2: 'Royalston, MA 01368',
   productImg:'https://www.naijatechguide.com/wp-content/uploads/2020/05/Umidigi-A70-Pro.jpg',
+    detailedImages: {
+      img1:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/2.jpg?1080",
+      img2:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/3.jpg?1085",
+    },
   mainPrice:45900,
   slashedPrice:800000,
   ratingsCount:4,
@@ -804,6 +936,12 @@ export const ProductOrders = [
   address1: '6556 Evergreen Boulevard Apt 76',
   address2: 'Royalston, MA 01368',
   productImg:'https://www.naijatechguide.com/wp-content/uploads/2020/05/Umidigi-A70-Pro.jpg',
+    detailedImages: {
+      img1:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/2.jpg?1080",
+      img2:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/3.jpg?1085",
+    },
   mainPrice:45900,
   slashedPrice:800000,
   ratingsCount:4,
@@ -817,6 +955,12 @@ export const ProductOrders = [
   address1: '6556 Evergreen Boulevard Apt 76',
   address2: 'Royalston, MA 01368',
   productImg:'https://www.naijatechguide.com/wp-content/uploads/2020/05/Umidigi-A70-Pro.jpg',
+    detailedImages: {
+      img1:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/2.jpg?1080",
+      img2:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/3.jpg?1085",
+    },
   mainPrice:45900,
   slashedPrice:800000,
   ratingsCount:4,
@@ -830,6 +974,12 @@ export const ProductOrders = [
   address1: '6556 Evergreen Boulevard Apt 76',
   address2: 'Royalston, MA 01368',
   productImg:'https://www.naijatechguide.com/wp-content/uploads/2020/05/Umidigi-A70-Pro.jpg',
+    detailedImages: {
+      img1:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/2.jpg?1080",
+      img2:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/3.jpg?1085",
+    },
   mainPrice:45900,
   slashedPrice:800000,
   ratingsCount:4,
@@ -843,6 +993,12 @@ export const ProductOrders = [
   address1: '6556 Evergreen Boulevard Apt 76',
   address2: 'Royalston, MA 01368',
   productImg:'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/11/647612/1.jpg?6915',
+    detailedImages: {
+      img1:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/2.jpg?1080",
+      img2:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/3.jpg?1085",
+    },
   mainPrice:45900,
   slashedPrice:800000,
   ratingsCount:4,
@@ -856,6 +1012,12 @@ export const ProductOrders = [
   address1: '6556 Evergreen Boulevard Apt 76',
   address2: 'Royalston, MA 01368',
   productImg:'https://www.naijatechguide.com/wp-content/uploads/2020/05/Umidigi-A70-Pro.jpg',
+    detailedImages: {
+      img1:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/2.jpg?1080",
+      img2:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/3.jpg?1085",
+    },
   mainPrice:45900,
   slashedPrice:800000,
   ratingsCount:4,
@@ -868,6 +1030,12 @@ export const ProductOrders = [
   address1: '6556 Evergreen Boulevard Apt 76',
   address2: 'Royalston, MA 01368',
   productImg:'https://www.naijatechguide.com/wp-content/uploads/2020/05/Umidigi-A70-Pro.jpg',
+    detailedImages: {
+      img1:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/2.jpg?1080",
+      img2:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/3.jpg?1085",
+    },
   mainPrice:45900,
   slashedPrice:800000,
   ratingsCount:4,
@@ -880,6 +1048,12 @@ export const ProductOrders = [
   address1: '6556 Evergreen Boulevard Apt 76',
   address2: 'Royalston, MA 01368',
   productImg:'https://www.naijatechguide.com/wp-content/uploads/2020/05/Umidigi-A70-Pro.jpg',
+    detailedImages: {
+      img1:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/2.jpg?1080",
+      img2:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/3.jpg?1085",
+    },
   mainPrice:45900,
   slashedPrice:800000,
   ratingsCount:4,
@@ -892,6 +1066,12 @@ export const ProductOrders = [
   address1: '6556 Evergreen Boulevard Apt 76',
   address2: 'Royalston, MA 01368',
   productImg:'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/11/647612/1.jpg?6915',
+    detailedImages: {
+      img1:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/2.jpg?1080",
+      img2:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/3.jpg?1085",
+    },
   mainPrice:45900,
   slashedPrice:800000,
   ratingsCount:4,
@@ -904,6 +1084,12 @@ export const ProductOrders = [
   address1: '6556 Evergreen Boulevard Apt 76',
   address2: 'Royalston, MA 01368',
   productImg:'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/66/218916/1.jpg?6847',
+    detailedImages: {
+      img1:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/2.jpg?1080",
+      img2:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/3.jpg?1085",
+    },
   mainPrice:45900,
   slashedPrice:800000,
   ratingsCount:4,
@@ -917,6 +1103,12 @@ export const ProductOrders = [
   address1: '6556 Evergreen Boulevard Apt 76',
   address2: 'Royalston, MA 01368',
   productImg:'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/11/647612/1.jpg?6915',
+    detailedImages: {
+      img1:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/2.jpg?1080",
+      img2:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/3.jpg?1085",
+    },
   mainPrice:45900,
   slashedPrice:800000,
   ratingsCount:4,
@@ -930,6 +1122,12 @@ export const ProductOrders = [
   address1: '6556 Evergreen Boulevard Apt 76',
   address2: 'Royalston, MA 01368',
   productImg:'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/66/218916/1.jpg?6847',
+    detailedImages: {
+      img1:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/2.jpg?1080",
+      img2:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/3.jpg?1085",
+    },
   mainPrice:45900,
   slashedPrice:800000,
   ratingsCount:4,
@@ -943,6 +1141,12 @@ export const ProductOrders = [
   address1: '6556 Evergreen Boulevard Apt 76',
   address2: 'Royalston, MA 01368',
   productImg:'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/11/647612/1.jpg?6915',
+    detailedImages: {
+      img1:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/2.jpg?1080",
+      img2:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/3.jpg?1085",
+    },
   mainPrice:45900,
   slashedPrice:800000,
   ratingsCount:4,
@@ -956,6 +1160,12 @@ export const ProductOrders = [
   address1: '6556 Evergreen Boulevard Apt 76',
   address2: 'Royalston, MA 01368',
   productImg:'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/11/647612/1.jpg?6915',
+    detailedImages: {
+      img1:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/2.jpg?1080",
+      img2:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/3.jpg?1085",
+    },
   mainPrice:45900,
   slashedPrice:800000,
   ratingsCount:4,
@@ -969,6 +1179,12 @@ export const ProductOrders = [
   address1: '6556 Evergreen Boulevard Apt 76',
   address2: 'Royalston, MA 01368',
   productImg:'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/11/647612/1.jpg?6915',
+    detailedImages: {
+      img1:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/2.jpg?1080",
+      img2:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/3.jpg?1085",
+    },
   mainPrice:45900,
   slashedPrice:800000,
   ratingsCount:4,
@@ -982,6 +1198,12 @@ export const ProductOrders = [
   address1: '6556 Evergreen Boulevard Apt 76',
   address2: 'Royalston, MA 01368',
   productImg:'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/11/647612/1.jpg?6915',
+    detailedImages: {
+      img1:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/2.jpg?1080",
+      img2:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/3.jpg?1085",
+    },
   mainPrice:45900,
   slashedPrice:800000,
   ratingsCount:4,
@@ -995,6 +1217,12 @@ export const ProductOrders = [
   address1: '6556 Evergreen Boulevard Apt 76',
   address2: 'Royalston, MA 01368',
   productImg:'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/11/647612/1.jpg?6915',
+    detailedImages: {
+      img1:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/2.jpg?1080",
+      img2:
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/3.jpg?1085",
+    },
   mainPrice:45900,
   slashedPrice:800000,
   ratingsCount:4,
@@ -1009,6 +1237,12 @@ export const ProductOrders = [
   address2: 'Royalston, MA 01368',
   productImg:'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/11/647612/1.jpg?6915',
   mainPrice:90000,
+  detailedImages: {
+    img1:
+      "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/2.jpg?1080",
+    img2:
+      "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/377417/3.jpg?1085",
+  },
   slashedPrice:110000,
   ratingsCount:4,
   ratingsNumber:1103,

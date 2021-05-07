@@ -14,7 +14,7 @@ const DealsSectionContent = ({
     .slice(props.sliceFrom, props.sliceTo)
     .map((data, index) => {
       return (
-        <ScrollToTop>
+        <ScrollToTop  key={index}>
           <Link
             to={`/product/${(data || []).id}`}
             onClick={() => loadCurrentItem(data)}
