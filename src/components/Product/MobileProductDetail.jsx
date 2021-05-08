@@ -11,8 +11,9 @@ import MobileProductImageCarousel from "./MobileProductImageCarousel";
 import { connect } from "react-redux";
 import { loadCurrentItem, addToCart } from "../../redux/actions/shopping";
 import BottomCartNav from "../Footer/BottomCartNav";
+import MobileComparePrice from "./MobileComparePrice";
 
-function MobileProductDetail({ current, product, addToCart }) {
+function MobileProductDetail({ current, products, addToCart }) {
   //   const history = useHistory();
   return (
     <Row className="rowOne__wrapper">
@@ -55,27 +56,13 @@ function MobileProductDetail({ current, product, addToCart }) {
             </div>
           </div>
 
-          <Row className="borderWrapperOne">
-            <Col sm="1">
-              <img src="/images/econnectProtect.svg" alt="" />
-            </Col>
-            <Col sm="11" className="protectPolicy">
-              <span>Econnect Protect - Device Insurance </span>
-              <p>+ &#8358; 19,650 </p>
-            </Col>
-          </Row>
-          <div className="borderWrapperTwo">
-            <div>
-              <p className="totalPriceText">Total Price: </p>
-              <p className="totalPriceFig">+ &#8358; 19,650 </p>
             </div>
-            <div>
-              <button type="button" className="smallButton">
-                BUY BOTH
-              </button>
-            </div>
+
+        <div className="mt-2">
+          <div className="font-xs font-weight-500 pt-3 pb-2 pl-3">CUSTOMERS ALSO VIEWED</div>
+            <MobileComparePrice current={current} productData={products} sliceFrom={0} sliceTo={6}/>
           </div>
-        </div>
+
 
         <div className="promotionsWrapper pb-3 pt-0 bg-white mb-3 border-0">
           <p className="rightSectionTitle"> PROMOTIONS</p>
@@ -202,6 +189,7 @@ function MobileProductDetail({ current, product, addToCart }) {
 const mapStateToProps = (state) => {
   return {
     current: state.shop.currentItem,
+    products: state.shop.products,
   };
 };
 

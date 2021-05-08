@@ -1,8 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import DiscountPercent from "../DiscountPercent/DiscountPercent";
-
-// Redux
 import { connect } from "react-redux";
 import { loadCurrentItem, addToCart } from "../../redux/actions/shopping";
 
@@ -12,13 +10,18 @@ const DealsSectionContentSm = ({
   loadCurrentItem,
   ...props
 }) => {
+  
+
   return (productData || [])
     .slice(props.sliceFrom, props.sliceTo)
     .map((data, index) => {
       return (
         <Link
+          key={index}
           to={`/product/${(data || []).id}`}
-          onClick={() => loadCurrentItem(data)}
+          onClick={() => {
+            loadCurrentItem(data);
+          }}
           className="prodSmallCol col-6 col-sm-4 col-lg-2"
         >
           <div className="productDetailCard  w-100 px-2">
@@ -27,7 +30,7 @@ const DealsSectionContentSm = ({
             </div>
 
             <div className="productCardImg">
-              <img src={data?.productImg} alt="product" className="w-100"/>
+              <img src={data?.productImg} alt="product" className="w-100" />
             </div>
             <div className="productName productName__sm pt-2 pt-lg-0">
               <p className="">{data?.productName} </p>
