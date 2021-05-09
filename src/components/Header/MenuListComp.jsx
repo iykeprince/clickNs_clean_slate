@@ -18,7 +18,6 @@ import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { logOut } from "../../redux/actions/auth";
 
-
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
@@ -210,6 +209,7 @@ const mapStateToProps = ({ auth }) => {
       token: auth.token,
     };
   }
+  return {};
 };
 
 const mapDispatchToProps = (dispatch) => ({

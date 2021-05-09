@@ -17,11 +17,12 @@ const shopReducer = (state = INITIAL_STATE, action) => {
       const item = state.products.find(
         (product) => product.id === action.payload.id
       );
-      
+      console.log(item);
       // Check if Item is in cart already
       inCart = state.cart.find((item) =>
         item.id === action.payload.id ? true : false
       );
+      console.log(inCart);
       return {
         ...state,
         cart: inCart

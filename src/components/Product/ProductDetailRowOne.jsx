@@ -10,8 +10,7 @@ import ProductCarousel from "./ProductCarousel";
 import { connect } from "react-redux";
 import { loadCurrentItem, addToCart } from "../../redux/actions/shopping";
 
-function ProductDetailRowOne({ current, product, addToCart}) {
-
+function ProductDetailRowOne({ current, product, addToCart }) {
   const history = useHistory();
 
   return (
@@ -26,9 +25,9 @@ function ProductDetailRowOne({ current, product, addToCart}) {
                 className="productImageDisplay w-100"
               />
             </div>
-            
+
             <div className="prevNext mr-4">
-              <ProductCarousel count={10}/>
+              <ProductCarousel count={10} />
             </div>
 
             <hr className="separator" />
@@ -54,30 +53,40 @@ function ProductDetailRowOne({ current, product, addToCart}) {
               <span>
                 <ReadOnlyRating size="small" ratingCount={current?.rating} />
               </span>
-              <span className="textSmallThree"> ({current?.rating} ratings) </span>
+              <span className="textSmallThree">
+                {" "}
+                ({current?.rating} ratings){" "}
+              </span>
             </div>
 
-            <p className="originalPrice">&#8358; {current?.mainPrice?.toLocaleString()}</p>
-            <span className="discountedPrice">&#8358; {current?.slashedPrice?.toLocaleString()}</span>
+            <p className="originalPrice">
+              &#8358; {current?.mainPrice?.toLocaleString()}
+            </p>
+            <span className="discountedPrice">
+              &#8358; {current?.slashedPrice?.toLocaleString()}
+            </span>
             <DiscountPercent DiscountText="-10%" />
             <div className="largeButton__wrapper">
-
               {/* THIS IS WHERE I'M STUCK, LOADING CURRENT ITEM TO REDUX  */}
               <LargeButton
                 buttonName="ADD TO CART"
                 onClick={() => {
-                  addToCart(current.id)
+                  addToCart(current.id);
                   history.push("/cart");
                 }}
               />
             </div>
             <div className="offers">
               <span>3 offers starting from &#8358;124,990</span>
-              <Link to="" className="textLink">See More Offers</Link>
+              <Link to="" className="textLink">
+                See More Offers
+              </Link>
             </div>
             <div className="offers2">
               <span>YOU CAN ALSO BUY:</span>
-              <Link to="" className="textLink">Details</Link>
+              <Link to="" className="textLink">
+                Details
+              </Link>
             </div>
             <Row className="borderWrapperOne">
               <Col sm="1">
@@ -143,7 +152,9 @@ function ProductDetailRowOne({ current, product, addToCart}) {
                     Shipped from abroad. Delivered between Thursday 19 Dec and
                     Thursday 26 Dec.
                   </p>
-                  <Link to="" className="smallText textLink">See more </Link>
+                  <Link to="" className="smallText textLink">
+                    See more{" "}
+                  </Link>
                 </div>
               </div>
 
@@ -159,7 +170,9 @@ function ProductDetailRowOne({ current, product, addToCart}) {
                     Free return within 15 days for Jumia Mall items and 7 days
                     for other eligible items.
                   </p>
-                  <Link to="" className="smallText textLink">See more </Link>
+                  <Link to="" className="smallText textLink">
+                    See more{" "}
+                  </Link>
                 </div>
               </div>
 
@@ -224,7 +237,6 @@ function ProductDetailRowOne({ current, product, addToCart}) {
   );
 }
 
-
 const mapStateToProps = (state) => {
   return {
     current: state.shop.currentItem,
@@ -234,11 +246,13 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     addToCart: (id) => {
-      console.log(id);
       dispatch(addToCart(id));
     },
     loadCurrentItem: (item) => dispatch(loadCurrentItem(item)),
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(ProductDetailRowOne);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ProductDetailRowOne);

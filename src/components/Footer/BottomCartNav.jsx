@@ -31,7 +31,8 @@ function BottomCartNav(props) {
           color="white"
           border="none !important"
           onClick={() => {
-            addToCart(props.current.id);
+            console.log("props.current.id fom cart btn", props.current.id)
+            props.addToCart(props.current.id);
             history.push("/cart");
           }}
           className="d-flex align-items-center justify-content-center"
