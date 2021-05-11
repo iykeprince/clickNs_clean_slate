@@ -146,6 +146,16 @@ hr.listItem_seperator {
 .totalStyle {
   font-size: 1.125rem;
 }
+.MuiStepLabel-labelContainer{
+  .MuiStepLabel-label{
+    font-size: 0.75rem !important;
+    font-weight: 500;
+    padding-top: 0.25rem !important;
+  }
+}
+.MuiStepLabel-label.MuiStepLabel-active {
+  color: var(--woozBlue) !important;
+}
 
 @media screen and (max-width: 576px) {
   .listInfoSection {

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
 import clsx from "clsx";
@@ -83,38 +83,32 @@ function getSteps() {
   return ["DELIVERY", "PAYMENT", "SUMMARY"];
 }
 
-
 function getStepContent(step) {
   switch (step) {
     case 0:
-      return <div className="p-4 text-woozRed">Select campaign settings... </div> ;
+      return (
+        <Fragment>
+          <MobileDelivery />
+        </Fragment>
+      );
     case 1:
-      return <div  className="p-4 text-woozBlue">What is an ad group anyways?</div>;
+      return (
+        <Fragment>
+          <MobilePayment />
+        </Fragment>
+      );
+
     case 2:
-      return <div  className="p-4 text-woozRed">This is the bit I really care about!</div>;
+      return (
+        <Fragment>
+          <MobileSummary />
+        </Fragment>
+      );
+
     default:
       return "Unknown step";
   }
 }
-
-
-// function getStepContent(step) {
-//   switch (step) {
-//     case 0:
-//       <MobileDelivery />;
-//       break;
-//     case 1:
-//       <MobilePayment />;
-//       break;
-
-//     case 2:
-//       <MobileSummary />;
-//       break;
-
-//     default:
-//       return "Unknown step";
-//   }
-// }
 
 export default function MobileStepper() {
   const classes = useStyles();
@@ -161,30 +155,22 @@ export default function MobileStepper() {
           <div>
             {getStepContent(activeStep)}
 
-
-            {/* <div>
+        {/*             
               <Button
                 disabled={activeStep === 0}
                 onClick={handleBack}
                 className={classes.button}
               >
                 Back
-              </Button>
-              <Button
-                variant="contained"
-                color="primary"
-                onClick={handleNext}
-                className={classes.button}
-              >
-                {activeStep === steps.length - 1 ? "Finish" : "Next"}
-              </Button>
-            </div> */}
+              </Button> */}
+
           </div>
         )}
+        
       </div>
 
       {activeStep !== steps.length - 1 ? (
-        <div className="py-3 bg-white font-weight-500 mt-4">
+        <div className="py-3 bg-white font-weight-500 mt-3">
           <div className="mx-3">
             <div className="d-flex align-items-center justify-content-between font-sm">
               <div>Subtotal</div>

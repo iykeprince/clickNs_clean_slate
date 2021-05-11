@@ -3,7 +3,7 @@ import CheckoutRowOne from "../../components/CheckOut/CheckoutRowOne";
 import Footer from "../../components/Footer/Footer";
 import HeaderThree from "../../components/Header/HeaderThree";
 import useWindowDimensions from "../../Hooks/UseWindowDimension";
-import MobileStepper from "./MobileStepper";
+import MobileCheckout from "./MobileCheckout";
 
 function CheckOut() {
   const { width } = useWindowDimensions();
@@ -15,7 +15,7 @@ function CheckOut() {
           <CheckoutRowOne />
         </div>
       ) : (
-        <MobileStepper />
+        <MobileCheckout />
       )}
       <Footer />
     </div>
