@@ -28,15 +28,20 @@
 .font-weight-600 {
   font-weight: 600;
 }
-.bg-primary {
+.bg-woozBlue {
   background-color: var(--woozBlue) !important;
+  &:hover,
+  &:focus, &:active {
+    background-color: var(--woozBlue) !important;
+    color: white !important;
+  }
 }
 .bg-secondary,
 .bg-woozRed {
   background-color: var(--woozRed) !important;
 }
-.bg-woozPink{
-  background-color: #FFE9E9 !important;
+.bg-woozPink {
+  background-color: #ffe9e9 !important;
 }
 .three-line-text {
   display: -webkit-box;
@@ -83,7 +88,7 @@
   border-color: var(--woozRed) !important;
 }
 .border-woozBlue {
-  border-color: var(--woozBlue);
+  border: 1px solid var(--woozBlue) !important;
 }
 
 @media (min-width: 992px) {

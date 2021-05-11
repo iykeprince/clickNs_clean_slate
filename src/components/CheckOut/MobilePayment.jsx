@@ -79,7 +79,7 @@ export default function MobilePayment() {
         <input type="text" className="col-12 border-0 bg-light rounded py-1 mt-2" />
         <div className="d-flex">
           <button
-            className="px-4 border-0 bg-woozRed font-weight-500 font-sm text-white rounded py-2 mx-auto mt-3"
+            className="px-4 border-0 bg-woozBlue font-weight-500 font-sm text-white rounded py-2 mx-auto mt-3"
             style={{ width: "8rem" }}
           >
             Apply

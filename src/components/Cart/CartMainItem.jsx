@@ -160,7 +160,7 @@ function CartMainItem({
                 <p className="selrText">Seller: {itemData?.sellerName}</p>
                 <p className="prodDescrpt three-line-text"> {itemData?.productName}</p>
                 <div className="productPrice__Wrap pt-1">
-                  <span className="iconDescrpt__wrapper font-weight-600 text-woozRed">
+                  <span className="iconDescrpt__wrapper font-weight-600 text-woozBlue">
                     &#8358;{itemData?.mainPrice.toLocaleString()}
                   </span>
                   <span className="slashedPrice">
@@ -171,7 +171,7 @@ function CartMainItem({
               <div className="col-12 iconWithText__wrap pt-2">
                 <span>
                   <button className="iconDescrpt__wrapper bg-white border-0">
-                   <span><FavoriteBorderIcon color="secondary" /></span>
+                   <span><FavoriteBorderIcon color="primary" /></span>
                     <span className="iconDescrpt">MOVE TO SAVED ITEMS</span>
                   </button>
                   
@@ -179,8 +179,8 @@ function CartMainItem({
                     className="iconDescrpt__wrapper bg-white border-0"
                     onClick={() => removeFromCart(itemData.id)}
                   >
-                    <span><DeleteIcon color="secondary"/></span>
-                    <span className="pl-2 font-xs text-woozRed font-weight-600">
+                    <span><DeleteIcon color="primary"/></span>
+                    <span className="pl-2 font-xs text-woozBlue font-weight-600">
                       REMOVE
                     </span>
                   </button>

@@ -79,7 +79,7 @@ function CartRowOne({ totalPrice, cart, products, current }) {
             </div>
             <div className="d-flex justify-content-between align-items-center mx-3 pb-3 pt-2">
               <span className="font-sm font-weight-600">Total</span>
-              <span className="font-medium font-weight-600 text-woozRed">
+              <span className="font-medium font-weight-600 text-woozBlue">
                 &#8358; {(fee + totalPrice)?.toLocaleString()}
               </span>
             </div>
@@ -88,11 +88,11 @@ function CartRowOne({ totalPrice, cart, products, current }) {
               <div>(NON-REFUNDABLE in case of a return)</div>
             </div>
             <div className=" mx-3">
-              <Link to="/checkout" className="d-flex py-2 col-12 rounded-lg border-0 bg-woozRed text-white font-weight-500">
+              <Link to="/checkout" className="d-flex py-2 col-12 rounded-lg border-0 bg-woozBlue text-white font-weight-500">
                 <span className="mx-auto">CHECKOUT</span>
               </Link>
-              <Link to="" className="d-flex mt-2 py-2 col-12 rounded-lg bg-white border border-woozRed font-weight-500 shadow-sm">
-                <span className="mx-auto  text-woozRed">CALL TO ORDER</span>
+              <Link to="" className="d-flex mt-2 py-2 col-12 rounded-lg bg-white border border-woozBlue font-weight-500 shadow-sm">
+                <span className="mx-auto  text-woozBlue">CALL TO ORDER</span>
             </Link>
             </div>
           </div>

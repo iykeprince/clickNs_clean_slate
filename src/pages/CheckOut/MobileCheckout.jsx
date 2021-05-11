@@ -182,14 +182,14 @@ export default function MobileStepper() {
             </div>
             <div className="font-weight-600 d-flex align-items-center justify-content-between pt-3 border-top">
               <div>Total</div>
-              <div className="text-woozRed">
+              <div className="text-woozBlue">
                 &#8358; {Number(700).toLocaleString()}
               </div>
             </div>
             <div className="mt-3">
               <button
                 onClick={handleNext}
-                className="d-flex col-12 border-0 font-weight-500 bg-woozRed py-2 text-white rounded mx-auto text-center"
+                className="d-flex col-12 border-0 font-weight-500 bg-woozBlue py-2 text-white rounded mx-auto text-center"
               >
                 <span className="mx-auto ">Proceed</span>
               </button>
@@ -200,7 +200,7 @@ export default function MobileStepper() {
         <div className="mt-5 mx-3">
           <Link
             to="/pay"
-            className="d-flex col-12 border-0 font-weight-500 bg-woozRed py-2 text-white rounded mx-auto text-center"
+            className="d-flex col-12 border-0 font-weight-500 bg-woozBlue py-2 text-white rounded mx-auto text-center"
           >
             <span className="mx-auto "> Confirm Order</span>
           </Link>

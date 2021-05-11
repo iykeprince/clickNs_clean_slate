@@ -18,12 +18,12 @@ function BottomCartNav(props) {
     <div className="px-2 bg-white col-12 cartStickyBottom">
       <div className="py-3 d-flex">
         <a href="tel: 911" className="call bx-call rounded mr-2">
-          <PhoneIcon color="secondary" />
+          <PhoneIcon color="primary" />
         </a>
 
         <DynamicButtonTwo
           width="100%"
-          backgroundColor="var(--woozRed)"
+          backgroundColor="var(--woozBlue)"
           boxShadow="0px 0px 10px rgb(0 0 0 / 25%)"
           borderRadius="0.313rem"
           fontWeight="bold"

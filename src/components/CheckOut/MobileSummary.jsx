@@ -17,7 +17,7 @@ export default function MobileSummary() {
             </div>
             <div className="font-weight-600 d-flex align-items-center justify-content-between pt-3 border-top">
               <div>Total</div>
-              <div className="text-woozRed">
+              <div className="text-woozBlue">
                 &#8358; {Number(700).toLocaleString()}
               </div>
             </div>
