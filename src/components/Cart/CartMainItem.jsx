@@ -10,7 +10,15 @@ import {
   adjustItemQty,
   removeFromCart,
   updateTotalPrice,
+  // loadCurrentItem,
+  // addToCart,
 } from "../../redux/actions/shopping";
+import useWindowDimensions from "../../Hooks/UseWindowDimension";
+// import AddCircleRoundedIcon from '@material-ui/icons/AddCircleRounded';
+// import RemoveCircleRoundedIcon from '@material-ui/icons/RemoveCircleRounded';
+// import { HeartRating } from "../Rating/Rating";
+import DeleteIcon from '@material-ui/icons/Delete';
+import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -38,7 +46,6 @@ function CartMainItem({
 }) {
   const classes = useStyles();
   const [itemNumber, setitemNumber] = useState(itemData.qty);
-  // console.log("totalItem|cart", cart);
 
   // CALCULATION
   const [totalItems, setTotalItems] = useState(0);
@@ -56,13 +63,7 @@ function CartMainItem({
     setTPrice(price);
   }, [cart, totalPrice, totalItems, setTotalItems, setTPrice]);
 
-  // console.log(
-  //   "totalItem|to redux",
-  //   totalItems,
-  //   "\n totalPrice|to redux",
-  //   totalPrice
-  // );
-
+  const { width } = useWindowDimensions();
   const singleItemTotal = itemNumber * itemData.mainPrice;
   const savedAmount = itemData.mainPrice - itemData.slashedPrice;
   // END OF CALCULATION
@@ -71,37 +72,50 @@ function CartMainItem({
     setitemNumber(event.target.value);
     adjustQty(itemData.id, event.target.value);
   };
-  // console.log("itemData", itemData);
-//  const [itemNumberTwo, setitemNumberTwo] = useState(1)
+
+  const incrementItemNumber = () => {
+    let itemNumberPlus = itemNumber + 1;
+    setitemNumber(itemNumberPlus);
+    adjustQty(itemData.id, itemNumberPlus);
+  };
+
+  const decrementItemNumber = () => {
+    let itemNumberMinus = itemNumber - 1;
+    setitemNumber(itemNumberMinus);
+    adjustQty(itemData.id, itemNumberMinus);
+  };
 
   return (
     <div>
       <Row className="ctop__row">
         <div className="col-12 col-md-6">
-          <Row className="prodDescrptGrp">
-            <div className="col-2 pImage__wrapper">
-              <img
-                src={itemData?.productImg}
-                alt="productImage"
-                className="pImage w-100 object-fit-contain"
-              />
-            </div>
+          {width > 576 ? (
+            <Row className="prodDescrptGrp">
+              <div className="col-2 pImage__wrapper">
+                <img
+                  src={itemData?.productImg}
+                  alt="productImage"
+                  className="pImage w-100 object-fit-contain"
+                />
+              </div>
 
-            <div className="col-10 pText__wrapper">
-              <p className="selrText">Seller: {itemData?.sellerName}</p>
-              <p className="prodDescrpt"> {itemData?.productName}</p>
-              {/* <div className="productPrice__Wrap">
-                <span className="iconDescrpt__wrapper mainPrice">
-                  &#8358; {itemData?.mainPrice}
-                </span>
-                <span className="slashedPrice">
-                  &#8358; {itemData?.slashedPrice}
-                </span>
-              </div> */}
-              <div className="iconWithText__wrap">
+              <div className="col-10 pText__wrapper">
+                <p className="selrText">Seller: {itemData?.sellerName}</p>
+                <p className="prodDescrpt"> {itemData?.productName}</p>
+                <div className="productPrice__Wrap">
+                  <span className="iconDescrpt__wrapper mainPrice">
+                    &#8358; {itemData?.mainPrice.toLocaleString()}
+                  </span>
+                  <span className="slashedPrice">
+                    &#8358; {itemData?.slashedPrice.toLocaleString()}
+                  </span>
+                </div>
+                <div className="iconWithText__wrap">
                 <span>
                   <button className="iconDescrpt__wrapper bg-white border-0">
                     <span>{IconStore.loveIconSmall}</span>
+                    {/* <span><HeartRating/></span> */}
+                    {/* <span><DeleteIcon color="secondary"/></span> */}
                     <span className="iconDescrpt">MOVE TO SAVED ITEMS</span>
                   </button>
                   <button
@@ -109,23 +123,86 @@ function CartMainItem({
                     onClick={() => removeFromCart(itemData.id)}
                   >
                     <span>{IconStore.deleteIconSmall}</span>
-                    <span className="iconDescrpt">REMOVE</span>
+                    <span className="pl-2 font-xs text-woozBlue font-weight-600">
+                      REMOVE
+                    </span>
                   </button>
                 </span>
                 <span className="mobilePlusMinusGrp">
-                  <span className="plusCircleIcon">
-                    {IconStore.plusCircleIcon}
-                  </span>
-                  <span>1</span>
-                  {/* <span onClick={()=>{setitemNumberTwo(itemNumberTwo+1)}}>{itemNumberTwo}</span> */}
-
-                  <span className="minusCircleIcon">
+                  <button
+                    className="minusCircleIcon border-0 bg-transparent"
+                    onClick={decrementItemNumber}
+                  >
                     {IconStore.minusCircleIcon}
+                  </button>
+                  <span>{itemNumber}</span>
+                  <button
+                    className="plusCircleIcon border-0 bg-transparent"
+                    onClick={incrementItemNumber}
+                  >
+                    {IconStore.plusCircleIcon}
+                  </button>
+                </span>
+                </div>
+              </div>
+            </Row>
+          ) : (
+            <Row className="prodDescrptGrp">
+              <div className="col-2 ">
+                <img
+                  src={itemData?.productImg}
+                  alt="productImage"
+                  className="pImage w-100 object-fit-contain"
+                />
+              </div>
+
+              <div className="col-10 pText__wrapper">
+                <p className="selrText">Seller: {itemData?.sellerName}</p>
+                <p className="prodDescrpt three-line-text"> {itemData?.productName}</p>
+                <div className="productPrice__Wrap pt-1">
+                  <span className="iconDescrpt__wrapper font-weight-600 text-woozRed">
+                    &#8358;{itemData?.mainPrice.toLocaleString()}
                   </span>
+                  <span className="slashedPrice">
+                    &#8358;{itemData?.slashedPrice.toLocaleString()}
+                  </span>
+                </div>
+              </div>
+              <div className="col-12 iconWithText__wrap pt-2">
+                <span>
+                  <button className="iconDescrpt__wrapper bg-white border-0">
+                   <span><FavoriteBorderIcon color="secondary" /></span>
+                    <span className="iconDescrpt">MOVE TO SAVED ITEMS</span>
+                  </button>
+                  
+                  <button
+                    className="iconDescrpt__wrapper bg-white border-0"
+                    onClick={() => removeFromCart(itemData.id)}
+                  >
+                    <span><DeleteIcon color="secondary"/></span>
+                    <span className="pl-2 font-xs text-woozRed font-weight-600">
+                      REMOVE
+                    </span>
+                  </button>
+                </span>
+                <span className="mobilePlusMinusGrp align-items-center">
+                  <button
+                    className="minusCircleIcon border-0 bg-transparent"
+                    onClick={decrementItemNumber}
+                  >
+                    {IconStore.minusCircleIcon}
+                  </button>
+                  <span>{itemNumber}</span>
+                  <button
+                    className="plusCircleIcon border-0 bg-transparent"
+                    onClick={incrementItemNumber}
+                  >
+                    {IconStore.plusCircleIcon}
+                  </button>
                 </span>
               </div>
-            </div>
-          </Row>
+            </Row>
+          )}
         </div>
 
         <div className="col-2 txt__contentgrp gr1">

@@ -12,6 +12,7 @@ import HelpListComp from "./HelpListComp";
 import useWindowDimensions from "../../Hooks/UseWindowDimension";
 import { connect } from "react-redux";
 import CancelRoundedIcon from "@material-ui/icons/CancelRounded";
+import Badge from "@material-ui/core/Badge";
 
 function Header({ showHamburger, cart }) {
   const [cartCount, setCartCount] = useState(0);
@@ -142,15 +143,10 @@ function Header({ showHamburger, cart }) {
 
               <Link to="/cart">
                 <div className="header__option cartHeader__Section">
-                  <img src="/images/cart.svg" alt="" className="cart" />
-                  {cartCount ? (
-                    <span className="purchaseCount">
-                      <span>{cartCount}</span>
-                    </span>
-                  ) : (
-                    ""
-                  )}
-                  <span className="option__lineOneCart">Cart</span>
+                  <Badge badgeContent={cartCount} color="secondary">
+                    <img src="/images/cart.svg" alt="" className="cart" />
+                  </Badge>
+                  <span className="option__lineOneCart pl-2">Cart</span>
                 </div>
               </Link>
             </div>

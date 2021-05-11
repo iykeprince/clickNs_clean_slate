@@ -29,7 +29,7 @@ const MobileComparePrice = ({
     });
   };
   return (
-    <div className="d-flex pl-2">
+    <div className={`d-flex ${props.paddingLeft}`}>
       {/* SWIPPER DISAPEARS WHEN CLICKED FROM ANY OTHER PLACE, BUT SHOW WHEN COMING FROM HOMEPAGE  */}
       <Swiper {...params}>
         {(productData || [])

@@ -20,7 +20,7 @@ export const HeartRating=(props)=> {
       })(Rating);
       
   return (
-    <div className={props.className}>
+    <div className={props.className} style={props.style}>
       <StyledRating
         name="customized-color"
         defaultValue={0}

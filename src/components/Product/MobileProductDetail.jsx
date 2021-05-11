@@ -60,7 +60,7 @@ function MobileProductDetail({ current, products, addToCart }) {
 
         <div className="mt-2">
           <div className="font-xs font-weight-500 pt-3 pb-2 pl-3">CUSTOMERS ALSO VIEWED</div>
-            <MobileComparePrice current={current} productData={products} sliceFrom={0} sliceTo={6}/>
+            <MobileComparePrice current={current} productData={products} sliceFrom={0} sliceTo={6} paddingLeft="pl-2"/>
           </div>
 
 

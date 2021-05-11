@@ -31,16 +31,27 @@
 .bg-primary {
   background-color: var(--woozBlue) !important;
 }
-.bg-secondary {
+.bg-secondary,
+.bg-woozRed {
   background-color: var(--woozRed) !important;
 }
-.bg-f5{
+.bg-woozPink{
+  background-color: #FFE9E9 !important;
+}
+.three-line-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.bg-f5 {
   background-color: #f5f5f5 !important;
 }
-.min-height-sm{
+.min-height-sm {
   min-height: 8rem !important;
 }
-.min-height-xs{
+.min-height-xs {
   min-height: 6rem !important;
 }
 .bg-center {
@@ -55,20 +66,33 @@
 .object-fit-cover {
   object-fit: cover;
 }
-.underline{
+.underline {
   text-decoration: underline !important;
 }
-.slashedText{
-    text-decoration: line-through;
-    text-decoration-color: red;
+.slashedText {
+  text-decoration: line-through;
+  text-decoration-color: red;
 }
-@media (min-width: 992px){
-  .pl-lg-9{
+.text-woozRed {
+  color: var(--woozRed);
+}
+.text-woozBlue {
+  color: var(--woozBlue);
+}
+.border-woozRed {
+  border-color: var(--woozRed) !important;
+}
+.border-woozBlue {
+  border-color: var(--woozBlue);
+}
+
+@media (min-width: 992px) {
+  .pl-lg-9 {
     padding-left: 7rem !important;
   }
 }
 
-@media (min-width: 768px){
+@media (min-width: 768px) {
   .font-md-xxl {
     font-size: 1.75rem !important;
   }
