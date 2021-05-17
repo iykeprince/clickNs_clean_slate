@@ -42,6 +42,7 @@ import PrivacyPolicy from "./pages/Markerting/PrivacyPolicy";
 import Partners from "./pages/Markerting/Partners";
 import ChangeAddress from "./pages/CheckOut/ChangeAdress";
 import UpdateAddress from "./pages/CheckOut/UpdateAddress";
+import SellOnWoozee from "./pages/SellOnWoozee";
 
 
 function App({current}) {
@@ -83,6 +84,7 @@ function App({current}) {
             <Route path={"/terms-of-use"} component={Terms} />
             <Route path={"/privacy"} component={PrivacyPolicy} />
             <Route path={"/logistics-partner"} component={Partners} />
+            <Route path={"/sell-on-woozeee"} component={SellOnWoozee} />
 
 
 

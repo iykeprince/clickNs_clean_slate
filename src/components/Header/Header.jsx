@@ -30,8 +30,28 @@ function Header({ showHamburger, cart }) {
 
   const [showHeaderBanner, setshowHeaderBanner] = useState(true);
 
+  const [scrolled,setScrolled]=React.useState(false);
+
+  const handleScroll=() => {
+    const offset=window.scrollY;
+    if(offset > 90 ){
+      setScrolled(true);
+    }
+    else{
+      setScrolled(false);
+    }
+  }
+  useEffect(() => {
+    window.addEventListener('scroll',handleScroll)
+  })
+
+  let x=[''];
+  if(scrolled){
+    x.push('fixed-top bg-white shadow-sm');
+  }
+
   return (
-    <header className="header__container">
+    <div className="header__container">
       <Row>
         <Col md="12">
           {showHeaderBanner && (
@@ -90,10 +110,10 @@ function Header({ showHamburger, cart }) {
 
       <div className="bgSR">
         <div className="headerSecondRow body__wrapper row">
-          <div className="sell">
+          <Link to="/sell-on-woozeee" className="sell">
             <img src="/images/blueStar.svg" alt="sell" />
             <span>Sell on woozeee</span>
-          </div>
+          </Link>
 
           <div className="m-auto">
             <div className="woozSpan">
@@ -117,6 +137,7 @@ function Header({ showHamburger, cart }) {
         </div>
       </div>
 
+      <div className={x.join(" ")}      >
       <Row className="headerThirdRow body__wrapper stickyHeaderTop">
         <div className="some__Container ml-n2 ml-sm-0">
           {(showHamburger && <SideNav />) ||
@@ -154,7 +175,8 @@ function Header({ showHamburger, cart }) {
         </div>
         {width < 768 ? <MobileHeaderSearch /> : ""}
       </Row>
-    </header>
+    </div>
+    </div>
   );
 }
 

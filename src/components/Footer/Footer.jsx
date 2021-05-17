@@ -140,7 +140,7 @@ function NewFooter() {
                       MORE INFORMATION
                     </h3>
                     <div className="quick-links">
-                      <Link to="/" className="white d-block">
+                      <Link to="/sell-on-woozeee" className="white d-block">
                         Sell on woozeee
                       </Link>
                       <Link to="/" className="white d-block">
