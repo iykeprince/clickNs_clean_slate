@@ -14,7 +14,7 @@ export default function Partners() {
         {/* <div className="mt-4 bg-white"> */}
         <div className="prodWrapper mb-5 col-12 col-lg-9 mx-auto">
           <div className="bg-white rounded shadow-sm">
-            <div className="text-center pt-3 bg-primary rounded-top text-white">
+            <div className="text-center pt-3 bg-woozBlue rounded-top text-white">
               <h3 className="text-white font-sm-">
                 Want to Become a woozeee Partner?
               </h3>
