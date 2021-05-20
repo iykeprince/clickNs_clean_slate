@@ -16,12 +16,10 @@ import NiceImage from "../assets/images/niceImage.svg";
 import useWindowDimensions from "../Hooks/UseWindowDimension";
 
 export default function LandingPage() {
-    const {width} = useWindowDimensions()
+  const { width } = useWindowDimensions();
   return (
     <>
-      <div className="position-relative" style={{ zIndex: 10 }}>
-        <Header />
-      </div>
+      <Header />
 
       <div className="w-100 h-100 bg-white">
         <div className="body__wrapper putAtMiddle">
@@ -47,16 +45,21 @@ export default function LandingPage() {
               </div>
             </div>
 
-                {width > 576 ? 
-            <div className="niceImageContainer">
-              <img src={NiceImage} alt="" className="niceImageItem" />
-            </div>
-         : <div></div> }
-         </div>
+            {width > 576 ? (
+              <div className="niceImageContainer">
+                <img src={NiceImage} alt="" className="niceImageItem" />
+              </div>
+            ) : (
+              <div></div>
+            )}
+          </div>
 
           <div className="text-center headingSpacer_2">
             <div className="">
-              <h2 className="font-3xl font-weight-bold"> Why woozeee is your best option</h2>
+              <h2 className="font-3xl font-weight-bold">
+                {" "}
+                Why woozeee is your best option
+              </h2>
             </div>
             <div className="d-flex  flex-column flex-sm-row gap-3 justify-content-center pt-5">
               <div className="d-flex flex-column gap-2 max-w-md  mx-auto">
@@ -90,7 +93,7 @@ export default function LandingPage() {
 
           <div className="text-center headingSpacer_1">
             <div className="">
-              <h2  className="font-3xl font-weight-bold">Trying is Believing</h2>
+              <h2 className="font-3xl font-weight-bold">Trying is Believing</h2>
               <p className="max-w-md-xl mx-auto mt-3">
                 See what people are saying about our unique and effective
                 Marketplace
@@ -115,11 +118,12 @@ export default function LandingPage() {
                   <VideoPlayIcon className="position-absolute top-40p left-40p pointer" />
                 </div>
                 <div className="text-left">
-                <h5 className="pt-3 pb-1">Review by Angie Wazobia</h5>
+                  <h5 className="pt-3 pb-1">Review by Angie Wazobia</h5>
 
-                <p  className="font-sm">
-                  We offer great customer support, online and offline training.
-                </p>
+                  <p className="font-sm">
+                    We offer great customer support, online and offline
+                    training.
+                  </p>
                 </div>
               </div>
               <div className="d-flex flex-column gap-2 max-w-md mx-auto">
@@ -128,8 +132,10 @@ export default function LandingPage() {
                   <VideoPlayIcon className="position-absolute top-40p left-40p pointer" />
                 </div>
                 <div className="text-left">
-                <h5 className="pt-3 pb-1">Review by Brittany Wazobia</h5>
-                <p  className="font-sm">Delivery is prompt (same day delivery) and orders can </p>
+                  <h5 className="pt-3 pb-1">Review by Brittany Wazobia</h5>
+                  <p className="font-sm">
+                    Delivery is prompt (same day delivery) and orders can{" "}
+                  </p>
                 </div>
               </div>
             </div>
@@ -137,8 +143,10 @@ export default function LandingPage() {
 
           <div className="text-center headingSpacer_1">
             <div className="">
-              <h2  className="font-3xl font-weight-bold">How it works</h2>
-              <p className="max-w-md-xl mx-auto  mt-3">It's easy with woozeee</p>
+              <h2 className="font-3xl font-weight-bold">How it works</h2>
+              <p className="max-w-md-xl mx-auto  mt-3">
+                It's easy with woozeee
+              </p>
             </div>
 
             <div className="d-flex flex-column flex-sm-row gap-3 justify-content-center pt-5">
@@ -215,7 +223,7 @@ export default function LandingPage() {
             </div>
 
             <div className="pb-5">
-            <button
+              <button
                 className="border-0 bg-woozBlue font-weight-bold text-white py-3 px-5 my-5 font-md-xl"
                 style={{ borderRadius: "8px" }}
               >

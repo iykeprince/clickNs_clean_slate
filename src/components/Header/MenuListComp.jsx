@@ -17,6 +17,7 @@ import AuthModal from "../Auth/AuthModal";
 import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { logOut } from "../../redux/actions/auth";
+import useWindowDimensions from "../../Hooks/UseWindowDimension";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -43,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
 
 function MenuListComp(props) {
   const { firstName, token } = props;
-
+ const {width} = useWindowDimensions()
   const classes = useStyles();
   // console.log(userDataFromGoogle)
   const [open, setOpen] = useState(false);
@@ -94,107 +95,125 @@ function MenuListComp(props) {
   }, [open]);
 
   return (
-    <div className={`${classes.root} d-none d-sm-block`}>
-      <div>
-        <Button
-          ref={anchorRef}
-          aria-controls={open ? "menu-list-grow" : undefined}
-          aria-haspopup="true"
-          onClick={handleToggle}
-        >
-          <span className="option__lineOne text-capitalize">
-            {token ? username : "Login"}
-          </span>
-          <img src="/images/arrowdown.svg" alt="" className="dropdown__icon" />
-        </Button>
-        <Popper
-          open={open}
-          anchorEl={anchorRef.current}
-          role={undefined}
-          transition
-          disablePortal
-        >
-          {({ TransitionProps, placement }) => (
-            <Grow
-              {...TransitionProps}
-              style={{
-                transformOrigin:
-                  placement === "bottom" ? "center top" : "center bottom",
-              }}
+    <>
+      {width > 480 ? (
+        <div className={classes.root}>
+          <div>
+            <Button
+              ref={anchorRef}
+              aria-controls={open ? "menu-list-grow" : undefined}
+              aria-haspopup="true"
+              onClick={handleToggle}
             >
-              <Paper>
-                <ClickAwayListener onClickAway={handleClose}>
-                  <MenuList
-                    autoFocusItem={open}
-                    id="menu-list-grow"
-                    onKeyDown={handleListKeyDown}
-                  >
-                    <Link to="/customer">
-                      <MenuItem>
-                        <span>{IconStore.bxUser}</span>
-                        <span className="adjacentIcon__text2">Account</span>
-                      </MenuItem>
-                    </Link>
-                    <Link to="/customer#/orders">
-                      <MenuItem>
-                        <span>{IconStore.bxBox}</span>
-                        <span className="adjacentIcon__text2">Orders</span>
-                      </MenuItem>
-                    </Link>
-                    <Link to="/customer#/saved">
-                      <MenuItem>
-                        {IconStore.heart}
-                        <span className="adjacentIcon__text2">Saved Items</span>
-                      </MenuItem>
-                    </Link>
-                    {token ? (
-                      <MenuItem onClick={handleLogOut} className="logOutTxt">
-                        LOGOUT
-                      </MenuItem>
-                    ) : (
-                      <MenuItem onClick={handleModalOpen} className="logOutTxt">
-                        <DynamicButtonTwo
-                          color="white"
-                          height="2.5rem"
-                          width="100%"
-                          backgroundColor="var(--woozRed)"
-                          boxShadow="0 4px 8px 0 rgb(0 0 0 / 20%)"
-                          borderRadius="5px"
-                          border="none !important"
-                          fontWeight="700"
-                          fontSize="0.875rem"
-                          hoverBoxShadow="0 4px 8px 0 rgb(0 0 0 / 20%)"
-                        >
-                          LOGIN
-                        </DynamicButtonTwo>
-                      </MenuItem>
-                    )}
-                  </MenuList>
-                </ClickAwayListener>
-              </Paper>
-            </Grow>
-          )}
-        </Popper>
-      </div>
-      <Modal
-        aria-labelledby="transition-modal-title"
-        aria-describedby="transition-modal-description"
-        className={classes.modal}
-        open={openModal}
-        onClose={handleModalClose}
-        closeAfterTransition
-        BackdropComponent={Backdrop}
-        BackdropProps={{
-          timeout: 500,
-        }}
-      >
-        <Fade in={openModal}>
-          <div className={classes.paperTwo}>
-            <AuthModal onLoginSuccess={handleModalClose} />
+              <span className="option__lineOne text-capitalize">
+                {token ? username : "Login"}
+              </span>
+              <img
+                src="/images/arrowdown.svg"
+                alt=""
+                className="dropdown__icon"
+              />
+            </Button>
+            <Popper
+              open={open}
+              anchorEl={anchorRef.current}
+              role={undefined}
+              transition
+              disablePortal
+            >
+              {({ TransitionProps, placement }) => (
+                <Grow
+                  {...TransitionProps}
+                  style={{
+                    transformOrigin:
+                      placement === "bottom" ? "center top" : "center bottom",
+                  }}
+                >
+                  <Paper>
+                    <ClickAwayListener onClickAway={handleClose}>
+                      <MenuList
+                        autoFocusItem={open}
+                        id="menu-list-grow"
+                        onKeyDown={handleListKeyDown}
+                      >
+                        <Link to="/customer">
+                          <MenuItem>
+                            <span>{IconStore.bxUser}</span>
+                            <span className="adjacentIcon__text2">Account</span>
+                          </MenuItem>
+                        </Link>
+                        <Link to="/customer#/orders">
+                          <MenuItem>
+                            <span>{IconStore.bxBox}</span>
+                            <span className="adjacentIcon__text2">Orders</span>
+                          </MenuItem>
+                        </Link>
+                        <Link to="/customer#/saved">
+                          <MenuItem>
+                            {IconStore.heart}
+                            <span className="adjacentIcon__text2">
+                              Saved Items
+                            </span>
+                          </MenuItem>
+                        </Link>
+                        {token ? (
+                          <MenuItem
+                            onClick={handleLogOut}
+                            className="logOutTxt"
+                          >
+                            LOGOUT
+                          </MenuItem>
+                        ) : (
+                          <MenuItem
+                            onClick={handleModalOpen}
+                            className="logOutTxt"
+                          >
+                            <DynamicButtonTwo
+                              color="white"
+                              height="2.5rem"
+                              width="100%"
+                              backgroundColor="var(--woozRed)"
+                              boxShadow="0 4px 8px 0 rgb(0 0 0 / 20%)"
+                              borderRadius="5px"
+                              border="none !important"
+                              fontWeight="700"
+                              fontSize="0.875rem"
+                              hoverBoxShadow="0 4px 8px 0 rgb(0 0 0 / 20%)"
+                            >
+                              LOGIN
+                            </DynamicButtonTwo>
+                          </MenuItem>
+                        )}
+                      </MenuList>
+                    </ClickAwayListener>
+                  </Paper>
+                </Grow>
+              )}
+            </Popper>
           </div>
-        </Fade>
-      </Modal>
-    </div>
+          <Modal
+            aria-labelledby="transition-modal-title"
+            aria-describedby="transition-modal-description"
+            className={classes.modal}
+            open={openModal}
+            onClose={handleModalClose}
+            closeAfterTransition
+            BackdropComponent={Backdrop}
+            BackdropProps={{
+              timeout: 500,
+            }}
+          >
+            <Fade in={openModal}>
+              <div className={classes.paperTwo}>
+                <AuthModal onLoginSuccess={handleModalClose} />
+              </div>
+            </Fade>
+          </Modal>
+        </div>
+      ) : (
+        ""
+      )}
+    </>
   );
 }
 

@@ -30,28 +30,8 @@ function Header({ showHamburger, cart }) {
 
   const [showHeaderBanner, setshowHeaderBanner] = useState(true);
 
-  const [scrolled,setScrolled]=React.useState(false);
-
-  const handleScroll=() => {
-    const offset=window.scrollY;
-    if(offset > 90 ){
-      setScrolled(true);
-    }
-    else{
-      setScrolled(false);
-    }
-  }
-  useEffect(() => {
-    window.addEventListener('scroll',handleScroll)
-  })
-
-  let x=[''];
-  if(scrolled){
-    x.push('fixed-top bg-white shadow-sm');
-  }
-
   return (
-    <div className="header__container">
+    <>
       <Row>
         <Col md="12">
           {showHeaderBanner && (
@@ -137,19 +117,35 @@ function Header({ showHamburger, cart }) {
         </div>
       </div>
 
-      <div className={x.join(" ")}      >
-      <Row className="headerThirdRow body__wrapper stickyHeaderTop">
-        <div className="some__Container ml-n2 ml-sm-0">
-          {(showHamburger && <SideNav />) ||
-            (width <= 992 ? <SideNav /> : null)}
 
-          <WoozHeaderLogo />
+      <Row className="headerThirdRow body__wrapper stickyHeaderTop bg-white shadow-sm w-100">
+        <div
+          className={
+            width > 768
+              ? "grid__Container__Header mx-auto"
+              : "d-flex w-100 justify-content-between"
+          }
+        >
+          <div className="griditem d-flex">
+            {(showHamburger && <SideNav />) ||
+              (width <= 992 ? <SideNav /> : null)}
 
-          <div className="searchWrapper">
-            <HeaderSearch />
+            <WoozHeaderLogo />
           </div>
 
-          <div className="some__item2">
+          {width > 768 ? (
+            <div
+              className={`${
+                showHamburger ? "pl-4" : ""
+              } griditem searchWrapper`}
+            >
+              <HeaderSearch />
+            </div>
+          ) : (
+            ""
+          )}
+
+          <div className="griditem some__item2">
             <div className="header__nav">
               <div className="header__option">
                 <MenuListComp />
@@ -173,10 +169,10 @@ function Header({ showHamburger, cart }) {
             </div>
           </div>
         </div>
+
         {width < 768 ? <MobileHeaderSearch /> : ""}
       </Row>
-    </div>
-    </div>
+    </>
   );
 }
 

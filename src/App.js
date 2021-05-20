@@ -62,12 +62,7 @@ function App({current}) {
   return (
     <Router >
       <MuiThemeProvider theme={theme}>
-        <div className="App">
-          <header className="App-header">
-            <title>Woozeee</title>
-            <link rel="icon" href="/images/favicon.ico" />
-          </header>
-
+     
           <Switch>
             <Route path={"/"} exact component={Home} />
             <Route path={"/customer/"} component={Account} />
@@ -122,7 +117,7 @@ function App({current}) {
             <Route path={"/sports"} component={Sports} />
             <Route path={"/others"} component={OtherCategories} />
           </Switch>
-        </div>
+
       </MuiThemeProvider>
     </Router>
   );

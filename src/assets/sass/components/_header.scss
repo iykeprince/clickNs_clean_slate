@@ -27,7 +27,7 @@
   }
 }
 .header__logo {
-  margin-top: auto !important ;
+  // margin-top: auto !important ;
   width: 7.938rem;
   height: 2.5rem;
 }
@@ -240,7 +240,6 @@ button:focus {
 .faIconBar {
   font-size: 1.5rem;
   cursor: pointer;
-  padding-right: 1.125rem !important;
   display: flex;
   align-self: center;
 }
@@ -254,6 +253,12 @@ button:focus {
     min-width: 200px;
   }
 }
+.grid__Container__Header{
+  display: grid;
+  grid-template-columns: 0.9fr 3.1fr 1fr;
+  gap: 0rem 1rem;
+}
+
 
 @media only screen and (max-width: 992px) {
   .logwrp {
@@ -274,11 +279,6 @@ button:focus {
   }
 }
 
-// @media only screen and (max-width: 576px) {
-//   .image__wrapper {
-//     display: none;
-//   }
-// }
 
 @media only screen and (max-width: 480px) {
   .option__lineOne,

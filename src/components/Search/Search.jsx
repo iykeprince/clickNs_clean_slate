@@ -1,14 +1,16 @@
 import React from "react";
 import { Button } from "react-bootstrap";
+import useWindowDimensions from "../../Hooks/UseWindowDimension";
 
 export const HeaderSearch = () => {
+  const {width} = useWindowDimensions()
   return (
     <div className="header__search">
       <img src="/images/search.svg" alt="" className="searchIcon " />
       <input
         type="text"
         className="header__searchInput"
-        placeholder="Search products, brands and categories"
+        placeholder={width>992?"Search products, brands and categories":"Search"}
       />
 
       <Button className="button">SEARCH</Button>
