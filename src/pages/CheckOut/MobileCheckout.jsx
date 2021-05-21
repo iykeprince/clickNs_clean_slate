@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
 import clsx from "clsx";
@@ -112,6 +112,16 @@ function getStepContent(step) {
 
 export default function MobileStepper() {
   const classes = useStyles();
+
+  //Scroll to top
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
+
   const [activeStep, setActiveStep] = React.useState(0);
   const steps = getSteps();
 
@@ -127,12 +137,35 @@ export default function MobileStepper() {
     setActiveStep(0);
   };
 
+  // Event onScroll
+  const [scrolled, setScrolled] = React.useState(false);
+
+  const handleScroll = () => {
+    const offset = window.scrollY;
+    //Scroll to top until the tip of the header is at y-axis of 90.
+    if (offset > 50) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+  });
+
+  let x = [""];
+  if (scrolled) {
+    x.push("shadow-sm bg-white");
+  }
+
+
+
   return (
-    <div className={`mt-3 ${classes.root}`}>
+    <div className={`${classes.root}`}>
       <Stepper
         alternativeLabel
         activeStep={activeStep}
-        className="bg-transparent"
+        className={`pt-3 pb-2 sticky-top ${!!x.join("")? x.join(""):"bg-f5"} `}
       >
         {steps.map((label) => (
           <Step key={label}>
@@ -155,7 +188,7 @@ export default function MobileStepper() {
           <div>
             {getStepContent(activeStep)}
 
-        {/*             
+            {/*             
               <Button
                 disabled={activeStep === 0}
                 onClick={handleBack}
@@ -163,14 +196,12 @@ export default function MobileStepper() {
               >
                 Back
               </Button> */}
-
           </div>
         )}
-        
       </div>
 
       {activeStep !== steps.length - 1 ? (
-        <div className="py-3 bg-white font-weight-500 mt-3">
+        <div className="py-3 bg-white font-weight-500 mt-3 border-top shadow-sm">
           <div className="mx-3">
             <div className="d-flex align-items-center justify-content-between font-sm">
               <div>Subtotal</div>
@@ -187,20 +218,24 @@ export default function MobileStepper() {
               </div>
             </div>
             <div className="mt-3">
-              <button
-                onClick={handleNext}
+              <Button
+                onClick={() => {
+                  handleNext();
+                  scrollToTop();
+                }}
                 className="d-flex col-12 border-0 font-weight-500 bg-woozBlue py-2 text-white rounded mx-auto text-center"
               >
                 <span className="mx-auto ">Proceed</span>
-              </button>
+              </Button>
             </div>
           </div>
         </div>
       ) : (
-        <div className="mt-5 mx-3">
+        <div className="mt-5 mx-3" onClick={scrollToTop}>
           <Link
             to="/pay"
             className="d-flex col-12 border-0 font-weight-500 bg-woozBlue py-2 text-white rounded mx-auto text-center"
+            onClick={scrollToTop}
           >
             <span className="mx-auto "> Confirm Order</span>
           </Link>

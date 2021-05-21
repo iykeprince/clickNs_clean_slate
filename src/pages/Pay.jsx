@@ -18,7 +18,7 @@ export default function Pay() {
           <div className="body__wrapper putAtMiddle">
             <PayFooter />
           </div>
-          <hr class="help_footer_hr" />
+          <hr className="help_footer_hr" />
           <p className="text-primary text-center py-4 font-weight-500">
             Back to woozeee
           </p>

@@ -39,7 +39,7 @@ export default function MobileDelivery() {
           <span>CHANGE</span>
         </div>
 
-        <div className="bg-white py-3 pl-3 font-weight-500 font-sm">
+        <div className="bg-white py-3 pl-3 font-weight-500 font-sm  border-top shadow-sm">
           <div>Agent Tony</div>
           <div>Street Name</div>
           <div>Local Govt</div>
@@ -50,7 +50,7 @@ export default function MobileDelivery() {
       <div className="mt-3">
         <div className="pl-3 pb-2 font-xs font-weight-500">SELECT A DELIVERY METHOD</div>
 
-        <div className="bg-white pt-3">
+        <div className="bg-white pt-3 scaleDownRadio border-top shadow-sm">
           <FormControl component="fieldset">
             <RadioGroup
               aria-label="DeliveriesOptions"
@@ -69,15 +69,16 @@ export default function MobileDelivery() {
                 control={<Radio />}
                 label={PickupComponent()}
                 className="align-items-start"
-
               />
             </RadioGroup>
           </FormControl>
-        </div>
-        
-        <div className="text-center font-weight-500 text-woozRed py-3 bg-white font-sm">
+
+          <div className="text-center font-weight-500 text-woozRed py-3 bg-white font-sm">
           Select Station Nearest to you
         </div>
+        </div>
+        
+       
       </div>
     </div>
   );

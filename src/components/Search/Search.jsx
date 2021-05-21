@@ -1,5 +1,5 @@
+import { Button } from "@material-ui/core";
 import React from "react";
-import { Button } from "react-bootstrap";
 import useWindowDimensions from "../../Hooks/UseWindowDimension";
 
 export const HeaderSearch = () => {
@@ -13,7 +13,7 @@ export const HeaderSearch = () => {
         placeholder={width>992?"Search products, brands and categories":"Search"}
       />
 
-      <Button className="button">SEARCH</Button>
+      <Button className="button text-white">SEARCH</Button>
     </div>
   );
 };

@@ -2,10 +2,6 @@
 .checkout__body .MuiTypography-body1 {
   font-size: 0.875rem;
 }
-// .checkout__body .MuiTypography-body1 {
-//   padding-left: 0.813rem !important;
-// }
-
 .MuiTypography-body1 {
   font-family: Google Sans !important;
 }
@@ -156,6 +152,15 @@ hr.listItem_seperator {
 .MuiStepLabel-label.MuiStepLabel-active {
   color: var(--woozBlue) !important;
 }
+.scaleDownRadio{
+  @media screen and (max-width:576px) {
+    .MuiButtonBase-root.MuiIconButton-root.MuiRadio-root{
+      transform: scale(0.7);
+    }
+  }
+}
+
+
 
 @media screen and (max-width: 576px) {
   .listInfoSection {
