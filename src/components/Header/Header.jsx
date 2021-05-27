@@ -13,6 +13,8 @@ import useWindowDimensions from "../../Hooks/UseWindowDimension";
 import { connect } from "react-redux";
 import CancelRoundedIcon from "@material-ui/icons/CancelRounded";
 import Badge from "@material-ui/core/Badge";
+// import {ReactComponent as WoozW} from "../../assets/images/woozW.svg";
+import {ReactComponent as WoozMedal} from "../../assets/images/woozeeeMedal.svg";
 
 function Header({ showHamburger, cart }) {
   const [cartCount, setCartCount] = useState(0);
@@ -89,9 +91,11 @@ function Header({ showHamburger, cart }) {
       </Row>
 
       <div className="bgSR">
-        <div className="headerSecondRow body__wrapper row">
+        <div className="headerSecondRow body__wrapper row bg-f5 position-relative" style={{zIndex:"2"}}>
           <Link to="/sell-on-woozeee" className="sell">
-            <img src="/images/blueStar.svg" alt="sell" />
+            {/* <img src="/images/blueStar.svg" alt="sell" /> */}
+            {/* <WoozW width="1rem"/> */}
+            <WoozMedal width="1.3rem" height="1.3rem"/>
             <span>Sell on woozeee</span>
           </Link>
 
@@ -117,60 +121,65 @@ function Header({ showHamburger, cart }) {
         </div>
       </div>
 
-
-      <Row className="headerThirdRow body__wrapper stickyHeaderTop bg-white shadow-sm w-100">
-        <div
-          className={
-            width > 768
-              ? "grid__Container__Header mx-auto"
-              : "d-flex w-100 justify-content-between"
-          }
-        >
-          <div className="griditem d-flex">
-            {(showHamburger && <SideNav />) ||
-              (width <= 992 ? <SideNav /> : null)}
-
-            <WoozHeaderLogo />
-          </div>
-
-          {width > 768 ? (
+      <Row
+        className="stickyHeaderTop bg-white shadow-sm w-100"
+        style={{ zIndex: "10" }}
+      >
+        <div class="w-100">
+          <div className="headerThirdRow  mx-auto  body__wrapper">
             <div
-              className={`${
-                showHamburger ? "pl-4" : ""
-              } griditem searchWrapper`}
+              className={
+                width > 768
+                  ? "grid__Container__Header"
+                  : "d-flex w-100 justify-content-between"
+              }
             >
-              <HeaderSearch />
-            </div>
-          ) : (
-            ""
-          )}
+              <div className="griditem d-flex">
+                {(showHamburger && <SideNav />) ||
+                  (width <= 992 ? <SideNav /> : null)}
 
-          <div className="griditem some__item2">
-            <div className="header__nav">
-              <div className="header__option">
-                <MenuListComp />
-
-                <Link to="/customer">
-                  <Ai.AiOutlineUser className="personIcon" />
-                </Link>
-              </div>
-              <div className="header__option helpSection">
-                <HelpListComp />
+                <WoozHeaderLogo />
               </div>
 
-              <Link to="/cart">
-                <div className="header__option cartHeader__Section">
-                  <Badge badgeContent={cartCount} color="secondary">
-                    <img src="/images/cart.svg" alt="" className="cart" />
-                  </Badge>
-                  <span className="option__lineOneCart pl-2">Cart</span>
+              {width > 768 ? (
+                <div
+                  className={`${
+                    showHamburger ? "pl-4" : ""
+                  } griditem searchWrapper`}
+                >
+                  <HeaderSearch />
                 </div>
-              </Link>
+              ) : (
+                ""
+              )}
+
+              <div className="griditem some__item2">
+                <div className="header__nav">
+                  <div className="header__option">
+                    <MenuListComp />
+
+                    <Link to="/customer">
+                      <Ai.AiOutlineUser className="personIcon" />
+                    </Link>
+                  </div>
+                  <div className="header__option helpSection">
+                    <HelpListComp />
+                  </div>
+
+                  <Link to="/cart">
+                    <div className="header__option cartHeader__Section">
+                      <Badge badgeContent={cartCount} color="secondary">
+                        <img src="/images/cart.svg" alt="" className="cart" />
+                      </Badge>
+                      <span className="option__lineOneCart pl-2">Cart</span>
+                    </div>
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
+          {width < 768 ? <MobileHeaderSearch /> : ""}
         </div>
-
-        {width < 768 ? <MobileHeaderSearch /> : ""}
       </Row>
     </>
   );

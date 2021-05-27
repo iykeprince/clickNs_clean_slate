@@ -20,7 +20,7 @@ export const HeaderSearch = () => {
 
 export const MobileHeaderSearch = () => {
   return (
-    <div className="header__search mx-1 pt-2 ">
+    <div className="header__search mx-1 px-2 pb-2">
       <img src="/images/search.svg" alt="" className="searchIcon " />
       <input
         type="text"
