@@ -4,6 +4,9 @@
 }
 .headingSpacer_2 {
   margin-top: 18rem !important;
+  @media screen and (max-width:478px) {
+    margin-top: 6rem !important;
+  }
 }
 .headingSpacer_sm {
   margin-top: 4.75rem !important;

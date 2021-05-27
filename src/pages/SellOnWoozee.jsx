@@ -24,14 +24,26 @@ export default function LandingPage() {
       <div className="w-100 h-100 bg-white">
         <div className="body__wrapper putAtMiddle">
           <div className="d-flex flex-column flex-sm-row justify-content-between">
-            <div className="pt-5 z-1 mt-3">
-              <h2 className="text-4xl font-weight-bold pt-5">Make Money</h2>
-              <h2 className="text-4xl font-weight-bold">
+            <div className={` ${width > 480 ? "pt-5" : "pt-3"} z-1 mt-3`}>
+              <h2
+                className={`${
+                  width > 480 ? "text-4xl pt-5" : "font-xxl pb-3"
+                } font-weight-bold`}
+              >
+                Make Money
+              </h2>
+              <h2
+                className={`${
+                  width > 480 ? "text-4xl" : "font-xxl pb-3"
+                } font-weight-bold`}
+              >
                 <span className="text-woozRed">with </span> woozeee
               </h2>
               <p>It’s more than a market place, it’s a lifestyle...</p>
               <button
-                className="border-0 bg-woozBlue font-weight-bold text-white py-3 px-5 mt-5 font-md-xl"
+                className={`border-0 bg-woozBlue font-weight-bold text-white py-2 py-sm-3 px-4 px-md-5 mt-5  ${
+                  width > 480 ? "font-md-xl" : "font-medium"
+                } `}
                 style={{ borderRadius: "8px" }}
               >
                 Get Started
