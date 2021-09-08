@@ -43,6 +43,7 @@ import Partners from "./pages/Markerting/Partners";
 import ChangeAddress from "./pages/CheckOut/ChangeAdress";
 import UpdateAddress from "./pages/CheckOut/UpdateAddress";
 import SellOnWoozee from "./pages/SellOnWoozee";
+import FourOFour from "./pages/FourOFour";
 
 
 function App({current}) {
@@ -116,6 +117,9 @@ function App({current}) {
             <Route path={"/home-office"} component={HomenOffice} />
             <Route path={"/sports"} component={Sports} />
             <Route path={"/others"} component={OtherCategories} />
+
+            {/* Not Found */}
+            <Route path="/*" component={FourOFour} />
           </Switch>
 
       </MuiThemeProvider>
